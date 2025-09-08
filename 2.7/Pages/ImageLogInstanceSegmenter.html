@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="pt" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,7 +16,7 @@
     
     
       
-        <title>ImageLogInstanceSegmenter - GeoSlicer Manual</title>
+        <title>Instance Segmenter - GeoSlicer Manual</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instance-segmenter" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +89,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ImageLogInstanceSegmenter
+              Instance Segmenter
             
           </span>
         </div>
@@ -150,16 +155,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Pesquisar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -170,7 +175,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando busca
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -203,7 +208,7 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -19803,10 +19808,47 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marcas-de-amostragem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marcas de amostragem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batentes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -19821,12 +19863,92 @@
                   
 
 
-  <h1>ImageLogInstanceSegmenter</h1>
-
-<!-- BEGIN INCLUDE ./UnderConstruction.md -->
-
-<p><img alt="Under Construction" src="../assets/images/UnderConstruction.svg" /></p>
-<!-- END INCLUDE -->
+<h1 id="instance-segmenter">Instance Segmenter</h1>
+<h2 id="introducao">Introdução</h2>
+<p>A análise quantitativa de dados de perfis de imagens é de grande importância na indústria de óleo e gás. Esta análise se destaca na
+caracterização de reservatórios que apresentam grande variabilidade de escalas de poros, como os carbonatos do pré-sal. Frequentemente,
+apenas a porosidade matricial das rochas não é suficiente para caracterizar as propriedades de escoamento de fluidos nesses reservatórios.
+De fato, a presença de regiões sujeitas a intensa carstificação e de rochas com porosidade vugular significativa governam o comportamento
+dos fluidos nesses reservatórios. Por sua natureza e escala, os perfis de imagem se destacam como uma importante ferramenta para melhor
+entendimento e caracterização mais acurada dessas rochas.</p>
+<p>Entretanto, o uso quantitativo dessas imagens é um desafio devido ao grande número de artefatos como espiralamento, breakouts,
+excentricidade, batentes, marcas de broca ou de amostragem, entre outros. Portanto, a correta interpretação, identificação e correção desses
+artefatos é de crucial importância.</p>
+<p>Neste contexto, são utilizadas técnicas de aprendizado de máquina e visão computacional para automatização e auxílio nos processos de
+análise das imagens de perfis de poços.</p>
+<p>Image Log Instance Segmenter é um módulo do GeoSlicer que realiza a segmentação por instância de artefatos de interesse em imagens de log.
+Segmentação por instância significa que os objetos são separados individualmente uns dos outros, e não somente por classes. No GeoSlicer
+estão disponíveis por ora a detecção de dois tipos de artefatos:</p>
+<ul>
+<li>Marcas de amostragem</li>
+<li>Batentes</li>
+</ul>
+<p>Após executado, um modelo gera um nodo de segmentação (labelmap) e uma tabela com propriedades de cada instância detectada, que podem ser
+analisadas utilizando-se o módulo Instance Editor, presente no ambiente Image Log.</p>
+<h2 id="marcas-de-amostragem">Marcas de amostragem</h2>
+<p>Para marcas de amostragem, é utilizada a <a href="https://github.com/matterport/Mask_RCNN">Mask-RCNN</a>, uma rede convolucional de alto desempenho designada para detecção por instância em
+imagens tradicionais RGB. Apesar das imagens de perfil não possuírem os três canais RGB, a entrada da rede foi adaptada para analisar os
+logs de Tempo de Trânsito e de Amplitude como dois canais de cores para o treinamento da rede.</p>
+<p>Estão disponíveis dois modelos treinados para a detecção de marcas de amostragem: um modelo primário e um modelo secundário, de testes. O
+objetivo de existir um modelo secundário é permitir que os usuários confrontem os dois modelos de modo a determinar qual é o melhor,
+possibilitando o descarte do pior modelo e a inclusão de futuros modelos concorrentes em novas versões do GeoSlicer.</p>
+<p>Este modelo gera uma tabela com as seguintes propriedades para cada marca de amostragem detectada:</p>
+<ul>
+<li>
+<p>Depth (m): profundidade real em metros.</p>
+</li>
+<li>
+<p>N depth (m): profundidade nominal em metros.</p>
+</li>
+<li>
+<p>Desc: número de descida.</p>
+</li>
+<li>
+<p>Cond: condição da marca.</p>
+</li>
+<li>
+<p>Diam (cm): diâmetro equivalente, o diâmetro de um círculo com a mesma área de marca.
+<span class="arithmatex">\(<span class="arithmatex">\(D = 2 \sqrt{\frac{area}{\pi}}\)</span>\)</span></p>
+</li>
+<li>
+<p>Circularity: circularidade, uma medida de quão próxima de um círculo a marca é, quanto mais próximo de 1, dado pela equação:
+<span class="arithmatex">\(<span class="arithmatex">\(C=\frac{4 \pi \times area}{perimetro^2}\)</span>\)</span></p>
+</li>
+<li>
+<p>Solidity: solidez, uma medida da convexidade da marca, quanto mais próximo de 1, dada pela equação:
+<span class="arithmatex">\(<span class="arithmatex">\(S=\frac{area}{area\text{_}convexa}\)</span>\)</span></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../assets/images/imagelog/area_vs_areaconvexa.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 1: Área versus área convexa (em azul).</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Azimuth: posição horizontal em graus ao longo da imagem, 0 a 360 graus.</p>
+</li>
+<li>
+<p>Label: identificador da instância na segmentação resultante.</p>
+</li>
+</ul>
+<h2 id="batentes">Batentes</h2>
+<p>Para os batentes, são utilizadas técnicas de visão computacional tradicional, que identificam marcas diagonais nas imagens de tempo de
+trânsito, características dos batentes.</p>
+<ul>
+<li>Depth (m): profundidade real em metros.</li>
+<li>Steepness: medida em graus da inclinação do batente em relação ao eixo horizontal.</li>
+<li>Area (cm²): área em centímetros quadrados.</li>
+<li>Linearity: o quanto o batente se parece com uma linha reta.</li>
+<li>Label: o identificador da instância na segmentação resultante.</li>
+</ul>
 
 
 
@@ -19874,7 +19996,7 @@
     
     
     
-<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 

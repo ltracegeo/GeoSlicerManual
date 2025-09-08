@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="pt" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#formatacao-dos-arquivos-a-serem-carregados" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +89,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
@@ -150,16 +155,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Pesquisar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -170,7 +175,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando busca
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -203,7 +208,7 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -19803,10 +19808,51 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formatacao-dos-arquivos-a-serem-carregados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatação dos arquivos a serem carregados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatação dos arquivos a serem carregados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#las" class="md-nav__link">
+    <span class="md-ellipsis">
+      LAS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -19823,10 +19869,57 @@
 
   <h1>ImageLogImport</h1>
 
-<!-- BEGIN INCLUDE ./UnderConstruction.md -->
-
-<p><img alt="Under Construction" src="../assets/images/UnderConstruction.svg" /></p>
-<!-- END INCLUDE -->
+<p>Módulo <em>GeoSlicer</em> para carregar dados de perfis em DLIS, LAS e CSV, conforme descrito nos passos abaixo:</p>
+<ol>
+<li>
+<p>Selecione o arquivo de log de poço em <em>Well Log File</em>.</p>
+</li>
+<li>
+<p>Edite <em>Null values list</em> e adicione ou remova valores da lista de possíveis valores nulos.</p>
+</li>
+<li>
+<p>Escolha os perfis desejados para serem carregados no GeoSlicer, de acordo com cada opção descrita abaixo:</p>
+<ul>
+<li>Dados 1-D devem ser carregados sem selecionar as opções “As Table“ e “LabelMap” e são exibidos como gráficos de
+  linha na Image Log View.
+  <img alt="ImageLog Environment aberto. À direita, uma view (1) com dados que foram carregados da curva 'GR/Gamma API', selecionada à esquerda (2). Os dados foram importados de um arquivo DLIS (3)." src="../assets/images/imagelog/curve-1D.png" /></li>
+<li>
+<p>Dados 2-D podem ser carregadas como volumes, tabelas ou LabelMap no GeoSlicer, sendo cada uma das opções
+  detalhadas a seguir:</p>
+<ul>
+<li>Volume: Esta é a opção padrão do GeoSlicer, sem marcar 'As Table' e 'LabelMap', sendo o dado carregado como
+  volume e exibido como imagem na Image Log View.
+  <img alt="À direita, uma view (1) com uma *borehole image* carregada da curva 'AMPEQ', selecionada à esquerda (2). Os dados foram importados de um arquivo DLIS (3)." src="../assets/images/imagelog/curve-2D-BHI.png" /></li>
+<li>Tabelas: Nesta opção, marcando a checkbox 'As Table', o dado é carregado como tabela e é exibido como vários
+  histogramas, como no caso do dado t2_dist da Figura 3 abaixo:
+  <img alt="À direita, uma view com dados de NMR (1), que foram carregados da curva T2_DIST (2), selecionada à esquerda, marcada com a opção 'As Table' (3). Os dados foram importados de um arquivo DLIS (4)." src="../assets/images/imagelog/NMR_1_annotated.png" /></li>
+<li>LabelMap: Nesta opção, marcando a checkbox 'LabelMap', assumindo um dado segmentado, ele é carregado como um
+  LabelMap e exibido como imagem segmentada.
+  <img alt="Dados segmentados (LabelMap) à direita (1), que foram carregados marcando a coluna com 'LabelMap' (2). Os dados foram carregados de um arquivo CSV (3)." src="../assets/images/imagelog/curve-2D-labelmap.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="formatacao-dos-arquivos-a-serem-carregados">Formatação dos arquivos a serem carregados</h2>
+<h3 id="las">LAS</h3>
+<p>Curvas em sequência com mnemônicos no formato <code>mnemonic[number]</code> serão agrupadas em dados 2-D. Por exemplo, os
+mnemônicos de uma imagem com 200 colunas:</p>
+<div class="highlight"><pre><span></span><code>AMP[0]
+…
+AMP[199]
+</code></pre></div>
+<p>Um mesmo arquivo pode conter dados 1-D e 2-D. No exemplo a seguir, AMP é uma imagem, enquanto LMF1 e LMF2 são dados 1-D:</p>
+<div class="highlight"><pre><span></span><code>AMP[0]
+…
+AMP[199]
+LMF1
+LMF2
+</code></pre></div>
+<h3 id="csv">CSV</h3>
+<p>Para o GeoSlicer interpretar dados CVS como 2-D, basta os mnemônicos serem de mesmo nome seguidos de um índice entre
+colchetes, como no 1º exemplo da seção LAS acima (AMP[0], …, AMP[199]).
+Diferentemente do caso LAS, o arquivo deve ter somente os dados 2-D.</p>
 
 
 
@@ -19874,7 +19967,7 @@
     
     
     
-<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 

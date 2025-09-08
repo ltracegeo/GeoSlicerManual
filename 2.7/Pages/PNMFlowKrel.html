@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="pt" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -71,7 +71,7 @@
       
         
         <a href="#simulacao-de-permeabilidade-relativa-krel" class="md-skip">
-          Skip to content
+          Pular para conteúdo
         </a>
       
     </div>
@@ -89,7 +89,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
@@ -155,16 +155,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Pesquisar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -175,7 +175,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando busca
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -208,7 +208,7 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -19808,12 +19808,47 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulacao-unica-de-krel-animacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulação única de Krel (animação)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste-de-sensibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste de Sensibilidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimativa-de-producao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimativa de Produção
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -19829,131 +19864,52 @@
 
 
 <h1 id="simulacao-de-permeabilidade-relativa-krel">Simulação de Permeabilidade Relativa (Krel)</h1>
-<div class="content-wrapper">
-    <div class="text-content">
-        <h2>Simulação única de Krel (animação)</h2>
-        <p>O fluxo abaixo permite simular e obter uma animação dos processos de <b>Drenagem</b> e <b>Embibição</b>:</p>
-        <ol>
-            <li>
-            <p><b>Carregue</b> o volume no qual deseja executar a simulação;</p>
-            </li>
-            <li>
-            <p>Realize a <b>Segmentação Manual</b> utilizando um dos segmentos para designar a região porosa da rocha;</p>
-            </li>
-            <li>
-            <p>Separe os segmentos utilizando a aba <b>Inspector</b>, delimitando assim a região de cada um dos poros;</p>
-            </li>
-            <li>
-            <p>Utilize a aba <b>Extraction</b><a href="../PNExtraction.html"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a> para obter a rede de poros e ligações a partir do volume LabelMap gerado;</p>
-            </li>
-            <li>
-            <p>Na aba <b>Simulation</b><a href="../PNSimulation.html"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>, escolha a tabela de poros, no seletor Simulation selecione <b>"Two-phase"</b><a href="../PNSimulation.html#two-phase"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>;</p>
-            </li>
-            <li>
-            <p>Marque a opção <b>"Create animation node"</b> na caixa "Simulation options"<a href="../PNSimulation.html#simulation-options"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a> e clique no botão <b>"Apply"</b>;</p>
-            </li>
-            <li>
-            <p>Ao finalizar a simulação, vá até a aba <b>"Cycles Visualization"</b> e selecione o nó de animação para visualizar o ciclo e a curva gerada;</p>
-            </li>
-        </ol>
-    </div>
-    <div class="video-wrapper">
-        <video class="floating-video" controls>
-            <source src="../assets/videos/pnm_krel_animation.webm" type="video/webm">
-            Sorry, your browser does not support the video tag.
-        </video>
-        <p class="video-caption">Video: Fluxo para simulação de permeabilidade relativa com animação.</p>
-    </div>
-</div>
+<h2 id="simulacao-unica-de-krel-animacao">Simulação única de Krel (animação)</h2>
+<figure class="video-container">  <video controls width="100%">  <source src="/assets/videos/pnm_krel_animation.webm" type="video/webm">  Your browser does not support the video tag.</video>  <figcaption>Video: Fluxo para simulação de permeabilidade relativa com animação.</figcaption></figure>
 
-<div class="content-wrapper">
-    <div class="text-content">
-        <h2 id=teste-de-sensibilidade>Teste de Sensibilidade</h2>
-        <p>O fluxo abaixo permite que o usuário simule e obtenha uma nuvem de curvas de Krel na qual ele pode fazer diferentes análises para determinar as propriedades que são mais sensíveis:</p>
-        <ol>
-            <li>
-            <p><b>Carregue</b> o volume no qual deseja executar a simulação;</p>
-            </li>
-            <li>
-            <p>Realize a <b>Segmentação Manual</b> utilizando um dos segmentos para designar a região porosa da rocha;</p>
-            </li>
-            <li>
-            <p>Separe os segmentos utilizando a aba <b>Inspector</b>, delimitando assim a região de cada um dos poros;</p>
-            </li>
-            <li>
-            <p>Utilize a aba <b>Extraction</b><a href="../PNExtraction.html"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a> para obter a rede de poros e ligações a partir do volume LabelMap gerado;</p>
-            </li>
-            <li>
-            <p>Na aba <b>Simulation</b><a href="../PNSimulation.html"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>, escolha a tabela de poros, no seletor Simulation selecione <b>"Two-phase"</b><a href="../PNSimulation.html#two-phase"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>;</p>
-            </li>
-            <li>
-            <p>Selecione múltiplos valores para alguns parâmetros clicando no botão <b>"Multi"</b> (como fizemos para o centro das distribuições dos ângulos de contato no vídeo) - Você pode encontrar mais informações sobre os parâmetros na seção <b>"Two-phase"</b><a href="../PNSimulation.html#two-phase"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>;</p>
-            </li>
-            <li>
-            <p>(Opcional) Salve os parâmetros selecionados usando a seção <b>"Save parameters"</b><a href="../PNSimulation.html#salvarcarregar-tabela-de-selecao-de-parametros"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>;</p>
-            </li>
-            <li>
-            <p>Clique no botão <b>"Apply"</b> para rodar as várias simulações;</p>
-            </li>
-            <li>
-            <p>Ao finalizar a execução, vá até a aba <b>"Krel EDA"</b> e selecione a tabela de parâmetros gerada para fazer diferentes análises usando os recursos de visualização da interface (nuvem de curvas, correlações de parâmetros e resultados, etc);</p>
-            </li>
-        </ol>
-    </div>
-    <div class="video-wrapper">
-        <video class="floating-video" controls>
-            <source src="../assets/videos/pnm_sensibility.webm" type="video/webm">
-            Sorry, your browser does not support the video tag.
-        </video>
-        <p class="video-caption">Video: Fluxo para Teste de Sensibilidade (variando parâmetros para múltiplas simulações Krel).</p>
-    </div>
-</div>
+<p>O fluxo abaixo permite simular e obter uma animação dos processos de <strong>Drenagem</strong> e <strong>Embibição</strong>:</p>
+<ol>
+<li><strong>Carregue</strong> o volume no qual deseja executar a simulação;</li>
+<li>Realize a <strong>Segmentação Manual</strong> utilizando um dos segmentos para designar a região porosa da rocha;</li>
+<li>Separe os segmentos utilizando a aba <strong>Inspector</strong>, delimitando assim a região de cada um dos poros;</li>
+<li>Utilize a aba <strong><a href="PoreNetworkExtractor.html">Extraction</a></strong> para obter a rede de poros e ligações a partir do volume LabelMap gerado;</li>
+<li>Na aba <strong><a href="PoreNetworkSimulation.html#two-phase">Simulation</a></strong>;</li>
+<li>Marque a opção <strong>"Create animation node"</strong> na caixa <strong><a href="PoreNetworkSimulation.html#simulation-options">"Simulation options"</a></strong> e clique no botão <strong>"Apply"</strong>;</li>
+<li>Ao finalizar a simulação, vá até a aba <strong>"Cycles Visualization"</strong> e selecione o nó de animação para visualizar o ciclo e a curva gerada;</li>
+</ol>
+<h2 id="teste-de-sensibilidade">Teste de Sensibilidade</h2>
+<figure class="video-container">  <video controls width="100%">  <source src="/assets/videos/pnm_sensibility.webm" type="video/webm">  Your browser does not support the video tag.</video>  <figcaption>Video: Fluxo para Teste de Sensibilidade (variando parâmetros para múltiplas simulações Krel).</figcaption></figure>
 
-<div class="content-wrapper">
-    <div class="text-content">
-        <h2>Estimativa de Produção</h2>
-        <p>O fluxo abaixo permite que o usuário simule e obtenha uma nuvem de curvas de Krel, em uma amostra de escala única:</p>
-        <ol>
-            <li>
-            <p><b>Carregue</b> o volume no qual deseja executar a simulação;</p>
-            </li>
-            <li>
-            <p>Realize a <b>Segmentação Manual</b> utilizando um dos segmentos para designar a região porosa da rocha;</p>
-            </li>
-            <li>
-            <p>Separe os segmentos utilizando a aba <b>Inspector</b>, delimitando assim a região de cada um dos poros;</p>
-            </li>
-            <li>
-            <p>Utilize a aba <b>Extraction</b><a href="../PNExtraction.html"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a> para obter a rede de poros e ligações a partir do volume LabelMap gerado;</p>
-            </li>
-            <li>
-            <p>Selecione múltiplos valores para alguns parâmetros clicando no botão <b>"Multi"</b> (como fizemos para o centro das distribuições dos ângulos de contato no vídeo) - Você pode encontrar mais informações sobre os parâmetros na seção <b>"Two-phase"</b><a href="../PNSimulation.html#two-phase"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>;</p>
-            </li>
-            <li>
-            <p>(Opcional) Salve os parâmetros selecionados usando a seção <b>"Save parameters"</b><a href="../PNSimulation.html#salvarcarregar-tabela-de-selecao-de-parametros"><img alt="Know More" src="../assets/icons/saiba_mais.svg" class="know-more-icon"></a>;</p>
-            </li>
-            <li>
-            <p>Clique no botão <b>"Apply"</b> para rodar as várias simulações;</p>
-            </li>
-            <li>
-            <p>
-            Ao finalizar a execução, vá até a aba <b>"Production Prediction"</b> e selecione a tabela de parâmetros gerada na simulação; Duas opções são disponíveis nessa interface: 
-            <ul>
-            <li>A primeira delas "Single Krel" é uma análise de cada simulação individual;</li>
-            <li>A segunda "Sensitivity test" é uma estimativa da produção levando em conta todas as simulações feitas;</li>
-            </ul>
-            </p>
-            </li>
-        </ol>
-    </div>
-    <div class="video-wrapper">
-        <video class="floating-video" controls>
-            <source src="../assets/videos/pnm_production.webm" type="video/webm">
-            Sorry, your browser does not support the video tag.
-        </video>
-        <p class="video-caption">Video: Fluxo da estimativa de produção.</p>
-    </div>
-</div>
+<p>O fluxo abaixo permite que o usuário simule e obtenha uma nuvem de curvas de Krel na qual ele pode fazer diferentes análises para determinar as propriedades que são mais sensíveis:</p>
+<ol>
+<li><strong>Carregue</strong> o volume no qual deseja executar a simulação;</li>
+<li>Realize a <strong>Segmentação Manual</strong> utilizando um dos segmentos para designar a região porosa da rocha;</li>
+<li>Separe os segmentos utilizando a aba <strong>Inspector</strong>, delimitando assim a região de cada um dos poros;</li>
+<li>Utilize a aba <strong>Extraction</strong> para obter a rede de poros e ligações a partir do volume LabelMap gerado;</li>
+<li>Na aba <strong>Simulation</strong>, escolha a tabela de poros, no seletor Simulation selecione <strong>"Two-phase"</strong>;</li>
+<li>Selecione múltiplos valores para alguns parâmetros clicando no botão <strong>"Multi"</strong> (como fizemos para o centro das distribuições dos ângulos de contato no vídeo) - Você pode encontrar mais informações sobre os parâmetros na seção <strong>"Two-phase"</strong>;</li>
+<li>(Opcional) Salve os parâmetros selecionados usando a seção <strong>"Save parameters"</strong>;</li>
+<li>Clique no botão <strong>"Apply"</strong> para rodar as várias simulações;</li>
+<li>Ao finalizar a execução, vá até a aba <strong>"Krel EDA"</strong> e selecione a tabela de parâmetros gerada para fazer diferentes análises usando os recursos de visualização da interface (nuvem de curvas, correlações de parâmetros e resultados, etc);</li>
+</ol>
+<h2 id="estimativa-de-producao">Estimativa de Produção</h2>
+<figure class="video-container">  <video controls width="100%">  <source src="/assets/videos/pnm_production.webm" type="video/webm">  Your browser does not support the video tag.</video>  <figcaption>Video: Fluxo da estimativa de produção.</figcaption></figure>
+
+<p>O fluxo abaixo permite que o usuário simule e obtenha uma nuvem de curvas de Krel, em uma amostra de escala única:</p>
+<ol>
+<li><strong>Carregue</strong> o volume no qual deseja executar a simulação;</li>
+<li>Realize a <strong>Segmentação Manual</strong> utilizando um dos segmentos para designar a região porosa da rocha;</li>
+<li>Separe os segmentos utilizando a aba <strong>Inspector</strong>, delimitando assim a região de cada um dos poros;</li>
+<li>Utilize a aba <strong>Extraction</strong> para obter a rede de poros e ligações a partir do volume LabelMap gerado;</li>
+<li>Selecione múltiplos valores para alguns parâmetros clicando no botão <strong>"Multi"</strong> (como fizemos para o centro das distribuições dos ângulos de contato no vídeo) - Você pode encontrar mais informações sobre os parâmetros na seção <strong>"Two-phase"</strong>;</li>
+<li>(Opcional) Salve os parâmetros selecionados usando a seção <strong>"Save parameters"</strong>;</li>
+<li>Clique no botão <strong>"Apply"</strong> para rodar as várias simulações;</li>
+<li>Ao finalizar a execução, vá até a aba <strong>"Production Prediction"</strong> e selecione a tabela de parâmetros gerada na simulação; Duas opções são disponíveis nessa interface:<ul>
+<li>A primeira delas "Single Krel" é uma análise de cada simulação individual;</li>
+<li>A segunda "Sensitivity test" é uma estimativa da produção levando em conta todas as simulações feitas;</li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -20001,7 +19957,7 @@
     
     
     
-<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 

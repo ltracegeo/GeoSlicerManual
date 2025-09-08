@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="pt" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,7 +16,7 @@
     
     
       
-        <title>Eccentricity - GeoSlicer Manual</title>
+        <title>Excentricidade (Eccentricity) - GeoSlicer Manual</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#excentricidade-eccentricity" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +89,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Eccentricity
+              Excentricidade (Eccentricity)
             
           </span>
         </div>
@@ -150,16 +155,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Pesquisar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -170,7 +175,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando busca
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -203,7 +208,7 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -19803,10 +19808,116 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teoria
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Usar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como Usar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagens-de-entrada-input-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagens de Entrada (Input Images)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros (Parameters)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracoes-avancadas-advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurações Avançadas (Advanced Settings)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saida-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saída (Output)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados (Results)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execução
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -19821,12 +19932,76 @@
                   
 
 
-  <h1>Eccentricity</h1>
-
-<!-- BEGIN INCLUDE ./UnderConstruction.md -->
-
-<p><img alt="Under Construction" src="../assets/images/UnderConstruction.svg" /></p>
-<!-- END INCLUDE -->
+<h1 id="excentricidade-eccentricity">Excentricidade (Eccentricity)</h1>
+<h2 id="motivacao">Motivação</h2>
+<p>Perfis de imagem ultrassônica podem sofrer de excentricidade, que ocorre quando a ferramenta não está centralizada no poço. Isso pode causar artefatos na imagem de amplitude, onde um lado do poço parece ter uma amplitude sistematicamente menor do que o outro. O módulo de Excentricidade corrige esses artefatos usando o tempo de trânsito para compensar as variações de amplitude.</p>
+<h2 id="teoria">Teoria</h2>
+<p>O método de correção é baseado na patente US2017/0082767, que modela a atenuação da amplitude com a distância (relacionada ao tempo de trânsito) usando um decaimento exponencial. O parâmetro chave neste modelo é o "Tau".</p>
+<p>A correção é aplicada ponto a ponto na imagem. O valor ideal de "Tau" é aquele que produz uma imagem corrigida com certas características estatísticas desejadas. O módulo pode otimizar "Tau" minimizando um ou mais dos seguintes momentos estatísticos da distribuição de amplitudes da imagem corrigida:</p>
+<ul>
+<li><strong>Desvio Padrão (Standard Deviation):</strong> Busca a menor variação de amplitude na imagem.</li>
+<li><strong>Assimetria (Skewness):</strong> Busca uma distribuição de amplitude o mais simétrica possível.</li>
+<li><strong>Curtose (Kurtosis):</strong> Busca uma distribuição de amplitude com "caudas" semelhantes a uma distribuição normal.</li>
+</ul>
+<h2 id="como-usar">Como Usar</h2>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../assets/images/Eccentricity.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 1: Interface do módulo Eccentricity, resultado, e imagem original.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="imagens-de-entrada-input-images">Imagens de Entrada (Input Images)</h3>
+<ol>
+<li><strong>Amplitude:</strong> Selecione a imagem de amplitude a ser corrigida.</li>
+<li><strong>Tempo de Trânsito (Transit Time):</strong> Selecione a imagem de tempo de trânsito correspondente.</li>
+</ol>
+<h3 id="parametros-parameters">Parâmetros (Parameters)</h3>
+<ol>
+<li><strong>Tau:</strong> Insira um valor de "Tau" para ser usado na correção. Este valor só é utilizado se nenhuma das opções de otimização abaixo for selecionada.</li>
+<li>
+<p><strong>Otimização de Tau (Tau Optimization):</strong></p>
+<ul>
+<li><strong>Minimizar Desvio Padrão (Minimize STD):</strong> Marque esta opção para que o módulo encontre o "Tau" que minimiza o desvio padrão da imagem corrigida.</li>
+<li><strong>Minimizar Assimetria (Minimize Skew):</strong> Marque para encontrar o "Tau" que minimiza a assimetria (absoluta) da imagem corrigida.</li>
+<li><strong>Minimizar Curtose (Minimize Kurtosis):</strong> Marque para encontrar o "Tau" que minimiza a curtose da imagem corrigida.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>É possível selecionar múltiplas opções de otimização. Neste caso, uma imagem de saída será gerada para cada opção selecionada. Se nenhuma opção for marcada, a correção será feita usando o valor de "Tau" inserido manualmente no campo <strong>Tau</strong>.</p>
+</div>
+</li>
+</ol>
+<h3 id="configuracoes-avancadas-advanced-settings">Configurações Avançadas (Advanced Settings)</h3>
+<p>Esta seção permite refinar o processo de otimização, ignorando valores de pixel que possam ser ruído ou anomalias.</p>
+<ul>
+<li><strong>Amplitude Mínima / Máxima (Minimum / Maximum Amplitude):</strong> Define o intervalo de valores de amplitude a serem considerados no cálculo da otimização. Pixels com valores fora deste intervalo serão ignorados.</li>
+<li><strong>Tempo de Trânsito Mínimo / Máximo (Minimum / Maximum Time):</strong> Define o intervalo de valores de tempo de trânsito a serem considerados no cálculo da otimização. Pixels com valores fora deste intervalo serão ignorados.</li>
+</ul>
+<h3 id="saida-output">Saída (Output)</h3>
+<ul>
+<li><strong>Prefixo de Saída (Output Prefix):</strong> Digite o prefixo a ser usado no nome das imagens de saída. O nome final incluirá o tipo de otimização (ex: <code>_std_Optimized</code>).</li>
+</ul>
+<h3 id="resultados-results">Resultados (Results)</h3>
+<p>Esta seção exibe os resultados para cada otimização realizada.</p>
+<ul>
+<li><strong>Tau otimizado (Optimized tau):</strong> O valor de "Tau" ótimo encontrado pelo processo de otimização.</li>
+<li><strong>Momento estatístico otimizado (Optimized statistical moment):</strong> O valor do momento estatístico (desvio padrão, assimetria ou curtose) correspondente ao "Tau" otimizado.</li>
+</ul>
+<h3 id="execucao">Execução</h3>
+<ul>
+<li><strong>Apply:</strong> Inicia o processo de correção.</li>
+<li><strong>Cancel:</strong> Cancela a execução do processo.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<ul>
+<li>MENEZES, C.; COMPAN, A. L. M.; SURMAS, R. <strong>Method to correct eccentricity in ultrasonic image profiles</strong>. US Patent No. US2017/0082767. 23 mar. 2017.</li>
+</ul>
 
 
 
@@ -19874,7 +20049,7 @@
     
     
     
-<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 

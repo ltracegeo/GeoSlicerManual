@@ -82,9 +82,21 @@ h6#entre-em-contato {
     cursor: pointer;
 }
 
+/* General search input styling */
 .md-search__input {
-    background-color: #dadada;
     border-radius: 8px;
+}
+
+/* Light mode search bar styles */
+[data-md-color-scheme="default"] .md-search__input {
+    background-color: #dadada;
+    color: rgba(0, 0, 0, .87);
+}
+
+/* Dark mode search bar styles for both idle and focused states */
+[data-md-color-scheme="slate"] .md-search__input {
+    background-color: #404040;
+    color: #ffffff;
 }
 
 /* fonts */
@@ -95,11 +107,6 @@ h6#entre-em-contato {
 /* Remove the unwanted icon */
 .md-nav__icon {
     display: none;
-}
-
-/* Remove the unwanted label for nav drawer */
-.md-nav__title {
-    background-color: white !important;
 }
 
 label[for="__drawer"] {
@@ -166,13 +173,6 @@ label[for="__drawer"] {
     touch-action: auto;
     max-width: 100%;
 }
-
-.md-sidebar.md-sidebar--secondary[data-md-component="sidebar"][data-md-type="toc"] {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
-
 
 .content-wrapper {
     display: flex;
