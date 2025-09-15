@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="SegmentEditor.html">
+      
+      
+        <link rel="next" href="SegmentInspector.html">
       
       
       <link rel="icon" href="../../assets/logo.ico">
@@ -16,7 +20,7 @@
     
     
       
-        <title>MicroCTSegmenter - GeoSlicer Manual</title>
+        <title>Segmentação por IA - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ai-segmenter" class="md-skip">
+        <a href="#treinamento-de-modelo" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -86,7 +90,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -107,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MicroCTSegmenter
+              Segmentação por IA
             
           </span>
         </div>
@@ -192,158 +198,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
-        
-  
-    
-  
-  Visão Geral
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../GettingStarted/InstallationGuide.html" class="md-tabs__link">
-          
-  
-  Introdução
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../Introduction.html" class="md-tabs__link">
-          
-  
-  Volumes
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../ThinSection/Introduction.html" class="md-tabs__link">
-          
-  
-  Thin Section
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../ImageLog/Introduction.html" class="md-tabs__link">
-          
-  
-  Well Logs
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Core/Introduction.html" class="md-tabs__link">
-          
-  
-  Core
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Multiscale/Introduction.html" class="md-tabs__link">
-          
-  
-  Multiscale
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Desenvolvimento/CompilandoGeoSlicer.html" class="md-tabs__link">
-          
-  
-  Desenvolvimento
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -357,10 +211,8 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -400,9 +252,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -579,20 +428,19 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -606,7 +454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Volumes
@@ -713,9 +561,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -847,20 +692,224 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Segmentation.html" class="md-nav__link">
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
         
-  
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Segmentação
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Segmentação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SegmentEditor.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Manual
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
+  
+  <span class="md-ellipsis">
+    Segmentação por IA
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="MicroCTSegmenter.html" class="md-nav__link md-nav__link--active">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
+  
+  <span class="md-ellipsis">
+    Segmentação por IA
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#treinamento-de-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Treinamento de Modelo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Treinamento de Modelo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método Random-Forest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-inferencia-bayesiana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método Inferência Bayesiana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos-pre-treinados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos Pré-treinados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos Pré-treinados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#treinamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Treinamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SegmentInspector.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
+  
+  <span class="md-ellipsis">
+    Segment Inspector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -897,9 +946,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1035,9 +1081,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1235,9 +1278,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1381,9 +1421,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1472,9 +1509,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -11267,9 +11301,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -13338,9 +13369,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -13504,9 +13532,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -13849,9 +13874,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -13909,9 +13931,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -14071,9 +14090,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -14185,9 +14201,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -14384,9 +14397,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -16808,9 +16818,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -16969,9 +16976,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -17029,9 +17033,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -17196,9 +17197,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -17541,9 +17539,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -17693,9 +17688,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -17924,9 +17916,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -18015,9 +18004,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18130,9 +18116,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18275,9 +18258,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18428,9 +18408,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18643,9 +18620,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -18776,9 +18750,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18915,9 +18886,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -19029,9 +18997,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19190,9 +19155,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19375,9 +19337,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -19466,9 +19425,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19581,9 +19537,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19719,9 +19672,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19911,9 +19861,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -20018,13 +19965,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ai-segmenter" class="md-nav__link">
+  <a href="#treinamento-de-modelo" class="md-nav__link">
     <span class="md-ellipsis">
-      AI Segmenter
+      Treinamento de Modelo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="AI Segmenter">
+    <nav class="md-nav" aria-label="Treinamento de Modelo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -20107,10 +20054,10 @@
                   
 
 
-  <h1>MicroCTSegmenter</h1>
+  <h1>Segmentação por IA</h1>
 
 <!-- BEGIN INCLUDE Pages/MicroCTSegmenter.md -->
-<h2 id="ai-segmenter">AI Segmenter</h2>
+<h2 id="treinamento-de-modelo">Treinamento de Modelo</h2>
 <p>O módulo <strong>MicroCT Segmenter</strong> oferece a opção de <em>Model Training</em>, que realiza a segmentação de uma amostra inteira a partir de uma anotação inicial simples. Com base nessa anotação, diferentes métodos treinam um modelo e inferem o resultado em toda a imagem ou em uma região de interesse (SOI). O modelo treinado pode ser salvo e reutilizado em outras imagens.</p>
 <h3 id="metodo-random-forest">Método Random-Forest</h3>
 <p>O Random-Forest é um método que constrói múltiplas árvores de decisão durante o treinamento para criar um modelo robusto. A classificação final é determinada pela maioria dos votos das árvores. Para este método, é possível selecionar diferentes <em>features</em> (características) extraídas da imagem para o treinamento.</p>
@@ -20328,7 +20275,7 @@
     
     
     
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 

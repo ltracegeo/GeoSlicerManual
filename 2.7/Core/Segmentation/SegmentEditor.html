@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-segmentation" class="md-skip">
+        <a href="#segment-editor" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -90,7 +90,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -196,160 +198,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
-        
-  
-    
-  
-  Visão Geral
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../GettingStarted/InstallationGuide.html" class="md-tabs__link">
-          
-  
-  Introdução
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Volumes/Introduction.html" class="md-tabs__link">
-          
-  
-  Volumes
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../ThinSection/Introduction.html" class="md-tabs__link">
-          
-  
-  Thin Section
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../ImageLog/Introduction.html" class="md-tabs__link">
-          
-  
-  Well Logs
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Introduction.html" class="md-tabs__link">
-          
-  
-  Core
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Multiscale/Introduction.html" class="md-tabs__link">
-          
-  
-  Multiscale
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../Desenvolvimento/CompilandoGeoSlicer.html" class="md-tabs__link">
-          
-  
-  Desenvolvimento
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -363,10 +211,8 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -406,9 +252,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -590,9 +433,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -719,9 +559,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -855,18 +692,107 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Volumes/Segmentation.html" class="md-nav__link">
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
-  
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Segmentação
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Segmentação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Volumes/Segmentation/SegmentEditor.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Manual
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Volumes/Segmentation/MicroCTSegmenter.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
+  
+  <span class="md-ellipsis">
+    Segmentação por IA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Volumes/Segmentation/SegmentInspector.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
+  
+  <span class="md-ellipsis">
+    Segment Inspector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -903,9 +829,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1041,9 +964,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1241,9 +1161,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1387,9 +1304,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1478,9 +1392,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -11273,9 +11184,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -13344,9 +13252,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -13510,9 +13415,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -13855,9 +13757,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -13915,9 +13814,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -14077,9 +13973,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -14191,9 +14084,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -14390,9 +14280,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -16814,9 +16701,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -16975,9 +16859,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -17035,9 +16916,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -17202,9 +17080,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -17547,9 +17422,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -17699,9 +17571,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -17930,9 +17799,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -18021,9 +17887,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18136,9 +17999,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -18284,21 +18144,15 @@
     
     
     
-      
-        
-        
-      
-      
     
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -18442,9 +18296,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
@@ -18484,6 +18335,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -18516,6 +18369,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -18524,16 +18379,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manual-segmentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manual Segmentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manual Segmentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#segmentacao-e-segmento" class="md-nav__link">
     <span class="md-ellipsis">
       Segmentação e Segmento
@@ -18541,8 +18386,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#representacao-de-rotulos-em-mapa-binario" class="md-nav__link">
     <span class="md-ellipsis">
       Representação de rótulos em mapa binário
@@ -18550,29 +18395,222 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#paineis-e-sua-utilizacao" class="md-nav__link">
     <span class="md-ellipsis">
       Painéis e sua utilização
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Painéis e sua utilização">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#principais-opcoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais opções
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tabela-de-segmentos" class="md-nav__link">
     <span class="md-ellipsis">
       Tabela de segmentos
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Tabela de segmentos">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#colunas-da-tabela" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colunas da tabela:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#secao-de-efeitos" class="md-nav__link">
     <span class="md-ellipsis">
       Seção de efeitos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção de efeitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efeitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efeitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pintura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pintura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desenho
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apagar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apagar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rastreamento-de-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rastreamento de Nível
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crescer-a-partir-de-sementes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crescer a partir de sementes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Margem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suavizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suavização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tesoura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tesoura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ilhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ilhas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores lógicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-de-mascara" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume de máscara
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limiar-de-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiar de cores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectividade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remocao-de-borda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remoção de Borda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expandir-segmentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expandir Segmentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primeiro-plano-inteligente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeiro plano inteligente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplos-limiares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Múltiplos limiares
     </span>
   </a>
   
@@ -18754,9 +18792,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -18887,9 +18922,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19026,9 +19058,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -19140,9 +19169,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19301,9 +19327,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19486,9 +19509,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -19577,9 +19597,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19692,9 +19709,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -19830,9 +19844,6 @@
   
     
     
-    
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -20022,9 +20033,6 @@
     
     
     
-      
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -20121,6 +20129,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -20129,16 +20139,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manual-segmentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manual Segmentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manual Segmentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#segmentacao-e-segmento" class="md-nav__link">
     <span class="md-ellipsis">
       Segmentação e Segmento
@@ -20146,8 +20146,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#representacao-de-rotulos-em-mapa-binario" class="md-nav__link">
     <span class="md-ellipsis">
       Representação de rótulos em mapa binário
@@ -20155,29 +20155,222 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#paineis-e-sua-utilizacao" class="md-nav__link">
     <span class="md-ellipsis">
       Painéis e sua utilização
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Painéis e sua utilização">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#principais-opcoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais opções
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tabela-de-segmentos" class="md-nav__link">
     <span class="md-ellipsis">
       Tabela de segmentos
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Tabela de segmentos">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#colunas-da-tabela" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colunas da tabela:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#secao-de-efeitos" class="md-nav__link">
     <span class="md-ellipsis">
       Seção de efeitos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção de efeitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efeitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efeitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pintura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pintura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desenho
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apagar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apagar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rastreamento-de-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rastreamento de Nível
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crescer-a-partir-de-sementes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crescer a partir de sementes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Margem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suavizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suavização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tesoura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tesoura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ilhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ilhas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores lógicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-de-mascara" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume de máscara
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limiar-de-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiar de cores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectividade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remocao-de-borda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remoção de Borda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expandir-segmentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expandir Segmentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primeiro-plano-inteligente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeiro plano inteligente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplos-limiares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Múltiplos limiares
     </span>
   </a>
   
@@ -20203,19 +20396,17 @@
                   
 
 
-  <h1>Manual</h1>
-
 <!-- BEGIN INCLUDE Pages/SegmentEditor.md -->
-<h2 id="manual-segmentation">Manual Segmentation</h2>
+<h1 id="segment-editor">Segment Editor</h1>
 <p>Este módulo é usado para especificar segmentos (estruturas de interesse) em imagens 2D/3D/4D. Algumas das ferramentas imitam uma interface de pintura, como o Photoshop ou o GIMP, mas operam em matrizes 3D de voxels em vez de pixels 2D. O módulo oferece edição de segmentos sobrepostos, exibição tanto em visualizações 2D quanto 3D, opções de visualização detalhadas, edição em visualizações 3D, criação de segmentações por interpolação ou extrapolação em algumas fatias, e edição em fatias em qualquer orientação.</p>
 <p>O Segment Editor não edita volumes de mapas de rótulos, mas as segmentações podem ser facilmente convertidas para/partir de volumes de mapas de rótulos usando a seção Explorer e utilizando o menu do botão secundário do mouse.</p>
-<h3 id="segmentacao-e-segmento">Segmentação e Segmento</h3>
+<h2 id="segmentacao-e-segmento">Segmentação e Segmento</h2>
 <p>O resultado de uma segmentação é armazenado no nó segmentation no GeoSlicer. Um nó de segmentação consiste em vários segmentos.</p>
 <p>Um segmento especifica a região para uma estrutura única. Cada segmento possui um número de propriedades, como nome, cor de exibição preferencial, descrição do conteúdo (capaz de armazenar entradas codificadas padrão DICOM) e propriedades personalizadas. Os segmentos podem se sobrepor no espaço.</p>
-<h3 id="representacao-de-rotulos-em-mapa-binario">Representação de rótulos em mapa binário</h3>
+<h2 id="representacao-de-rotulos-em-mapa-binario">Representação de rótulos em mapa binário</h2>
 <p>A representação em mapa binário de rótulos é provavelmente a representação mais comumente usada porque é a mais fácil de editar. A maioria dos softwares que utilizam essa representação armazena todos os segmentos em uma única matriz 3D, portanto, cada voxel pode pertencer a um único segmento: os segmentos não podem se sobrepor. No GeoSlicer, a sobreposição entre segmentos é permitida. Para armazenar segmentos sobrepostos em mapas binários, os segmentos são organizados em camadas. Cada camada é armazenada internamente como um volume 3D separado, e um volume pode ser compartilhado entre vários segmentos não sobrepostos para economizar memória.</p>
 <p>Em uma segmentação com a representação de origem definida como mapa binário, cada camada pode ter geometria diferente (origem, espaçamento, direções dos eixos, extensões) temporariamente - para permitir mover segmentos entre segmentações sem perda de qualidade desnecessária (cada reamostragem de um mapa binário pode levar a pequenas mudanças). Todas as camadas são forçadas a ter a mesma geometria durante certas operações de edição e quando a segmentação é salva em arquivo.</p>
-<h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
+<h2 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h2>
 <table>
 <thead>
 <tr>
@@ -20228,7 +20419,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="principais-opcoes">Principais opções</h4>
+<h3 id="principais-opcoes">Principais opções</h3>
 <ul>
 <li>
 <p>Segmentação: escolha a segmentação a ser editada.</p>
@@ -20246,9 +20437,9 @@
 <p>Mostrar 3D: exiba sua segmentação no visualizador 3D. Este é um botão de alternância. Quando ativado, a superfície é criada e atualizada automaticamente conforme o usuário segmenta. Quando desligado, a conversão não é contínua e o processo de segmentação é mais rápido. Para alterar os parâmetros de criação de superfície: clique na seta ao lado do botão siga para a opção "Smoothing factor" e na barra de valor para editar um valor de parâmetro de conversão. Definir o fator de suavização como 0 desativa a suavização, tornando as atualizações muito mais rápidas. Defina o fator de suavização como 0,1 para suavização fraca e 0,5 ou maior para suavização mais forte.</p>
 </li>
 </ul>
-<h3 id="tabela-de-segmentos">Tabela de segmentos</h3>
+<h2 id="tabela-de-segmentos">Tabela de segmentos</h2>
 <p>Esta tabela exibe a lista de todos os segmentos.</p>
-<h4 id="colunas-da-tabela">Colunas da tabela:</h4>
+<h3 id="colunas-da-tabela">Colunas da tabela:</h3>
 <ul>
 <li>
 <p>Visibilidade (ícone de olho): Alterna a visibilidade do segmento. Para personalizar a visualização: abra os controles de visualização de fatia (clique nos ícones de botão e seta dupla na parte superior de um visualizador de fatia) ou vá para o módulo Segmentações.</p>
@@ -20264,7 +20455,7 @@ Concluído: o usuário pode selecionar manualmente este estado para indicar que 
 Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer finalidade personalizada, por exemplo, para chamar a atenção de um revisor especialista para o segmento</p>
 </li>
 </ul>
-<h3 id="secao-de-efeitos">Seção de efeitos</h3>
+<h2 id="secao-de-efeitos">Seção de efeitos</h2>
 <table>
 <thead>
 <tr>
@@ -20288,10 +20479,10 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>Desfazer/Refazer: O módulo salva o estado da segmentação antes de cada efeito ser aplicado. Isso é útil para experimentação e correção de erros. Por padrão, os últimos 10 estados são lembrados.</p>
 </li>
 </ul>
-<h4 id="efeitos">Efeitos</h4>
+<h3 id="efeitos">Efeitos</h3>
 <hr />
 <p>Os efeitos operam clicando no botão Aplicar na seção de opções do efeito ou clicando e/ou arrastando nas visualizações de fatias ou 3D.</p>
-<h4 id="pintura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id=#pintura>Pintura</a></h4>
+<h3 id="pintura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id=#pintura>Pintura</a></h3>
 <ul>
 <li>
 <p>Escolha o raio (em milímetros) do pincel a ser aplicado.</p>
@@ -20309,7 +20500,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>O modo Esfera aplica o raio às fatias acima e abaixo da fatia atual.</p>
 </li>
 </ul>
-<h4 id="desenho"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id=#desenho>Desenho</a></h4>
+<h3 id="desenho"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id=#desenho>Desenho</a></h3>
 <ul>
 <li>
 <p>Clique com o botão esquerdo para criar pontos individuais de um contorno.</p>
@@ -20323,10 +20514,10 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </ul>
 <p>Nota</p>
 <p>O efeito Tesoura também pode ser usado para desenhar. O efeito Tesoura funciona tanto em visualizações de fatias quanto em 3D, pode ser configurado para desenhar em mais de uma fatia por vez, pode apagar também, pode ser restrito a desenhar linhas horizontais/verticais (usando o modo retângulo), etc.</p>
-<h4 id="apagar"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_erase.png" /> Apagar</h4>
+<h3 id="apagar"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_erase.png" /> Apagar</h3>
 <p>Semelhante ao efeito Pintura, mas as regiões destacadas são removidas do segmento selecionado em vez de adicionadas.</p>
 <p>Se a Máscara / Área Editável estiver definida para um segmento específico, a região destacada é removida do segmento selecionado e adicionada ao segmento de máscara. Isso é útil quando uma parte de um segmento precisa ser separada em outro segmento.</p>
-<h4 id="rastreamento-de-nivel"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_level_tracing.png" /> Rastreamento de Nível</h4>
+<h3 id="rastreamento-de-nivel"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_level_tracing.png" /> Rastreamento de Nível</h3>
 <ul>
 <li>
 <p>Mover o mouse define um contorno onde os pixels têm o mesmo valor de fundo que o pixel de fundo atual.</p>
@@ -20335,7 +20526,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>Clicar com o botão esquerdo aplica esse contorno ao mapa de rótulos.</p>
 </li>
 </ul>
-<h4 id="crescer-a-partir-de-sementes"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_grow_from_seeds.png" /> Crescer a partir de sementes</h4>
+<h3 id="crescer-a-partir-de-sementes"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_grow_from_seeds.png" /> Crescer a partir de sementes</h3>
 <p>Desenhe o segmento dentro de cada estrutura anatômica. Este método começará a partir dessas "sementes" e as expandirá para alcançar a segmentação completa.</p>
 <ul>
 <li>
@@ -20369,10 +20560,10 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>O método usa uma versão aprimorada do algoritmo grow-cut descrito em <em>Liangjia Zhu, Ivan Kolesov, Yi Gao, Ron Kikinis, Allen Tannenbaum. An Effective Interactive Medical Image Segmentation Method Using Fast GrowCut, International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI), Interactive Medical Image Computing Workshop, 2014</em>.</p>
 </li>
 </ul>
-<h4 id="margem"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_margin.png" /> Margem</h4>
+<h3 id="margem"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_margin.png" /> Margem</h3>
 <p>Aumenta ou diminui o segmento selecionado pela margem especificada.</p>
 <p>Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão processados (na ordem da lista de segmentos).</p>
-<h4 id="suavizacao"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_smoothing.png" /> Suavização</h4>
+<h3 id="suavizacao"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_smoothing.png" /> Suavização</h3>
 <p>Suaviza segmentos preenchendo buracos e/ou removendo extrusões.</p>
 <p>Por padrão, o segmento atual será Suavizado. Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão suavizado (na ordem da lista de segmentos). Esta operação pode ser demorada para segmentações complexas. O método <code>Suavização conjunta</code> sempre suaviza todos os segmentos visíveis.</p>
 <p>Clicando no botão <code>Aplicar</code>, toda a segmentação é suavizada. Para suavizar uma região específica, clique e arraste com o botão esquerdo em qualquer visualização de fatia ou 3D. O mesmo método e força de suavização são usados tanto no modo de segmentação inteira quanto no modo de suavização por região (o tamanho do pincel não afeta a força da Suavização, apenas facilita a designação de uma região maior).</p>
@@ -20394,7 +20585,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>Suavização conjunto: suaviza múltiplos segmentos de uma vez, preservando a interface estanque entre eles. Se os segmentos se sobrepuserem, o segmento mais alto na tabela de segmentos terá prioridade. Aplicado a todos os segmentos visíveis.</p>
 </li>
 </ul>
-<h4 id="tesoura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id=#tesoura>Tesoura</a></h4>
+<h3 id="tesoura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id=#tesoura>Tesoura</a></h3>
 <p>Recorta segmentos para a região especificada ou preenche regiões de um segmento (geralmente usado com mascaramento). As regiões podem ser desenhadas tanto na visualização de fatia quanto nas visualizações 3D.</p>
 <ul>
 <li>
@@ -20405,7 +20596,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </li>
 </ul>
 <p>Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão processados (na ordem da lista de segmentos).</p>
-<h4 id="ilhas"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_islands.png" /> Ilhas</h4>
+<h3 id="ilhas"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_islands.png" /> Ilhas</h3>
 <p>Use esta ferramenta para processar “ilhas”, ou seja, regiões conectadas que são definidas como grupos de voxels não vazios que se tocam, mas são cercados por voxels vazios.</p>
 <ul>
 <li>
@@ -20427,9 +20618,9 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p><code>Adicionar ilha selecionada</code>: após selecionar este modo, clique em uma área vazia na visualização de fatias para adicionar essa região vazia ao segmento (preencher buraco).</p>
 </li>
 </ul>
-<h4 id="operadores-logicos"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_logical_operators.png" /> Operadores lógicos</h4>
+<h3 id="operadores-logicos"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_logical_operators.png" /> Operadores lógicos</h3>
 <p>Aplicar operações básicas de copiar, limpar, preencher e Booleanas ao(s) segmento(s) selecionado(s). Veja mais detalhes sobre os métodos clicando em “Mostrar detalhes” na descrição do efeito no Editor de Segmentos.</p>
-<h4 id="volume-de-mascara"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_mask_volume.png" /> Volume de máscara</h4>
+<h3 id="volume-de-mascara"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_mask_volume.png" /> Volume de máscara</h3>
 <p>Apague dentro/fora de um segmento em um volume ou crie uma máscara binária. O resultado pode ser salvo em um novo volume ou sobrescrever o volume de entrada. Isso é útil para remover detalhes irrelevantes de uma imagem ou criar máscaras para operações de processamento de imagem (como registro ou correção de intensidade).</p>
 <ul>
 <li>
@@ -20456,22 +20647,22 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p><code>Volume de saída</code>: este volume armazenará o resultado da máscara. Embora possa ser o mesmo que o volume de entrada, geralmente é melhor usar um volume de saída diferente, porque assim as opções podem ser ajustadas e a máscara pode ser recalculada várias vezes.</p>
 </li>
 </ul>
-<h4 id="limiar-de-cores"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/color_threshold_effect.png" /> Limiar de cores</h4>
+<h3 id="limiar-de-cores"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/color_threshold_effect.png" /> Limiar de cores</h3>
 <p>Esse efeito de edição de segmentação chamado "Color threshold", permite a segmentação de imagens com base em intervalos de cores definidos pelo usuário. O efeito pode operar em modos de cor HSV ou RGB, permitindo ajustes nos componentes de matiz, saturação e valor. Ainda possui ajuste nos níveis de vermelho, verde e azul. O efeito oferece uma visualização em tempo real da segmentação, utilizando um pulso de pré-visualização para ajudar o usuário a refinar os parâmetros antes de aplicar as alterações permanentemente. Além disso, o efeito inclui funcionalidades avançadas, como a conversão de espaços de cor e a manipulação de intervalos circulares, possibilitando uma segmentação precisa e customizada.</p>
-<h4 id="conectividade"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/conectivity_effect.png" /> Conectividade</h4>
+<h3 id="conectividade"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/conectivity_effect.png" /> Conectividade</h3>
 <p>Esse efeito de "Conectividade" permite a seleção de segmentos no Geoslicer, permitindo aos usuários calcular regiões conectadas dentro de um segmento em uma direção específica. O efeito inclui parâmetros configuráveis como saltos de conectividade, direção e nome de saída, tornando-o uma ferramenta versátil para tarefas detalhadas de segmentação. Ele lida de forma eficiente com a análise de componentes conectados e gera um novo segmento baseado nas configurações definidas pelo usuário.</p>
-<h4 id="remocao-de-borda"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> Remoção de Borda</h4>
+<h3 id="remocao-de-borda"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> Remoção de Borda</h3>
 <p>Remove as bordas dos segmentos visíveis usando um filtro de detecção de bordas. Apenas os segmentos visíveis são modificados no processo.</p>
 <ul>
 <li><strong>Filter</strong>: Apenas magnitude de gradiente até o momento.</li>
 <li><strong>Threshold adjustment</strong>: Ajusta o limiar para encontrar uma borda adequada.</li>
 <li><strong>Keep filter result</strong>: Marque esta opção para manter o resultado do filtro como um novo volume, para inspeção.</li>
 </ul>
-<h4 id="expandir-segmentos"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> Expandir Segmentos</h4>
+<h3 id="expandir-segmentos"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> Expandir Segmentos</h3>
 <p>Aplica o processo de watershed para expandir os segmentos visíveis, preenchendo os espaços vazios da segmentação. Os segmentos visíveis selecionados são usados como sementes, ou mínimos, a partir dos quais são expandidos.</p>
-<h4 id="primeiro-plano-inteligente"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/smart_foreground_effect.png" /> Primeiro plano inteligente</h4>
+<h3 id="primeiro-plano-inteligente"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/smart_foreground_effect.png" /> Primeiro plano inteligente</h3>
 <p>Segmenta automaticamente a área útil de uma imagem ou volume, isto é, a região que corresponde de fato à amostra, rejeitando as regiões de borda. Habilitando-se o recurso de fragmentação (atualmente disponível apenas para lâminas), eventuais fissuras entre fragmentos de rocha também deixam de ser consideradas área util. Este efeito é conveniente para fluxos de trabalho em que as áreas adjacentes à rocha possam influenciar negativamente, como, por exemplo, determinar a taxa de porosidade da amostra.</p>
-<h4 id="multiplos-limiares">Múltiplos limiares</h4>
+<h3 id="multiplos-limiares">Múltiplos limiares</h3>
 <p>O efeito de <em>multiple threshold</em>, apresentado nos ambientes Volumes, Image Log, Core e Multiscale, permite ao usuário segmentar um volume 3D a partir de múltiplos valores de limiares. Dependendo da quantidade de segmentos selecionados, um histograma com limiares aparece colorido na interface. Cada segmento será separado pelo limiar, começando o próximo segmento em um limiar levemente acima na escala de cinza. Dessa forma, pode-se segmentar facilmente a imagem a partir da escala de cinza.</p>
 <p><img alt="" src="../../assets/images/module_segmenteditor_multiple_threshold.png" /></p>
 <ul>
@@ -20554,7 +20745,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
     
     
     
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 
