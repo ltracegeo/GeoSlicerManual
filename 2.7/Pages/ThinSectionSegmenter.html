@@ -16,7 +16,7 @@
     
     
       
-        <title>Segmentação Automática (Thin Section) - GeoSlicer Manual</title>
+        <title>ThinSectionSegmenter - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#segmentacao-automatica-thin-section" class="md-skip">
+        <a href="#segmentacao-automatica-de-laminas-delgadas" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Segmentação Automática (Thin Section)
+              ThinSectionSegmenter
             
           </span>
         </div>
@@ -724,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/Manual/SegmentEditor.html" class="md-nav__link">
+      <a href="../Volumes/Segmentation/SegmentEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
@@ -746,52 +746,17 @@
   
   
   
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
+    <li class="md-nav__item">
+      <a href="../Volumes/Segmentation/MicroCTSegmenter.html" class="md-nav__link">
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
-            
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
   
   <span class="md-ellipsis">
     Segmentação por IA
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7_2">
-            <span class="md-nav__icon md-icon"></span>
-            Segmentação por IA
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/Semiauto/MicroCTSemiAutoSegmentation.html" class="md-nav__link">
-        
-  
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
-  
-  <span class="md-ellipsis">
-    Model Training
-  </span>
-  
-
       </a>
     </li>
   
@@ -805,38 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/Automatic/MicroCTSegmenter.html" class="md-nav__link">
-        
-  
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
-  
-  <span class="md-ellipsis">
-    Pre-trained Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/SegmentInspector/SegmentInspector.html" class="md-nav__link">
+      <a href="../Volumes/Segmentation/SegmentInspector.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
@@ -13447,11 +13381,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/ResultAnalysis.html" class="md-nav__link">
+      <a href="../Volumes/MoreTools/MoreToolsFlows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Outras Ferramentas
+    Flows
   </span>
   
 
@@ -14180,7 +14114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/Manual/SegmentEditor.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/SegmentEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
@@ -14203,7 +14137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/Automatic/ThinSectionSegmenter.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/ThinSectionSegmenter.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
@@ -14226,7 +14160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/SegmentInspector/SegmentInspector.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/SegmentInspector.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
@@ -14249,7 +14183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/InstanceEditor/ThinSectionInstanceEditor.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/ThinSectionInstanceEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-combine"><path d="M10 18H5a3 3 0 0 1-3-3v-1"/><path d="M14 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2"/><path d="M20 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2"/><path d="m7 21 3-3-3-3"/><rect x="14" y="14" width="8" height="8" rx="2"/><rect x="2" y="2" width="8" height="8" rx="2"/></svg>
@@ -14272,7 +14206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/LabelMapEditor/LabelMapEditor.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/LabelMapEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tags"><path d="m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19"/><path d="M9.586 5.586A2 2 0 0 0 8.172 5H3a1 1 0 0 0-1 1v5.172a2 2 0 0 0 .586 1.414L8.29 18.29a2.426 2.426 0 0 0 3.42 0l3.58-3.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="6.5" cy="9.5" r=".5" fill="currentColor"/></svg>
@@ -14295,7 +14229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/PoreStats/PoreStats.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/PoreStats.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
@@ -14318,7 +14252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/SelfGuidedSegmentation/UnsupervisedSegmentation.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/UnsupervisedSegmentation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clover-icon lucide-clover"><path d="M16.17 7.83 2 22"/><path d="M4.02 12a2.827 2.827 0 1 1 3.81-4.17A2.827 2.827 0 1 1 12 4.02a2.827 2.827 0 1 1 4.17 3.81A2.827 2.827 0 1 1 19.98 12a2.827 2.827 0 1 1-3.81 4.17A2.827 2.827 0 1 1 12 19.98a2.827 2.827 0 1 1-4.17-3.81A1 1 0 1 1 4 12"/><path d="m7.83 7.83 8.34 8.34"/></svg>
@@ -17112,11 +17046,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/MoreTools/ResultAnalysis.html" class="md-nav__link">
+      <a href="../ThinSection/MoreTools/MoreToolsFlows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Outras Ferramentas
+    Flows
   </span>
   
 
@@ -18601,6 +18535,8 @@
       <a href="../Multiscale/Introduction.html" class="md-nav__link">
         
   
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
+  
   <span class="md-ellipsis">
     Introdução
   </span>
@@ -19795,6 +19731,94 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Desenvolvimento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Desenvolvimento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Desenvolvimento/CompilandoGeoSlicer.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
+  
+  <span class="md-ellipsis">
+    Compilando o GeoSlicer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Desenvolvimento/ComoContribuir.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
+  
+  <span class="md-ellipsis">
+    Como Contribuir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -19812,8 +19836,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -19822,19 +19844,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#segmentacao-multifasicaminerais" class="md-nav__link">
+  <a href="#segmentacao-automatica-de-laminas-delgadas" class="md-nav__link">
     <span class="md-ellipsis">
-      Segmentação Multifásica/Minerais
+      Segmentação Automática de Lâminas Delgadas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Segmentação Multifásica/Minerais">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segmentacao-multifasica-minerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentação Multifásica (Minerais)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segmentação Multifásica (Minerais)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rede-neural-convolucional" class="md-nav__link">
+  <a href="#rede-neural-convolucional-u-net" class="md-nav__link">
     <span class="md-ellipsis">
-      Rede Neural Convolucional
+      Rede Neural Convolucional (U-Net)
     </span>
   </a>
   
@@ -19856,9 +19887,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#redes-neurais-convolucionais" class="md-nav__link">
+  <a href="#redes-neurais-convolucionais-u-net" class="md-nav__link">
     <span class="md-ellipsis">
-      Redes Neurais Convolucionais
+      Redes Neurais Convolucionais (U-Net)
     </span>
   </a>
   
@@ -19868,6 +19899,15 @@
   <a href="#inferencia-bayesiana" class="md-nav__link">
     <span class="md-ellipsis">
       Inferência Bayesiana
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
     </span>
   </a>
   
@@ -19893,16 +19933,14 @@
                   
 
 
-<h1 id="segmentacao-automatica-thin-section">Segmentação Automática (Thin Section)</h1>
-<p>Dentro do contexto de segmentação de imagens de lâminas petrográficas obtidas por fotomicrografia, existem duas abordagens de segmentação. A mais simples consiste na identificação da fase de poro, nesta abordagem todo o restante da imagem é considerada não-poro. Por outro lado, a abordagem mais complexa é a identificação das múltiplas fases que compõem a fase não-poro. Esta abordagem é comumente denominada de segmentação multifásica, ou multi-mineralógica, pois o segmento não-poro é em geral composto de diversos minerais que compõem a rocha.</p>
-<h2 id="segmentacao-multifasicaminerais">Segmentação Multifásica/Minerais</h2>
-<p>Entender a mineralogia das rochas sedimentares, isto é, sua composição em termos de minerais e texturas, é uma tarefa relevante para o mercado de petróleo, uma vez que aspectos como porosidade, permeabilidade e distribuição mineral das formações rochosas indicam a possibilidade de extração petrolífera do local e a provável qualidade do petróleo presente.</p>
-<p>Uma forma de se estudar a mineralogia de uma rocha é obter uma lâmina de seção fina de uma pequena amostra e aplicar sobre ela o método QEMSCAN (Quantitative Evaluation of Materials by Scanning Electron Microscopy). A técnica consiste em determinar qual mineral está presente em cada parte da lâmina de acordo com o sinal produzido pela sua reação a um feixe de elétrons.</p>
-<p>Embora poderoso, o QEMSCAN depende da manipulação precisa de equipamentos e sistemas, dentre outras limitações, as quais abrem espaço para o uso de modelos capazes de reproduzir os resultados do QEMSCAN utilizando modernos algoritmos de visão computacional aplicados sobre imagens de lâmina. O uso de tais modelos é facilitado ao usuário pela interface do GeoSlicer.</p>
-<h3 id="rede-neural-convolucional">Rede Neural Convolucional</h3>
-<p>As redes neurais artificiais pré-alimentadas mais simples que existem são as multi-layer perceptrons (MLPs), que tradicionalmente nada mais são do que empilhamentos alternados de transformações lineares com pesos treináveis e operações ativação simples que possibilitam que o modelo compreenda relações não-lineares nos dados. Tais modelos podem aprender padrões muito complexos em dados tabulares, mas têm limitações ao lidar com imagens ou volumes. Isto acontece porque estas redes ignoram a posição espacial de um pixel com relação aos outros, e por isso têm dificuldade em compreender contexto para além da primeira dimensão. As redes convolucionais surgem como a alternativa mais simples e eficiente para lidar com dados espaciais em grades regularmente espaçadas. Sua configuração mais básica é muito próxima à da MLP, exceto que as transformações lineares são janeladas – uma convolução nada mais é que uma transformação linear aplicada numa janela deslizante. Desta forma, a previsão de um pixel passa a depender de outros que estão em torno dele, em todas as suas dimensões espaciais. Além disso, por conta do janelamento, partimos da premissa plausível que pixels muito distantes uns dos outros não tem boa correlação. Este ponto é importante, pois uma vez que tais pixels podem ser ignorados da análise, torna-se acessível produzir um modelo muitas vezes mais complexo (em número de camadas e número de ativações), ainda que mantendo-se um modelo pequeno (baixo número de parâmetros).</p>
-<h4 id="arquitetura-u-net">Arquitetura U-Net</h4>
-<p>A U-net é uma rede neural convolucional que foi introduzida em 2015 por Ronnenberger et al.. Ela se tornou a base para modelos estado-da-arte em segmentação semântica de imagens e volumes, sendo capaz de atribuir uma classe para cada pixel da imagem, delimitando precisamente a região em que cada elemento se encontra. A U-net é formada por três ideias principais: filtros convolucionais treináveis que realçam feições visuais, análise multi-escala e conexões de salto intra-escala, que vão das etapas de processamento anteriores às posteriores, formando o grafo da rede em formato de "U". A primeira etapa da rede codifica, em resoluções cada vez menores, as principais características extraídas da imagem, enquanto a segunda etapa decodifica a informação gradualmente, gerando o mapa de segmentação da imagem à medida que recupera sua resolução original. A U-net pode ser utilizada tanto para regressão de propriedades como para segmentação, e seus hiper-parâmetros importantes incluem o número de escalas, o número de operações de convolução por escala, o tamanho dos filtros de convolução e as funções de ativação entre as operações, que têm o objetivo de tornar a modelo capaz de entender relações não-lineares entre as entradas e as saídas.</p>
+  <h1>ThinSectionSegmenter</h1>
+
+<h2 id="segmentacao-automatica-de-laminas-delgadas">Segmentação Automática de Lâminas Delgadas</h2>
+<p>A segmentação de imagens de lâminas petrográficas pode ser feita de duas formas: uma segmentação binária, que identifica apenas a fase de poro, e uma segmentação multifásica, que identifica os diversos minerais que compõem a rocha.</p>
+<h2 id="segmentacao-multifasica-minerais">Segmentação Multifásica (Minerais)</h2>
+<p>A análise da composição mineral e da textura das rochas é fundamental para a indústria de petróleo. O GeoSlicer utiliza modelos de Deep Learning para automatizar essa análise a partir de imagens de lâminas, oferecendo uma alternativa ao método QEMSCAN.</p>
+<h3 id="rede-neural-convolucional-u-net">Rede Neural Convolucional (U-Net)</h3>
+<p>Para a segmentação mineralógica, o GeoSlicer emprega uma rede neural convolucional com a arquitetura <strong>U-Net</strong>. Este tipo de rede é ideal para segmentação semântica, pois atribui uma classe a cada pixel da imagem, delimitando com precisão a região de cada elemento. A U-Net é composta por um caminho de codificação, que extrai características da imagem em múltiplas escalas, e um caminho de decodificação, que reconstrói o mapa de segmentação.</p>
 <table>
 <thead>
 <tr>
@@ -19911,309 +19949,34 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Arquitetura exemplo da U-Net. Por Mehrdad Yazdani - <a href="https://commons.wikimedia.org/wiki/File:Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png">U-Net</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</td>
+<td align="center">Figura 1: Arquitetura exemplo da U-Net.</td>
 </tr>
 </tbody>
 </table>
-<p>O GeoSlicer oferece modelos baseados em U-Net para a segmentação mineralógica de imagens de lâmina de seção fina, possibilitando a identificação de poros e minerais como calcita, dolomita, argilas e quartzo.</p>
 <h4 id="treinamento">Treinamento</h4>
-<p>O treinamento dos modelos de segmentação baseados em U-Net foi feito sobre imagens em alta resolução de mais de 50 lâminas, utilizando fotografias em escala micrométrica iluminadas tanto por Luz Natural (PP) quanto por Polarização Cruzada (PX). O resultado do QEMSCAN aplicado sobre cada lâmina foi usado como resposta esperada a ser aproximada pela rede.</p>
-<p>As imagens PP e PX não necessariamente são fornecidas na mesma orientação. Além disso, a imagem QEMSCAN é gerada em resolução e orientação diferentes das lâminas. Por isso, cada lâmina teve que ser submetida ao processo de referenciamento/registro, isto é, ao alinhamento espacial das três imagens. O processo de referenciamento é disponibilizado no GeoSlicer a partir da aba Registration no ambiente do Thin Section. Além disso, foi delimitada para cada lâmina uma região de interesse (SOI - <em>Segment of Interest</em>), de modo a focar o aprendizado da rede sobre a área útil da lâmina, minimizando bordas e falhas. A Figura 2, mostra um dos resultados desse processo.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Imagem de referências" src="../assets/images/ThinSectionSegmenter2.png" width="100%" /><img alt="Resultado de referenciamento" src="../assets/images/ThinSectionSegmenter3.png" width="100%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 2: Imagens PP, PX, QEMSCAN e SOI antes (acima) e depois (abaixo) do referenciamento.</td>
-</tr>
-</tbody>
-</table>
-<p>Para uma maior variedade de dados e facilidade de processamento, as lâminas foram divididas em recortes de 1000² <em>pixels</em>, considerando apenas recortes com pelo menos 70% de área útil de acordo com o SOI. Durante o treinamento, os recortes passavam pelos seguintes processos de aumento aleatório, para diversificação dos dados aprendidos:</p>
-<ul>
-<li>Sub-recorte de uma área aleatória de 512² pixels;</li>
-<li>Inversão ou não sobre o eixo horizontal;</li>
-<li>Inversão ou não sobre o eixo vertical;</li>
-<li>Rotação em um múltiplo de 90º.</li>
-</ul>
-<p>Dada a quantidade relativamente baixa de lâminas, dois métodos de validação foram testados:</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th align="center">Método de validação</th>
-<th align="center">Conjunto de treino</th>
-<th align="center">Conjunto de validação</th>
-<th align="center">Justificativa</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">1</td>
-<td align="center">Porção maior de cada lâmina</td>
-<td align="center">Porção menor de cada lâmina, sem interseção com a porção de treino</td>
-<td align="center">Maior variabilidade de dados de treinamento</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">Subconjunto maior de lâminas</td>
-<td align="center">Subconjunto menor de lâminas, sem interseção com o subconjunto de lâminas de treino</td>
-<td align="center">Melhor noção da generalização do modelo para lâminas desconhecidas</td>
-</tr>
-</tbody>
-</table>
-<h6 id="tabela-1-metodos-de-validacao-utilizados">Tabela 1: Métodos de validação utilizados.</h6>
-<p></center></p>
-<p>Os modelos Textura Fina e Textura Densa foram validados apenas pelo método 1, dada a pequena quantidade de lâminas. </p>
-<p>Dada a distribuição dos minerais e poros ao longo do conjunto de dados, os modelos foram treinados para identificação de <strong>Poros</strong> e dos minerais <strong>Calcita (0% a 1%MgO)</strong>, <strong>Dolomita</strong>, <strong>Mg-Argilominerais</strong>, <strong>Quartzo</strong> e dos demais minerais como uma única classe denominada <strong>Outros</strong>.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Distribuição dos poros e minerais no conjunto de dados" src="../assets/images/ThinSectionSegmenter4.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 3: Distribuição dos poros e minerais no conjunto de dados.</td>
-</tr>
-</tbody>
-</table>
-<p>Como métricas de avaliação, foram considerados: o coeficiente de Dice, que determina a sobreposição entre a segmentação esperada e a obtida; a correlação linear entre as distribuições dos poros/minerais no QEMSCAN e na segmentação obtida; e a matriz de confusão, que avalia como cada classe está sendo interpretada pelos modelos. Feitos os experimentos cabíveis, um modelo final para cada contexto (Textura Fina, Textura Densa e Completo) foi treinado com todos os dados correspondentes.</p>
+<p>O treinamento dos modelos foi realizado com mais de 50 lâminas de alta resolução, utilizando imagens de Luz Natural (PP) e Polarização Cruzada (PX). O resultado do QEMSCAN foi usado como gabarito. As imagens PP, PX e QEMSCAN foram alinhadas através de um processo de registro, e o treinamento focou em uma região de interesse (SOI) para minimizar ruídos de borda. Para aumentar a diversidade dos dados, os recortes das lâminas passaram por transformações aleatórias, como rotações e inversões. Os modelos foram treinados para identificar <strong>Poros</strong> e os minerais <strong>Calcita</strong>, <strong>Dolomita</strong>, <strong>Mg-Argilominerais</strong>, <strong>Quartzo</strong> e uma classe genérica de <strong>Outros</strong>.</p>
 <h4 id="resultados">Resultados</h4>
-<p>A seguir, os resultados relativos a cada um dos modelos, de acordo com o método de validação considerado. A correlação foi determinada em termos do coeficiente de determinação (R²), que indica melhor linearidade quanto mais próximo de 1.0, e da raiz do erro quadrático médio (RMSE). Cada célula da matriz de confusão, por sua vez, se aproxima mais da cor branca quanto maior for a quantidade de pixels da classe real (linha) classificada como pertencendo à classe predita (coluna). A matriz ideal teria toda a diagonal principal em cor branca e as demais células em cor preta</p>
-<h5 id="textura-fina-metodo-de-validacao-1">Textura Fina - método de validação 1:</h5>
-<ul>
-<li>Dice: 38.67%.
-| <img alt="Resultado de validação do modelo Textura Fina 1" src="../assets/images/ThinSectionSegmenter5.png" width="50%" /><img alt="Resultado de validação do modelo Textura Fina 2" src="../assets/images/ThinSectionSegmenter6.png" width="45%" /><img alt="Resultado de validação do modelo Textura Fina 3" src="../assets/images/ThinSectionSegmenter7.png" width="100%" /> |
-|:-----------------------------------------------:|
-| Figura 4: Modelo Textura Fina: resultados de validação - método 1.</li>
-</ul>
-<h5 id="textura-densa-metodo-de-validacao-1">Textura Densa - método de validação 1:</h5>
-<ul>
-<li>Dice: 43.50%.</li>
-</ul>
+<p>Os modelos finais, integrados ao GeoSlicer, apresentam boas aproximações da composição mineral, especialmente para o estudo de texturas e da distribuição das fases. Abaixo, um exemplo de predição sobre lâminas não vistas durante o treinamento.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Resultado de validação do modelo Textura Densa 1" src="../assets/images/ThinSectionSegmenter8.png" width="50%" /><img alt="Resultado de validação do modelo Textura Densa 2" src="../assets/images/ThinSectionSegmenter9.png" width="45%" /><img alt="Resultado de validação do modelo Textura Densa 3" src="../assets/images/ThinSectionSegmenter10.png" width="100%" /></th>
+<th align="center"><img alt="Figura 2" src="../assets/images/ThinSectionSegmenter19.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 6: Modelo Textura Densa: resultados de validação - método 1.</td>
+<td align="center">Figura 2: Predição dos modelos finais sobre lâminas desconhecidas.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="completo-metodo-de-validacao-1">Completo - método de validação 1:</h5>
-<ul>
-<li>Dice:<ul>
-<li>validado no conjunto de dados completo: 38.67%;</li>
-<li>validado no conjunto de dados de textura fina: 35.70%;</li>
-<li>validado no conjunto de dados de textura densa: 43.15%.</li>
-</ul>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Resultado de validação do modelo Completo 1" src="../assets/images/ThinSectionSegmenter11.png" width="50%" /><img alt="Resultado de validação do modelo Completo 2" src="../assets/images/ThinSectionSegmenter12.png" width="45%" /><img alt="Resultado de validação do modelo Completo 3" src="../assets/images/ThinSectionSegmenter13.png" width="100%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 7: Modelo Completo: resultados de validação - método 1.</td>
-</tr>
-</tbody>
-</table>
-<h5 id="completo-metodo-de-validacao-2">Completo - método de validação 2:</h5>
-<ul>
-<li>Dice: 35.79%.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Resultado de validação do modelo Completo 1" src="../assets/images/ThinSectionSegmenter14.png" width="50%" /><img alt="Resultado de validação do modelo Textu Completo 2" src="../assets/images/ThinSectionSegmenter15.png" width="45%" /><img alt="Resultado de validação do modelo Completo 3" src="../assets/images/ThinSectionSegmenter16.png" width="100%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 8: Modelo Completo: resultados de validação - método 2.</td>
-</tr>
-</tbody>
-</table>
-<p>A Figura 9 a seguir mostra, na parte superior, o comportamento da função de custo e da métrica de Dice dos modelos validados pelo método 1. A baixa suavidade das curvas de validação se deve ao fato de que a validação foi feita em intervalos grandes entre as iterações de treinamento. Na parte inferior, os gráficos referentes ao modelo Completo com validação tipo 2 (treinado em uma etapa anterior, e com mais etapas de validação). </p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Gráficos de aprendizagem dos modelos validados pelo método 1" src="../assets/images/ThinSectionSegmenter17.png" width="100%" /><img alt="Gráficos de aprendizagem dos modelos validados pelo método 2" src="../assets/images/ThinSectionSegmenter18.png" width="100%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 9: Gráficos de aprendizagem dos modelos. Superior: validados pelo método 1; Inferior: validados pelo método 2.</td>
-</tr>
-</tbody>
-</table>
-<p>Nota-se que tanto os custos de treinamento quanto de validação se estabilizam em valores próximos a 0,7, o que indica que de fato houve aprendizagem sem notável subajuste ou sobreajuste aos dados. Em alguns casos a função de custo de treinamento sofre uma queda abrupta, provavelmente devido ao escalonamento da taxa de aprendizagem, porém os modelos já atingem seu máximo valor de métrica de validação antes disso.</p>
-<p>A seguir, alguns resultados obtidos com os modelos finais, já integrados ao GeoSlicer, sobre lâminas nunca antes tratadas durante o treinamento e validação dos modelos:</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Figura 10" src="../assets/images/ThinSectionSegmenter19.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 10: Predição dos modelos finais sobre lâminas desconhecidas.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="discussao-e-limitacoes">Discussão e limitações</h4>
-<p>No geral, os resultados revelam alguns insights importantes:</p>
-<ul>
-<li>Os valores de Dice indicam níveis de sobreposição um tanto limitados entre o "real" (QEMSCAN) e o predito;</li>
-<li>Por outro lado, os gráficos de correlação mostram que a distribuição predita dos poros e minerais tem uma correspondência satisfatória com a realidade, sobretudo com respeito ao método de validação 1. Com o método 2, a métrica é um pouco comprometida, mas ainda é numericamente satisfatória;</li>
-<li>No geral, as matrizes de confusão tem a diagonal destacada, porém apresentam dificuldade especialmente com a classe Outros. Além disso, parece haver uma certa concentração de predições em duas classes muito frequentes no conjunto de dados, Calcita e Dolomita, o que indica que os modelos podem ter aprendido mais sobre elas e menos sobre as classes menos frequentes;</li>
-<li>As imagens mostram que as predições tendem a ser “mais suaves” do que o QEMSCAN correspondente. Comparando-se o exemplo de predição da Figura 5 com o primeiro exemplo da Figura 7, nota-se que o modelo dedicado à Textura Fina parece atender melhor uma lâmina com esse tipo de textura do que o modelo Completo, o que é confirmado pelo valor de Dice 3% maior (38,67% x 35,70%). Além disso, comparar o exemplo da Figura 8 com o último da Figura 7 mostra um desempenho notavelmente superior do método de validação 1, o que é confirmado pelos gráficos de correlação.</li>
-</ul>
-<p>Acredita-se que problemas apontados nos resultados gerais são decorrentes das seguintes limitações:</p>
-<ul>
-<li>O processo de referenciamento/registro introduz duas dificuldades inerentes: (i) o alinhamento de imagens de resoluções originalmente diferentes, visto que o QEMSCAN tem resolução muito inferior à das imagens de lâmina; e (ii) a dificuldade de se posicionar uma imagem perfeitamente sobre a outra. A combinação desses dois fatores faz com que muitos pixels do QEMSCAN fiquem levemente desalinhados em relação aos seus reais correspondentes nas lâminas, o que se destaca principalmente nos limites entre diferentes minerais e nas áreas em que um mineral aparece de forma mais granular, dificultando o aprendizado da rede. Isso explica o fato de que as predições aproximam bem o QEMSCAN e, por consequência, as distribuições dos minerais, mas ao mesmo tempo têm transições muito mais suaves e, por isso, apresentam baixo valor de Dice;</li>
-<li>A quantidade e variedade de lâminas usadas para treinamento são muito pequenas, o que limita a capacidade de generalização, sobretudo com respeito ao método de validação 2, que exclui algumas lâminas do treinamento para usá-las como validação. Alguns minerais podem não ter sido suficientemente representados, levando-os a serem preditos erroneamente em algumas ocasiões, como mostram as matrizes de confusão. A classe Outros, sobretudo, aparece pouco frequentemente e de forma predominantemente granular, dificultando seu reconhecimento. </li>
-</ul>
-<p>Essas são as limitações que podem ser enfrentadas quando um modelo de segmentação mineralógica é utilizado pelo GeoSlicer. No entanto, nota-se que atualmente os modelos já trazem boas aproximações, sobretudo quando se pretende estudar texturas menos granulares e/ou a distribuição das fases minerais. Além disso, vale ressaltar que os modelos finais disponibilizados foram treinados com uma quantidade ainda maior de dados, visto que não houve exclusão de uma parte para validação.</p>
 <h2 id="segmentacao-poronao-poro">Segmentação Poro/Não-poro</h2>
-<p>A porosidade da rocha é um aspecto geológico importante para a determinação do quão favorável é o encontro e a extração de petróleo. Extraindo-se uma lâmina de seção fina de uma pequena amostra de rocha, pode-se aproximar o nível de porosidade da formação rochosa.</p>
-<p>Uma forma de destacar os poros de uma amostra para melhor inspeção visual é o preenchimento do espaço com uma resina de coloração distinta dos padrões encontrados na rocha. A imagem a seguir mostra um recorte de lâmina com porosidade preenchida por resina de cor azul.</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Recorte de lâmina com porosidade preenchida por resina de cor azul" src="../assets/images/ThinSectionSegmenter20.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 11: Recorte de lâmina com porosidade preenchida por resina de cor azul.</td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<p>Através do GeoSlicer, é possível fazer uma análise computacional da porosidade de uma lâmina através da segmentação por limiar de cores. Isso significa que, ao se definir limiares mínimos e máximos para cada componente RGB ou HSV de uma imagem de lâmina, o software destaca as regiões da imagem compreendidas dentro desses limiares, o que pode ser aplicado sobre a faixa de coloração da resina. Porém, esse tipo de segmentação envolve uma investigação manual e subjetiva dos melhores limiares e está limitada às condições de resolução e iluminação da imagem e ao tipo de resina empregado. Isso torna conveniente o uso de técnicas capazes de distinguir os poros de uma lâmina através não somente de seu nível de coloração como também de seu aspecto físico e da textura rochosa que o envolve, como a Inferência Bayesiana ou o uso de Redes Neurais Convolucionais, método que será tratado nesta página.</p>
-<h3 id="redes-neurais-convolucionais">Redes Neurais Convolucionais</h3>
-<p>Assim como nos estudos de segmentação multi-fásica de lâminas e segmentação de dados de Micro-CT, a arquitetura U-Net também foi utilizada para segmentação de poros. </p>
+<p>A porosidade é um indicador crucial do potencial de um reservatório. O GeoSlicer oferece métodos automáticos para segmentar os poros, que são tipicamente preenchidos com resina azul para destaque.</p>
+<h3 id="redes-neurais-convolucionais-u-net">Redes Neurais Convolucionais (U-Net)</h3>
+<p>Assim como na segmentação multifásica, a arquitetura U-Net é utilizada para a segmentação de poros.</p>
 <h4 id="treinamento_1">Treinamento</h4>
-<p>O estudo aqui descrito envolveu um total de 85 imagens de lâminas, com resolução normalmente em torno de 2000 pixels de altura e 3000 de largura. A resposta esperada da rede, isto é, a segmentação de poros que a rede deveria aproximar, era a segmentação por limiar de cores feita previamente sobre as lâminas disponíveis. Além disso, a cada lâmina foi atribuída uma região de interesse (SOI - <em>Segment of Interest</em>) que delimita a área da lâmina considerada útil para o estudo.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Figura 12" src="../assets/images/ThinSectionSegmenter21.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 12: À esquerda: exemplo de lâmina; ao centro: em amarelo, segmentação das regiões compreendidas pela resina azul na lâmina; à direita: em amarelo, região de interesse (SOI) da lâmina.</td>
-</tr>
-</tbody>
-</table>
-<p>A fim de ampliar o conjunto de dados e diminuir o esforço computacional do processo de aprendizado da rede, as lâminas foram divididas em recortes de 128² pixels. Os recortes com menos de 70% de área útil (SOI) foram descartados. Para avaliação do desempenho da rede, o conjunto total foi dividido ao acaso conforme a tabela a seguir:</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th align="center">Conjunto</th>
-<th align="center">Qtd. Lâminas</th>
-<th align="center">Qtd. Recortes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Treino</td>
-<td align="center">69</td>
-<td align="center">19570</td>
-</tr>
-<tr>
-<td align="center">Validação</td>
-<td align="center">8</td>
-<td align="center">2404</td>
-</tr>
-<tr>
-<td align="center">Teste</td>
-<td align="center">8</td>
-<td align="center">2379</td>
-</tr>
-<tr>
-<td align="center">Total</td>
-<td align="center">85</td>
-<td align="center">24353</td>
-</tr>
-</tbody>
-</table>
-<h5 id="tabela-2-conjunto-de-dados-de-treinamento-validacao-e-teste">Tabela 2: Conjunto de dados de treinamento, validação e teste.</h5>
-<p></center></p>
-<p>O processo de treinamento foi executado por 300 épocas, isto é, a rede iterou sobre todo o  conjunto de treino, uma imagem por vez e em ordem aleatória, por 300 vezes. A cada iteração, o recorte sofria modificações aleatórias, como inversão horizontal e/ou vertical e rotações múltiplas de 90°, de modo a diversificar ainda mais os padrões aprendidos. A cada 30 épocas, o nível de sobreposição entre as segmentações esperada e predita, determinado pelo coeficiente de Dice, era avaliado sobre o conjunto de validação. Também foram avaliados os níveis de porosidade preditos em relação aos esperados e as matrizes de confusão entre os pixels pertencentes à classe de poro e os não pertencentes. O resultado no conjunto de testes seria avaliado uma vez que fosse obtido um resultado de validação satisfatório, para ciência do desempenho do modelo sobre imagens não usadas no estudo. Atualmente, o modelo presente no GeoSlicer é o mesmo treinado com o conjunto de treino, mas futuramente um modelo final treinado com todos os dados pode ser disponibilizado.</p>
+<p>O modelo foi treinado com 85 imagens de lâminas, onde a segmentação de referência foi obtida por limiar de cor sobre a resina azul. As lâminas foram divididas em recortes de 128x128 pixels, e apenas as áreas úteis (delimitadas pela SOI) foram consideradas. O treinamento durou 300 épocas, com aplicação de modificações aleatórias (rotações, inversões) para diversificar os dados e melhorar a capacidade de generalização do modelo.</p>
 <h4 id="resultados_1">Resultados</h4>
-<p>Como mostram as duas próximas imagens, as funções de custo tanto de treinamento quanto de validação convergem para um valor final, que parece próximo a 0.15. O gráfico de validação é menos suave devido ao fato de que 1 ciclo de validação ocorria a cada 30 épocas de treino.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Função de custo de treino" src="../assets/images/ThinSectionSegmenter22.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 13: Função de custo de treino.</td>
-</tr>
-</tbody>
-</table>
-<p>Isso traz três indicadores importantes:
-- Convergência: a rede de fato foi capaz de aprender padrões;
-- Custo final baixo: o aprendizado foi bem sucedido;
-- Custos de treino e validação similares: não houve sobreajuste ou subajuste aos dados de treinamento.</p>
-<p>De fato, a métrica de validação indica que houve aprendizado satisfatório, mostrando valores de coeficiente de Dice superiores a 85%.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Função de custo" src="../assets/images/ThinSectionSegmenter23.png" width="50%" /><img alt="Métrica Dice da validação" src="../assets/images/ThinSectionSegmenter24.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 14: Função de custo e métrica Dice da validação.</td>
-</tr>
-</tbody>
-</table>
-<p>A análise comparativa entre os níveis de porosidade esperada e predita no conjunto de validação também mostra resultados satisfatórios. O gráfico de correlação mostra uma correlação predição-realidade praticamente linear, considerando a porosidade de cada imagem separadamente, com coeficiente de determinação (R²) de 0.9995 - muito próximo do valor perfeito de 1.0 -, e raiz do erro médio quadrático (RMSE) de 0.0104 - muito próxima de zero. Por sua vez, o gráfico de barras mostra diferenças pouco perceptíveis entre a porosidade real e a predita quando considerado o conjunto de validação inteiro.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Correlação poro x não-poro de validação" src="../assets/images/ThinSectionSegmenter25.png" width="50%" /><img alt="gráfico de barras comparando os resultados da porosidade real x predita" src="../assets/images/ThinSectionSegmenter26.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 15: Correlação poro x não-poro de validação (a esquerda) e gráfico de barras comparando os resultados da porosidade real x predita (a direita).</td>
-</tr>
-</tbody>
-</table>
-<p>Por sua vez, a matriz de confusão revela que o fator que mais afeta os resultados da rede são os falsos negativos, isto é, pixels que deveriam ser classificados como poros e não são, o que compreende aproximadamente 14% do conjunto de validação.</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Matriz de confusão de validação" src="../assets/images/ThinSectionSegmenter27.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 16: Matriz de confusão de validação.</td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<p>As imagens a seguir mostram avaliações qualitativas dos resultados. O quadro ORIGINAL mostra um recorte de lâmina. O quadro LABEL destaca, em verde, os poros rotulados no recorte. Por sua vez, o quadro PREDICTION mostra: (i) em verde: os verdadeiros positivos (poro classificado como tal), (ii) em vermelho: os falsos positivos (predição indevida de poro) e (iii) em amarelo: os falsos negativos (não-predições indevidas de poro). Por último, o quadro CONFIDENCE mostra o nível de confiança da predição: quanto mais clara a região, maior a certeza na predição.</p>
+<p>O modelo alcançou um desempenho satisfatório, com um coeficiente de Dice (sobreposição) superior a 85%. Os resultados mostram que a rede consegue identificar os poros com alta confiança, embora possa apresentar algumas dificuldades nas bordas, onde as cores são intermediárias.</p>
 <table>
 <thead>
 <tr>
@@ -20222,123 +19985,61 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 17: Exemplos de resultados de validação.</td>
+<td align="center">Figura 3: Exemplos de resultados. Em verde, os verdadeiros positivos; em vermelho, os falsos positivos; e em amarelo, os falsos negativos.</td>
 </tr>
 </tbody>
 </table>
-<p>A partir dos exemplos, se nota que os mais baixos níveis de confiança são vistos nas bordas dos poros. Em adição, o último exemplo ilustra situações recorrente nas predições:</p>
-<ul>
-<li>Falsos negativos nas bordas dos poros;</li>
-<li>Falsos negativos detectados em pixels pontuais. </li>
-</ul>
-<p>No conjunto de testes, os resultados foram similares:</p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Correlação poro x não-poro de teste" src="../assets/images/ThinSectionSegmenter30.png" width="50%" /><img alt="Gráfico de barras comparando os resultados da porosidade real x predita" src="../assets/images/ThinSectionSegmenter31.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 18: Correlação poro x não-poro de teste (a esquerda) e gráfico de barras comparando os resultados da porosidade real x predita (a direita).</td>
-</tr>
-</tbody>
-</table>
-<p>Por sua vez, a matriz de confusão revela que o fator que mais afeta os resultados da rede são os falsos negativos, isto é, pixels que deveriam ser classificados como poros e não são, o que compreende aproximadamente 14% do conjunto de validação.</p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Matriz de confusão de teste" src="../assets/images/ThinSectionSegmenter32.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 19: Matriz de confusão de teste.</td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<h4 id="discussao-e-limitacoes_1">Discussão e limitações</h4>
-<p>No geral, o modelo desempenha sua função de forma muito satisfatória sobre imagens com a resolução conhecida durante o treinamento, principalmente no que diz respeito ao cálculo do nível de porosidade. Acredita-se que o principal fator limitante para um desempenho ainda melhor é o fato de que a rotulação dos poros, usada como base para o treinamento, carrega as limitações da segmentação por limiar de cores. As bordas dos poros costumam apresentar cores intermediárias entre o azul da resina e as das texturas de rocha, de modo a serem compreendidas pelos limiares em algumas imagens e não em outras, dificultando o aprendizado sobre essas regiões. Dificuldade similar provém do fato de que pequenos pontos sobre as texturas podem ter coloração indevidamente compatível com os limiares, sendo rotulados como poros. Futuramente, o modelo pode ser melhorado com a inclusão de mais dados de treinamento e um refinamento e/ou pós-tratamento na rotulação por cor.</p>
 <h3 id="inferencia-bayesiana">Inferência Bayesiana</h3>
-<p>Visando a segmentação poro/não-poro, além das redes neurais, podem ser utilizadas também redes mais simples, como é o caso da Inferência Bayesiana. Nesse tipo de modelo, os pesos da rede são descritos de acordo com uma matriz de covariância e uma média relativa a cada segmento. Dessa forma, depois de treinada, essa correlação entre os pixels/voxels pode ser usada a fim de medir a probabilidade de cada um dos segmentos.</p>
-<p>Além disso, o algoritmo de Inferência Bayesiana ainda permite uma estimativa de erros sobre o resultado final e ajuste fino posterior dessas porcentagens de segmentos, uma vez que provê uma incerteza como resultado da inferência.</p>
-<p>Como vantagem do caráter probabilístico nessa abordagem, existe a possibilidade de pesar certos segmentos em relação a outros a partir da inclusão de parâmetros a priori, que são úteis em sua adaptação a dados diferentes sem a necessidade de um novo treinamento.</p>
-<h4 id="teoria">Teoria</h4>
-<p>A inferência Bayesiana é um dos mais antigos modelos usados na área da visão computacional, sendo os primeiros artigos sobre o método publicados no final da década de 1970, quando os computadores começaram a poder processar grandes quantidades de dados como imagens (Hunt, 1977). Posteriormente, nas décadas seguintes, o método foi melhorado e o uso de diferentes modelos a priori e funções de verossimilhança foram criadas (Skilling et. al., 1984; Hanson, 1990; Hanson, 1993; Geman et. al., 1990). Atualmente, variações do método são empregadas em uma vasta quantidade de aplicações, como é o caso da inversão sísmica Bayesiana (De Figueiredo et. al., 2017).</p>
-<p>Para introduzirmos esse método, vamos supor que já temos algum conhecimento sobre qual deve ser o resultado de nosso algoritmo. Dentro da abordagem Bayesiana, expressamos esse conhecimento a partir de uma distribuição de probabilidades chamada distribuição a priori:</p>
-<div class="arithmatex">\[ P(A). \]</div>
-<p>Dessa forma, ao nos depararmos com um dado novo, devemos atualizar tal probabilidade, com base na nova “observação” ou “evidência”. A distribuição atualizada que leva em conta tanto as observações quanto o conhecimento a priori é chamada de distribuição a posteriori, definida por:</p>
-<div class="arithmatex">\[ P(A|B). \]</div>
-<p>A ideia do método de inferência Bayesiana é que podemos incluir o novo conhecimento a partir da multiplicação da distribuição a priori por uma função de verossimilhança <span class="arithmatex">\(P(B|A)\)</span>. Dessa forma, a atualização sobre o modelo será dada por:</p>
-<p>$$ P(A|B) = \frac{P(B|A)P(A)}{P(B)}, $$
-onde <span class="arithmatex">\(P(B)\)</span> é uma normalização. Essa fórmula é conhecida como lei ou <strong>regra de Bayes</strong> --- Para o leitor interessado em maiores detalhes matemáticos sobre os diferentes modelos de inferência Bayesiana é recomendada a leitura dos livros de Murray Aitkin (Aitkin, 2010), Helio S. Migon, Dani Gamerman e Francisco Louzada (Migon, et. al., 2014), além do cap. 2 de Dani Gamerman e Hedibert Freitas Lopes (Gamerman et. al., 2006).</p>
-<p>A regra de Bayes é frequentemente utilizada para problemas de classificação. Entretanto, a segmentação de imagens pode ser interpretada como uma sequência de classificações sobre diferentes partes da imagem. Seguindo um algoritmo de janela deslizante sobre a imagem, obtemos uma segmentação completa de todos os seus pixels.</p>
-<p>No GeoSlicer, esta abordagem é utilizada juntamente com a suposição de uma Distribuição Normal Multivariada para função de verossimilhança:</p>
-<p>$$ f(x_p|s)=\frac{1}{\sqrt{(2\pi)^k \det \Sigma_s}}\exp\left(-\frac{1}{2}(x_p-\mu_s)^T \Sigma_s^{-1} (x_p-\mu_s)\right), $$
-onde <span class="arithmatex">\(x_p\)</span> é um vetor que contém os valores empilhados da imagem dentro de um kernel centrado no pixel <span class="arithmatex">\(p\)</span> a ser analisado, enquanto <span class="arithmatex">\(\mu_s\)</span> e <span class="arithmatex">\(\sigma_s\)</span> são a média e a matriz de covariância características de um segmento s, os quais são calculados baseados nos dados de anotações.</p>
-<p>O cálculo da média de cada segmento é trivial, enquanto o da matriz covariância é definido por:</p>
-<div class="arithmatex">\[ \Sigma_{w,w} = \frac{A A^T}{N_p-1}, \]</div>
-<p>onde A é a matriz dos dados anotados construída conforme o diagrama da Figura 20. Assim como no caso da feature de variograma, essas matrizes também contêm informações das correlações espaciais de cada segmento.</p>
+<p>Como alternativa às redes neurais, a Inferência Bayesiana oferece um modelo mais simples para a segmentação poro/não-poro. Este método utiliza a <strong>regra de Bayes</strong> para calcular a probabilidade de um pixel pertencer a um segmento (poro ou não-poro) com base em uma média e uma matriz de covariância aprendidas durante o treinamento.</p>
+<p>A abordagem utiliza uma <strong>Distribuição Normal Multivariada</strong> como função de verossimilhança:</p>
+<div class="arithmatex">\[ f(x_p|s)=\frac{1}{\sqrt{(2\pi)^k \det \Sigma_s}}\exp\left(-\frac{1}{2}(x_p-\mu_s)^T \Sigma_s^{-1} (x_p-\mu_s)\right) \]</div>
+<p>Onde <span class="arithmatex">\(x_p\)</span> é o vetor de pixels em uma janela, e <span class="arithmatex">\(\mu_s\)</span> e <span class="arithmatex">\(\Sigma_s\)</span> são a média e a covariância do segmento <span class="arithmatex">\(s\)</span>.</p>
+<h4 id="treinamento-e-resultados">Treinamento e Resultados</h4>
+<p>Para melhorar os resultados, as imagens de lâmina, originalmente em formato RGB, são convertidas para HSV. O modelo foi treinado em um conjunto de dados pequeno (~10 amostras) e, mesmo com uma abordagem simples, produz resultados interessantes para a segmentação poro/não-poro.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Algoritmo de janela deslizante" src="../assets/images/ThinSectionSegmenter33.png" width="50%" /></th>
+<th align="center"><img alt="Resultado qualitativo" src="../assets/images/ThinSectionSegmenter34.png" width="100%" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 20: Algoritmo de janela deslizante.</td>
+<td align="center">Figura 4: Resultado qualitativo da segmentação poro/não-poro por inferência Bayesiana.</td>
 </tr>
 </tbody>
 </table>
-<p>Com as médias e as matrizes de covariância calculadas, a inferência da probabilidade de cada segmento para um dado pixel da imagem é obtida pela regra de Bayes:</p>
-<div class="arithmatex">\[ P(s|x)=\frac{P(x|s) P(s)}{P(x)}, \]</div>
-<p>onde o fator de normalização é</p>
-<div class="arithmatex">\[ P(x)=\sum_s P(x|s) P(s). \]</div>
-<p>Em casos de tamanho de kernel grande, o cálculo das probabilidades a posteriori seguindo a equação anterior pode ser um desafio. De fato, alguns problemas numéricos podem ocorrer relacionados ao cálculo da exponencial e a inversão das matrizes de covariância.</p>
-<p>Com relação ao cálculo da exponencial, esse pode ser evitado ao tirarmos o logaritmo da probabilidade, de forma que ficamos com:</p>
-<div class="arithmatex">\[ S = -\log f(x) = \frac{1}{2} \log\det(2\pi\Sigma) + \frac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu), \]</div>
-<p>onde o termo com o logaritmo do determinante pode ser calculado a partir de funções bastante robustas disponibilizadas em bibliotecas como o numpy. E o segundo termo pode ser calculado simplesmente como uma multiplicação de matrizes, ou para o caso de kernels grandes, como uma convolução sobre a imagem, seguida de uma multiplicação de matrizes mais simples.</p>
-<p>Uma vez que a função logaritmo é classificada como uma função côncava, podemos dizer que o máximo do seu argumento continua sendo o máximo da própria função, de forma que:</p>
-<div class="arithmatex">\[ \arg\max(f(x))=\arg\min(-\log f(x)), \]</div>
-<p>onde o sinal é colocado apenas como uma conveniência. Ou seja, ao determinarmos o segmento que minimiza a função <span class="arithmatex">\(S\)</span>, determinamos também o segmento que maximiza a função de distribuição de probabilidade <span class="arithmatex">\(f\)</span>.</p>
-<p>Desta maneira, calculamos para cada pixel da imagem, o segmento que maximiza a probabilidade a posteriori, e que portanto melhor representa o kernel da imagem estatisticamente.</p>
-<h4 id="treinamento_2">Treinamento</h4>
-<p>Como forma de auxiliar o modelo na melhor compreensão dos diferentes tipos de imagens de entrada, realizamos alguns tratamentos de pré-processamento sobre esses e além disso também realizamos alguns tratamentos sobre a matriz de covariância.</p>
-<p>No caso dos dados de lâminas, que apresentam mais de um canal, os dados estão em formato RGB, no entanto, notamos que os resultados da rede são muito superiores ao utilizar a imagem em formato HSV, onde a classificação é feita pela cor, saturação e valor. Dessa forma, convertemos a imagem de lâmina para esse formato antes de treinar/inferir o modelo.</p>
-<p>Além dos pré-processamentos feitos nos dados de entrada, também realizamos um procedimento de filtragem (ou <em>tapering</em>) da matriz covariância quando o tamanho do kernel é muito grande (&gt;10 px). Fazemos isso a partir do uso de uma função envelope que pode ser uma gaussiana, por exemplo. Esse procedimento se justifica em virtude da enorme quantidade de detalhes que a matriz covariância é capaz de capturar nesse regime, e como alguns desses detalhes são menos relevantes para a segmentação, eles podem acabar prevendo um resultado muito ruidoso e impreciso.</p>
-<p>Com base em todos esses processamentos, disponibilizamos no Geoslicer dois modelos treinados em um pequeno conjunto de dados (~10 amostras), para a segmentação poro/não-poro em lâminas. Abaixo, apresentamos alguns resultados desse modelo pré-treinado.</p>
-<h4 id="resultados_2">Resultados</h4>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Resultado qualitativo da segmentação poro/não-poro por inferência Bayesiana." src="../assets/images/ThinSectionSegmenter34.png" width="100%" /><img alt="Resultado qualitativo da segmentação poro/não-poro por inferência Bayesiana." src="../assets/images/ThinSectionSegmenter35.png" width="100%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 21: Resultados qualitativos da segmentação poro/não-poro por inferência Bayesiana.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="discussao">Discussão</h4>
-<p>Dessa maneira, podemos concluir que a inferência Bayesiana pode ser empregada como um dos métodos no contexto da segmentação de imagens, produzindo resultados interessantes, mesmo que com uma abordagem bastante simples e sem extensos dados de treinamento. </p>
-<p>Ainda, deixamos indicada a possibilidade futura de implementação de um ajuste fino nos resultados finais das segmentações, que pode ser uma interessante função para o usuário. Uma vez que esse controle o permitiria, por exemplo, após o procedimento de inferência, fazer um ajuste manual sobre a quantidade de cada segmento, corrigindo eventuais falhas na previsão do modelo.</p>
-<p>Além disso, uma possibilidade para investigação futura seria a criação de alguns modelos a priori para as correlações entre pixels/voxels. Em testes preliminares, tentamos por meio de uma intuição sobre o caráter dos dados, criar modelos que não necessitassem do treinamento prévio. Entretanto, esses modelos não chegaram a superar os modelos treinados e portanto resolvemos não seguir com ele.</p>
-<h4 id="referencias">Referências</h4>
+<h3 id="referencias">Referências</h3>
 <ul>
-<li>De Figueiredo, L. P., Schmitz, T., Lunelli, R., Roisenberg, M., Santana de Freitas, D., &amp; Grana, D. (2020). Direct Multivariate Simulation - A stepwise conditional transformation for multivariate geostatistical simulation. Computers &amp; Geosciences, 104659.  https://doi.org/10.1016/j.cageo.2020.104659  </li>
-<li>De Figueiredo, L. P., Grana, D., Santos, M., Figueiredo, W., Roisenberg, M., &amp; Schwedersky Neto, G. (2017). Bayesian seismic inversion based on rock-physics prior modeling for the joint estimation of acoustic impedance, porosity and lithofacies. Journal of Computational Physics, 336, 128–142. https://doi.org/10.1016/j.jcp.2017.02.013 </li>
-<li>B. R. Hunt. (1977) Bayesian methods in nonlinear digital image restoration. IEEETrans. Comp.,C-26:219-229.</li>
-<li>Skilling, J.; Bryan, R. K. Maximum entropy image reconstruction: general algorithm. Monthly Notices of the Royal Astronomical Society, v. 211, n. 1, p. 111–124, nov. 1984. https://doi.org/10.1093/mnras/211.1.111 </li>
-<li>Hanson, Kenneth. (1993). Introduction to Bayesian image analysis. Proc SPIE. 1898. 716-731. https://doi.org/10.1117/12.154577.</li>
-<li>Hanson, Kenneth. (1990) Object detection and amplitude estimation based on maximum a-posteriori reconstructions," Proc. SPIE 1231, Medical Imaging IV: Image Formation; https://doi.org/10.1117/12.18794.</li>
-<li>Geman, S., and Geman, D.. 1990. Stochastic Relaxation, Gibbs Distribution and the Bayesian Restoration of Images. IEEE, Transactions on Pattern Analysis; Machine Intelligence, vol. PAMI-6, no. 6, pp. 721-741, Nov. 1984, http://doi.org/10.1109/TPAMI.1984.4767596. </li>
-<li>(livro) Aitkin, Murray A. 2010. Statistical inference: an integrated Bayesian/likelihood approach. CRC Press: Taylor e Francis Group.</li>
-<li>(livro) Migon, Helio S., Dani Gamerman, and Francisco Louzada. 2014. Statistical Inference: An Integrated Approach. 2nd ed. CRC Press: Taylor e Francis Group.</li>
-<li>(livro) Gamerman, Dani, and Hedibert F. Lopes. 2006. Monte Carlo Markov Chain: Stochastic Simulation for Bayesian Inference. 2nd ed. London: Chapman &amp; Hall.</li>
+<li>
+<p>DE FIGUEIREDO, L. P. et al. (2020). <em>Direct Multivariate Simulation - A stepwise conditional transformation for multivariate geostatistical simulation</em>. Computers &amp; Geosciences.</p>
+</li>
+<li>
+<p>DE FIGUEIREDO, L. P. et al. (2017). <em>Bayesian seismic inversion based on rock-physics prior modeling for the joint estimation of acoustic impedance, porosity and lithofacies</em>. Journal of Computational Physics.</p>
+</li>
+<li>
+<p>HUNT, B. R. (1977). <em>Bayesian methods in nonlinear digital image restoration</em>. IEEE Transactions on Computers.</p>
+</li>
+<li>
+<p>SKILLING, J. &amp; BRYAN, R. K. (1984). <em>Maximum entropy image reconstruction: general algorithm</em>. Monthly Notices of the Royal Astronomical Society.</p>
+</li>
+<li>
+<p>HANSON, K. (1993). <em>Introduction to Bayesian image analysis</em>. Proc SPIE.</p>
+</li>
+<li>
+<p>HANSON, K. (1990). <em>Object detection and amplitude estimation based on maximum a-posteriori reconstructions</em>. Proc. SPIE.</p>
+</li>
+<li>
+<p>GEMAN, S. &amp; GEMAN, D. (1990). <em>Stochastic Relaxation, Gibbs Distribution and the Bayesian Restoration of Images</em>. IEEE, Transactions on Pattern Analysis; Machine Intelligence.</p>
+</li>
+<li>
+<p>AITKIN, M. A. (2010). <em>Statistical inference: an integrated Bayesian/likelihood approach</em>. CRC Press.</p>
+</li>
+<li>
+<p>MIGON, H. S. et al. (2014). <em>Statistical Inference: An Integrated Approach</em>. 2nd ed. CRC Press.</p>
+</li>
+<li>
+<p>GAMERMAN, D. &amp; LOPES, H. F. (2006). <em>Monte Carlo Markov Chain: Stochastic Simulation for Bayesian Inference</em>. 2nd ed. Chapman &amp; Hall.</p>
+</li>
 </ul>
 
 

@@ -16,7 +16,7 @@
     
     
       
-        <title>Segmentação Automática (Micro CT) - GeoSlicer Manual</title>
+        <title>MicroCTSegmenter - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#segmentacao-automatica-micro-ct" class="md-skip">
+        <a href="#treinamento-de-modelo" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Segmentação Automática (Micro CT)
+              MicroCTSegmenter
             
           </span>
         </div>
@@ -724,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/Manual/SegmentEditor.html" class="md-nav__link">
+      <a href="../Volumes/Segmentation/SegmentEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
@@ -746,52 +746,17 @@
   
   
   
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
+    <li class="md-nav__item">
+      <a href="../Volumes/Segmentation/MicroCTSegmenter.html" class="md-nav__link">
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
-            
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
   
   <span class="md-ellipsis">
     Segmentação por IA
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7_2">
-            <span class="md-nav__icon md-icon"></span>
-            Segmentação por IA
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/Semiauto/MicroCTSemiAutoSegmentation.html" class="md-nav__link">
-        
-  
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
-  
-  <span class="md-ellipsis">
-    Model Training
-  </span>
-  
-
       </a>
     </li>
   
@@ -805,38 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/Automatic/MicroCTSegmenter.html" class="md-nav__link">
-        
-  
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
-  
-  <span class="md-ellipsis">
-    Pre-trained Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Volumes/Segmentation/SegmentInspector/SegmentInspector.html" class="md-nav__link">
+      <a href="../Volumes/Segmentation/SegmentInspector.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
@@ -13447,11 +13381,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/ResultAnalysis.html" class="md-nav__link">
+      <a href="../Volumes/MoreTools/MoreToolsFlows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Outras Ferramentas
+    Flows
   </span>
   
 
@@ -14180,7 +14114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/Manual/SegmentEditor.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/SegmentEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
@@ -14203,7 +14137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/Automatic/ThinSectionSegmenter.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/ThinSectionSegmenter.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
@@ -14226,7 +14160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/SegmentInspector/SegmentInspector.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/SegmentInspector.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
@@ -14249,7 +14183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/InstanceEditor/ThinSectionInstanceEditor.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/ThinSectionInstanceEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-combine"><path d="M10 18H5a3 3 0 0 1-3-3v-1"/><path d="M14 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2"/><path d="M20 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2"/><path d="m7 21 3-3-3-3"/><rect x="14" y="14" width="8" height="8" rx="2"/><rect x="2" y="2" width="8" height="8" rx="2"/></svg>
@@ -14272,7 +14206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/LabelMapEditor/LabelMapEditor.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/LabelMapEditor.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tags"><path d="m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19"/><path d="M9.586 5.586A2 2 0 0 0 8.172 5H3a1 1 0 0 0-1 1v5.172a2 2 0 0 0 .586 1.414L8.29 18.29a2.426 2.426 0 0 0 3.42 0l3.58-3.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="6.5" cy="9.5" r=".5" fill="currentColor"/></svg>
@@ -14295,7 +14229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/PoreStats/PoreStats.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/PoreStats.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
@@ -14318,7 +14252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/Segmentation/SelfGuidedSegmentation/UnsupervisedSegmentation.html" class="md-nav__link">
+      <a href="../ThinSection/Segmentation/UnsupervisedSegmentation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clover-icon lucide-clover"><path d="M16.17 7.83 2 22"/><path d="M4.02 12a2.827 2.827 0 1 1 3.81-4.17A2.827 2.827 0 1 1 12 4.02a2.827 2.827 0 1 1 4.17 3.81A2.827 2.827 0 1 1 19.98 12a2.827 2.827 0 1 1-3.81 4.17A2.827 2.827 0 1 1 12 19.98a2.827 2.827 0 1 1-4.17-3.81A1 1 0 1 1 4 12"/><path d="m7.83 7.83 8.34 8.34"/></svg>
@@ -17112,11 +17046,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ThinSection/MoreTools/ResultAnalysis.html" class="md-nav__link">
+      <a href="../ThinSection/MoreTools/MoreToolsFlows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Outras Ferramentas
+    Flows
   </span>
   
 
@@ -18601,6 +18535,8 @@
       <a href="../Multiscale/Introduction.html" class="md-nav__link">
         
   
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
+  
   <span class="md-ellipsis">
     Introdução
   </span>
@@ -19795,6 +19731,94 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Desenvolvimento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Desenvolvimento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Desenvolvimento/CompilandoGeoSlicer.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
+  
+  <span class="md-ellipsis">
+    Compilando o GeoSlicer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Desenvolvimento/ComoContribuir.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
+  
+  <span class="md-ellipsis">
+    Como Contribuir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -19812,8 +19836,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -19822,46 +19844,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arquitetura-u-net" class="md-nav__link">
+  <a href="#treinamento-de-modelo" class="md-nav__link">
     <span class="md-ellipsis">
-      Arquitetura U-Net
+      Treinamento de Modelo
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#treinamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Treinamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resultados" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resultados
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Resultados">
+    <nav class="md-nav" aria-label="Treinamento de Modelo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#segmentacao-binaria" class="md-nav__link">
+  <a href="#metodo-random-forest" class="md-nav__link">
     <span class="md-ellipsis">
-      Segmentação Binária
+      Método Random-Forest
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#segmentacao-basins" class="md-nav__link">
+  <a href="#metodo-inferencia-bayesiana" class="md-nav__link">
     <span class="md-ellipsis">
-      Segmentação Basins
+      Método Inferência Bayesiana
     </span>
   </a>
   
@@ -19873,11 +19877,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencias-bibliograficas" class="md-nav__link">
+  <a href="#modelos-pre-treinados" class="md-nav__link">
     <span class="md-ellipsis">
-      Referências Bibliográficas
+      Modelos Pré-treinados
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Modelos Pré-treinados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#treinamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Treinamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -19896,196 +19933,175 @@
                   
 
 
-<h1 id="segmentacao-automatica-micro-ct">Segmentação Automática (Micro CT)</h1>
-<p>Dois problemas merecem especial atenção quando o assunto é a microtomografia de rocha. Em primeiro lugar, a segmentação de poros em relação aos seus minerais. Este procedimento pode ser útil para a caracterização de poros, de propriedades geoestatísticas, hidráulicas e mecânicas das rochas, bem como para a execução de simulações posteriores. O segundo problema é o da identificação conjunta dos elementos gerais contidos na amostra. Nesta segunda segmentação, denominada <em>basins</em>, múltiplas classes de elementos são consideradas: não-material, poro, quartzo, porosidade em sub-resolução, calcita e alta atenuação. Para além do valor intrínseco à identificação de minerais, tal segmentação é utilizada na inferência da densidade da rocha, na caracterização de suas fraturas e no estudo detalhado do comportamento dos fluidos nas rochas de interesse.</p>
-<h2 id="arquitetura-u-net">Arquitetura U-Net</h2>
-<p>O GeoSlicer implementa segmentadores para ambos os problemas acima por meio de redes neurais pré-treinadas do tipo U-Net, a qual foi introduzida na segmentação multifásica de lâminas delgadas. As configurações de rede U-Net utilizadas nesta seção são mostradas na Tabela 1.</p>
-<p><center></p>
+  <h1>MicroCTSegmenter</h1>
+
+<h2 id="treinamento-de-modelo">Treinamento de Modelo</h2>
+<p>O módulo <strong>MicroCT Segmenter</strong> oferece a opção de <em>Model Training</em>, que realiza a segmentação de uma amostra inteira a partir de uma anotação inicial simples. Com base nessa anotação, diferentes métodos treinam um modelo e inferem o resultado em toda a imagem ou em uma região de interesse (SOI). O modelo treinado pode ser salvo e reutilizado em outras imagens.</p>
+<h3 id="metodo-random-forest">Método Random-Forest</h3>
+<p>O Random-Forest é um método que constrói múltiplas árvores de decisão durante o treinamento para criar um modelo robusto. A classificação final é determinada pela maioria dos votos das árvores. Para este método, é possível selecionar diferentes <em>features</em> (características) extraídas da imagem para o treinamento.</p>
+<h4 id="selecao-de-caracteristicas-features">Seleção de características (<em>features</em>)</h4>
+<ul>
+<li><strong>Raw input image</strong>: Adiciona a própria imagem como uma das entradas.</li>
+<li><strong>Gaussian filter</strong>: Aplica um kernel gaussiano de raio escolhido como um filtro na imagem.</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th align="center">Parâmetros da U-Net</th>
-<th align="center">Segmentação binária</th>
-<th align="center">Segmentação <em>basins</em></th>
+<th align="center"><img alt="Figura 1" src="../assets/images/MicroCTSemiAutoSegmentationa2.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Escalas</td>
-<td align="center">5</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td align="center">Convoluções por escala</td>
-<td align="center">2</td>
-<td align="center">2</td>
-</tr>
-<tr>
-<td align="center">Função de ativação</td>
-<td align="center">PReLU</td>
-<td align="center">PReLU</td>
-</tr>
-<tr>
-<td align="center">Canais de entrada</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">Canais de saída</td>
-<td align="center">1</td>
-<td align="center">6</td>
+<td align="center">Figura 1: Filtro gaussiano.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="tabela-1-configuracao-de-modelos-utilizados-na-segmentacao-de-poros-e-basins">Tabela 1: Configuração de modelos utilizados na segmentação de poros e basins.</h5>
-<p></center></p>
-<h2 id="treinamento">Treinamento</h2>
-<p>Os dados utilizados no treinamento somam 68 volumes para o caso do modelo de segmentação binária (poro/não-poro), e 106 para os volumes de segmentação multi-classe, como detalhado na tabelas 2 e 3. A distribuição de intensidades varia bastante entre um produto de microtomografia e outro. De forma a facilitar a generalização da rede para dados futuros, uma transformação linear de histograma foi realizada, de tal modo que os percentis 5 e 50 tornassem as intensidades 0 e 0.5, respectivamente.</p>
-<p>Os volumes de treinamento foram recortados em subvolumes menores, com dimensão de 128³ voxels. Uma porção aleatória de 75% deles sofreu transformações aleatórias de aumento de dados, incluindo rotações, reversões e adição de ruído branco antes de carregadas para treinamento, enquanto que os outros 25% foram carregados diretamente em cada etapa de validação.</p>
-<p><center></p>
+<ul>
+<li><strong>Winvar filter</strong>: Filtro baseado na variância, calcula <span class="arithmatex">\(\left\lt x^2\right\gt-\left\lt x\right\gt^2\)</span> dentro de um kernel de raio escolhido.</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th align="center">Conjunto (segmentação binária)</th>
-<th align="center">Volumes</th>
-<th align="center">Subvolumes recortados</th>
+<th align="center"><img alt="Figura 2" src="../assets/images/MicroCTSemiAutoSegmentationa3.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Treinamento e validação</td>
-<td align="center">64</td>
-<td align="center">26086</td>
-</tr>
-<tr>
-<td align="center">Teste</td>
-<td align="center">4</td>
-<td align="center">806</td>
-</tr>
-<tr>
-<td align="center">Total</td>
-<td align="center">68</td>
-<td align="center">26892</td>
+<td align="center">Figura 2: Filtro winvar.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="tabela-2-configuracao-de-dados-utilizados-no-treinamento-e-teste-do-modelo-de-segmentacao-de-poros">Tabela 2: Configuração de dados utilizados no treinamento e teste do modelo de segmentação de poros.</h5>
-<p></center></p>
-<p><center></p>
+<ul>
+<li><strong>Gabor filters</strong>: Calculados em direções <span class="arithmatex">\(\theta\)</span> igualmente espaçadas, esses filtros são compostos de uma parte gaussiana e uma parte senoidal. Em 2D, a fórmula é:</li>
+</ul>
+<div class="arithmatex">\[ f(x,y,\omega,\theta,\sigma)=\frac{1}{2\pi\sigma^2}\exp\left[-\frac{1}{2}\frac{x^2+y^2}{\sigma^2}+I\omega(x\cos\theta+y\sin\theta)\right] \]</div>
 <table>
 <thead>
 <tr>
-<th align="center">Conjunto (segmentação binária)</th>
-<th align="center">Volumes</th>
-<th align="center">Subvolumes recortados</th>
+<th align="center"><img alt="Figura 3" src="../assets/images/MicroCTSemiAutoSegmentationa4.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Treinamento e validação</td>
-<td align="center">100</td>
-<td align="center">44156</td>
-</tr>
-<tr>
-<td align="center">Teste</td>
-<td align="center">6</td>
-<td align="center">2288</td>
-</tr>
-<tr>
-<td align="center">Total</td>
-<td align="center">106</td>
-<td align="center">46444</td>
+<td align="center">Figura 3: Filtro Gabor em uma das direções <span class="arithmatex">\(\theta\)</span>.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="tabela-3-configuracao-de-dados-utilizados-no-treinamento-e-teste-do-modelo-de-segmentacao-basins">Tabela 3: Configuração de dados utilizados no treinamento e teste do modelo de segmentação <em>basins</em>.</h5>
-<p></center></p>
-<p>O poro, que é a classe mais importante em ambas as segmentações, encontra-se em pequenas regiões, sendo menos comum do que as outras classes. Esta característica torna todo o conjunto de dados desbalanceado, pela própria natureza das rochas. Nestes casos, é indicado o uso da função custo de Tversky no treinamento, ao invés das mais tradicionais, como a entropia cruzada, e o custo de Dice. A função custo de Tversky, proposta por Salehi et al., 2017, foi projetada para abordar essa questão, incorporando dois parâmetros de compensação entre os falsos positivos (<span class="arithmatex">\(\alpha\)</span>) e falsos negativos (<span class="arithmatex">\(\beta\)</span>), definidos pelo usuário. No artigo em que é definida, os valores de 0.3 para <span class="arithmatex">\(\alpha\)</span> e 0.7 para <span class="arithmatex">\(\beta\)</span> se mostraram úteis para o treinamento de modelos em dados altamente desequilibrados, permitindo que o mesmo seja mais sensível às classes minoritárias. Considerando um modelo binário, tal função tem a seguinte forma:</p>
-<div class="arithmatex">\[TL(\alpha, \beta)=\frac{\sum_{i=1}^N p_{0 i} g_{0 i}}{\sum_{i=1}^N p_{0 i} g_{0 i}+\alpha \sum_{i=1}^N p_{0 i} g_{1 i}+\beta \sum_{i=1}^N p_{1 i} g_{0 i}},\]</div>
-<p>onde TL é a função custo de Tversky, <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\beta\)</span> são seus parâmetros, <span class="arithmatex">\(p_{0 i}\)</span> é a probabilidade do voxel <span class="arithmatex">\(i\)</span> pertencer à classe segmentada, enquanto <span class="arithmatex">\(p_{1 i}\)</span>, a de não pertencer a ela. De modo similar, <span class="arithmatex">\(g_{0 i}\)</span> vale 1 no voxel <span class="arithmatex">\(i\)</span> se ele pertence à classe segmentada e 0 caso contrário, enquanto <span class="arithmatex">\(g_{1 i}\)</span> é o oposto. Num cenário com mais de duas classes sendo segmentadas, o custo de Tversky é a média dos custos relacionados a cada classe.</p>
-<h2 id="resultados">Resultados</h2>
-<p>Ambos os modelos foram treinados até que o custo calculado na validação passasse a divergir, com tamanho de lote igual a 32 exemplos para a rede binária e 10 exemplos para a rede <em>basins</em>. A evolução da função custo nos dois casos são mostradas nas Figuras 2 e 5. A Figura 3 apresenta a matriz de confusão normalizada em relação aos rótulos verdadeiros para o modelo de segmentação poro/não-poro numa das imagens de validação. De forma similar, a Figura 6 contém a matriz de confusão para a segmentação multi-classe. Este modelo não conseguiu generalizar as classes não-material e alta-atenuação (<em>non-material</em> e <em>high-attenuation</em>). Enquanto o primeiro caso é esperado, pois os dados utilizados no treinamento raramente continham exemplos da classe, o segundo representa um considerável potencial para melhorias, de forma que o modelo <em>basins</em> deixe de ignorar estes elementos durante a segmentação. As distribuições de tamanho de poro foram calculadas para os dois modelos usando recortes centrais de 400³ voxels, e podem ser vistos nas Figura 3 e 6. As curvas de distribuição de poros previstas se aproximaram mais das anotadas no caso do modelo binário, o que indica que ele deve ser utilizado quando uma boa segmentação de poros é mais valorizada em determinada tarefa.</p>
-<h3 id="segmentacao-binaria">Segmentação Binária</h3>
+<ul>
+<li><strong>Minkowsky functionals</strong>: Parâmetros morfológicos que descrevem a geometria dos dados, associados a volume, superfície, curvatura média e característica de Euler.</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Imagem de teste" src="../assets/images/MicroCTSegmenter7.png" width="29%" /><img alt="Anotação da imagem de teste" src="../assets/images/MicroCTSegmenter8b.png" width="29%" /><img alt="Resultado" src="../assets/images/MicroCTSegmenter9.png" width="29%" /></th>
+<th align="center"><img alt="Figura 4" src="../assets/images/MicroCTSemiAutoSegmentationMink1.png" /> <img alt="Figura 4" src="../assets/images/MicroCTSemiAutoSegmentationMink2.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Seção de imagem de micro-CT de um dos testes do modelo de segmentação binária junto com a respectiva anotação utilizada (ao centro) e resultado dos rótulos previstos pela rede de poros (a direita).</td>
+<td align="center">Figura 4: Filtros Minkowsky.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Variogram range</strong>: Mede a variação média dos valores em função da distância. O <em>range</em> é a distância onde a variação é máxima. É útil para diferenciar texturas e granulometrias.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 5" src="../assets/images/MicroCTSemiAutoSegmentationa5.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 5: Variogram range.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metodo-inferencia-bayesiana">Método Inferência Bayesiana</h3>
+<p>Este método utiliza a <strong>regra de Bayes</strong> para classificar os pixels da imagem, atualizando as probabilidades de um pixel pertencer a uma classe com base nas anotações.</p>
+<p>A abordagem no GeoSlicer assume uma <strong>Distribuição Normal Multivariada</strong> para a função de verossimilhança, onde a média <span class="arithmatex">\(\mu_s\)</span> e a matriz de covariância <span class="arithmatex">\(\Sigma_s\)</span> de cada segmento são calculadas a partir das anotações:</p>
+<div class="arithmatex">\[ f(x_p|s)=\frac{1}{\sqrt{(2\pi)^k \det \Sigma_s}}\exp\left(-\frac{1}{2}(x_p-\mu_s)^T \Sigma_s^{-1} (x_p-\mu_s)\right) \]</div>
+<p>Onde <span class="arithmatex">\(x_p\)</span> é o vetor de pixels em uma janela, e <span class="arithmatex">\(\mu_s\)</span> e <span class="arithmatex">\(\Sigma_s\)</span> são a média e a covariância do segmento <span class="arithmatex">\(s\)</span>.</p>
+<p>A inferência da probabilidade de cada segmento para um pixel é obtida pela regra de Bayes, e o segmento que maximiza essa probabilidade é escolhido.</p>
+<p>Para otimizar o desempenho, são aplicados alguns tratamentos, como a transformação de percentil em imagens de MicroCT e a conversão para o formato HSV em imagens de lâminas delgadas. Além disso, para acelerar o processo, é possível calcular a covariância de forma esparsa, utilizando apenas os eixos ou planos principais, o que é especialmente útil em 3D.</p>
+<p>Abaixo, alguns resultados da aplicação do método em imagens de tomografia e lâminas:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 6" src="../assets/images/MicroCTSemiAutoSegmentation4.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 6: Segmentação semi-automática usando inferência Bayesiana em dados de MicroCT.</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 2" src="../assets/images/MicroCTSegmenter4.png" /></th>
+<th align="center"><img alt="Figura 7" src="../assets/images/MicroCTSemiAutoSegmentation5.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 2: Evolução da função custo em cada iteração de treinamento do modelo de poros no conjunto de validação.</td>
+<td align="center">Figura 7: Segmentação semi-automática usando inferência Bayesiana em dados de lâminas.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="modelos-pre-treinados">Modelos Pré-treinados</h2>
+<p>O GeoSlicer oferece modelos pré-treinados baseados na arquitetura <strong>U-Net</strong> para resolver dois problemas comuns na microtomografia de rochas: a segmentação binária (poro/não-poro) e a segmentação <em>basins</em> (múltiplos minerais).</p>
+<h3 id="treinamento">Treinamento</h3>
+<p>O treinamento dos modelos foi realizado com um vasto conjunto de dados (68 volumes para o modelo binário e 106 para o <em>basins</em>), aplicando uma transformação linear de histograma para facilitar a generalização. Os volumes foram recortados em subvolumes de 128³ voxels, e uma porção de 75% deles sofreu transformações aleatórias (aumento de dados) para melhorar a robustez do modelo. Para lidar com o desbalanceamento de classes (poros são menos comuns), foi utilizada a <strong>função de custo de Tversky</strong>, que ajusta a sensibilidade do modelo para classes minoritárias, melhorando a precisão na detecção de poros.</p>
+<h3 id="resultados">Resultados</h3>
+<p>Os modelos pré-treinados apresentam resultados de alta qualidade. O modelo de segmentação binária é especialmente preciso na identificação de poros, enquanto o modelo <em>basins</em> oferece uma segmentação completa dos diferentes minerais.</p>
+<h4 id="segmentacao-binaria">Segmentação Binária</h4>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Matriz de confusão" src="../assets/images/MicroCTSegmenter5.png" width="50%" /><img alt="Distribuição de tamannho de poro" src="../assets/images/MicroCTSegmenter6.png" width="50%" /></th>
+<th align="center"><img alt="Imagem de teste" src="../assets/images/MicroCTSegmenter12a.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 3: Matriz de confusão do modelo de poros em dados de teste e distribuição de tamanho de poros prevista contra anotada em um dos volumes do conjunto de teste usando o modelo de segmentação binária.</td>
+<td align="center">Figura 8: Comparação entre a imagem original, a anotação e o resultado da segmentação binária.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="segmentacao-basins">Segmentação <em>Basins</em></h3>
+<h4 id="segmentacao-basins">Segmentação <em>Basins</em></h4>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Imagem de teste" src="../assets/images/MicroCTSegmenter7.png" width="29%" /><img alt="Anotação da imagem de teste" src="../assets/images/MicroCTSegmenter8b.png" width="29%" /><img alt="Resultado" src="../assets/images/MicroCTSegmenter9.png" width="29%" /></th>
+<th align="center"><img alt="Imagem de teste" src="../assets/images/MicroCTSegmenter78a.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 4: Seção de imagem de micro-CT de uma das imagens de teste do modelo de segmentação basins (RJS688A_F6484H_LIMPA_T2_01983nm), com a respectiva anotação utilizada (ao centro) e resultado dos rótulos previstos pela rede de poros (à direita).</td>
+<td align="center">Figura 9: Comparação entre a imagem original, a anotação e o resultado da segmentação basins.</td>
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Figura 5" src="../assets/images/MicroCTSegmenter10.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 5: Evolução da função custo em cada iteração de treinamento do modelo de poros no conjunto de validação.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Matriz de confusão" src="../assets/images/MicroCTSegmenter11.png" width="50%" /><img alt="Distribuição de tamannho de poro" src="../assets/images/MicroCTSegmenter12.png" width="50%" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Figura 6: Matriz de confusão do modelo de segmentação basins em dados de teste e distribuição de tamanho de poro predita contra anotada em um dos volumes do conjunto de teste usando o modelo de segmentação basins.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
-<p>SCHMIDT, U., WEIGERT, M., BROADDUS, C., MYERS, G. Cell detection with star-convex polygons. In: Medical Image Computing and Computer Assisted Intervention–MICCAI 2018: 21st International Conference, Granada, Spain, September 16-20, 2018, Proceedings, Part II 11. Springer International Publishing, 2018. p. 265-273.</p>
-<p>SALEHI, Seyed Sadegh Mohseni; ERDOGMUS, Deniz; GHOLIPOUR, Ali. Tversky loss function for image segmentation using 3D fully convolutional deep networks. In: Machine Learning in Medical Imaging: 8th International Workshop, MLMI 2017, Held in Conjunction with MICCAI 2017, Quebec City, QC, Canada, September 10, 2017, Proceedings 8. Springer International Publishing, 2017. p. 379-387.</p>
-<p>WEIGERT, M., SCHMIDT, U., HAASE, R., SUGAWARA, K., MYERS, G. Star-convex polyhedra for 3D object detection and segmentation in microscopy. In: Proceedings of the IEEE/CVF winter conference on applications of computer vision. 2020. p. 3666-3673.</p>
-<p>BAI, Min; URTASUN, Raquel. Deep watershed transform for instance segmentation. In: Proceedings of the IEEE conference on computer vision and pattern recognition. 2017. p. 5221-5229.</p>
-<p>HE, K., GKIOXARI, G., DOLLÁR, P., GIRSHICK, R. Mask r-cnn. In: Proceedings of the IEEE international conference on computer vision. 2017. p. 2961-2969.</p>
-<p>RONNEBERGER, Olaf; FISCHER, Philipp; BROX, Thomas. U-net: Convolutional networks for biomedical image segmentation. In: Medical Image Computing and Computer-Assisted Intervention–MICCAI 2015: 18th International Conference, Munich, Germany, October 5-9, 2015, Proceedings, Part III 18. Springer International Publishing, 2015. p. 234-241.</p>
+<h3 id="referencias">Referências</h3>
+<ul>
+<li>
+<p>SCHMIDT, U. et al. (2018). <em>Cell detection with star-convex polygons</em>. In: Medical Image Computing and Computer Assisted Intervention–MICCAI 2018. Springer.</p>
+</li>
+<li>
+<p>SALEHI, S. S. M. et al. (2017). <em>Tversky loss function for image segmentation using 3D fully convolutional deep networks</em>. In: Machine Learning in Medical Imaging. Springer.</p>
+</li>
+<li>
+<p>WEIGERT, M. et al. (2020). <em>Star-convex polyhedra for 3D object detection and segmentation in microscopy</em>. In: Proceedings of the IEEE/CVF winter conference on applications of computer vision.</p>
+</li>
+<li>
+<p>BAI, M. &amp; URTASUN, R. (2017). <em>Deep watershed transform for instance segmentation</em>. In: Proceedings of the IEEE conference on computer vision and pattern recognition.</p>
+</li>
+<li>
+<p>HE, K. et al. (2017). <em>Mask r-cnn</em>. In: Proceedings of the IEEE international conference on computer vision.</p>
+</li>
+<li>
+<p>RONNEBERGER, O. et al. (2015). <em>U-net: Convolutional networks for biomedical image segmentation</em>. In: Medical Image Computing and Computer-Assisted Intervention–MICCAI 2015. Springer.</p>
+</li>
+</ul>
 
 
 

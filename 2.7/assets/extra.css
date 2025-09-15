@@ -9,9 +9,13 @@
 }
 
 [data-md-color-scheme=default] {
-    --md-typeset-a-color: rgba(0, 0, 0, .87) !important;
+    --md-typeset-a-color: #006400 !important;
     --md-accent-fg-color: rgba(0, 0, 0, .87) !important;
     --md-default-fg-color--light: rgba(0, 0, 0, .87) !important;
+}
+
+.md-typeset a {
+    text-decoration: underline;
 }
 
 h1 {
