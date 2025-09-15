@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="Resample/Resample.html">
+      
+      
+        <link rel="next" href="Microtom/Microtom.html">
       
       
       <link rel="icon" href="../assets/logo.ico">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Gradient Anisotropic Diffusion - GeoSlicer Manual</title>
+        <title>Segmentação - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradient-anisotropic-diffusion" class="md-skip">
+        <a href="#manual-segmentation" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gradient Anisotropic Diffusion
+              Segmentação
             
           </span>
         </div>
@@ -235,11 +239,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../Volumes/Introduction.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Introduction.html" class="md-tabs__link">
           
   
   Volumes
@@ -579,23 +585,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -606,7 +617,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Volumes
@@ -620,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Introduction.html" class="md-nav__link">
+      <a href="Introduction.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
@@ -643,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MicroCTImport/Import.html" class="md-nav__link">
+      <a href="MicroCTImport/Import.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-down"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="M12 10v6"/><path d="m15 13-3 3-3-3"/></svg>
@@ -666,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MicroCTExport/Export.html" class="md-nav__link">
+      <a href="MicroCTExport/Export.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
@@ -689,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Crop/Crop.html" class="md-nav__link">
+      <a href="Crop/Crop.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crop"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
@@ -750,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Filter/GradientAnisotropicDiffusion/GradientAnisotropicDiffusion.html" class="md-nav__link">
+      <a href="Filter/GradientAnisotropicDiffusion/GradientAnisotropicDiffusion.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>
@@ -773,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Filter/PolynomialShadingCorrection/PolynomialShadingCorrection.html" class="md-nav__link">
+      <a href="Filter/PolynomialShadingCorrection/PolynomialShadingCorrection.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>
@@ -796,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Filter/MicroCTFlowApplyFilters.html" class="md-nav__link">
+      <a href="Filter/MicroCTFlowApplyFilters.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>
@@ -827,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Resample/Resample.html" class="md-nav__link">
+      <a href="Resample/Resample.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize-2"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" x2="21" y1="10" y2="3"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -847,10 +858,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Volumes/Segmentation.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
+  
+  <span class="md-ellipsis">
+    Segmentação
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Segmentation.html" class="md-nav__link md-nav__link--active">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
@@ -861,6 +892,183 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manual-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Segmentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segmentacao-e-segmento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentação e Segmento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representacao-de-rotulos-em-mapa-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representação de rótulos em mapa binário
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paineis-e-sua-utilizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painéis e sua utilização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-de-segmentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de segmentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-de-efeitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seção de efeitos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-segmenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Segmenter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Segmenter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método Random-Forest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-inferencia-bayesiana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método Inferência Bayesiana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos-pre-treinados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos Pré-treinados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos Pré-treinados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#treinamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Treinamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-inspector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segment Inspector
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment Inspector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paineis-e-sua-utilizacao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painéis e sua utilização
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -873,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Microtom/Microtom.html" class="md-nav__link">
+      <a href="Microtom/Microtom.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-cog"><circle cx="12" cy="17" r="3"/><path d="M4.2 15.1A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"/><path d="m15.7 18.4-.9-.3"/><path d="m9.2 15.9-.9-.3"/><path d="m10.6 20.7.3-.9"/><path d="m13.1 14.2.3-.9"/><path d="m13.6 20.7-.4-1"/><path d="m10.8 14.3-.4-1"/><path d="m8.3 18.6 1-.4"/><path d="m14.7 15.8 1-.4"/></svg>
@@ -934,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Microporosity/PorosityFromSaturation.html" class="md-nav__link">
+      <a href="Microporosity/PorosityFromSaturation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
@@ -957,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Microporosity/PorosityFromSegmentation.html" class="md-nav__link">
+      <a href="Microporosity/PorosityFromSegmentation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
@@ -988,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/ModellingFlow/StreamlinedModelling.html" class="md-nav__link">
+      <a href="ModellingFlow/StreamlinedModelling.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-tree"><path d="M21 12h-8"/><path d="M21 6H8"/><path d="M21 18h-8"/><path d="M3 6v4c0 1.1.9 2 2 2h3"/><path d="M3 10v6c0 1.1.9 2 2 2h3"/></svg>
@@ -1011,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Register/Register.html" class="md-nav__link">
+      <a href="Register/Register.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
@@ -1072,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/PNExtraction.html" class="md-nav__link">
+      <a href="PNM/PNExtraction.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1095,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/PNSimulation.html" class="md-nav__link">
+      <a href="PNM/PNSimulation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1118,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/KabsREV.html" class="md-nav__link">
+      <a href="PNM/KabsREV.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1141,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/cycles.html" class="md-nav__link">
+      <a href="PNM/cycles.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1164,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/krelEDA.html" class="md-nav__link">
+      <a href="PNM/krelEDA.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1187,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/production.html" class="md-nav__link">
+      <a href="PNM/production.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1210,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/compare.html" class="md-nav__link">
+      <a href="PNM/compare.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
@@ -1271,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/Fluxos/kabs.html" class="md-nav__link">
+      <a href="PNM/Fluxos/kabs.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
@@ -1294,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/Fluxos/krel.html" class="md-nav__link">
+      <a href="PNM/Fluxos/krel.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
@@ -1317,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/Fluxos/micp.html" class="md-nav__link">
+      <a href="PNM/Fluxos/micp.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
@@ -1340,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/PNM/Fluxos/report.html" class="md-nav__link">
+      <a href="PNM/Fluxos/report.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
@@ -1417,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Multiscale/MultiscaleImageGeneration.html" class="md-nav__link">
+      <a href="Multiscale/MultiscaleImageGeneration.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
@@ -1440,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Multiscale/MultiscalePostProcessing.html" class="md-nav__link">
+      <a href="Multiscale/MultiscalePostProcessing.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-cog"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m3.2 12.9-.9-.4"/><path d="m3.2 15.1-.9.4"/><path d="M4.677 21.5a2 2 0 0 0 1.313.5H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2.5"/><path d="m4.9 11.2-.4-.9"/><path d="m4.9 16.8-.4.9"/><path d="m7.5 10.3-.4.9"/><path d="m7.5 17.7-.4-.9"/><path d="m9.7 12.5-.9.4"/><path d="m9.7 15.5-.9-.4"/><circle cx="6" cy="14" r="3"/></svg>
@@ -1509,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/BigImage/LoadBigImage.html" class="md-nav__link">
+      <a href="BigImage/LoadBigImage.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -1942,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/BigImage/PolynomialShadingCorrection.html" class="md-nav__link">
+      <a href="BigImage/PolynomialShadingCorrection.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
@@ -1965,7 +2173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/BigImage/BoundaryRemoval.html" class="md-nav__link">
+      <a href="BigImage/BoundaryRemoval.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -4288,7 +4496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/BigImage/ExpandSegments.html" class="md-nav__link">
+      <a href="BigImage/ExpandSegments.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -6611,7 +6819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/BigImage/MultipleThreshold.html" class="md-nav__link">
+      <a href="BigImage/MultipleThreshold.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -8934,7 +9142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/BigImage/StreamlinedSegmentation.html" class="md-nav__link">
+      <a href="BigImage/StreamlinedSegmentation.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -11303,7 +11511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/VolumeCalculator.html" class="md-nav__link">
+      <a href="MoreTools/VolumeCalculator.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
@@ -11326,7 +11534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/Tables.html" class="md-nav__link">
+      <a href="MoreTools/Tables.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-table-properties"><path d="M15 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M21 9H3"/><path d="M21 15H3"/></svg>
@@ -11349,7 +11557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/TableFilter.html" class="md-nav__link">
+      <a href="MoreTools/TableFilter.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
@@ -11372,7 +11580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/Charts.html" class="md-nav__link">
+      <a href="MoreTools/Charts.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
@@ -11395,7 +11603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/VariogramAnalysis.html" class="md-nav__link">
+      <a href="MoreTools/VariogramAnalysis.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -13374,7 +13582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/NetCDF/Introduction.html" class="md-nav__link">
+      <a href="MoreTools/NetCDF/Introduction.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid-2x2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
@@ -13397,7 +13605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/NetCDF/Import.html" class="md-nav__link">
+      <a href="MoreTools/NetCDF/Import.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid-2x2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
@@ -13420,7 +13628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/NetCDF/Export.html" class="md-nav__link">
+      <a href="MoreTools/NetCDF/Export.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid-2x2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
@@ -13443,7 +13651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/NetCDF/Save.html" class="md-nav__link">
+      <a href="MoreTools/NetCDF/Save.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid-2x2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
@@ -13474,7 +13682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/MoreTools/MoreToolsFlows.html" class="md-nav__link">
+      <a href="MoreTools/MoreToolsFlows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -13541,7 +13749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Import/BIAEPBrowser.html" class="md-nav__link">
+      <a href="Import/BIAEPBrowser.html" class="md-nav__link">
         
   
     <?xml version="1.0" encoding="utf-8" ?>
@@ -13763,7 +13971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Import/OpenRockData.html" class="md-nav__link">
+      <a href="Import/OpenRockData.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-download"><path d="M12 13v8l-4-4"/><path d="m12 21 4-4"/><path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"/></svg>
@@ -13786,7 +13994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Import/NetCDF.html" class="md-nav__link">
+      <a href="Import/NetCDF.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid-2x2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
@@ -13809,7 +14017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Volumes/Import/SurfaceLoader3D.html" class="md-nav__link">
+      <a href="Import/SurfaceLoader3D.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cylinder-icon lucide-cylinder"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/></svg>
@@ -20010,8 +20218,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -20020,20 +20226,161 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parametros-para-o-algoritmo-de-difusao-anisotropica" class="md-nav__link">
+  <a href="#manual-segmentation" class="md-nav__link">
     <span class="md-ellipsis">
-      Parâmetros para o algoritmo de difusão anisotrópica
+      Manual Segmentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segmentacao-e-segmento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentação e Segmento
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#exemplos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#representacao-de-rotulos-em-mapa-binario" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplos
+      Representação de rótulos em mapa binário
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paineis-e-sua-utilizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painéis e sua utilização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-de-segmentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de segmentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-de-efeitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seção de efeitos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-segmenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Segmenter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Segmenter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método Random-Forest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-inferencia-bayesiana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método Inferência Bayesiana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos-pre-treinados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos Pré-treinados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos Pré-treinados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#treinamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Treinamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-inspector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segment Inspector
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment Inspector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paineis-e-sua-utilizacao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painéis e sua utilização
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -20052,67 +20399,714 @@
                   
 
 
-<h1 id="gradient-anisotropic-diffusion">Gradient Anisotropic Diffusion</h1>
-<p>Aplica difusão anisotrópica de gradiente a um volume. Métodos de difusão anisotrópica reduzem ruído em imagens enquanto preservam características da imagem, como bordas. Em muitas aplicações, assume-se que transições entre claro e escuro (bordas) sejam de interesse. Métodos de difusão isotrópica padrão frequentemente borram fronteiras entre claro e escuro. Metódos de difusão anisotrópica são formulados especificamente para preservar as bordas. O termo de condutância neste caso é uma função da magnitude do gradiente da imagem em cada ponto, reduzindo a força da difusão nas bordas. A implementação numérica dessa equação é similar à descrita no artigo de Perona-Malik, porém usa uma técnica mais robusta para estimativa da magnitude do gradiente e é generalizado para N-dimensões.</p>
-<h2 id="parametros-para-o-algoritmo-de-difusao-anisotropica">Parâmetros para o algoritmo de difusão anisotrópica</h2>
-<p>Condutância (conductance): Controla a sensibilidade do termo de condutância. Como regra geral, quanto menor o valor, mais fortemente o filtro preservará as bordas. Um alto valor causará difusão (suavização) das bordas. Note que o número de iterações controla o quanto haverá de suavização dentro de regiões delimitadas pelas bordas.</p>
-<p>Iterações (numberOfIterations): Quanto mais iterações, maior suavização. Cada iteração leva a mesma quantidade de tempo. Se uma iteração leva 10 segundos, 10 iterações levam 100 segundos.</p>
-<p>Passo temporal (timeStep): O passo temporal depende da dimensionalidade da imagem. Para imagens tridimensionais, o valor padrão de de 0.0625 fornece uma solução estável. Na prática, a alteração deste parâmetro causa poucas alterações na imagem.</p>
-<h2 id="exemplos">Exemplos</h2>
+  <h1>Segmentação</h1>
+
+<!-- BEGIN INCLUDE Pages/SegmentEditor.md -->
+<h2 id="manual-segmentation">Manual Segmentation</h2>
+<p>Este módulo é usado para especificar segmentos (estruturas de interesse) em imagens 2D/3D/4D. Algumas das ferramentas imitam uma interface de pintura, como o Photoshop ou o GIMP, mas operam em matrizes 3D de voxels em vez de pixels 2D. O módulo oferece edição de segmentos sobrepostos, exibição tanto em visualizações 2D quanto 3D, opções de visualização detalhadas, edição em visualizações 3D, criação de segmentações por interpolação ou extrapolação em algumas fatias, e edição em fatias em qualquer orientação.</p>
+<p>O Segment Editor não edita volumes de mapas de rótulos, mas as segmentações podem ser facilmente convertidas para/partir de volumes de mapas de rótulos usando a seção Explorer e utilizando o menu do botão secundário do mouse.</p>
+<h3 id="segmentacao-e-segmento">Segmentação e Segmento</h3>
+<p>O resultado de uma segmentação é armazenado no nó segmentation no GeoSlicer. Um nó de segmentação consiste em vários segmentos.</p>
+<p>Um segmento especifica a região para uma estrutura única. Cada segmento possui um número de propriedades, como nome, cor de exibição preferencial, descrição do conteúdo (capaz de armazenar entradas codificadas padrão DICOM) e propriedades personalizadas. Os segmentos podem se sobrepor no espaço.</p>
+<h3 id="representacao-de-rotulos-em-mapa-binario">Representação de rótulos em mapa binário</h3>
+<p>A representação em mapa binário de rótulos é provavelmente a representação mais comumente usada porque é a mais fácil de editar. A maioria dos softwares que utilizam essa representação armazena todos os segmentos em uma única matriz 3D, portanto, cada voxel pode pertencer a um único segmento: os segmentos não podem se sobrepor. No GeoSlicer, a sobreposição entre segmentos é permitida. Para armazenar segmentos sobrepostos em mapas binários, os segmentos são organizados em camadas. Cada camada é armazenada internamente como um volume 3D separado, e um volume pode ser compartilhado entre vários segmentos não sobrepostos para economizar memória.</p>
+<p>Em uma segmentação com a representação de origem definida como mapa binário, cada camada pode ter geometria diferente (origem, espaçamento, direções dos eixos, extensões) temporariamente - para permitir mover segmentos entre segmentações sem perda de qualidade desnecessária (cada reamostragem de um mapa binário pode levar a pequenas mudanças). Todas as camadas são forçadas a ter a mesma geometria durante certas operações de edição e quando a segmentação é salva em arquivo.</p>
+<h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../assets/images/GradientAnisotropicDiffusion1.png" /></th>
+<th align="center"><img alt="Figura 1" src="../assets/images/thin_section/modulos/segment_editor/segment_editor_fig1.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Exemplo de aplicação do algoritmo a um volume com os valores padrão dos parâmetros</td>
+<td align="center">Figura 1: Apresentação do módulo segment editor.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="principais-opcoes">Principais opções</h4>
+<ul>
+<li>
+<p>Segmentação: escolha a segmentação a ser editada.</p>
+</li>
+<li>
+<p>Volume de origem: escolha o volume a ser segmentado. O volume de origem selecionado na primeira vez após a segmentação ser criada é usado para determinar a geometria de representação do labelmap da segmentação (extensão, resolução, direções dos eixos, origem). O volume de origem é usado por todos os efeitos do editor que utilizam a intensidade do volume segmentado (por exemplo, limite, rastreamento de nível). O volume de origem pode ser alterado a qualquer momento durante o processo de segmentação.</p>
+</li>
+<li>
+<p>Adicionar: Adicione um novo segmento à segmentação e selecione-o.</p>
+</li>
+<li>
+<p>Remover: selecione o segmento que deseja excluir e clique em Remover segmento para excluir da segmentação.</p>
+</li>
+<li>
+<p>Mostrar 3D: exiba sua segmentação no visualizador 3D. Este é um botão de alternância. Quando ativado, a superfície é criada e atualizada automaticamente conforme o usuário segmenta. Quando desligado, a conversão não é contínua e o processo de segmentação é mais rápido. Para alterar os parâmetros de criação de superfície: clique na seta ao lado do botão siga para a opção "Smoothing factor" e na barra de valor para editar um valor de parâmetro de conversão. Definir o fator de suavização como 0 desativa a suavização, tornando as atualizações muito mais rápidas. Defina o fator de suavização como 0,1 para suavização fraca e 0,5 ou maior para suavização mais forte.</p>
+</li>
+</ul>
+<h3 id="tabela-de-segmentos">Tabela de segmentos</h3>
+<p>Esta tabela exibe a lista de todos os segmentos.</p>
+<h4 id="colunas-da-tabela">Colunas da tabela:</h4>
+<ul>
+<li>
+<p>Visibilidade (ícone de olho): Alterna a visibilidade do segmento. Para personalizar a visualização: abra os controles de visualização de fatia (clique nos ícones de botão e seta dupla na parte superior de um visualizador de fatia) ou vá para o módulo Segmentações.</p>
+</li>
+<li>
+<p>Amostra de cores: defina a cor e atribua o segmento à terminologia padronizada.</p>
+</li>
+<li>
+<p>Estado (ícone de bandeira): Esta coluna pode ser usada para definir o status de edição de cada segmento que pode ser usado para filtrar a tabela ou marcar segmentos para processamento posterior. 
+Não iniciado: estado inicial padrão, indica que a edição ainda não ocorreu.
+Em andamento: quando um segmento “não iniciado” é editado, seu estado é automaticamente alterado para este
+Concluído: o usuário pode selecionar manualmente este estado para indicar que o segmentat está completo
+Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer finalidade personalizada, por exemplo, para chamar a atenção de um revisor especialista para o segmento</p>
+</li>
+</ul>
+<h3 id="secao-de-efeitos">Seção de efeitos</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 2" src="../assets/images/thin_section/modulos/segment_editor/segment_editor_fig2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 2: Seção de efeitos do segment editor.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Barra de ferramentas de efeitos: Selecione o efeito desejado aqui. Veja abaixo mais informações sobre cada efeito.</p>
+</li>
+<li>
+<p>Opções: As opções para o efeito selecionado serão exibidas aqui.</p>
+</li>
+<li>
+<p>Desfazer/Refazer: O módulo salva o estado da segmentação antes de cada efeito ser aplicado. Isso é útil para experimentação e correção de erros. Por padrão, os últimos 10 estados são lembrados.</p>
+</li>
+</ul>
+<h4 id="efeitos">Efeitos</h4>
+<hr />
+<p>Os efeitos operam clicando no botão Aplicar na seção de opções do efeito ou clicando e/ou arrastando nas visualizações de fatias ou 3D.</p>
+<h4 id="pintura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id=#pintura>Pintura</a></h4>
+<ul>
+<li>
+<p>Escolha o raio (em milímetros) do pincel a ser aplicado.</p>
+</li>
+<li>
+<p>Clique com o botão esquerdo para aplicar um círculo único.</p>
+</li>
+<li>
+<p>Clique com o botão esquerdo e arraste para preencher uma região.</p>
+</li>
+<li>
+<p>Uma trilha de círculos é deixada, que é aplicada quando o botão do mouse é liberado.</p>
+</li>
+<li>
+<p>O modo Esfera aplica o raio às fatias acima e abaixo da fatia atual.</p>
+</li>
+</ul>
+<h4 id="desenho"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id=#desenho>Desenho</a></h4>
+<ul>
+<li>
+<p>Clique com o botão esquerdo para criar pontos individuais de um contorno.</p>
+</li>
+<li>
+<p>Arraste com o botão esquerdo para criar uma linha contínua de pontos.</p>
+</li>
+<li>
+<p>Clique duas vezes com o botão esquerdo para adicionar um ponto e preencher o contorno. Alternativamente, clique com o botão direito para preencher o contorno atual sem adicionar mais pontos.</p>
+</li>
+</ul>
+<p>Nota</p>
+<p>O efeito Tesoura também pode ser usado para desenhar. O efeito Tesoura funciona tanto em visualizações de fatias quanto em 3D, pode ser configurado para desenhar em mais de uma fatia por vez, pode apagar também, pode ser restrito a desenhar linhas horizontais/verticais (usando o modo retângulo), etc.</p>
+<h4 id="apagar"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_erase.png" /> Apagar</h4>
+<p>Semelhante ao efeito Pintura, mas as regiões destacadas são removidas do segmento selecionado em vez de adicionadas.</p>
+<p>Se a Máscara / Área Editável estiver definida para um segmento específico, a região destacada é removida do segmento selecionado e adicionada ao segmento de máscara. Isso é útil quando uma parte de um segmento precisa ser separada em outro segmento.</p>
+<h4 id="rastreamento-de-nivel"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_level_tracing.png" /> Rastreamento de Nível</h4>
+<ul>
+<li>
+<p>Mover o mouse define um contorno onde os pixels têm o mesmo valor de fundo que o pixel de fundo atual.</p>
+</li>
+<li>
+<p>Clicar com o botão esquerdo aplica esse contorno ao mapa de rótulos.</p>
+</li>
+</ul>
+<h4 id="crescer-a-partir-de-sementes"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_grow_from_seeds.png" /> Crescer a partir de sementes</h4>
+<p>Desenhe o segmento dentro de cada estrutura anatômica. Este método começará a partir dessas "sementes" e as expandirá para alcançar a segmentação completa.</p>
+<ul>
+<li>
+<p>Inicializar: Clique neste botão após a segmentação inicial ser concluída (usando outros efeitos de editor). O cálculo inicial pode levar mais tempo do que as atualizações subsequentes. O volume de origem e o método de preenchimento automático serão bloqueados após a inicialização, portanto, se algum desses precisar ser alterado, clique em Cancelar e inicialize novamente.</p>
+</li>
+<li>
+<p>Atualizar: Atualize a segmentação concluída com base nas entradas alteradas.</p>
+</li>
+<li>
+<p>Atualização automática: ative esta opção para atualizar automaticamente a visualização do resultado quando a segmentação for alterada.</p>
+</li>
+<li>
+<p>Cancelar: Remover visualização do resultado. As sementes são mantidas inalteradas, portanto, os parâmetros podem ser alterados e a segmentação pode ser     reiniciada clicando em Inicializar.</p>
+</li>
+<li>
+<p>Aplicar: Substitua os segmentos de sementes pelos resultados visualizados.</p>
+</li>
+</ul>
+<p>Notas:</p>
+<ul>
+<li>
+<p>Apenas segmentos visíveis são usados por este efeito.</p>
+</li>
+<li>
+<p>Pelo menos dois segmentos são necessários.</p>
+</li>
+<li>
+<p>Se uma parte de um segmento for apagada ou a pintura for removida usando Desfazer (e não for substituída por outro segmento), recomenda-se cancelar e inicializar novamente. A razão é que o efeito de adicionar mais informações (pintar mais sementes) pode ser propagado para toda a segmentação, mas remover informações (remover algumas regiões de sementes) não mudará a segmentação completa.</p>
+</li>
+<li>
+<p>O método usa uma versão aprimorada do algoritmo grow-cut descrito em <em>Liangjia Zhu, Ivan Kolesov, Yi Gao, Ron Kikinis, Allen Tannenbaum. An Effective Interactive Medical Image Segmentation Method Using Fast GrowCut, International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI), Interactive Medical Image Computing Workshop, 2014</em>.</p>
+</li>
+</ul>
+<h4 id="margem"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_margin.png" /> Margem</h4>
+<p>Aumenta ou diminui o segmento selecionado pela margem especificada.</p>
+<p>Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão processados (na ordem da lista de segmentos).</p>
+<h4 id="suavizacao"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_smoothing.png" /> Suavização</h4>
+<p>Suaviza segmentos preenchendo buracos e/ou removendo extrusões.</p>
+<p>Por padrão, o segmento atual será Suavizado. Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão suavizado (na ordem da lista de segmentos). Esta operação pode ser demorada para segmentações complexas. O método <code>Suavização conjunta</code> sempre suaviza todos os segmentos visíveis.</p>
+<p>Clicando no botão <code>Aplicar</code>, toda a segmentação é suavizada. Para suavizar uma região específica, clique e arraste com o botão esquerdo em qualquer visualização de fatia ou 3D. O mesmo método e força de suavização são usados tanto no modo de segmentação inteira quanto no modo de suavização por região (o tamanho do pincel não afeta a força da Suavização, apenas facilita a designação de uma região maior).</p>
+<p>Métodos disponíveis:</p>
+<ul>
+<li>
+<p>Mediana: remove pequenas extrusões e preenche pequenos espaços enquanto mantém os contornos suaves praticamente inalterados. Aplicado apenas ao segmento selecionado.</p>
+</li>
+<li>
+<p>Abertura: remove extrusões menores do que o tamanho do kernel especificado. Não adiciona nada ao segmento. Aplicado apenas ao segmento selecionado.</p>
+</li>
+<li>
+<p>Fechamento: preenche cantos afiados e buracos menores do que o tamanho do kernel especificado. Não remove nada do segmento. Aplicado apenas ao segmento selecionado.</p>
+</li>
+<li>
+<p>Gaussiano: suaviza todos os detalhes. A suavização mais forte possível, mas tende a diminuir o segmento. Aplicado apenas ao segmento selecionado.</p>
+</li>
+<li>
+<p>Suavização conjunto: suaviza múltiplos segmentos de uma vez, preservando a interface estanque entre eles. Se os segmentos se sobrepuserem, o segmento mais alto na tabela de segmentos terá prioridade. Aplicado a todos os segmentos visíveis.</p>
+</li>
+</ul>
+<h4 id="tesoura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id=#tesoura>Tesoura</a></h4>
+<p>Recorta segmentos para a região especificada ou preenche regiões de um segmento (geralmente usado com mascaramento). As regiões podem ser desenhadas tanto na visualização de fatia quanto nas visualizações 3D.</p>
+<ul>
+<li>
+<p>Clique com o botão esquerdo para começar a desenhar (forma livre ou círculo/retângulo elástico)</p>
+</li>
+<li>
+<p>Solte o botão para aplicar</p>
+</li>
+</ul>
+<p>Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão processados (na ordem da lista de segmentos).</p>
+<h4 id="ilhas"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_islands.png" /> Ilhas</h4>
+<p>Use esta ferramenta para processar “ilhas”, ou seja, regiões conectadas que são definidas como grupos de voxels não vazios que se tocam, mas são cercados por voxels vazios.</p>
+<ul>
+<li>
+<p><code>Manter maior ilha</code>: mantém a maior região conectada.</p>
+</li>
+<li>
+<p><code>Remover pequenas ilhas</code>: mantém todas as regiões conectadas que são maiores que o <code>tamanho mínimo</code>.</p>
+</li>
+<li>
+<p><code>Dividir ilhas em segmentos</code>: cria um segmento único para cada região conectada do segmento selecionado.</p>
+</li>
+<li>
+<p><code>Manter ilha selecionada</code>: após selecionar este modo, clique em uma área não vazia na visualização de fatias para manter essa região e remover todas as outras regiões.</p>
+</li>
+<li>
+<p><code>Remover ilha selecionada</code>: após selecionar este modo, clique em uma área não vazia na visualização de fatias para remover essa região e preservar todas as outras regiões.</p>
+</li>
+<li>
+<p><code>Adicionar ilha selecionada</code>: após selecionar este modo, clique em uma área vazia na visualização de fatias para adicionar essa região vazia ao segmento (preencher buraco).</p>
+</li>
+</ul>
+<h4 id="operadores-logicos"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_logical_operators.png" /> Operadores lógicos</h4>
+<p>Aplicar operações básicas de copiar, limpar, preencher e Booleanas ao(s) segmento(s) selecionado(s). Veja mais detalhes sobre os métodos clicando em “Mostrar detalhes” na descrição do efeito no Editor de Segmentos.</p>
+<h4 id="volume-de-mascara"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_mask_volume.png" /> Volume de máscara</h4>
+<p>Apague dentro/fora de um segmento em um volume ou crie uma máscara binária. O resultado pode ser salvo em um novo volume ou sobrescrever o volume de entrada. Isso é útil para remover detalhes irrelevantes de uma imagem ou criar máscaras para operações de processamento de imagem (como registro ou correção de intensidade).</p>
+<ul>
+<li>
+<p><code>Operação</code>:</p>
+<ul>
+<li>
+<p><code>Preencher dentro</code>: define todos os voxels do volume selecionado para o <code>Valor de preenchimento</code> especificado dentro do segmento selecionado.</p>
+</li>
+<li>
+<p><code>Preencher fora</code>: define todos os voxels do volume selecionado para o <code>Valor de preenchimento</code> especificado fora do segmento selecionado.</p>
+</li>
+<li>
+<p><code>Preencher dentro e fora</code>: cria um volume de mapa de etiquetas binário como saída, preenchido com o <code>Valor de preenchimento fora</code> e o <code>Valor de preenchimento dentro</code>. A maioria das operações de processamento de imagem exige que a região de fundo (fora, ignorada) seja preenchida com o valor 0.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Borda suave</code>: se definido como &gt;0, a transição entre dentro/fora da máscara é gradual. O valor especifica o desvio padrão da função de desfoque gaussiano. Valores maiores resultam em uma transição mais suave.</p>
+</li>
+<li>
+<p><code>Volume de entrada</code>: voxels deste volume serão usados como entrada para a máscara. A geometria e o tipo de voxel do volume de saída serão os mesmos que os deste volume.</p>
+</li>
+<li>
+<p><code>Volume de saída</code>: este volume armazenará o resultado da máscara. Embora possa ser o mesmo que o volume de entrada, geralmente é melhor usar um volume de saída diferente, porque assim as opções podem ser ajustadas e a máscara pode ser recalculada várias vezes.</p>
+</li>
+</ul>
+<h4 id="limiar-de-cores"><img alt="" src="../assets/images/thin_section/modulos/segment_editor/color_threshold_effect.png" /> Limiar de cores</h4>
+<p>Esse efeito de edição de segmentação chamado "Color threshold", permite a segmentação de imagens com base em intervalos de cores definidos pelo usuário. O efeito pode operar em modos de cor HSV ou RGB, permitindo ajustes nos componentes de matiz, saturação e valor. Ainda possui ajuste nos níveis de vermelho, verde e azul. O efeito oferece uma visualização em tempo real da segmentação, utilizando um pulso de pré-visualização para ajudar o usuário a refinar os parâmetros antes de aplicar as alterações permanentemente. Além disso, o efeito inclui funcionalidades avançadas, como a conversão de espaços de cor e a manipulação de intervalos circulares, possibilitando uma segmentação precisa e customizada.</p>
+<h4 id="conectividade"><img alt="" src="../assets/images/thin_section/modulos/segment_editor/conectivity_effect.png" /> Conectividade</h4>
+<p>Esse efeito de "Conectividade" permite a seleção de segmentos no Geoslicer, permitindo aos usuários calcular regiões conectadas dentro de um segmento em uma direção específica. O efeito inclui parâmetros configuráveis como saltos de conectividade, direção e nome de saída, tornando-o uma ferramenta versátil para tarefas detalhadas de segmentação. Ele lida de forma eficiente com a análise de componentes conectados e gera um novo segmento baseado nas configurações definidas pelo usuário.</p>
+<h4 id="remocao-de-borda"><img alt="" src="../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> Remoção de Borda</h4>
+<p>Remove as bordas dos segmentos visíveis usando um filtro de detecção de bordas. Apenas os segmentos visíveis são modificados no processo.</p>
+<ul>
+<li><strong>Filter</strong>: Apenas magnitude de gradiente até o momento.</li>
+<li><strong>Threshold adjustment</strong>: Ajusta o limiar para encontrar uma borda adequada.</li>
+<li><strong>Keep filter result</strong>: Marque esta opção para manter o resultado do filtro como um novo volume, para inspeção.</li>
+</ul>
+<h4 id="expandir-segmentos"><img alt="" src="../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> Expandir Segmentos</h4>
+<p>Aplica o processo de watershed para expandir os segmentos visíveis, preenchendo os espaços vazios da segmentação. Os segmentos visíveis selecionados são usados como sementes, ou mínimos, a partir dos quais são expandidos.</p>
+<h4 id="primeiro-plano-inteligente"><img alt="" src="../assets/images/thin_section/modulos/segment_editor/smart_foreground_effect.png" /> Primeiro plano inteligente</h4>
+<p>Segmenta automaticamente a área útil de uma imagem ou volume, isto é, a região que corresponde de fato à amostra, rejeitando as regiões de borda. Habilitando-se o recurso de fragmentação (atualmente disponível apenas para lâminas), eventuais fissuras entre fragmentos de rocha também deixam de ser consideradas área util. Este efeito é conveniente para fluxos de trabalho em que as áreas adjacentes à rocha possam influenciar negativamente, como, por exemplo, determinar a taxa de porosidade da amostra.</p>
+<h4 id="multiplos-limiares">Múltiplos limiares</h4>
+<p>O efeito de <em>multiple threshold</em>, apresentado nos ambientes Volumes, Image Log, Core e Multiscale, permite ao usuário segmentar um volume 3D a partir de múltiplos valores de limiares. Dependendo da quantidade de segmentos selecionados, um histograma com limiares aparece colorido na interface. Cada segmento será separado pelo limiar, começando o próximo segmento em um limiar levemente acima na escala de cinza. Dessa forma, pode-se segmentar facilmente a imagem a partir da escala de cinza.</p>
+<p><img alt="" src="../assets/images/module_segmenteditor_multiple_threshold.png" /></p>
+<ul>
+<li>
+<p><code>Operação</code>:</p>
+<ul>
+<li>
+<p><code>Preencher internamente</code>: segmenta toda a área útil da imagem/volume;</p>
+</li>
+<li>
+<p><code>Apagar externamente</code>: dado um segmento qualquer já preenchido, exclui toda sua região que resida fora da área útil.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Fragmentação</code>:</p>
+<ul>
+<li>
+<p><code>Dividir</code>: habilita/desabilita o recurso de fragmentação. Recomendado apenas para imagens de lâminas de luz polarizada (PP). Uma vez habilitado, permite escolher entre:</p>
+<ul>
+<li>
+<p><code>Manter todos</code>: considera todos os fragmentos como área útil;</p>
+</li>
+<li>
+<p><code>Filtrar os N maiores</code>: apenas os <em>N</em> fragmentos de maior área serão preservados, sendo <em>N</em> o valor especificado pelo usuário.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- END INCLUDE -->
+<hr />
+<!-- BEGIN INCLUDE Pages/MicroCTSegmenter.md -->
+<h2 id="ai-segmenter">AI Segmenter</h2>
+<p>O módulo <strong>MicroCT Segmenter</strong> oferece a opção de <em>Model Training</em>, que realiza a segmentação de uma amostra inteira a partir de uma anotação inicial simples. Com base nessa anotação, diferentes métodos treinam um modelo e inferem o resultado em toda a imagem ou em uma região de interesse (SOI). O modelo treinado pode ser salvo e reutilizado em outras imagens.</p>
+<h3 id="metodo-random-forest">Método Random-Forest</h3>
+<p>O Random-Forest é um método que constrói múltiplas árvores de decisão durante o treinamento para criar um modelo robusto. A classificação final é determinada pela maioria dos votos das árvores. Para este método, é possível selecionar diferentes <em>features</em> (características) extraídas da imagem para o treinamento.</p>
+<h4 id="selecao-de-caracteristicas-features">Seleção de características (<em>features</em>)</h4>
+<ul>
+<li><strong>Raw input image</strong>: Adiciona a própria imagem como uma das entradas.</li>
+<li><strong>Gaussian filter</strong>: Aplica um kernel gaussiano de raio escolhido como um filtro na imagem.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../assets/images/MicroCTSemiAutoSegmentationa2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 1: Filtro gaussiano.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Winvar filter</strong>: Filtro baseado na variância, calcula <span class="arithmatex">\(\left\lt x^2\right\gt-\left\lt x\right\gt^2\)</span> dentro de um kernel de raio escolhido.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 2" src="../assets/images/MicroCTSemiAutoSegmentationa3.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 2: Filtro winvar.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Gabor filters</strong>: Calculados em direções <span class="arithmatex">\(\theta\)</span> igualmente espaçadas, esses filtros são compostos de uma parte gaussiana e uma parte senoidal. Em 2D, a fórmula é:</li>
+</ul>
+<div class="arithmatex">\[ f(x,y,\omega,\theta,\sigma)=\frac{1}{2\pi\sigma^2}\exp\left[-\frac{1}{2}\frac{x^2+y^2}{\sigma^2}+I\omega(x\cos\theta+y\sin\theta)\right] \]</div>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 3" src="../assets/images/MicroCTSemiAutoSegmentationa4.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 3: Filtro Gabor em uma das direções <span class="arithmatex">\(\theta\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Minkowsky functionals</strong>: Parâmetros morfológicos que descrevem a geometria dos dados, associados a volume, superfície, curvatura média e característica de Euler.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 4" src="../assets/images/MicroCTSemiAutoSegmentationMink1.png" /> <img alt="Figura 4" src="../assets/images/MicroCTSemiAutoSegmentationMink2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 4: Filtros Minkowsky.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Variogram range</strong>: Mede a variação média dos valores em função da distância. O <em>range</em> é a distância onde a variação é máxima. É útil para diferenciar texturas e granulometrias.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 5" src="../assets/images/MicroCTSemiAutoSegmentationa5.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 5: Variogram range.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metodo-inferencia-bayesiana">Método Inferência Bayesiana</h3>
+<p>Este método utiliza a <strong>regra de Bayes</strong> para classificar os pixels da imagem, atualizando as probabilidades de um pixel pertencer a uma classe com base nas anotações.</p>
+<p>A abordagem no GeoSlicer assume uma <strong>Distribuição Normal Multivariada</strong> para a função de verossimilhança, onde a média <span class="arithmatex">\(\mu_s\)</span> e a matriz de covariância <span class="arithmatex">\(\Sigma_s\)</span> de cada segmento são calculadas a partir das anotações:</p>
+<div class="arithmatex">\[ f(x_p|s)=\frac{1}{\sqrt{(2\pi)^k \det \Sigma_s}}\exp\left(-\frac{1}{2}(x_p-\mu_s)^T \Sigma_s^{-1} (x_p-\mu_s)\right) \]</div>
+<p>Onde <span class="arithmatex">\(x_p\)</span> é o vetor de pixels em uma janela, e <span class="arithmatex">\(\mu_s\)</span> e <span class="arithmatex">\(\Sigma_s\)</span> são a média e a covariância do segmento <span class="arithmatex">\(s\)</span>.</p>
+<p>A inferência da probabilidade de cada segmento para um pixel é obtida pela regra de Bayes, e o segmento que maximiza essa probabilidade é escolhido.</p>
+<p>Para otimizar o desempenho, são aplicados alguns tratamentos, como a transformação de percentil em imagens de MicroCT e a conversão para o formato HSV em imagens de lâminas delgadas. Além disso, para acelerar o processo, é possível calcular a covariância de forma esparsa, utilizando apenas os eixos ou planos principais, o que é especialmente útil em 3D.</p>
+<p>Abaixo, alguns resultados da aplicação do método em imagens de tomografia e lâminas:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 6" src="../assets/images/MicroCTSemiAutoSegmentation4.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 6: Segmentação semi-automática usando inferência Bayesiana em dados de MicroCT.</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 2" src="../assets/images/GradientAnisotropicDiffusion2.png" /></th>
+<th align="center"><img alt="Figura 7" src="../assets/images/MicroCTSemiAutoSegmentation5.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 2: Exemplo de como o parâmetro de iterações afeta o resultado. Nesse caso, um alto valor levou a bordas mais bem definidas.</td>
+<td align="center">Figura 7: Segmentação semi-automática usando inferência Bayesiana em dados de lâminas.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="modelos-pre-treinados">Modelos Pré-treinados</h2>
+<p>O GeoSlicer oferece modelos pré-treinados baseados na arquitetura <strong>U-Net</strong> para resolver dois problemas comuns na microtomografia de rochas: a segmentação binária (poro/não-poro) e a segmentação <em>basins</em> (múltiplos minerais).</p>
+<h3 id="treinamento">Treinamento</h3>
+<p>O treinamento dos modelos foi realizado com um vasto conjunto de dados (68 volumes para o modelo binário e 106 para o <em>basins</em>), aplicando uma transformação linear de histograma para facilitar a generalização. Os volumes foram recortados em subvolumes de 128³ voxels, e uma porção de 75% deles sofreu transformações aleatórias (aumento de dados) para melhorar a robustez do modelo. Para lidar com o desbalanceamento de classes (poros são menos comuns), foi utilizada a <strong>função de custo de Tversky</strong>, que ajusta a sensibilidade do modelo para classes minoritárias, melhorando a precisão na detecção de poros.</p>
+<h3 id="resultados">Resultados</h3>
+<p>Os modelos pré-treinados apresentam resultados de alta qualidade. O modelo de segmentação binária é especialmente preciso na identificação de poros, enquanto o modelo <em>basins</em> oferece uma segmentação completa dos diferentes minerais.</p>
+<h4 id="segmentacao-binaria">Segmentação Binária</h4>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 3" src="../assets/images/GradientAnisotropicDiffusion3.png" /></th>
+<th align="center"><img alt="Imagem de teste" src="../assets/images/MicroCTSegmenter12a.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 3: Exemplo de como o parâmetro de condutância afeta o resultado. Nesse caso, um alto valor levou a uma imagem mais borrada.</td>
+<td align="center">Figura 8: Comparação entre a imagem original, a anotação e o resultado da segmentação binária.</td>
 </tr>
 </tbody>
 </table>
+<h4 id="segmentacao-basins">Segmentação <em>Basins</em></h4>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 4" src="../assets/images/GradientAnisotropicDiffusion4.png" /></th>
+<th align="center"><img alt="Imagem de teste" src="../assets/images/MicroCTSegmenter78a.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 4: Exemplo de como o parâmetro de condutância afeta o resultado. Nesse caso, um baixo valor levou a um resultado similar à entrada.</td>
+<td align="center">Figura 9: Comparação entre a imagem original, a anotação e o resultado da segmentação basins.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="referencias">Referências</h3>
+<ul>
+<li>
+<p>SCHMIDT, U. et al. (2018). <em>Cell detection with star-convex polygons</em>. In: Medical Image Computing and Computer Assisted Intervention–MICCAI 2018. Springer.</p>
+</li>
+<li>
+<p>SALEHI, S. S. M. et al. (2017). <em>Tversky loss function for image segmentation using 3D fully convolutional deep networks</em>. In: Machine Learning in Medical Imaging. Springer.</p>
+</li>
+<li>
+<p>WEIGERT, M. et al. (2020). <em>Star-convex polyhedra for 3D object detection and segmentation in microscopy</em>. In: Proceedings of the IEEE/CVF winter conference on applications of computer vision.</p>
+</li>
+<li>
+<p>BAI, M. &amp; URTASUN, R. (2017). <em>Deep watershed transform for instance segmentation</em>. In: Proceedings of the IEEE conference on computer vision and pattern recognition.</p>
+</li>
+<li>
+<p>HE, K. et al. (2017). <em>Mask r-cnn</em>. In: Proceedings of the IEEE international conference on computer vision.</p>
+</li>
+<li>
+<p>RONNEBERGER, O. et al. (2015). <em>U-net: Convolutional networks for biomedical image segmentation</em>. In: Medical Image Computing and Computer-Assisted Intervention–MICCAI 2015. Springer.</p>
+</li>
+</ul>
+<!-- END INCLUDE -->
+<hr />
+<!-- BEGIN INCLUDE Pages/SegmentInspector.md -->
+<h2 id="segment-inspector">Segment Inspector</h2>
+<p>Este módulo fornece vários métodos para analisar uma imagem segmentada. Particularmente, os algoritmos Watershed e Separate objects permitem fragmentar uma segmentação em várias partições, ou vários segmentos. Geralmente é aplicado à segmentação do espaço poroso para calcular as métricas de cada elemento poroso.
+A entrada é um nó de segmentação ou volume de labelmap, uma região de interesse (definida por um nó de segmentação) e a imagem/volume mestre. A saída é um labelmap onde cada partição (elemento poro) está em uma cor diferente, uma tabela com parâmetros globais e uma tabela com as diferentes métricas para cada partição.</p>
+<h3 id="paineis-e-sua-utilizacao_1">Painéis e sua utilização</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../assets/images/thin_section/modulos/segment_inspector/interface.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 1: Apresentação do módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="principais-opcoes_1">Principais opções</h4>
+<p>A interface do módulo Segment Inspector é composta por Inputs, Parameters e Output</p>
+<h5 id="single-input">Single input</h5>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 2" src="../assets/images/thin_section/modulos/segment_inspector/inputs_single.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 2: Apresentação dos inputs no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><em>Segmentation</em>: Input para a segmentação utilizada na partição.</p>
+</li>
+<li>
+<p><em>Region SOI</em>: Escolha Uma segmentação de interresse que contenha ao menos uma parte da segmentação utilizada em <em>Segmentation</em>.</p>
+</li>
+<li>
+<p><em>Image</em>: Campo preenchido automaticamente com o nodo de referência da segmentação utilizada em <em>Segmentation</em>.</p>
+</li>
+</ul>
+<h5 id="attributes">Attributes</h5>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 3" src="../assets/images/thin_section/modulos/segment_inspector/attributes.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 3: Atributos de segmentos no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><em>Segments</em>: Segmentos contidos na segmentação selecionada em <em>Segmentation</em>. A lista informa sobre a visualização do segmento pelo icone do olho. Para a inicialização do metodo de fragmentação um segmento deve ser selecionado.</p>
+</li>
+<li>
+<p><em>Calculate proportions</em>: Checkbox para apresentar as proporções de cada segmento na imagem.</p>
+</li>
+<li>
+<p><em>Dimension(px)</em>: Apresenta as dimensões da imagem selecionada.</p>
+</li>
+</ul>
+<h4 id="parametros-e-metodos">Parâmetros e Métodos</h4>
+<h5 id="watershed">Watershed</h5>
+<p>O algoritmo de Watershed funciona simulando a expansão de "bacias hidrográficas" a partir de pontos marcados como mínimos locais. À medida que a "água" preenche os vales, ela define as fronteiras entre diferentes regiões. Essa abordagem é amplamente utilizada em aplicações onde é necessário separar objetos ou poros em materiais, aproveitando os contrastes entre regiões.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 4" src="../assets/images/thin_section/modulos/segment_inspector/watershed.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 4: Watershed no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><em>Size Filter(mm)</em>: Controla o alcance máximo de segmentação, influenciando diretamente o tamanho e a conectividade das regiões segmentadas. Valores pequenos são Usados quando você deseja segmentar muitos detalhes finos em contrapartida Valores grandes são usados quando o foco é em grandes áreas ou objetos conectados.</p>
+</li>
+<li>
+<p><em>2D throat analysis(beta)</em>: Adiciona métricas de analise de gargantas 2d no report.</p>
+</li>
+<li>
+<p><em>Smooth factor</em>: Parâmetro que ajusta o grau de suavidade nas bordas das regiões segmentadas, permitindo controle entre a preservação dos detalhes e a redução de ruído ou irregularidades. Com Fatores altos a segmentação será mais suave e simplificada, mas com perda de pequenos detalhes.</p>
+</li>
+<li>
+<p><em>Minimun Distance</em>: parâmetro que determina a menor distância permitida entre dois máximos locais ou objetos segmentados. Um valor maior deste parâmetro fundirá objetos próximos, simplificando a segmentação, enquanto um valor menor permitirá a separação de objetos mais próximos, resultando em uma segmentação mais detalhada.</p>
+</li>
+<li>
+<p><em>Orientation Line</em>: O parâmetro de orientação permite que o algoritmo alinhe-se adequadamente com as características da imagem, melhorando a precisão da segmentação</p>
+</li>
+</ul>
+<h5 id="separate-objects">Separate Objects</h5>
+<p>O método de segmentação por "Separate Objects
+" identifica regiões conectadas em uma matriz binária que representam objetos de informação. Este processo é especialmente útil em análise de porosidade, onde é importante distinguir diferentes regiões conectadas dentro de um volume.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 5" src="../assets/images/thin_section/modulos/segment_inspector/separate_objects.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 5: Separate Objects no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><em>Size Filter(mm)</em>: Controla o alcance máximo de segmentação, influenciando diretamente o tamanho e a conectividade das regiões segmentadas. Valores pequenos são Usados quando você deseja segmentar muitos detalhes finos em contrapartida Valores grandes são usados quando o foco é em grandes áreas ou objetos conectados.</p>
+</li>
+<li>
+<p><em>Orientation Line</em>: O parâmetro de orientação permite que o algoritmo alinhe-se adequadamente com as características da imagem, melhorando a precisão da segmentação</p>
+</li>
+</ul>
+<h5 id="gpu-watershed">GPU Watershed</h5>
+<p>A técnica de Deep Watershed combina o conceito tradicional de Watershed com redes neurais profundas para obter uma segmentação mais precisa e robusta. Utilizando a força de aprendizado profundo, o método aprimora a detecção de limites e objetos em cenários complexos, como a análise de materiais porosos com múltiplos níveis de sobreposição. Essa abordagem é particularmente eficaz para lidar com volumes tridimensionais e para realizar segmentações precisas em imagens ruidosas.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 6" src="../assets/images/thin_section/modulos/segment_inspector/gpu_watershed.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 6: GPU Watershed no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><em>Split Threshold(0-1)</em>: Controla o alcance máximo de segmentação, influenciando diretamente o tamanho e a conectividade das regiões segmentadas. Valores pequenos são usados quando você deseja segmentar muitos detalhes finos em contrapartida valores grandes são usados quando o foco é em grandes áreas ou objetos conectados.</p>
+</li>
+<li>
+<p><em>2D throat analysis(beta)</em>: Adiciona métricas de analise de gargantas 2d no report.</p>
+</li>
+<li>
+<p><em>Base volume (px)</em>: Esse parâmetro representa um valor base que pode ser relacionado ao tamanho ou à escala do volume que está sendo processado. Ele serve como uma referência para calcular a profundidade ou as camadas do volume que serão analisadas.</p>
+</li>
+<li>
+<p><em>Intersection (px)</em>:Esse parâmetro é usado para ajustar o quanto as regiões dentro do volume podem se sobrepor umas às outras durante a segmentação. </p>
+</li>
+<li>
+<p><em>Border (px)</em>: Esse parâmetro define o tamanho ou a espessura das bordas que serão consideradas ao calcular as camadas de profundidade no volume.</p>
+</li>
+<li>
+<p><em>Background Threshold(0-1)</em>:  Atua como um ponto de corte. Todos os valores abaixo desse limiar (threshold) são considerados como pertencentes ao fundo (ou background), enquanto valores acima do limiar são considerados como partes de objetos ou regiões significativas dentro da imagem ou volume.</p>
+</li>
+</ul>
+<h5 id="transitions-analysis">Transitions Analysis</h5>
+<p>A Análise de Transições se concentra em examinar as mudanças entre regiões ou segmentos de uma imagem. Este método é empregado principalmente para estudar a mineralogia de amostras.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 7" src="../assets/images/thin_section/modulos/segment_inspector/transition_analysis.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 7: Transitions Analysis no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>Include Background</em>: Usa as dimensões totais da imagem de entrada para análise.</li>
+</ul>
+<h5 id="basic-petrophysics">Basic Petrophysics</h5>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 8" src="../assets/images/thin_section/modulos/segment_inspector/transition_analysis.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 8: Transitions Analysis no módulo Segment Inspector.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>Include Background</em>: Usa as dimensões totais da imagem de entrada para análise.</li>
+</ul>
+<h4 id="output">Output</h4>
+<p>Digite um nome para ser usado como prefixo para o objeto de resultados (mapa de rótulos onde cada partição (elemento de poro) está em uma cor diferente, uma tabela com parâmetros globais e uma tabela com as diferentes métricas para cada partição).</p>
+<h4 id="propriedades-metricas">Propriedades / Métricas:</h4>
+<ol>
+<li><strong>Label</strong>: identificação do rótulo da partição.</li>
+<li><strong>mean</strong>: valor médio da imagem/volume de entrada dentro da região da partição (poro/grão).</li>
+<li><strong>median</strong>: valor mediano da imagem/volume de entrada dentro da região da partição (poro/grão).</li>
+<li><strong>stddev</strong>:  Desvio padrão do valor da imagem/volume de entrada dentro da região da partição (poro/grão).</li>
+<li><strong>voxelCount</strong>: Número total de pixels/vóxels da região da partição (poro/grão).</li>
+<li><strong>area</strong>: Área total da partição (poro/grão). Unidade: mm².</li>
+<li><strong>angle</strong>: Ângulo em graus (entre 270 e 90) relacionado à linha de orientação (opcional, se nenhuma linha for selecionada, a orientação de referência é a horizontal superior).</li>
+<li><strong>max_feret</strong>: Maior eixo de Feret. Unidade: mm.</li>
+<li><strong>min_feret</strong>: Menor eixo de Feret. Unidade: mm.</li>
+<li><strong>mean_feret</strong>: Média dos eixos mínimo e máximo.</li>
+<li><strong>aspect_ratio</strong>:   min_feret / max_feret.</li>
+<li><strong>elongation</strong>: max_feret / min_feret.</li>
+<li><strong>eccentricity</strong>:   quadrado(1 - min_feret / max_feret), relacionado à elipse equivalente (0 ≤ e &lt; 1), igual a 0 para círculos.</li>
+<li><strong>ellipse_perimeter</strong>: Perímetro da elipse equivalente (elipse equivalente com eixos dados pelos eixos mínimo e máximo de Feret). Unidade: mm.</li>
+<li><strong>ellipse_area</strong>: Área da elipse equivalente (elipse equivalente com eixos dados pelos eixos mínimo e máximo de Feret). Unidade: mm².</li>
+<li><strong>ellipse_perimeter_over_ellipse_area</strong>: Perímetro da elipse equivalente dividido por sua área.</li>
+<li><strong>perimeter</strong>: Perímetro real da partição (poro/grão). Unidade: mm.</li>
+<li><strong>perimeter_over_area</strong>: Perímetro real dividido pela área da partição (poro/grão).</li>
+<li><strong>gamma</strong>: Arredondamento de uma área calculado como 'gamma = perímetro / (2 * quadrado(PI * área))'.</li>
+<li><strong>pore_size_class</strong>:  Símbolo/código/id da classe do poro.</li>
+<li><strong>pore_size_class_label</strong>: Rótulo da classe do poro.</li>
+</ol>
+<h5 id="definicao-das-classes-de-poros">Definição das classes de poros:</h5>
+<ul>
+<li><strong>Microporo</strong>:  classe = 0, max_feret menor que 0,062 mm.</li>
+<li><strong>Mesoporo muito pequeno</strong>: classe = 1, max_feret entre 0,062 e 0,125 mm.</li>
+<li><strong>Mesoporo pequeno</strong>: classe = 2, max_feret entre 0,125 e 0,25 mm.</li>
+<li><strong>Mesoporo médio</strong>: classe = 3, max_feret entre 0,25 e 0,5 mm.</li>
+<li><strong>Mesoporo grande</strong>: classe = 4, max_feret entre 0,5 e 1 mm.</li>
+<li><strong>Mesoporo muito grande</strong>: classe = 5, max_feret entre 1 e 4 mm.</li>
+<li><strong>Megaporo pequeno</strong>: classe = 6, max_feret entre 4 e 32 mm.</li>
+<li><strong>Megaporo grande</strong>: classe = 7, max_feret maior que 32 mm.</li>
+</ul>
+<!-- END INCLUDE -->
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -3,7 +3,7 @@
     --md-hue: 240;
     --md-default-bg-color: hsl(0deg 0% 17.25%);
     --md-footer-bg-color: hsl(0, 0%, 13%);
-    --md-typeset-a-color: #dadada !important;
+    --md-typeset-a-color: white !important;
     --md-accent-fg-color: #dadada !important;
     --md-default-fg-color--light: #dadada;
 }
@@ -279,3 +279,8 @@ svg {
     stroke: #FFFFFF;
     color: #333333;
 }
+
+.md-sidebar .md-sidebar--secondary .md-sidebar__scrollwrap { /* Selector for the primary sidebar, where TOC typically resides */
+    background-color: red; /* Replace with your desired color */
+}
+
