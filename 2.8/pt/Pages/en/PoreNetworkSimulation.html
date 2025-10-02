@@ -2286,12 +2286,12 @@
   <h1>PoreNetworkSimulation</h1>
 
 <h2 id="simulation">Simulation</h2>
-<p>This module can perform different types of simulations based on the results from the pore and throat table (created in the <a href="../../Volumes/PNM/PNM.html#extractor">Extraction</a> module). The simulations include: <a href="../../Volumes/PNM/PNM.html#one-phase"><em>One-phase</em></a>, <a href="../../Volumes/PNM/PNM.html#two-phase"><em>Two-phase</em></a>, <a href="../../Volumes/PNM/PNM.html#mercury-injection"><em>Mercury injection</em></a>, explained in the sections below.</p>
-<p>All simulations have the same input arguments: The pore table generated from the network extraction, and when the volume is multi-scale, the <a href="../../Volumes/PNM/PNM.html#subscale-model">subscale model</a> used and its parameterization.</p>
+<p>This module can perform different types of simulations based on the results of the pore and connection table (created in the [Extraction] module). The simulations include: <a href="../../Volumes/PNM/PNM.html#one-phase"><em>One-phase</em></a>, <a href="../../Volumes/PNM/PNM.html#two-phase"><em>Two-phase</em></a>, <a href="../../Volumes/PNM/PNM.html#mercury-injection"><em>Mercury injection</em></a>, explained in the following sections.</p>
+<p>All simulations have the same input arguments: The pore table generated from the network extraction and, when the volume is multiscale, the <a href="../../Volumes/PNM/PNM.html#subscale-model">subscale model</a> used and its parameterization.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../../../assets/images/PoreNetworkSimulation.png" /></th>
+<th align="center"><img alt="Figure 1" src="../../../assets/images/PoreNetworkSimulation.png" /></th>
 </tr>
 </thead>
 <tbody>
@@ -2301,55 +2301,55 @@
 </tbody>
 </table>
 <h3 id="one-phase"><em>One-phase</em></h3>
-<p>One-phase simulation is mainly used to determine the absolute permeability (<span class="arithmatex">\(K_{abs}\)</span>) property of the sample.</p>
+<p>The one-phase simulation is mainly used to determine the absolute permeability (<span class="arithmatex">\(K_{abs}\)</span>) property of the sample. </p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 2" src="../../../assets/images/PoreNetworkSimulationOnePhase.png" /></th>
+<th align="center"><img alt="Figure 2" src="../../../assets/images/PoreNetworkSimulationOnePhase.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 2: One-phase simulation.</td>
+<td align="center">Figure 2: Single-phase simulation.</td>
 </tr>
 </tbody>
 </table>
-<p>Three different <em>solvers</em> can be used for this type of simulation:</p>
+<p>Three different solvers can be used for this type of simulation:</p>
 <ul>
-<li>pypardiso (recommended) : yields the best results, converging even in situations of very disparate radii;</li>
-<li>pyflowsolver : includes an option for selecting the stop criterion, but with lower performance than pypardiso;</li>
-<li>openpnm : a more traditionally used option;</li>
+<li>pypardiso (recommended): yields the best results, converging even in situations with very discrepant radii;</li>
+<li>pyflowsolver: includes an option to select the stopping criterion, but with lower performance than pypardiso;</li>
+<li>openpnm: the most traditionally used option;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 3" src="../../../assets/images/PoreNetworkSimulationOnePhaseSolver.png" /></th>
+<th align="center"><img alt="Figure 3" src="../../../assets/images/PoreNetworkSimulationOnePhaseSolver.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 3: Pyflowsolver option and stop criterion. The other options (pypardiso and openpnm) do not have this criterion.</td>
+<td align="center">Figure 3: Pyflowsolver option and stopping criterion. The other options (pypardiso and openpnm) do not have this criterion.</td>
 </tr>
 </tbody>
 </table>
-<p>When conductivity values are very discrepant for the same sample, and this sample percolates more through the subscale, we may encounter convergence problems for the solution. For this reason, we added an option to limit values at high conductivities.</p>
+<p>When the conductivity values are very different for the same sample, and this sample percolates more through the subscale, we may have problems converging to the solution. Because of this, we added an option to limit the values at high conductivities.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 4" src="../../../assets/images/PoreNetworkSimulationOnePhaseClip.png" /></th>
+<th align="center"><img alt="Figure 4" src="../../../assets/images/PoreNetworkSimulationOnePhaseClip.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 4: Conductivity value limitation options.</td>
+<td align="center">Figure 4: Options for limiting conductivity values.</td>
 </tr>
 </tbody>
 </table>
-<p>Additionally, one-phase simulation can be performed in a single direction, or in multiple directions, using the <em>Orientation scheme</em> parameter.</p>
+<p>In addition, single-phase simulation can be performed in a single direction or in multiple directions using the Orientation scheme parameter.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 5" src="../../../assets/images/PoreNetworkSimulationOnePhaseOrientationScheme.png" /></th>
+<th align="center"><img alt="Figure 5" src="../../../assets/images/PoreNetworkSimulationOnePhaseOrientationScheme.png" /></th>
 </tr>
 </thead>
 <tbody>
@@ -2359,29 +2359,29 @@
 </tbody>
 </table>
 <h3 id="two-phase"><em>Two-phase</em></h3>
-<p>Two-phase simulation consists of initially injecting oil into the sample and increasing its pressure so that it invades practically all pores, a process known as <em>drainage</em>. After this first step, oil is replaced by water, and pressure is increased again, to allow water to invade some of the pores that previously contained oil, expelling the latter. This second process is known as <em>imbibition</em>. By measuring the rock's permeability relative to absolute permeability, as a function of water saturation during this process, we obtain the curve known as the relative permeability curve (<span class="arithmatex">\(K_{rel}\)</span>).</p>
-<p>Since each rock can interact physically or chemically with oil and water in different ways, we need a rather large variety of parameters that allow us to calibrate the results to model and simplify this interaction, in order to extract some physical meaning of the rock properties from the simulation. Below, we list some parameters that can be found in the two-phase simulation available in GeoSlicer.</p>
-<p>Currently, GeoSlicer offers two algorithms for performing two-phase simulation: the first is PNFlow, a standard algorithm implemented in C++, and the second is a proprietary algorithm developed by LTrace in Python.</p>
+<p>The two-phase simulation consists of initially injecting oil into the sample and increasing its pressure so that it invades virtually all pores, in a process known as drainage. After this first stage, the oil is replaced with water and the pressure is increased again to allow the water to invade some of the pores that were previously filled with oil, expelling the latter. This second process is known as imbibition. By measuring the permeability of the rock in relation to absolute permeability, as a function of water saturation during this process, we obtain the curve known as the relative permeability curve (<span class="arithmatex">\(K_{rel}\)</span>).</p>
+<p>Since each rock can interact physically or chemically with oil and water in different ways, we need a fairly large variety of parameters to calibrate the results in order to model and simplify this interaction, so that we can extract some physical meaning from the rock properties from the simulation. Below, we list some parameters that can be found in the two-phase simulation available in GeoSlicer. </p>
+<p>Currently, we have two algorithms available in GeoSlicer to perform two-phase simulation. The first is PNFlow, which is a standard algorithm implemented in C++, and the second is an algorithm developed by LTrace in Python.</p>
 <h4 id="saveload-parameter-selection-table">Save/Load parameter selection table</h4>
-<p>To facilitate the reproduction of simulations that run with the same set of parameters, the interface has options to save/load parameters from tables that are stored with the project. This way, when calibrating the parameter set, the user can save this information for a later analysis, or use the same parameters on another sample.</p>
+<p>To facilitate the reproduction of simulations that run on the same set of parameters, the interface has options to save/load parameters from tables that are saved with the project. Thus, when calibrating the set of parameters, the user can save this information for later analysis or use these same parameters in another sample.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 6a" src="../../../assets/images/PoreNetworkSimulationTwoPhaseLoad.png" /><img alt="Figura 6b" src="../../../assets/images/PoreNetworkSimulationTwoPhaseSave.png" /></th>
+<th align="left"><img alt="Figure 6a" src="../../../assets/images/PoreNetworkSimulationTwoPhaseLoad.png" /><img alt="Figure 6b" src="../../../assets/images/PoreNetworkSimulationTwoPhaseSave.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 6: Options to save/load parameter selection tables.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="fluid-properties"><em>Fluid properties</em></h4>
-<p>In this section, it is possible to change the parameters of the fluids (water and oil) used in the simulation:</p>
+<h4 id="fluid-properties">Fluid properties</h4>
+<p>In this section, you can change the parameters of the fluids (water and oil) used in the simulation:</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 7" src="../../../assets/images/PoreNetworkSimulationTwoPhaseFluidProperties.png" /></th>
+<th align="center"><img alt="Figure 7" src="../../../assets/images/PoreNetworkSimulationTwoPhaseFluidProperties.png" /></th>
 </tr>
 </thead>
 <tbody>
@@ -2391,11 +2391,11 @@
 </tbody>
 </table>
 <h4 id="contact-angle-options"><em>Contact angle options</em></h4>
-<p>One of the main properties affecting the interaction of a liquid with a solid is wettability, which can be determined from the contact angle formed by the former when in contact with the latter. Thus, if the contact angle is close to zero, there is a strong interaction that "holds" the liquid to the solid, whereas when the contact angle is close to 180º, the liquid's interaction with the surface is weak, and it can flow more easily over it.</p>
+<p>One of the main properties that affect the interaction of a liquid with a solid is wettability, which can be determined from the contact angle formed by the former when in contact with the latter. Thus, if the contact angle is close to zero, there is a strong interaction that “binds” the liquid to the solid, whereas when the contact angle is close to 180°, the interaction of the liquid with the surface is weak and it can flow more easily through it.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 8" src="../../../assets/images/PoreNetworkSimulationMolhabilidade.png" /></th>
+<th align="center"><img alt="Figure 8" src="../../../assets/images/PoreNetworkSimulationMolhabilidade.png" /></th>
 </tr>
 </thead>
 <tbody>
@@ -2404,11 +2404,11 @@
 </tr>
 </tbody>
 </table>
-<p>We model contact angles using two distinct distributions: the <em>Initial contact angle</em>, which controls the contact angle of pores before oil invasion; and the <em>Equilibrium contact angle</em>, which controls the contact angle after oil invasion. In addition to the base distributions used in each case, there is an option to add a second distribution for each of them. Thus, each pore is assigned to one of the two distributions, with the "Fraction" parameter used to determine what percentage of pores will follow the second distribution relative to the first.</p>
+<p>We modeled the contact angles from two distributions used at different times: the Initial contact angle, which controls the contact angle of the pores before oil invasion; and the Equilibrium contact angle, which controls the contact angle after oil invasion. In addition to the base distributions used in each case, there is an option to add a second distribution for each of them, so that each pore is linked to one of the two distributions, with the “Fraction” parameter being used to determine what percentage of pores will follow the second distribution in relation to the first.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 9" src="../../../assets/images/PoreNetworkSimulationTwoPhaseContactAngle.png" /></th>
+<th align="center"><img alt="Figure 9" src="../../../assets/images/PoreNetworkSimulationTwoPhaseContactAngle.png" /></th>
 </tr>
 </thead>
 <tbody>
@@ -2420,18 +2420,18 @@
 <p>Each angle distribution, whether primary or secondary, initial or equilibrium, has a series of parameters that describe it:</p>
 <ul>
 <li>
-<p><em>Model</em>: allows modeling hysteresis curves between advancing/receding angles from intrinsic angles:</p>
+<p><em>Model</em>: allows modeling the hysteresis curves between advance/retreat angles from the intrinsic angles:</p>
 <ul>
-<li><em>Equal angles</em>: advancing/receding angles identical to the intrinsic angle;</li>
-<li><em>Constant difference</em>: constant difference of advancing/receding angles relative to the intrinsic angle;</li>
-<li><em>Morrow curve</em>: advancing/receding curves determined by Morrow's curves;</li>
+<li><em>Equal angles</em>: advance/retreat angles identical to the intrinsic angle;</li>
+<li><em>Constant difference</em>: constant difference between the advance/retreat angles and the intrinsic angle;</li>
+<li><em>Morrow curve</em>: advance/retreat curves determined by Morrow curves;</li>
 </ul>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 10" src="../../../assets/images/PoreNetworkSimulationMorrow.png" width="50%" /></th>
+<th align="center"><img alt="Figure 10" src="../../../assets/images/PoreNetworkSimulationMorrow.png" width="50%" /></th>
 </tr>
 </thead>
 <tbody>
@@ -2442,84 +2442,100 @@
 </table>
 <ul>
 <li><em>Contact angle distribution center</em>: Defines the center of the contact angle distribution;</li>
-<li><em>Contact angle distribution range</em>: Range of the distribution (center-range/2, center+range/2), with the minimum/maximum angle being 0º/180º, respectively;</li>
-<li><em>Delta</em>, <em>Gamma</em>: Parameters of the truncated Weibull distribution; if a negative number is chosen, it uses a uniform distribution;</li>
-<li><em>Contact angle correlation</em>: Chooses how the contact angle will be correlated to pore radius: <em>Positive radius</em> defines larger contact angles for larger radii; <em>Negative radius</em> does the opposite, assigning larger angles for smaller radii; <em>Uncorrelated</em> means independence between contact angles and pore radius;</li>
-<li><em>Separation</em>: If the chosen model is <em>constant difference</em>, defines the separation between advancing and receding angles;</li>
+<li><em>Contact angle distribution range</em>: Distribution range (center-range/2, center+range/2), with the minimum/maximum angle being 0º/180º, respectively;</li>
+<li><em>Delta</em>, <em>Gamma</em>: Truncated Weibull distribution parameters; if a negative number is chosen, a uniform distribution is used; If positive numbers are chosen, it uses the following probability distribution: <span class="arithmatex">\(p(\tilde\theta)=\frac{\gamma}{\delta}\frac{\tilde\theta^{\gamma-1}e^{-\tilde\theta^\gamma/\delta}}{1-e^{-1/\delta}}\)</span> where <span class="arithmatex">\(\tilde\theta\in[\theta_{min},\theta_{max}]\)</span>. Some ideas for parameters for this distribution are graphed below:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figure 11" src="../../../assets/images/weibull.png" width="50%" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figure 11: Weibull distribution.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Contact angle correlation: Chooses how the contact angle will be correlated to the pore radius: Positive radius defines larger contact angles for larger radii; Negative radius does the opposite, assigning larger angles to smaller radii; Uncorrelated means independence between contact angles and pore radius;</li>
+<li><em>Separation</em>: If the chosen model is <em>constant difference</em>, defines the separation between advance and retreat angles;</li>
 </ul>
 <p>Other parameters are defined only for the second distribution:</p>
 <ul>
-<li><em>Fraction</em>: A value between 0 and 1 that controls which fraction of the pores will use the second distribution instead of the first;</li>
+<li><em>Fraction</em>: A value between 0 and 1 that controls which fraction of the pores will use the second distribution instead of the first; </li>
 <li><em>Fraction distribution</em>: Defines whether the fraction will be determined by the number of pores or total volume;</li>
-<li><em>Correlation diameter</em>: If <em>Fraction correlation</em> is chosen as <em>Spatially correlated</em>, defines the most probable distance to find pores with the same contact angle distribution;</li>
-<li><em>Fraction correlation</em>: Defines how the fraction for the second distribution will be correlated, whether spatially correlated, for larger pores, smaller pores, or random;</li>
+<li><em>Correlation diameter</em>: If <em>Fraction correlation</em> is chosen as <em>Spatially correlated</em>, defines the most likely distance to find pores with the same contact angle distribution;</li>
+<li><em>Fraction correlation</em>: Defines how the fraction for the second distribution will be correlated, if spatially correlated, for larger pores, smaller pores, or random;</li>
 </ul>
-<h4 id="simulation-options"><em>Simulation options</em></h4>
+<h4 id="simulation-options">Simulation options</h4>
 <p>This section of parameters is dedicated to controlling the parameters related to the simulation itself.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 11" src="../../../assets/images/PoreNetworkSimulationTwoPhaseSimulationProperties.png" /></th>
+<th align="center"><img alt="Figure 12" src="../../../assets/images/PoreNetworkSimulationTwoPhaseSimulationProperties.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 11: Simulation parameters.</td>
+<td align="center">Figure 12: Simulation parameters.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><em>Minimum SWi</em>: Defines the minimum SWi value, stopping the drainage cycle when the Sw value is reached (SWi can be higher if water gets trapped);</li>
-<li><em>Final cycle Pc</em>: Stops the cycle when this capillary pressure is reached;</li>
-<li><em>Sw step length</em>: Sw step length used before checking the new permeability value;</li>
-<li><em>Inject/Produce from</em>: Defines from which sides the fluid will be injected/produced along the z-axis; the same side can both inject and produce;</li>
+<li><em>Minimum SWi</em>: Sets the minimum SWi value, interrupting the drainage cycle when the Sw value is reached (SWi may be higher if water becomes trapped);</li>
+<li><em>Final cycle Pc</em>: Interrupts the cycle when this capillary pressure is reached;</li>
+<li><em>Sw step length</em>: Sw step used before checking the new permeability value;</li>
+<li><em>Inject/Produce from</em>: Defines on which sides the fluid will be injected/produced along the z-axis; the same side can both inject and produce;</li>
 <li><em>Pore fill</em>: Determines which mechanism dominates each individual pore filling event;</li>
-<li><em>Lower/Upper box boundary</em>: Pores with a relative distance along the Z-axis from the boundary to this plane value are considered "left"/"right" pores, respectively;</li>
-<li><em>Subresolution volume</em>: Considers that the volume contains this fraction of subresolution pore space that is always filled with water;</li>
-<li><em>Plot first injection cycle</em>: If selected, the first cycle, oil injection into a fully water-saturated medium, will be included in the output plot. The simulation will run, regardless of whether the option is selected or not;</li>
-<li><em>Create animation node</em>: Creates an animation node that can be used in the "Cycles Visualization" tab;</li>
-<li><em>Keep temporary files</em>: Keeps .vtu files in the GeoSlicer temporary files folder, one file for each simulation step;</li>
-<li><em>Max subprocesses</em>: Maximum number of single-thread subprocesses to be executed; The recommended value for an idle machine is 2/3 of the total cores;</li>
+<li><em>Lower/Upper box boundary</em>: Pores with a relative distance on the Z axis from the edge to this plane value are considered “left”/“right” pores, respectively;</li>
+<li><em>Subresolution volume</em>: Considers that the volume contains this fraction of subresolution porous space that is always filled with water;</li>
+<li><em>Plot first injection cycle</em>: If selected, the first cycle, oil injection into a fully water-saturated medium, will be included in the output graph. The simulation will run regardless of whether the option is selected or not;</li>
+<li><em>Create animation node</em>: Creates an animation node that can be used in the “Cycles Visualization” tab;</li>
+<li><em>Keep temporary files</em>: Keeps the .vtu files in the GeoSlicer temporary files folder, one file for each stage of the simulation;</li>
+<li><em>Max subprocesses</em>: Maximum number of single-thread subprocesses to be executed; The recommended value for an idle machine is 2/3 of the total number of cores;</li>
 </ul>
-<p>Since we have a vast number of parameters that can be modified to model the experiment from the simulation, it becomes useful to vary these parameters more systematically for an in-depth analysis of their influence on the obtained results.</p>
-<p>For this, the user can select the "<em>Multi</em>" button available for most parameters. Upon clicking Multi, three boxes appear with start, end, and step options, which can be used to run various simulations in a linearly distributed table of these parameter values. If more than one parameter is chosen with multiple values, simulations run with all possible parameter combinations, which can considerably increase the number of simulations and execution time.</p>
-<p>Upon completing the execution of the set of simulations, the user can perform analyses to understand the relationships between simulation results and the chosen parameters in the <em>Krel EDA</em> tab.</p>
+<p>Since we have a vast number of parameters that can be modified to model the experiment from the simulation, it becomes useful to vary these parameters more systematically for an in-depth analysis of their influence on the results obtained. </p>
+<p>To do this, the user can select the “Multi” button available in most parameters. When clicking on Multi, three boxes appear with start, end, and step options, which can be used to run several simulations in a linearly distributed table of the values of these parameters. If more than one parameter is chosen with multiple values, simulations run with all possible parameter combinations, which can considerably increase the number of simulations and the time to execute them.</p>
+<p>Upon completion of the simulation set, the user can perform analyses to understand the relationships between the simulation results and the parameters selected in the Krel EDA tab.</p>
 <h3 id="mercury-injection"><em>Mercury injection</em></h3>
-<p>In addition to one-phase and two-phase simulations, this module also offers a simulation of the Mercury intrusion experiment.</p>
+<p>In addition to the one- and two-phase simulations, this module also offers a simulation of the Mercury intrusion experiment.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 12" src="../../../assets/images/PoreNetworkSimulationMercury.png" /></th>
+<th align="center"><img alt="Figure 13" src="../../../assets/images/PoreNetworkSimulationMercury.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 12: Mercury intrusion simulation.</td>
+<td align="center">Figure 13: Mercury intrusion simulation.</td>
 </tr>
 </tbody>
 </table>
-<p>Mercury intrusion is an experiment in which liquid mercury is injected into a reservoir rock sample under vacuum, with increasing pressure. The volume of mercury invading the sample is measured as a function of mercury pressure. Since the contact angle of liquid mercury with mercury vapor is approximately independent of the substrate, it is possible to use analytical models, such as the bundle of tubes model, to calculate the pore size distribution of the sample.</p>
-<p>The mercury intrusion test is relatively accessible, and its main relevance in the PNM context lies in the ability to run the simulation on a sample for which experimental results of Mercury Intrusion Capillary Pressure (MICP) curves are available. This allows for the comparison of results to validate and calibrate the pore network extracted from the sample, which will be used in one-phase and two-phase simulations.</p>
-<p>To facilitate the analysis of sub-resolution pore radius assignment, the code in GeoSlicer will output, in addition to the graphs obtained by the OpenPNM simulation, graphs of pore and throat radius distributions, and also volume distributions, separating them into resolved pores (which do not change with subscale assignment) and unresolved pores. This way, the user can verify if the subscale model was applied correctly.</p>
-<h3 id="subscale-model">Subscale Model</h3>
-<p>In the case of the multi-scale network, since subscale radii cannot be determined from the image itself due to being out of resolution, it is necessary to define a model for assigning these radii. Some currently available options are:</p>
+<p>Mercury intrusion is an experiment in which liquid mercury is injected into a reservoir rock sample under vacuum, with increasing pressure. The volume of mercury invading the sample is measured as a function of mercury pressure. Since the contact angle of liquid mercury with mercury vapor is approximately independent of the substrate, analytical models, such as the tube bundle model, can be used to calculate the pore size distribution of the sample. </p>
+<p>The mercury intrusion test is relatively affordable, and its main relevance in the context of PNM lies in the ability to perform the simulation on a sample for which experimental results of Mercury Intrusion Capillary Pressure (MICP) curves are available. This allows the comparison of results to validate and calibrate the pore network extracted from the sample, which will be used in one- and two-phase simulations.</p>
+<p>To facilitate the analysis of sub-resolution pore radius assignment, the code in GeoSlicer will produce, in addition to the graphs obtained by the simulation in OpenPNM, graphs of pore and throat radius distributions and also volume distributions, separating them into resolved pores (which are not altered by subscale assignment) and unresolved pores. This allows the user to check whether the subscale model has been applied correctly.</p>
+<h3 id="subscale-model"><a id="subscale-model">Subscale Model</a></h3>
+<p>In the case of a multiscale network, since the subscale radii cannot be determined from the image itself because they are outside the resolution, it is necessary to define a model for assigning these radii. Some options currently available are:</p>
 <ul>
-<li><em>Fixed radius</em>: All sub-resolution radii have the same size chosen in the interface;</li>
+<li>
+<p>Fixed radius: All subresolution radii are the same size as chosen in the interface.
+<img alt="Figure 14" src="../../../assets/images/PoreNetworkSimulationSubscaleFixed.png" /></p>
+</li>
+<li>
+<p><em>Leverett Function - Sample Permeability</em>: Assigns an inlet pressure based on the J Leverett curve based on the permeability of the sample;
+<img alt="Figure 15" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverett.png" /></p>
+</li>
+<li>
+<p><em>Leverett Function - Permeability curve</em>: Also uses the J Leverett curve but with a curve defined for permeability instead of a value;
+<img alt="Figure 16" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverettCurve.png" /></p>
+</li>
+<li>
+<p><em>Pressure Curve</em> and <em>Throat Radius Curve</em>: Assigns subresolution radii based on the curve obtained from a mercury injection experiment. The inlet pressure data can be used by volume fraction, or the equivalent radius can be used as a function of volume fraction;
+<img alt="Figure 17a" src="../../../assets/images/PoreNetworkSimulationSubscalePressure.png" /><img alt="Figure 17b" src="../../../assets/images/PoreNetworkSimulationSubscaleRadius.png" /></p>
+</li>
 </ul>
-<p><img alt="Figura 13" src="../../../assets/images/PoreNetworkSimulationSubscaleFixed.png" /></p>
-<ul>
-<li><em>Leverett Function - Sample Permeability</em>: Assigns an entry pressure based on the J Leverett curve, based on the sample's permeability;</li>
-</ul>
-<p><img alt="Figura 14" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverett.png" /></p>
-<ul>
-<li><em>Leverett Function - Permeability curve</em>: Also uses the J Leverett curve but with a defined curve for permeability instead of a single value;</li>
-</ul>
-<p><img alt="Figura 15" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverettCurve.png" /></p>
-<ul>
-<li><em>Pressure Curve</em> and <em>Throat Radius Curve</em>: Assigns sub-resolution radii based on the curve obtained from a mercury injection experiment. It can use entry pressure data by volume fraction, or the equivalent radius as a function of volume fraction;</li>
-</ul>
-<p><img alt="Figura 16a" src="../../../assets/images/PoreNetworkSimulationSubscalePressure.png" /><img alt="Figura 16b" src="../../../assets/images/PoreNetworkSimulationSubscaleRadius.png" /></p>
-<p>The chosen subscale model has no impact on single-scale network simulations, as all radii are already determined.</p>
+<p>The chosen subscale model has no impact on uniescalar network simulations, since all radii are already determined. </p>
 
 
 

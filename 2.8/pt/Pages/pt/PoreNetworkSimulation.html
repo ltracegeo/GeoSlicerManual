@@ -2287,7 +2287,7 @@
 
 <h2 id="simulation">Simulation</h2>
 <p>Este módulo pode realizar diferentes tipos de simulações a partir dos resultados da tabela de poros e ligações (criada no módulo de <a href="../../Volumes/PNM/PNM.html#extractor">Extração</a>). As simulações incluem: <a href="../../Volumes/PNM/PNM.html#one-phase"><em>One-phase</em></a>, <a href="../../Volumes/PNM/PNM.html#two-phase"><em>Two-phase</em></a>, <a href="../../Volumes/PNM/PNM.html#mercury-injection"><em>Mercury injection</em></a>, explicados nas seções adiante.</p>
-<p>Todas as simulações possuem os mesmos argumentos de entrada: A tabela de poros gerada a partir da extração da rede e quando o volume for multiescalar, o <a href="../../Volumes/PNM/PNM.html#modelo-subscala">modelo subescala</a> utilizado e sua parametrização.</p>
+<p>Todas as simulações possuem os mesmos argumentos de entrada: A tabela de poros gerada a partir da extração da rede e quando o volume for multiescalar, o <a href="../../Volumes/PNM/PNM.html#subscale-model">modelo subescala</a> utilizado e sua parametrização.</p>
 <table>
 <thead>
 <tr>
@@ -2448,12 +2448,12 @@
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 11" src="../assets/images/weibull.png" width="50%" /></th>
+<th align="center"><img alt="Figura 11" src="../../../assets/images/weibull.png" width="50%" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Distribuição de Weibull.</td>
+<td align="center">Figura 11: Distribuição de Weibull.</td>
 </tr>
 </tbody>
 </table>
@@ -2515,7 +2515,7 @@
 <p>A intrusão de mercúrio é um experimento no qual mercúrio líquido é injetado em uma amostra de rocha reservatório sob vácuo, com pressão crescente. O volume de mercúrio invadindo a amostra é medido em função da pressão de mercúrio. Uma vez que o ângulo de contato do mercúrio líquido com o vapor de mercúrio é aproximadamente independente do substrato, é possível utilizar modelos analíticos, como o modelo do feixe de tubos, para calcular a distribuição do tamanho dos poros da amostra. </p>
 <p>O ensaio de intrusão de mercúrio é relativamente acessível e sua principal relevância no contexto do PNM reside na capacidade de executar a simulação em uma amostra para a qual os resultados experimentais de curvas de Pressão Capilar por Intrusão de Mercúrio (MICP) estão disponíveis. Isso permite a comparação dos resultados para validar e calibrar a rede de poros extraída da amostra, que será usada nas simulações de uma e duas fases.</p>
 <p>Para facilitar as análises da atribuição dos raios dos poros sub-resolução, o código presente no GeoSlicer produzirá como saída, além dos gráficos obtidos pela simulação no OpenPNM, os gráficos das distribuições de raios de poros e gargantas e também das distribuições de volumes, separando em poros resolvidos (que não se alteram pela atribuição da subescala) e poros não resolvidos. Dessa forma, o usuário pode conferir se o modelo de subescala foi aplicado corretamente.</p>
-<h3 id="modelo-subscala">Modelo Subscala</h3>
+<h3 id="modelo-subscala"><a id="subscale-model">Modelo Subscala</a></h3>
 <p>No caso da rede multiescalar, como os raios da subescala não podem ser determinados a partir da própria imagem, por estarem fora da resolução, é necessário definir um modelo para atribuição desses raios. Algumas opções disponíveis atualmente são:</p>
 <ul>
 <li>

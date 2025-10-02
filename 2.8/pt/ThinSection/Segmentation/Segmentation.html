@@ -2550,7 +2550,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <h4 id="efeitos">Efeitos</h4>
 <hr />
 <p>Os efeitos operam clicando no botão Aplicar na seção de opções do efeito ou clicando e/ou arrastando nas visualizações de fatias ou 3D.</p>
-<h4 id="pintura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id="pintura">Pintura</a></h4>
+<h4 id="pintura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id="paint">Pintura</a></h4>
 <ul>
 <li>
 <p>Escolha o raio (em milímetros) do pincel a ser aplicado.</p>
@@ -2568,7 +2568,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>O modo Esfera aplica o raio às fatias acima e abaixo da fatia atual.</p>
 </li>
 </ul>
-<h4 id="desenho"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id="desenho">Desenho</a></h4>
+<h4 id="desenho"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id="draw">Desenho</a></h4>
 <ul>
 <li>
 <p>Clique com o botão esquerdo para criar pontos individuais de um contorno.</p>
@@ -2653,7 +2653,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>Suavização conjunto: suaviza múltiplos segmentos de uma vez, preservando a interface estanque entre eles. Se os segmentos se sobrepuserem, o segmento mais alto na tabela de segmentos terá prioridade. Aplicado a todos os segmentos visíveis.</p>
 </li>
 </ul>
-<h4 id="tesoura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id="tesoura">Tesoura</a></h4>
+<h4 id="tesoura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id="scissors">Tesoura</a></h4>
 <p>Recorta segmentos para a região especificada ou preenche regiões de um segmento (geralmente usado com mascaramento). As regiões podem ser desenhadas tanto na visualização de fatia quanto nas visualizações 3D.</p>
 <ul>
 <li>
@@ -2719,18 +2719,18 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 <p>Esse efeito de edição de segmentação chamado "Color threshold", permite a segmentação de imagens com base em intervalos de cores definidos pelo usuário. O efeito pode operar em modos de cor HSV ou RGB, permitindo ajustes nos componentes de matiz, saturação e valor. Ainda possui ajuste nos níveis de vermelho, verde e azul. O efeito oferece uma visualização em tempo real da segmentação, utilizando um pulso de pré-visualização para ajudar o usuário a refinar os parâmetros antes de aplicar as alterações permanentemente. Além disso, o efeito inclui funcionalidades avançadas, como a conversão de espaços de cor e a manipulação de intervalos circulares, possibilitando uma segmentação precisa e customizada.</p>
 <h4 id="conectividade"><img alt="" src="../../../assets/images/thin_section/modulos/segment_editor/conectivity_effect.png" /> Conectividade</h4>
 <p>Esse efeito de "Conectividade" permite a seleção de segmentos no Geoslicer, permitindo aos usuários calcular regiões conectadas dentro de um segmento em uma direção específica. O efeito inclui parâmetros configuráveis como saltos de conectividade, direção e nome de saída, tornando-o uma ferramenta versátil para tarefas detalhadas de segmentação. Ele lida de forma eficiente com a análise de componentes conectados e gera um novo segmento baseado nas configurações definidas pelo usuário.</p>
-<h4 id="remocao-de-borda"><img alt="" src="../../../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> <a id="remocao-de-borda">Remoção de Borda</a></h4>
+<h4 id="remocao-de-borda"><img alt="" src="../../../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> <a id="boundary-removal">Remoção de Borda</a></h4>
 <p>Remove as bordas dos segmentos visíveis usando um filtro de detecção de bordas. Apenas os segmentos visíveis são modificados no processo.</p>
 <ul>
 <li><strong>Filter</strong>: Apenas magnitude de gradiente até o momento.</li>
 <li><strong>Threshold adjustment</strong>: Ajusta o limiar para encontrar uma borda adequada.</li>
 <li><strong>Keep filter result</strong>: Marque esta opção para manter o resultado do filtro como um novo volume, para inspeção.</li>
 </ul>
-<h4 id="expandir-segmentos"><img alt="" src="../../../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> <a id="expandir-segmentos">Expandir Segmentos</a></h4>
+<h4 id="expandir-segmentos"><img alt="" src="../../../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> <a id="expand-segments">Expandir Segmentos</a></h4>
 <p>Aplica o processo de watershed para expandir os segmentos visíveis, preenchendo os espaços vazios da segmentação. Os segmentos visíveis selecionados são usados como sementes, ou mínimos, a partir dos quais são expandidos.</p>
 <h4 id="primeiro-plano-inteligente"><img alt="" src="../../../assets/images/thin_section/modulos/segment_editor/smart_foreground_effect.png" /> Primeiro plano inteligente</h4>
 <p>Segmenta automaticamente a área útil de uma imagem ou volume, isto é, a região que corresponde de fato à amostra, rejeitando as regiões de borda. Habilitando-se o recurso de fragmentação (atualmente disponível apenas para lâminas), eventuais fissuras entre fragmentos de rocha também deixam de ser consideradas área util. Este efeito é conveniente para fluxos de trabalho em que as áreas adjacentes à rocha possam influenciar negativamente, como, por exemplo, determinar a taxa de porosidade da amostra.</p>
-<h4 id="multiplos-limiares"><a id="multiplos-limiares">Múltiplos limiares</a></h4>
+<h4 id="multiplos-limiares"><a id="multiple-thresholds">Múltiplos limiares</a></h4>
 <p>O efeito de <em>multiple threshold</em>, apresentado nos ambientes Volumes, Image Log, Core e Multiscale, permite ao usuário segmentar um volume 3D a partir de múltiplos valores de limiares. Dependendo da quantidade de segmentos selecionados, um histograma com limiares aparece colorido na interface. Cada segmento será separado pelo limiar, começando o próximo segmento em um limiar levemente acima na escala de cinza. Dessa forma, pode-se segmentar facilmente a imagem a partir da escala de cinza.</p>
 <p><img alt="" src="../../../assets/images/module_segmenteditor_multiple_threshold.png" /></p>
 <ul>
@@ -2759,7 +2759,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </li>
 </ul>
 <hr />
-<h2 id="segmentacao-automatica-de-laminas-delgadas">Segmentação Automática de Lâminas Delgadas</h2>
+<h2 id="segmentacao-automatica-de-laminas-delgadas"><a id="automatic-thin-section-segmentation">Segmentação Automática de Lâminas Delgadas</a></h2>
 <p>A segmentação de imagens de lâminas petrográficas pode ser feita de duas formas: uma segmentação binária, que identifica apenas a fase de poro, e uma segmentação multifásica, que identifica os diversos minerais que compõem a rocha.</p>
 <h3 id="segmentacao-multifasica-minerais">Segmentação Multifásica (Minerais)</h3>
 <p>A análise da composição mineral e da textura das rochas é fundamental para a indústria de petróleo. O GeoSlicer utiliza modelos de Deep Learning para automatizar essa análise a partir de imagens de lâminas, oferecendo uma alternativa ao método QEMSCAN.</p>
@@ -3197,7 +3197,7 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </tbody>
 </table>
 <h4 id="2-segmentacao-de-poros">2. Segmentação de poros</h4>
-<p>Uma vez que uma imagem é carregada, sua região porosa é segmentada através dos <strong><a href="Segmentation.html#segmentacao-automatica-de-laminas-delgadas">modelos pré-treinados</a></strong>
+<p>Uma vez que uma imagem é carregada, sua região porosa é segmentada através dos <strong><a href="Segmentation.html#automatic-thin-section-segmentation">modelos pré-treinados</a></strong>
   disponíveis no GeoSlicer. Neste módulo, 3 modelos são disponibilizados:</p>
 <ul>
 <li>Modelo bayesiano de <em>kernel</em> pequeno;</li>
@@ -3437,7 +3437,7 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </li>
 <li>Caso utilize a <strong>versão pública do GeoSlicer</strong>, um campo <em>Annotations</em> deve estar visível, e os passos a seguir deverão ser executados. Caso contrário, pule este passo.<ul>
 <li>Adicione dois novos segmentos à segmentação de saída. Alternativamente, você pode criar uma nova segmentação com dois segmentos.</li>
-<li>Selecione um dos novos segmentos criados. Utilize efeitos de marcação como <a href="Segmentation.html#desenho">Desenho (<em>Draw</em>)</a>, <a href="Segmentation.html#pintura">Pintura (<em>Paint</em>)</a> ou <a href="Segmentation.html#tesoura">Tesoura (<em>Scissors</em>)</a> para demarcar pequenas amostras da textura da rocha.</li>
+<li>Selecione um dos novos segmentos criados. Utilize efeitos de marcação como <a href="Segmentation.html#draw">Desenho (<em>Draw</em>)</a>, <a href="Segmentation.html#paint">Pintura (<em>Paint</em>)</a> ou <a href="Segmentation.html#scissors">Tesoura (<em>Scissors</em>)</a> para demarcar pequenas amostras da textura da rocha.</li>
 <li>Selecione o outro novo segmento. Demarque agora pequenas amostras da resina de poro na imagem.</li>
 <li>Retorne ao efeito <em>Smart foreground</em> e reselecione o segmento ao qual a operação será aplicada.</li>
 <li>Em <em>Annotations</em>, selecione a segmentação que contém os segmentos demarcados.</li>
