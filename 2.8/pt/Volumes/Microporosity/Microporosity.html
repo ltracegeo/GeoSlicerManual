@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mapa-de-porosidade-via-saturacao" class="md-skip">
+        <a href="#mapa-de-porosidade-via-segmentacao" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -724,15 +724,6 @@
       Índice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mapa-de-porosidade-via-saturacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mapa de porosidade via saturação
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#mapa-de-porosidade-via-segmentacao" class="md-nav__link">
@@ -2347,24 +2338,24 @@
 
   <h1>Microporosity</h1>
 
-<h2 id="mapa-de-porosidade-via-saturacao">Mapa de porosidade via saturação</h2>
-<p>Esse módulo é utilizado para gerar o mapa de porosidade para uma amostra específica a partir da comparação entre a amostra seca e a saturada.</p>
-<p>As entradas necessárias para a utilização do módulo são:</p>
-<ul>
-<li>
-<p>Imagem seca e saturada da amostra;</p>
-</li>
-<li>
-<p>Segmentação das fases com pelo menos dois dos segmentos representando: o espaço poroso e o sólido;</p>
-</li>
-</ul>
-<p><img alt="interface" src="../../../assets/images/PorosityFromSaturationInterface.webp" /></p>
-<blockquote>
-<p>As imagens seca e saturada devem estar registradas para que esse módulo funcione adequadamente.</p>
-</blockquote>
-<p>Ao selecionar a Segmentação, o módulo reconhece automaticamente os nomes "Poro" para o espaço poroso e o nome "Calcita" para o sólido de referência. No entanto, o usuário pode alterar qual dos segmentos representa cada uma das fases que serão utilizadas para delimitar o mapa de porosidade, nos valores 0 (sólido) e 1 (poro). Quaisquer outros segmentos não selecionados estarão compreendidos na fase intermediária em porosidade (escala de cinza).
-Após selecionar os segmentos pode-se clicar em "Inicializar", isso fará com que o módulo calcule e colore apropriadamente os histogramas da imagem seca e da saturada. Enquanto as cores representam os segmentos (normalmente serão delimitados por linhas retas no caso da segmentação ter sido gerada por threshold), as barras indicarão onde o mapa de porosidade será limitado para os valores de 0 e 1. Os valores intermediários serão escalados adequadamente com base no alcance das barras. Normalmente os valores padrão já são bons.</p>
-<hr />
+<!-- ## Mapa de porosidade via saturação
+
+Esse módulo é utilizado para gerar o mapa de porosidade para uma amostra específica a partir da comparação entre a amostra seca e a saturada.
+
+As entradas necessárias para a utilização do módulo são:
+
+- Imagem seca e saturada da amostra;
+
+- Segmentação das fases com pelo menos dois dos segmentos representando: o espaço poroso e o sólido;
+
+![interface](../../assets/images/PorosityFromSaturationInterface.webp)
+
+> As imagens seca e saturada devem estar registradas para que esse módulo funcione adequadamente.
+
+Ao selecionar a Segmentação, o módulo reconhece automaticamente os nomes "Poro" para o espaço poroso e o nome "Calcita" para o sólido de referência. No entanto, o usuário pode alterar qual dos segmentos representa cada uma das fases que serão utilizadas para delimitar o mapa de porosidade, nos valores 0 (sólido) e 1 (poro). Quaisquer outros segmentos não selecionados estarão compreendidos na fase intermediária em porosidade (escala de cinza).
+Após selecionar os segmentos pode-se clicar em "Inicializar", isso fará com que o módulo calcule e colore apropriadamente os histogramas da imagem seca e da saturada. Enquanto as cores representam os segmentos (normalmente serão delimitados por linhas retas no caso da segmentação ter sido gerada por threshold), as barras indicarão onde o mapa de porosidade será limitado para os valores de 0 e 1. Os valores intermediários serão escalados adequadamente com base no alcance das barras. Normalmente os valores padrão já são bons.
+
+--- -->
 <h2 id="mapa-de-porosidade-via-segmentacao">Mapa de porosidade via Segmentação</h2>
 <p>Nesse módulo o mapa de porosidade pode ser gerado a partir dos dados de microtomografia e de uma segmentação feita em cima dele. Após selecionar a segmentação, pode-se escolher a classificação de cada um dos segmentos em Macroporosity, Microporosity, Reference Solid e High Attenuation. Com isso, o algoritmo gerará um mapa de porosidade onde os segmentos classificados como Macroporosity serão sempre 1, Reference Solid e High Attenuation serão 0 e os segmentos indicados por Microporosity estarão em uma escala de cinza entre 0 e 1.</p>
 <p><img alt="fromsegmentation" src="../../../assets/images/PorosityFromSegmentation.png" /></p>
