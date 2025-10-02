@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="pt" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -74,8 +74,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#ambiente-core" class="md-skip">
-          Pular para conteúdo
+        <a href="#core-environment" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,7 +93,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
@@ -150,6 +150,32 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../pt/Core/Introduction.html" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="Introduction.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         
@@ -159,16 +185,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -179,7 +205,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando busca
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -214,7 +240,7 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -237,7 +263,7 @@
         
   
   <span class="md-ellipsis">
-    Visão Geral
+    Overview
   </span>
   
 
@@ -267,7 +293,7 @@
             
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -277,7 +303,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Introdução
+            Introduction
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -294,7 +320,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog-icon lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>
   
   <span class="md-ellipsis">
-    Instalação
+    Installation
   </span>
   
 
@@ -317,7 +343,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints-icon lucide-footprints"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>
   
   <span class="md-ellipsis">
-    Primeiros Passos
+    First Steps
   </span>
   
 
@@ -340,7 +366,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-app-window-icon lucide-app-window"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
   
   <span class="md-ellipsis">
-    Aplicação
+    Application
   </span>
   
 
@@ -363,7 +389,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
   
   <span class="md-ellipsis">
-    Módulos
+    Modules
   </span>
   
 
@@ -386,7 +412,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up-icon lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Carregando dados
+    Loading Data
   </span>
   
 
@@ -474,7 +500,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -497,7 +523,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-down"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="M12 10v6"/><path d="m15 13-3 3-3-3"/></svg>
   
   <span class="md-ellipsis">
-    Carregamento
+    MicroCT Import
   </span>
   
 
@@ -520,7 +546,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Export
+    MicroCT Export
   </span>
   
 
@@ -566,7 +592,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>
   
   <span class="md-ellipsis">
-    Filtros
+    Filter
   </span>
   
 
@@ -612,7 +638,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -658,7 +684,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
   
   <span class="md-ellipsis">
-    Microporosidade
+    Microporosity
   </span>
   
 
@@ -704,7 +730,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
   
   <span class="md-ellipsis">
-    Registro
+    Register
   </span>
   
 
@@ -727,7 +753,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
   
   <span class="md-ellipsis">
-    Rede de Poros
+    Pore Network
   </span>
   
 
@@ -884,7 +910,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -930,7 +956,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image-up"><path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21"/><path d="m14 19.5 3-3 3 3"/><path d="M17 22v-5.5"/><circle cx="9" cy="9" r="2"/></svg>
   
   <span class="md-ellipsis">
-    Qemscan Loader
+    QEMSCAN Loader
   </span>
   
 
@@ -953,7 +979,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crop"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
   
   <span class="md-ellipsis">
-    Cortes
+    Crop
   </span>
   
 
@@ -976,7 +1002,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
   
   <span class="md-ellipsis">
-    Filtros
+    Filters
   </span>
   
 
@@ -999,7 +1025,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg>
   
   <span class="md-ellipsis">
-    Registro
+    Register
   </span>
   
 
@@ -1022,7 +1048,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -1202,7 +1228,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -1529,7 +1555,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1538,23 +1564,23 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Índice
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#secoes" class="md-nav__link">
+  <a href="#sections" class="md-nav__link">
     <span class="md-ellipsis">
-      Seções
+      Sections
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#o-que-voce-pode-fazer" class="md-nav__link">
+  <a href="#what-can-you-do" class="md-nav__link">
     <span class="md-ellipsis">
-      O que você pode fazer?
+      What can you do?
     </span>
   </a>
   
@@ -1651,7 +1677,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
   
   <span class="md-ellipsis">
-    Transforms
+    Multicore Transforms
   </span>
   
 
@@ -1698,6 +1724,29 @@
   
   <span class="md-ellipsis">
     Core Inpaint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MulticoreExport.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
+  
+  <span class="md-ellipsis">
+    Export
   </span>
   
 
@@ -1808,7 +1857,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -2157,7 +2206,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
   
   <span class="md-ellipsis">
-    Fluxos
+    Flows
   </span>
   
 
@@ -2195,7 +2244,7 @@
             
   
   <span class="md-ellipsis">
-    Desenvolvimento
+    Development
   </span>
   
 
@@ -2205,7 +2254,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Desenvolvimento
+            Development
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2216,13 +2265,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Desenvolvimento/BuildingGeoSlicer.html" class="md-nav__link">
+      <a href="../Development/BuildingGeoSlicer.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Compilando o GeoSlicer
+    Building GeoSlicer
   </span>
   
 
@@ -2239,13 +2288,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Desenvolvimento/HowToContribute.html" class="md-nav__link">
+      <a href="../Development/HowToContribute.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Como Contribuir
+    How To Contribute
   </span>
   
 
@@ -2262,13 +2311,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Desenvolvimento/Documentation.html" class="md-nav__link">
+      <a href="../Development/Documentation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Documentação
+    Documentation
   </span>
   
 
@@ -2300,30 +2349,28 @@
                   
 
 
-<!-- BEGIN INCLUDE Pages/CoreIntroduction.md -->
-<h1 id="ambiente-core">Ambiente Core</h1>
-<p>O ambiente Core é dedicado à análise de testemunhos de sondagem, permitindo a visualização e processamento de imagens de testemunhos. Com este ambiente, você pode executar uma ampla gama de tarefas, desde o carregamento de imagens fotográficas de testemunhos até a segmentação e exportação de resultados.</p>
-<h2 id="secoes">Seções</h2>
-<p>O ambiente Core do GeoSlicer é organizado em vários módulos, cada um dedicado a um conjunto específico de tarefas. Clique em um módulo para saber mais sobre suas funcionalidades:</p>
+<h1 id="core-environment">Core Environment</h1>
+<p>The Core environment is dedicated to the analysis of drilling core samples, allowing for the visualization and processing of core images. With this environment, you can perform a wide range of tasks, from loading photographic images of core samples to segmentation and export of results.</p>
+<h2 id="sections">Sections</h2>
+<p>The GeoSlicer Core environment is organized into several modules, each dedicated to a specific set of tasks. Click on a module to learn more about its functionalities:</p>
 <ul>
-<li><strong><a href="Multicore.html">Import</a>:</strong> Projetado para importar e processar imagens de testemunhos.</li>
-<li><strong><a href="CorePhotographLoader.html">Core Photograph Loader</a>:</strong> Carregue imagens fotográficas de testemunhos para análise.</li>
-<li><strong><a href="Crop.html">Crop</a>:</strong> Ferramentas para cortar e ajustar as imagens de testemunho.</li>
-<li><strong><a href="MulticoreTransforms.html">Transforms</a>:</strong> Aplique transformações geométricas.</li>
-<li><strong><a href="Segmentation/Segmentation.html">Segmentation</a>:</strong> Realize a segmentação de imagens para identificação de características.</li>
-<li><strong><a href="CoreInpaint.html">Core Inpaint</a>:</strong> Preencha regiões ausentes ou danificadas nas imagens.</li>
-<li><strong><a href="MulticoreExport.html">Export</a>:</strong> Exporte os dados processados e os resultados da análise.</li>
+<li><strong><a href="Multicore.html">Import</a>:</strong> Designed to import and process core images.</li>
+<li><strong><a href="CorePhotographLoader.html">Core Photograph Loader</a>:</strong> Load photographic images of core samples for analysis.</li>
+<li><strong><a href="Crop.html">Crop</a>:</strong> Tools for cropping and adjusting core images.</li>
+<li><strong><a href="MulticoreTransforms.html">Transforms</a>:</strong> Apply geometric transformations.</li>
+<li><strong><a href="Segmentation/Segmentation.html">Segmentation</a>:</strong> Perform image segmentation for feature identification.</li>
+<li><strong><a href="CoreInpaint.html">Core Inpaint</a>:</strong> Fill in missing or damaged regions in images.</li>
+<li><strong><a href="MulticoreExport.html">Export</a>:</strong> Export processed data and analysis results.</li>
 </ul>
-<h2 id="o-que-voce-pode-fazer">O que você pode fazer?</h2>
-<p>Com o ambiente Core do GeoSlicer, você pode:</p>
+<h2 id="what-can-you-do">What can you do?</h2>
+<p>With the GeoSlicer Core environment, you can:</p>
 <ul>
-<li><strong>Visualizar e analisar imagens de testemunhos de sondagem.</strong></li>
-<li><strong>Aplicar uma ampla gama de filtros e transformações de processamento de imagem.</strong></li>
-<li><strong>Segmentar imagens para identificar características geológicas.</strong></li>
-<li><strong>Inspecionar e refinar os resultados da segmentação.</strong></li>
-<li><strong>Exportar os resultados para uso em outros softwares ou para relatórios.</strong></li>
+<li><strong>Visualize and analyze drilling core images.</strong></li>
+<li><strong>Apply a wide range of image processing filters and transformations.</strong></li>
+<li><strong>Segment images to identify geological features.</strong></li>
+<li><strong>Inspect and refine segmentation results.</strong></li>
+<li><strong>Export results for use in other software or for reports.</strong></li>
 </ul>
-<!-- END INCLUDE -->
 
 
 
@@ -2374,7 +2421,7 @@
     
     
     
-<script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
 
 

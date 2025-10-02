@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="pt" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -74,8 +74,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#fluxo-pp" class="md-skip">
-          Pular para conteúdo
+        <a href="#pp-flow" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,7 +93,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../../assets/logo.png" alt="logo">
@@ -150,6 +150,32 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pt/ThinSection/Flows/Flows.html" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="Flows.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         
@@ -159,16 +185,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -179,7 +205,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando busca
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -214,7 +240,7 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -237,7 +263,7 @@
         
   
   <span class="md-ellipsis">
-    Visão Geral
+    Overview
   </span>
   
 
@@ -267,7 +293,7 @@
             
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -277,7 +303,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Introdução
+            Introduction
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -294,7 +320,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog-icon lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>
   
   <span class="md-ellipsis">
-    Instalação
+    Installation
   </span>
   
 
@@ -317,7 +343,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints-icon lucide-footprints"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>
   
   <span class="md-ellipsis">
-    Primeiros Passos
+    First Steps
   </span>
   
 
@@ -340,7 +366,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-app-window-icon lucide-app-window"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
   
   <span class="md-ellipsis">
-    Aplicação
+    Application
   </span>
   
 
@@ -363,7 +389,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
   
   <span class="md-ellipsis">
-    Módulos
+    Modules
   </span>
   
 
@@ -386,7 +412,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up-icon lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Carregando dados
+    Loading Data
   </span>
   
 
@@ -474,7 +500,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -497,7 +523,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-down"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="M12 10v6"/><path d="m15 13-3 3-3-3"/></svg>
   
   <span class="md-ellipsis">
-    Carregamento
+    MicroCT Import
   </span>
   
 
@@ -520,7 +546,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Export
+    MicroCT Export
   </span>
   
 
@@ -566,7 +592,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>
   
   <span class="md-ellipsis">
-    Filtros
+    Filter
   </span>
   
 
@@ -612,7 +638,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -658,7 +684,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
   
   <span class="md-ellipsis">
-    Microporosidade
+    Microporosity
   </span>
   
 
@@ -704,7 +730,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
   
   <span class="md-ellipsis">
-    Registro
+    Register
   </span>
   
 
@@ -727,7 +753,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
   
   <span class="md-ellipsis">
-    Rede de Poros
+    Pore Network
   </span>
   
 
@@ -886,7 +912,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -932,7 +958,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image-up"><path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21"/><path d="m14 19.5 3-3 3 3"/><path d="M17 22v-5.5"/><circle cx="9" cy="9" r="2"/></svg>
   
   <span class="md-ellipsis">
-    Qemscan Loader
+    QEMSCAN Loader
   </span>
   
 
@@ -955,7 +981,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crop"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
   
   <span class="md-ellipsis">
-    Cortes
+    Crop
   </span>
   
 
@@ -978,7 +1004,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
   
   <span class="md-ellipsis">
-    Filtros
+    Filters
   </span>
   
 
@@ -1001,7 +1027,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg>
   
   <span class="md-ellipsis">
-    Registro
+    Register
   </span>
   
 
@@ -1024,7 +1050,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -1075,39 +1101,39 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Índice
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fluxo-pp" class="md-nav__link">
+  <a href="#pp-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Fluxo PP
+      PP Flow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fluxo-pppx" class="md-nav__link">
+  <a href="#pppx-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Fluxo PP/PX
+      PP/PX Flow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fluxo-qemscan" class="md-nav__link">
+  <a href="#qemscan-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Fluxo QEMSCAN
+      QEMSCAN Flow
     </span>
   </a>
   
@@ -1269,7 +1295,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -1656,7 +1682,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
   
   <span class="md-ellipsis">
-    Transforms
+    Multicore Transforms
   </span>
   
 
@@ -1703,6 +1729,29 @@
   
   <span class="md-ellipsis">
     Core Inpaint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core/MulticoreExport.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
+  
+  <span class="md-ellipsis">
+    Export
   </span>
   
 
@@ -1813,7 +1862,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -2162,7 +2211,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
   
   <span class="md-ellipsis">
-    Fluxos
+    Flows
   </span>
   
 
@@ -2200,7 +2249,7 @@
             
   
   <span class="md-ellipsis">
-    Desenvolvimento
+    Development
   </span>
   
 
@@ -2210,7 +2259,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Desenvolvimento
+            Development
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2221,13 +2270,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Desenvolvimento/BuildingGeoSlicer.html" class="md-nav__link">
+      <a href="../../Development/BuildingGeoSlicer.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Compilando o GeoSlicer
+    Building GeoSlicer
   </span>
   
 
@@ -2244,13 +2293,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Desenvolvimento/HowToContribute.html" class="md-nav__link">
+      <a href="../../Development/HowToContribute.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Como Contribuir
+    How To Contribute
   </span>
   
 
@@ -2267,13 +2316,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Desenvolvimento/Documentation.html" class="md-nav__link">
+      <a href="../../Development/Documentation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Documentação
+    Documentation
   </span>
   
 
@@ -2307,490 +2356,436 @@
 
   <h1>Thin Section Flows</h1>
 
-<!-- BEGIN INCLUDE Pages/FluxoPP.md -->
-<h2 id="fluxo-pp">Fluxo PP</h2>
-<p>Este fluxo é utilizado para calcular métricas de poro a partir de uma imagem PP (polarização plana).</p>
-<figure class="video-container">  <video controls width="100%">  <source src="../../assets/videos/thin_section_pp_px_flow.webm" type="video/webm">  Your browser does not support the video tag.</video>  <figcaption>Video: Executando o fluxo PP/PX</figcaption></figure>
+<h2 id="pp-flow">PP Flow</h2>
+<p>This flow is used to calculate pore metrics from a PP image (plane polarization).</p>
+<figure class="video-container">  <video controls width="100%">  <source src="../../../assets/videos/thin_section_pp_px_flow.webm" type="video/webm" >  Your browser does not support the video tag.</video>  <figcaption>Video: Executing the PP/PX flow</figcaption></figure>
 
-<!-- BEGIN INCLUDE ./FlowStepsLoadPp.md -->
-<h3 id="carregar-pppx">Carregar PP/PX</h3>
-<p>Escolha os arquivos de imagem PP (polarizado plano) para carregar.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/ThinSectionLoader.html">Thin Section Loader</a></em></p>
-<h4 id="elementos-da-interface">Elementos da Interface</h4>
-<p><img alt="Carregar PP" src="../../assets/images/PNMFlowLoadPp.png" /></p>
-<p>Especifique o caminho para a imagem no campo <strong>PP</strong>.</p>
-<p>Ao lado do campo, há um botão <img alt="Procurar arquivo" src="../../assets/images/PNMFlowFindFile.png" /> que abre o explorador de arquivos do sistema, a fim de selecionar o arquivo.</p>
-<h4 id="formatos-aceitos">Formatos aceitos</h4>
+<h3 id="load-pppx">Load PP/PX</h3>
+<p>Choose the PP (plane polarized) image files to load.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Loader/ThinSectionLoader.html">Thin Section Loader</a></em></p>
+<h4 id="interface-elements">Interface Elements</h4>
+<p><img alt="Load PP" src="../../assets/images/PNMFlowLoadPp.png" /></p>
+<p>Specify the path to the image in the <strong>PP</strong> field.</p>
+<p>Next to the field, there is a button <img alt="Find file" src="../../assets/images/PNMFlowFindFile.png" /> that opens the system's file explorer, in order to select the file.</p>
+<h4 id="accepted-formats">Accepted formats</h4>
 <ul>
 <li>JPEG</li>
 <li>TIFF</li>
 <li>PNG</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsScale.md -->
-<h3 id="definir-a-escala">Definir a Escala</h3>
-<p>Defina o tamanho do pixel em milímetros para a imagem.</p>
-<p>Neste passo, a imagem PP deve estar visível. Se a imagem tiver uma barra de escala, ela pode ser detectada automaticamente, e os campos serão preenchidos automaticamente. Nesse caso, confira os valores e siga para o próximo passo.</p>
-<p>Se a detecção falhar, a seguinte mensagem aparecerá: <code>Could not detect scale automatically. Please define it manually.</code> Nesse caso, é necessário definir a escala manualmente. Se o tamanho do pixel for conhecido, preencha-o diretamente no campo <code>Pixel size (mm)</code>. Se não for, o tamanho do pixel pode ser calculado medindo a barra de escala na imagem.</p>
-<p>Definir a escala é importante para garantir que as métricas de poro calculadas posteriormente estejam fisicamente corretas.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/ThinSectionLoader.html">Thin Section Loader</a></em></p>
-<h4 id="elementos-da-interface_1">Elementos da Interface</h4>
-<p><img alt="Definir a Escala" src="../../assets/images/PNMFlowScale.png" /></p>
+<h3 id="define-the-scale">Define the Scale</h3>
+<p>Define the pixel size in millimeters for the image.</p>
+<p>In this step, the PP image must be visible. If the image has a scale bar, it can be detected automatically, and the fields will be filled in automatically. In this case, check the values and proceed to the next step.</p>
+<p>If detection fails, the following message will appear: <code>Could not detect scale automatically. Please define it manually.</code> In this case, it is necessary to define the scale manually. If the pixel size is known, fill it directly into the <code>Pixel size (mm)</code> field. If not, the pixel size can be calculated by measuring the scale bar on the image.</p>
+<p>Defining the scale is important to ensure that the pore metrics calculated later are physically correct.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Loader/ThinSectionLoader.html">Thin Section Loader</a></em></p>
+<h4 id="interface-elements_1">Interface Elements</h4>
+<p><img alt="Define the Scale" src="../../assets/images/PNMFlowScale.png" /></p>
 <ul>
 <li>
-<p><strong>Scale size (px)</strong>: Insira o tamanho da barra de escala em pixels (px). Use o botão <code>Measure bar</code> para medir diretamente na imagem.</p>
+<p><strong>Scale size (px)</strong>: Enter the size of the scale bar in pixels (px). Use the <code>Measure bar</code> button to measure directly on the image.</p>
 </li>
 <li>
-<p><strong>Measure bar</strong>: Clique neste botão para usar a ferramenta de medida, que permitirá que você desenhe uma linha na imagem para medir a barra de escala em pixels. Com a ferramenta ativa, clique em uma das extremidades da barra, em seguida clique na outra extremidade. O campo <code>Scale size (px)</code> será preenchido com o tamanho medido.</p>
+<p><strong>Measure bar</strong>: Click this button to use the measurement tool, which will allow you to draw a line on the image to measure the scale bar in pixels. With the tool active, click one end of the bar, then click the other end. The <code>Scale size (px)</code> field will be filled with the measured size.</p>
 </li>
 <li>
-<p><strong>Scale size (mm)</strong>: Insira o tamanho real da barra de escala em milímetros (mm). Esse valor deve estar visível na imagem, próximo a barra. Por exemplo, se estiver escrito "0,1 cm", insira "1" no campo.</p>
+<p><strong>Scale size (mm)</strong>: Enter the real size of the scale bar in millimeters (mm). This value should be visible on the image, next to the bar. For example, if it says "0,1 cm", enter "1" in the field.</p>
 </li>
 <li>
-<p><strong>Pixel size (mm)</strong>: Este campo exibe o valor calculado do tamanho do pixel em milímetros, com base nos valores inseridos nos campos <code>Scale size (px)</code> e <code>Scale size (mm)</code>. Esse valor é atualizado automaticamente quando os campos anteriores são preenchidos.</p>
+<p><strong>Pixel size (mm)</strong>: This field displays the calculated pixel size value in millimeters, based on the values entered in the <code>Scale size (px)</code> and <code>Scale size (mm)</code> fields. This value is automatically updated when the previous fields are filled.</p>
 </li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsSoi.md -->
-<h3 id="definir-o-segmento-de-interesse">Definir o Segmento de Interesse</h3>
-<p>Selecione o segmento de interesse (SOI) para as imagens PP/PX.</p>
-<p>Algumas imagens podem incluir regiões que não fazem parte da rocha, em especial nas bordas. Esse passo permite definir a região relevante.</p>
-<p>Os passos posteriores <em>Smart-seg</em> e <em>Auto-label</em> serão executados apenas nesta região.</p>
-<p>Para definir o segmento, desenhe retângulos na imagem. Se preferir desenho livre, selecione a opção <em>Free-form</em>.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<h4 id="elementos-da-interface_2">Elementos da Interface</h4>
-<p><img alt="Definir o Segmento de Interesse" src="../../assets/images/PNMFlowSoi.png" /></p>
-<h5 id="ferramentas-de-segmentacao">Ferramentas de Segmentação</h5>
+<h3 id="define-the-segment-of-interest">Define the Segment of Interest</h3>
+<p>Select the segment of interest (SOI) for the PP/PX images.</p>
+<p>Some images may include regions that are not part of the rock, especially at the edges. This step allows you to define the relevant region.</p>
+<p>The subsequent <em>Smart-seg</em> and <em>Auto-label</em> steps will only be executed in this region.</p>
+<p>To define the segment, draw rectangles on the image. If you prefer freehand drawing, select the <em>Free-form</em> option.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h4 id="interface-elements_2">Interface Elements</h4>
+<p><img alt="Define the Segment of Interest" src="../../assets/images/PNMFlowSoi.png" /></p>
+<h5 id="segmentation-tools">Segmentation Tools</h5>
 <ul>
-<li><img alt="" src="../../assets/images/PNMFlowNoEditing.png" /> <strong>Sem edição</strong>: Use este ícone para interagir com a visualização (zoom, mover etc) em vez de desenhar o segmento.</li>
-<li><img alt="" src="../../assets/images/PNMFlowScissors.png" /> <strong>Tesoura</strong>: Use este ícone para ativar a ferramenta de tesoura, usada para editar o segmento de interesse.</li>
+<li><img alt="" src="../../assets/images/PNMFlowNoEditing.png" /> <strong>No editing</strong>: Use this icon to interact with the visualization (zoom, move, etc.) instead of drawing the segment.</li>
+<li><img alt="" src="../../assets/images/PNMFlowScissors.png" /> <strong>Scissors</strong>: Use this icon to activate the scissors tool, used to edit the segment of interest.</li>
 </ul>
-<h5 id="opcoes-da-tesoura">Opções da Tesoura</h5>
+<h5 id="scissors-options">Scissors Options</h5>
 <ul>
-<li><strong>Operações</strong>:<ul>
-<li><strong>Erase inside</strong>: Apagar parte do segmento que estiver dentro da região desenhada.</li>
-<li><strong>Erase outside</strong>: Apagar parte do segmento que estiver fora da região desenhada.</li>
-<li><strong>Fill inside</strong>: Preencher segmento dentro da região desenhada.</li>
-<li><strong>Fill outside</strong>: Preencher segmento fora da região desenhada.</li>
+<li><strong>Operations</strong>:<ul>
+<li><strong>Erase inside</strong>: Erase part of the segment that is inside the drawn region.</li>
+<li><strong>Erase outside</strong>: Erase part of the segment that is outside the drawn region.</li>
+<li><strong>Fill inside</strong>: Fill segment inside the drawn region.</li>
+<li><strong>Fill outside</strong>: Fill segment outside the drawn region.</li>
 </ul>
 </li>
-<li><strong>Formas</strong>:<ul>
-<li><strong>Free-form</strong>: Desenhar desenhos livres.</li>
-<li><strong>Circle</strong>: Desenhar círculos.</li>
-<li><strong>Rectangle</strong>: Desenhar retângulos.</li>
+<li><strong>Shapes</strong>:<ul>
+<li><strong>Free-form</strong>: Draw freehand shapes.</li>
+<li><strong>Circle</strong>: Draw circles.</li>
+<li><strong>Rectangle</strong>: Draw rectangles.</li>
 </ul>
 </li>
-<li><img alt="" src="../../assets/images/PNMFlowUndoRedo.png" /> <strong>Undo/Redo</strong>: Desfazer ou refazer a última alteração.</li>
+<li><img alt="" src="../../assets/images/PNMFlowUndoRedo.png" /> <strong>Undo/Redo</strong>: Undo or redo the last change.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsSmartSeg.md -->
-<h3 id="segmentacao-inteligente">Segmentação Inteligente</h3>
-<p>Segmente automaticamente a imagem usando um modelo de aprendizado de máquina. Se preferir segmentar a imagem manualmente, pule este passo com a opção <code>Skip</code>.</p>
-<p><strong>Módulo correspondente</strong>: <a href="../../Pages/ThinSectionSegmenter.html">Segmentação Automática (Thin Section)</a> </p>
-<h4 id="elementos-da-interface_3">Elementos da Interface</h4>
-<p><img alt="Segmentação Inteligente" src="../../assets/images/PNMFlowSmartSeg.png" /></p>
+<h3 id="smart-segmentation">Smart Segmentation</h3>
+<p>Automatically segment the image using a machine learning model. If you prefer to segment the image manually, skip this step with the <code>Skip</code> option.</p>
+<p><strong>Corresponding Module</strong>: <a href="../Segmentation/Segmentation.html#automatic-thin-section-segmentation">Automatic Segmentation (Thin Section)</a> </p>
+<h4 id="interface-elements_3">Interface Elements</h4>
+<p><img alt="Smart Segmentation" src="../../assets/images/PNMFlowSmartSeg.png" /></p>
 <ul>
-<li><strong>Model</strong>: Selecione o modelo a ser usado para segmentar a imagem. Após selecionar, informações sobre o modelo aparecerão, incluindo descrição e segmentos de saída. Cada modelo segmenta a imagem em um conjunto específico de classes.</li>
+<li><strong>Model</strong>: Select the model to be used to segment the image. After selecting, information about the model will appear, including description and output segments. Each model segments the image into a specific set of classes.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsManualSeg.md -->
-<h3 id="segmentacao-manual">Segmentação Manual</h3>
-<p>Edite a segmentação com ferramentas manuais. Esse passo pode ser usado para editar a segmentação criada no passo anterior (<em>Smart-seg</em>), ou para editar uma segmentação nova.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<h4 id="elementos-de-interface">Elementos de Interface</h4>
-<p><img alt="Segmentação Manual" src="../../assets/images/PNMFlowManualSeg.png" /></p>
-<p>Página principal: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsAutoLabel.md -->
-<h3 id="auto-fragmentar">Auto-fragmentar</h3>
-<p>Divida a segmentação atual em vários objetos usando o método escolhido.</p>
-<p>Escolha quais segmentos na segmentação atual dividir em objetos utilizando as caixas de seleção. Os segmentos selecionados serão considerados um só no algoritmo de fragmentação.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentInspector.html">Segment Inspector</a></em></p>
-<h4 id="elementos-da-interface_4">Elementos da Interface</h4>
-<p><img alt="Auto-fragmentar" src="../../assets/images/PNMFlowAutoLabel.png" /></p>
+<h3 id="manual-segmentation">Manual Segmentation</h3>
+<p>Edit the segmentation with manual tools. This step can be used to edit the segmentation created in the previous step (<em>Smart-seg</em>), or to edit a new segmentation.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h4 id="interface-elements_4">Interface Elements</h4>
+<p><img alt="Manual Segmentation" src="../../assets/images/PNMFlowManualSeg.png" /></p>
+<p>Main page: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h3 id="auto-fragment">Auto-fragment</h3>
+<p>Divide the current segmentation into multiple objects using the chosen method.</p>
+<p>Choose which segments in the current segmentation to divide into objects using the checkboxes. The selected segments will be considered as one in the fragmentation algorithm.</p>
+<p><strong>Corresponding Module</strong>: <em><a href="../Segmentation/Segmentation.html#segment-inspector">Segment Inspector</a></em></p>
+<h4 id="interface-elements_5">Interface Elements</h4>
+<p><img alt="Auto-fragment" src="../../assets/images/PNMFlowAutoLabel.png" /></p>
 <ul>
 <li>
-<p><strong>Method:</strong> Selecione o método desejado para dividir os segmentos. As opções incluem:</p>
+<p><strong>Method:</strong> Select the desired method to divide the segments. Options include:</p>
 <ul>
-<li><strong>Watershed</strong>: Divide os segmentos encontrando bacias nos valores da imagem subjacente.</li>
-<li><strong>Separate objects</strong>: Divide segmentos em regiões contíguas. Os objetos não tocarão uns aos outros.</li>
+<li><strong>Watershed</strong>: Divides segments by finding basins in the underlying image values.</li>
+<li><strong>Separate objects</strong>: Divides segments into contiguous regions. Objects will not touch each other.</li>
 </ul>
 </li>
 <li>
 <p><strong>Segments:</strong></p>
 <ul>
-<li>Lista de segmentos atualmente na imagem com caixas de seleção para escolher quais devem ser divididos.</li>
-<li>Cada segmento é representado por sua cor e nome.</li>
+<li>List of segments currently in the image with checkboxes to choose which ones should be divided.</li>
+<li>Each segment is represented by its color and name.</li>
 </ul>
 </li>
 <li>
-<p><strong>Calculate proportions:</strong> Caixa de seleção para habilitar ou desabilitar o cálculo das proporções dos segmentos. Se habilitado, mostra a área de cada segmento em relação à região de interesse.</p>
+<p><strong>Calculate proportions:</strong> Checkbox to enable or disable the calculation of segment proportions. If enabled, shows the area of each segment relative to the region of interest.</p>
 </li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsLabelEditor.md -->
-<h3 id="editar-objetos">Editar Objetos</h3>
-<p>Separe ou una objetos detectados no passo anterior.</p>
-<p>Após a edição, pressione <code>Next</code> para recalcular as métricas de poro e gerar uma nova tabela de relatório. Pressione <code>Skip</code> para pular o cálculo, se não houver alterações.</p>
-<p><strong>Módulo correspondente</strong>: <em>Label Editor</em></p>
-<h4 id="elementos-da-interface_5">Elementos da Interface</h4>
-<p><img alt="Editar Objetos" src="../../assets/images/PNMFlowLabelEditor.png" /></p>
-<p>Este passo mostra o mapa de objetos gerado no passo anterior (<em>auto-label</em>). Clique em uma operação e, em seguida, clique em um objeto na imagem para executá-la.</p>
+<h3 id="edit-objects">Edit Objects</h3>
+<p>Separate or merge objects detected in the previous step.</p>
+<p>After editing, press <code>Next</code> to recalculate pore metrics and generate a new report table. Press <code>Skip</code> to skip the calculation if there are no changes.</p>
+<p><strong>Corresponding module</strong>: <em>Label Editor</em></p>
+<h4 id="interface-elements_6">Interface Elements</h4>
+<p><img alt="Edit Objects" src="../../assets/images/PNMFlowLabelEditor.png" /></p>
+<p>This step shows the object map generated in the previous step (<em>auto-label</em>). Click an operation and then click an object in the image to execute it.</p>
 <ul>
-<li><strong>Hold operation for next edition</strong>: Selecione esta opção para realizar uma operação (ex.: <code>Merge</code>) várias vezes consecutivas sem precisar selecionar a operação novamente.</li>
-<li><strong>Merge</strong>: Clique em dois objetos para uni-los. Atalho: <code>m</code>.</li>
-<li><strong>Auto Split</strong>: Clique para dividir automaticamente um objeto usando a técnica de <em>watershed</em>. Atalho: <code>a</code>.</li>
-<li><strong>Slice</strong>: Clique para cortar o objeto com uma linha reta. Defina a linha com dois cliques na imagem. Atalho: <code>s</code>.</li>
-<li><strong>Point cut</strong>: Clique para cortar o objeto em um ponto específico. Atalho: <code>c</code>.</li>
-<li><strong>Cancel</strong>: Clique para cancelar a operação atual.</li>
-<li><strong>Undo</strong>: Clique para desfazer a última ação. Atalho: <code>z</code>.</li>
-<li><strong>Redo</strong>: Clique para refazer a última ação desfeita. Atalho: <code>x</code>.</li>
+<li><strong>Hold operation for next edition</strong>: Select this option to perform an operation (e.g., <code>Merge</code>) several times consecutively without needing to select the operation again.</li>
+<li><strong>Merge</strong>: Click two objects to unite them. Shortcut: <code>m</code>.</li>
+<li><strong>Auto Split</strong>: Click to automatically split an object using the <em>watershed</em> technique. Shortcut: <code>a</code>.</li>
+<li><strong>Slice</strong>: Click to cut the object with a straight line. Define the line with two clicks on the image. Shortcut: <code>s</code>.</li>
+<li><strong>Point cut</strong>: Click to cut the object at a specific point. Shortcut: <code>c</code>.</li>
+<li><strong>Cancel</strong>: Click to cancel the current operation.</li>
+<li><strong>Undo</strong>: Click to undo the last action. Shortcut: <code>z</code>.</li>
+<li><strong>Redo</strong>: Click to redo the last undone action. Shortcut: <code>x</code>.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsFinish.md -->
-<h3 id="finalizar">Finalizar</h3>
-<p>Este passo apresenta os resultados do fluxo de trabalho. Todas imagens do projeto são listadas, incluindo entradas, saídas e imagens intermediárias.</p>
-<p>Ao finalizar o fluxo, você pode:</p>
+<h3 id="finish">Finish</h3>
+<p>This step presents the results of the workflow. All project images are listed, including inputs, outputs, and intermediate images.</p>
+<p>Upon completing the workflow, you can:</p>
 <ul>
-<li>Visualizar os resultados (Clique no ícone de olho na lista de resultados)</li>
-<li>Salvar o projeto (Ctrl+S)</li>
-<li>Exportar os resultados usando o módulo <em>Thin Section Export</em></li>
-<li>Clicar em <code>Next</code> para executar o fluxo com outra imagem.</li>
+<li>View the results (Click the eye icon in the results list)</li>
+<li>Save the project (Ctrl+S)</li>
+<li>Export the results using the <em>Thin Section Export</em> module</li>
+<li>Click <code>Next</code> to run the workflow with another image.</li>
 </ul>
-<p><strong>Módulo correspondente</strong>: <em>Explorer</em></p>
-<h4 id="elementos-da-interface_6">Elementos da Interface</h4>
-<p><img alt="Finalizar" src="../../assets/images/PNMFlowFinish.png" /></p>
-<p>Todos os dados do projeto atual são listados, isso inclui tanto dados gerados neste fluxo ou em outros processos.</p>
-<p>O relatório é gerado no passo <em>Auto-label</em> e é recalculado opcionalmente no passo <em>Edit labels</em>. Ambas tabelas são listadas. O mesmo vale para o mapa de objetos (<em>labelmap</em>).</p>
-<!-- END INCLUDE -->
-
-<!-- END INCLUDE -->
+<p><strong>Corresponding module</strong>: <em>Explorer</em></p>
+<h4 id="interface-elements_7">Interface Elements</h4>
+<p><img alt="Finish" src="../../assets/images/PNMFlowFinish.png" /></p>
+<p>All current project data is listed, this includes data generated in this workflow or in other processes.</p>
+<p>The report is generated in the <em>Auto-label</em> step and is optionally recalculated in the <em>Edit labels</em> step. Both tables are listed. The same applies to the object map (<em>labelmap</em>).</p>
 <hr />
-<!-- BEGIN INCLUDE Pages/FluxoPPPX.md -->
-<h2 id="fluxo-pppx">Fluxo PP/PX</h2>
-<p>Este fluxo é utilizado para calcular métricas de poro a partir de uma imagem PP (polarização plana) e uma imagem PX (polarização cruzada).</p>
-<figure class="video-container">  <video controls width="100%">  <source src="../../assets/videos/thin_section_pp_px_flow.webm" type="video/webm">  Your browser does not support the video tag.</video>  <figcaption>Video: Executando o fluxo PP/PX</figcaption></figure>
+<h2 id="pppx-flow">PP/PX Flow</h2>
+<p>This flow is used to calculate pore metrics from a PP (plane polarization) image and a PX (cross polarization) image.</p>
+<figure class="video-container">  <video controls width="100%">  <source src="../../../assets/videos/thin_section_pp_px_flow.webm" type="video/webm" >  Your browser does not support the video tag.</video>  <figcaption>Video: Executing the PP/PX flow</figcaption></figure>
 
-<!-- BEGIN INCLUDE ./FlowStepsLoadPpPx.md -->
-<h3 id="carregar-pppx_1">Carregar PP/PX</h3>
-<p>Escolha os arquivos de imagem PP (polarizado plano) e PX (polarizado cruzado) para carregar.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/ThinSectionLoader.html">Thin Section Loader</a></em></p>
-<h4 id="elementos-da-interface_7">Elementos da Interface</h4>
-<p><img alt="Carregar PP/PX" src="../../assets/images/PNMFlowLoadPpPx.png" /></p>
-<p>Especifique o caminho para as imagens nos campos <strong>PP</strong> e <strong>PX</strong>.</p>
-<p>Ao lado de cada campo, há um botão <img alt="Procurar arquivo" src="../../assets/images/PNMFlowFindFile.png" /> que abre o explorador de arquivos do sistema, a fim de selecionar o arquivo.</p>
-<h4 id="formatos-aceitos_1">Formatos aceitos</h4>
+<h3 id="load-pppx_1">Load PP/PX</h3>
+<p>Choose the PP (plane-polarized) and PX (cross-polarized) image files to load.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Loader/ThinSectionLoader.html">Thin Section Loader</a></em></p>
+<h4 id="interface-elements_8">Interface Elements</h4>
+<p><img alt="Load PP/PX" src="../../assets/images/PNMFlowLoadPpPx.png" /></p>
+<p>Specify the path to the images in the <strong>PP</strong> and <strong>PX</strong> fields.</p>
+<p>Next to each field, there is a button <img alt="Browse file" src="../../assets/images/PNMFlowFindFile.png" /> which opens the system's file explorer to select the file.</p>
+<h4 id="accepted-formats_1">Accepted Formats</h4>
 <ul>
 <li>JPEG</li>
 <li>TIFF</li>
 <li>PNG</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsScale.md -->
-<h3 id="definir-a-escala_1">Definir a Escala</h3>
-<p>Defina o tamanho do pixel em milímetros para a imagem.</p>
-<p>Neste passo, a imagem PP deve estar visível. Se a imagem tiver uma barra de escala, ela pode ser detectada automaticamente, e os campos serão preenchidos automaticamente. Nesse caso, confira os valores e siga para o próximo passo.</p>
-<p>Se a detecção falhar, a seguinte mensagem aparecerá: <code>Could not detect scale automatically. Please define it manually.</code> Nesse caso, é necessário definir a escala manualmente. Se o tamanho do pixel for conhecido, preencha-o diretamente no campo <code>Pixel size (mm)</code>. Se não for, o tamanho do pixel pode ser calculado medindo a barra de escala na imagem.</p>
-<p>Definir a escala é importante para garantir que as métricas de poro calculadas posteriormente estejam fisicamente corretas.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/ThinSectionLoader.html">Thin Section Loader</a></em></p>
-<h4 id="elementos-da-interface_8">Elementos da Interface</h4>
-<p><img alt="Definir a Escala" src="../../assets/images/PNMFlowScale.png" /></p>
+<h3 id="define-the-scale_1">Define the Scale</h3>
+<p>Define the pixel size in millimeters for the image.</p>
+<p>In this step, the PP image must be visible. If the image has a scale bar, it can be detected automatically, and the fields will be filled in automatically. In this case, check the values and proceed to the next step.</p>
+<p>If detection fails, the following message will appear: <code>Could not detect scale automatically. Please define it manually.</code> In this case, it is necessary to define the scale manually. If the pixel size is known, fill it directly into the <code>Pixel size (mm)</code> field. If not, the pixel size can be calculated by measuring the scale bar on the image.</p>
+<p>Defining the scale is important to ensure that the pore metrics calculated later are physically correct.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Loader/ThinSectionLoader.html">Thin Section Loader</a></em></p>
+<h4 id="interface-elements_9">Interface Elements</h4>
+<p><img alt="Define the Scale" src="../../assets/images/PNMFlowScale.png" /></p>
 <ul>
 <li>
-<p><strong>Scale size (px)</strong>: Insira o tamanho da barra de escala em pixels (px). Use o botão <code>Measure bar</code> para medir diretamente na imagem.</p>
+<p><strong>Scale size (px)</strong>: Enter the size of the scale bar in pixels (px). Use the <code>Measure bar</code> button to measure directly on the image.</p>
 </li>
 <li>
-<p><strong>Measure bar</strong>: Clique neste botão para usar a ferramenta de medida, que permitirá que você desenhe uma linha na imagem para medir a barra de escala em pixels. Com a ferramenta ativa, clique em uma das extremidades da barra, em seguida clique na outra extremidade. O campo <code>Scale size (px)</code> será preenchido com o tamanho medido.</p>
+<p><strong>Measure bar</strong>: Click this button to use the measurement tool, which will allow you to draw a line on the image to measure the scale bar in pixels. With the tool active, click one end of the bar, then click the other end. The <code>Scale size (px)</code> field will be filled with the measured size.</p>
 </li>
 <li>
-<p><strong>Scale size (mm)</strong>: Insira o tamanho real da barra de escala em milímetros (mm). Esse valor deve estar visível na imagem, próximo a barra. Por exemplo, se estiver escrito "0,1 cm", insira "1" no campo.</p>
+<p><strong>Scale size (mm)</strong>: Enter the real size of the scale bar in millimeters (mm). This value should be visible on the image, next to the bar. For example, if it says "0,1 cm", enter "1" in the field.</p>
 </li>
 <li>
-<p><strong>Pixel size (mm)</strong>: Este campo exibe o valor calculado do tamanho do pixel em milímetros, com base nos valores inseridos nos campos <code>Scale size (px)</code> e <code>Scale size (mm)</code>. Esse valor é atualizado automaticamente quando os campos anteriores são preenchidos.</p>
+<p><strong>Pixel size (mm)</strong>: This field displays the calculated pixel size value in millimeters, based on the values entered in the <code>Scale size (px)</code> and <code>Scale size (mm)</code> fields. This value is automatically updated when the previous fields are filled.</p>
 </li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsRegister.md -->
-<h3 id="registrar">Registrar</h3>
-<p>Registre a imagem PP com a imagem PX, garantindo que elas estejam espacialmente alinhadas.</p>
-<p>Confira se as imagens precisam de alinhamento, por exemplo, usando a função <code>Rock</code> Se elas já estiverem alinhadas, pule esse passo com a opção <code>Skip</code></p>
-<p>Se o registro for necessário, clique no botão <code>Add</code> e, em seguida, clique na imagem para adicionar um marcador. Arraste o mesmo marcador na outra imagem de forma que ele esteja na mesma posição em ambas as imagens.</p>
-<p>Adicione mais marcadores até que as imagens estejam alinhadas.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/ThinSectionRegistration.html">Thin Section Registration</a></em></p>
-<h4 id="elementos-da-interface_9">Elementos da Interface</h4>
-<p><img alt="Registrar" src="../../assets/images/PNMFlowRegister.png" /></p>
-<h5 id="visualizacao">Visualização</h5>
+<h3 id="register">Register</h3>
+<p>Register the PP image with the PX image, ensuring they are spatially aligned.</p>
+<p>Check if the images need alignment, for example, using the <code>Rock</code> function. If they are already aligned, skip this step with the <code>Skip</code> option.</p>
+<p>If registration is necessary, click the <code>Add</code> button, then click on the image to add a marker. Drag the same marker onto the other image so that it is in the same position on both images.</p>
+<p>Add more markers until the images are aligned.</p>
+<p><strong>Corresponding Module</strong>: <em><a href="../Register/Register.html">Thin Section Registration</a></em></p>
+<h4 id="interface-elements_10">Interface Elements</h4>
+<p><img alt="Register" src="../../assets/images/PNMFlowRegister.png" /></p>
+<h5 id="display">Display</h5>
 <ul>
 <li><strong>Display</strong>:</li>
-<li><strong>Fixed</strong>: Seleciona a visualização da imagem PP.</li>
-<li><strong>Moving</strong>: Seleciona a visualização da imagem PX.</li>
+<li><strong>Fixed</strong>: Selects the view of the PP image.</li>
+<li><strong>Moving</strong>: Selects the view of the PX image.</li>
 <li>
-<p><strong>Transformed</strong>: Seleciona a visualização da imagem <em>Transformed</em> Essa imagem mostra ambas imagens sobrepostas.</p>
+<p><strong>Transformed</strong>: Selects the view of the <em>Transformed</em> image. This image shows both images overlaid.</p>
 </li>
 <li>
-<p><strong>Fade</strong>: Ajusta a opacidade entre as imagens sobrepostas. Use a barra deslizante para alterar a opacidade e o campo numérico para definir um valor específico. </p>
+<p><strong>Fade</strong>: Adjusts the opacity between the overlaid images. Use the slider to change the opacity and the numerical field to set a specific value.</p>
 </li>
 <li>
-<p><strong>Rock</strong>: Ativa a visualização alternativa das imagens em um movimento de vai-e-vem.</p>
+<p><strong>Rock</strong>: Activates the alternate view of the images in a back-and-forth motion.</p>
 </li>
 <li>
-<p><strong>Flicker</strong>: Alterna rapidamente entre as imagens.</p>
+<p><strong>Flicker</strong>: Rapidly switches between images.</p>
 </li>
 <li>
 <p><strong>Views</strong>:</p>
 </li>
-<li><strong>Zoom in</strong>: Aumenta o zoom na visualização de todas imagens.</li>
-<li><strong>Zoom out</strong>: Reduz o zoom na visualização de todas imagens.</li>
-<li><strong>Fit</strong>: Ajusta as imagens para caber na janela de visualização.</li>
+<li><strong>Zoom in</strong>: Zooms in on the view of all images.</li>
+<li><strong>Zoom out</strong>: Zooms out on the view of all images.</li>
+<li><strong>Fit</strong>: Fits the images to the viewing window.</li>
 </ul>
-<h5 id="marcadores-landmarks">Marcadores (Landmarks)</h5>
+<h5 id="markers-landmarks">Markers (Landmarks)</h5>
 <ul>
-<li><strong>Add</strong>: Clique neste botão para adicionar um novo marcador na imagem. </li>
-<li><strong>Lista de marcadores</strong>: Exibe os marcadores adicionados. Cada marcador listado inclui:</li>
-<li><strong>Botão de seleção</strong> <img alt="Botão de seleção" src="../../assets/images/PNMFlowSelectMarker.png" />: Seleciona o marcador.</li>
-<li><strong>Botão de exclusão</strong> <img alt="Botão de exclusão" src="../../assets/images/PNMFlowDeleteMarker.png" />: Exclui o marcador.</li>
+<li><strong>Add</strong>: Click this button to add a new marker to the image.</li>
+<li><strong>List of markers</strong>: Displays the added markers. Each listed marker includes:</li>
+<li><strong>Selection button</strong> <img alt="Selection button" src="../../assets/images/PNMFlowSelectMarker.png" />: Selects the marker.</li>
+<li><strong>Deletion button</strong> <img alt="Deletion button" src="../../assets/images/PNMFlowDeleteMarker.png" />: Deletes the marker.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsSoi.md -->
-<h3 id="definir-o-segmento-de-interesse_1">Definir o Segmento de Interesse</h3>
-<p>Selecione o segmento de interesse (SOI) para as imagens PP/PX.</p>
-<p>Algumas imagens podem incluir regiões que não fazem parte da rocha, em especial nas bordas. Esse passo permite definir a região relevante.</p>
-<p>Os passos posteriores <em>Smart-seg</em> e <em>Auto-label</em> serão executados apenas nesta região.</p>
-<p>Para definir o segmento, desenhe retângulos na imagem. Se preferir desenho livre, selecione a opção <em>Free-form</em>.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<h4 id="elementos-da-interface_10">Elementos da Interface</h4>
-<p><img alt="Definir o Segmento de Interesse" src="../../assets/images/PNMFlowSoi.png" /></p>
-<h5 id="ferramentas-de-segmentacao_1">Ferramentas de Segmentação</h5>
+<h3 id="define-the-segment-of-interest_1">Define the Segment of Interest</h3>
+<p>Select the segment of interest (SOI) for the PP/PX images.</p>
+<p>Some images may include regions that are not part of the rock, especially at the edges. This step allows you to define the relevant region.</p>
+<p>The subsequent <em>Smart-seg</em> and <em>Auto-label</em> steps will only be executed in this region.</p>
+<p>To define the segment, draw rectangles on the image. If you prefer freehand drawing, select the <em>Free-form</em> option.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h4 id="interface-elements_11">Interface Elements</h4>
+<p><img alt="Define the Segment of Interest" src="../../assets/images/PNMFlowSoi.png" /></p>
+<h5 id="segmentation-tools_1">Segmentation Tools</h5>
 <ul>
-<li><img alt="" src="../../assets/images/PNMFlowNoEditing.png" /> <strong>Sem edição</strong>: Use este ícone para interagir com a visualização (zoom, mover etc) em vez de desenhar o segmento.</li>
-<li><img alt="" src="../../assets/images/PNMFlowScissors.png" /> <strong>Tesoura</strong>: Use este ícone para ativar a ferramenta de tesoura, usada para editar o segmento de interesse.</li>
+<li><img alt="" src="../../assets/images/PNMFlowNoEditing.png" /> <strong>No editing</strong>: Use this icon to interact with the visualization (zoom, move, etc.) instead of drawing the segment.</li>
+<li><img alt="" src="../../assets/images/PNMFlowScissors.png" /> <strong>Scissors</strong>: Use this icon to activate the scissors tool, used to edit the segment of interest.</li>
 </ul>
-<h5 id="opcoes-da-tesoura_1">Opções da Tesoura</h5>
+<h5 id="scissors-options_1">Scissors Options</h5>
 <ul>
-<li><strong>Operações</strong>:<ul>
-<li><strong>Erase inside</strong>: Apagar parte do segmento que estiver dentro da região desenhada.</li>
-<li><strong>Erase outside</strong>: Apagar parte do segmento que estiver fora da região desenhada.</li>
-<li><strong>Fill inside</strong>: Preencher segmento dentro da região desenhada.</li>
-<li><strong>Fill outside</strong>: Preencher segmento fora da região desenhada.</li>
+<li><strong>Operations</strong>:<ul>
+<li><strong>Erase inside</strong>: Erase part of the segment that is inside the drawn region.</li>
+<li><strong>Erase outside</strong>: Erase part of the segment that is outside the drawn region.</li>
+<li><strong>Fill inside</strong>: Fill segment inside the drawn region.</li>
+<li><strong>Fill outside</strong>: Fill segment outside the drawn region.</li>
 </ul>
 </li>
-<li><strong>Formas</strong>:<ul>
-<li><strong>Free-form</strong>: Desenhar desenhos livres.</li>
-<li><strong>Circle</strong>: Desenhar círculos.</li>
-<li><strong>Rectangle</strong>: Desenhar retângulos.</li>
+<li><strong>Shapes</strong>:<ul>
+<li><strong>Free-form</strong>: Draw freehand shapes.</li>
+<li><strong>Circle</strong>: Draw circles.</li>
+<li><strong>Rectangle</strong>: Draw rectangles.</li>
 </ul>
 </li>
-<li><img alt="" src="../../assets/images/PNMFlowUndoRedo.png" /> <strong>Undo/Redo</strong>: Desfazer ou refazer a última alteração.</li>
+<li><img alt="" src="../../assets/images/PNMFlowUndoRedo.png" /> <strong>Undo/Redo</strong>: Undo or redo the last change.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsSmartSeg.md -->
-<h3 id="segmentacao-inteligente_1">Segmentação Inteligente</h3>
-<p>Segmente automaticamente a imagem usando um modelo de aprendizado de máquina. Se preferir segmentar a imagem manualmente, pule este passo com a opção <code>Skip</code>.</p>
-<p><strong>Módulo correspondente</strong>: <a href="../../Pages/ThinSectionSegmenter.html">Segmentação Automática (Thin Section)</a> </p>
-<h4 id="elementos-da-interface_11">Elementos da Interface</h4>
-<p><img alt="Segmentação Inteligente" src="../../assets/images/PNMFlowSmartSeg.png" /></p>
+<h3 id="smart-segmentation_1">Smart Segmentation</h3>
+<p>Automatically segment the image using a machine learning model. If you prefer to segment the image manually, skip this step with the <code>Skip</code> option.</p>
+<p><strong>Corresponding Module</strong>: <a href="../Segmentation/Segmentation.html#automatic-thin-section-segmentation">Automatic Segmentation (Thin Section)</a> </p>
+<h4 id="interface-elements_12">Interface Elements</h4>
+<p><img alt="Smart Segmentation" src="../../assets/images/PNMFlowSmartSeg.png" /></p>
 <ul>
-<li><strong>Model</strong>: Selecione o modelo a ser usado para segmentar a imagem. Após selecionar, informações sobre o modelo aparecerão, incluindo descrição e segmentos de saída. Cada modelo segmenta a imagem em um conjunto específico de classes.</li>
+<li><strong>Model</strong>: Select the model to be used to segment the image. After selecting, information about the model will appear, including description and output segments. Each model segments the image into a specific set of classes.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsManualSeg.md -->
-<h3 id="segmentacao-manual_1">Segmentação Manual</h3>
-<p>Edite a segmentação com ferramentas manuais. Esse passo pode ser usado para editar a segmentação criada no passo anterior (<em>Smart-seg</em>), ou para editar uma segmentação nova.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<h4 id="elementos-de-interface_1">Elementos de Interface</h4>
-<p><img alt="Segmentação Manual" src="../../assets/images/PNMFlowManualSeg.png" /></p>
-<p>Página principal: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsAutoLabel.md -->
-<h3 id="auto-fragmentar_1">Auto-fragmentar</h3>
-<p>Divida a segmentação atual em vários objetos usando o método escolhido.</p>
-<p>Escolha quais segmentos na segmentação atual dividir em objetos utilizando as caixas de seleção. Os segmentos selecionados serão considerados um só no algoritmo de fragmentação.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentInspector.html">Segment Inspector</a></em></p>
-<h4 id="elementos-da-interface_12">Elementos da Interface</h4>
-<p><img alt="Auto-fragmentar" src="../../assets/images/PNMFlowAutoLabel.png" /></p>
+<h3 id="manual-segmentation_1">Manual Segmentation</h3>
+<p>Edit the segmentation with manual tools. This step can be used to edit the segmentation created in the previous step (<em>Smart-seg</em>), or to edit a new segmentation.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h4 id="interface-elements_13">Interface Elements</h4>
+<p><img alt="Manual Segmentation" src="../../assets/images/PNMFlowManualSeg.png" /></p>
+<p>Main page: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h3 id="auto-fragment_1">Auto-fragment</h3>
+<p>Divide the current segmentation into multiple objects using the chosen method.</p>
+<p>Choose which segments in the current segmentation to divide into objects using the checkboxes. The selected segments will be considered as one in the fragmentation algorithm.</p>
+<p><strong>Corresponding Module</strong>: <em><a href="../Segmentation/Segmentation.html#segment-inspector">Segment Inspector</a></em></p>
+<h4 id="interface-elements_14">Interface Elements</h4>
+<p><img alt="Auto-fragment" src="../../assets/images/PNMFlowAutoLabel.png" /></p>
 <ul>
 <li>
-<p><strong>Method:</strong> Selecione o método desejado para dividir os segmentos. As opções incluem:</p>
+<p><strong>Method:</strong> Select the desired method to divide the segments. Options include:</p>
 <ul>
-<li><strong>Watershed</strong>: Divide os segmentos encontrando bacias nos valores da imagem subjacente.</li>
-<li><strong>Separate objects</strong>: Divide segmentos em regiões contíguas. Os objetos não tocarão uns aos outros.</li>
+<li><strong>Watershed</strong>: Divides segments by finding basins in the underlying image values.</li>
+<li><strong>Separate objects</strong>: Divides segments into contiguous regions. Objects will not touch each other.</li>
 </ul>
 </li>
 <li>
 <p><strong>Segments:</strong></p>
 <ul>
-<li>Lista de segmentos atualmente na imagem com caixas de seleção para escolher quais devem ser divididos.</li>
-<li>Cada segmento é representado por sua cor e nome.</li>
+<li>List of segments currently in the image with checkboxes to choose which ones should be divided.</li>
+<li>Each segment is represented by its color and name.</li>
 </ul>
 </li>
 <li>
-<p><strong>Calculate proportions:</strong> Caixa de seleção para habilitar ou desabilitar o cálculo das proporções dos segmentos. Se habilitado, mostra a área de cada segmento em relação à região de interesse.</p>
+<p><strong>Calculate proportions:</strong> Checkbox to enable or disable the calculation of segment proportions. If enabled, shows the area of each segment relative to the region of interest.</p>
 </li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsLabelEditor.md -->
-<h3 id="editar-objetos_1">Editar Objetos</h3>
-<p>Separe ou una objetos detectados no passo anterior.</p>
-<p>Após a edição, pressione <code>Next</code> para recalcular as métricas de poro e gerar uma nova tabela de relatório. Pressione <code>Skip</code> para pular o cálculo, se não houver alterações.</p>
-<p><strong>Módulo correspondente</strong>: <em>Label Editor</em></p>
-<h4 id="elementos-da-interface_13">Elementos da Interface</h4>
-<p><img alt="Editar Objetos" src="../../assets/images/PNMFlowLabelEditor.png" /></p>
-<p>Este passo mostra o mapa de objetos gerado no passo anterior (<em>auto-label</em>). Clique em uma operação e, em seguida, clique em um objeto na imagem para executá-la.</p>
+<h3 id="edit-objects_1">Edit Objects</h3>
+<p>Separate or merge objects detected in the previous step.</p>
+<p>After editing, press <code>Next</code> to recalculate pore metrics and generate a new report table. Press <code>Skip</code> to skip the calculation if there are no changes.</p>
+<p><strong>Corresponding module</strong>: <em>Label Editor</em></p>
+<h4 id="interface-elements_15">Interface Elements</h4>
+<p><img alt="Edit Objects" src="../../assets/images/PNMFlowLabelEditor.png" /></p>
+<p>This step shows the object map generated in the previous step (<em>auto-label</em>). Click an operation and then click an object in the image to execute it.</p>
 <ul>
-<li><strong>Hold operation for next edition</strong>: Selecione esta opção para realizar uma operação (ex.: <code>Merge</code>) várias vezes consecutivas sem precisar selecionar a operação novamente.</li>
-<li><strong>Merge</strong>: Clique em dois objetos para uni-los. Atalho: <code>m</code>.</li>
-<li><strong>Auto Split</strong>: Clique para dividir automaticamente um objeto usando a técnica de <em>watershed</em>. Atalho: <code>a</code>.</li>
-<li><strong>Slice</strong>: Clique para cortar o objeto com uma linha reta. Defina a linha com dois cliques na imagem. Atalho: <code>s</code>.</li>
-<li><strong>Point cut</strong>: Clique para cortar o objeto em um ponto específico. Atalho: <code>c</code>.</li>
-<li><strong>Cancel</strong>: Clique para cancelar a operação atual.</li>
-<li><strong>Undo</strong>: Clique para desfazer a última ação. Atalho: <code>z</code>.</li>
-<li><strong>Redo</strong>: Clique para refazer a última ação desfeita. Atalho: <code>x</code>.</li>
+<li><strong>Hold operation for next edition</strong>: Select this option to perform an operation (e.g., <code>Merge</code>) several times consecutively without needing to select the operation again.</li>
+<li><strong>Merge</strong>: Click two objects to unite them. Shortcut: <code>m</code>.</li>
+<li><strong>Auto Split</strong>: Click to automatically split an object using the <em>watershed</em> technique. Shortcut: <code>a</code>.</li>
+<li><strong>Slice</strong>: Click to cut the object with a straight line. Define the line with two clicks on the image. Shortcut: <code>s</code>.</li>
+<li><strong>Point cut</strong>: Click to cut the object at a specific point. Shortcut: <code>c</code>.</li>
+<li><strong>Cancel</strong>: Click to cancel the current operation.</li>
+<li><strong>Undo</strong>: Click to undo the last action. Shortcut: <code>z</code>.</li>
+<li><strong>Redo</strong>: Click to redo the last undone action. Shortcut: <code>x</code>.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsFinish.md -->
-<h3 id="finalizar_1">Finalizar</h3>
-<p>Este passo apresenta os resultados do fluxo de trabalho. Todas imagens do projeto são listadas, incluindo entradas, saídas e imagens intermediárias.</p>
-<p>Ao finalizar o fluxo, você pode:</p>
+<h3 id="finish_1">Finish</h3>
+<p>This step presents the results of the workflow. All project images are listed, including inputs, outputs, and intermediate images.</p>
+<p>Upon completing the workflow, you can:</p>
 <ul>
-<li>Visualizar os resultados (Clique no ícone de olho na lista de resultados)</li>
-<li>Salvar o projeto (Ctrl+S)</li>
-<li>Exportar os resultados usando o módulo <em>Thin Section Export</em></li>
-<li>Clicar em <code>Next</code> para executar o fluxo com outra imagem.</li>
+<li>View the results (Click the eye icon in the results list)</li>
+<li>Save the project (Ctrl+S)</li>
+<li>Export the results using the <em>Thin Section Export</em> module</li>
+<li>Click <code>Next</code> to run the workflow with another image.</li>
 </ul>
-<p><strong>Módulo correspondente</strong>: <em>Explorer</em></p>
-<h4 id="elementos-da-interface_14">Elementos da Interface</h4>
-<p><img alt="Finalizar" src="../../assets/images/PNMFlowFinish.png" /></p>
-<p>Todos os dados do projeto atual são listados, isso inclui tanto dados gerados neste fluxo ou em outros processos.</p>
-<p>O relatório é gerado no passo <em>Auto-label</em> e é recalculado opcionalmente no passo <em>Edit labels</em>. Ambas tabelas são listadas. O mesmo vale para o mapa de objetos (<em>labelmap</em>).</p>
-<!-- END INCLUDE -->
-
-<!-- END INCLUDE -->
+<p><strong>Corresponding module</strong>: <em>Explorer</em></p>
+<h4 id="interface-elements_16">Interface Elements</h4>
+<p><img alt="Finish" src="../../assets/images/PNMFlowFinish.png" /></p>
+<p>All current project data is listed, this includes data generated in this workflow or in other processes.</p>
+<p>The report is generated in the <em>Auto-label</em> step and is optionally recalculated in the <em>Edit labels</em> step. Both tables are listed. The same applies to the object map (<em>labelmap</em>).</p>
 <hr />
-<!-- BEGIN INCLUDE Pages/FluxoQEMSCAN.md -->
-<h2 id="fluxo-qemscan">Fluxo QEMSCAN</h2>
-<p>Este fluxo é utilizado para calcular métricas de poro a partir de uma imagem QEMSCAN.</p>
-<figure class="video-container">  <video controls width="100%">  <source src="../../assets/videos/thin_section_qemscan_flow.webm" type="video/webm">  Your browser does not support the video tag.</video>  <figcaption>Video: Executando o fluxo QEMSCAN</figcaption></figure>
+<h2 id="qemscan-flow">QEMSCAN Flow</h2>
+<p>This flow is used to calculate pore metrics from a QEMSCAN image.</p>
+<figure class="video-container">  <video controls width="100%">  <source src="../../../assets/videos/thin_section_qemscan_flow.webm" type="video/webm" >  Your browser does not support the video tag.</video>  <figcaption>Video: Executando o fluxo QEMSCAN</figcaption></figure>
 
-<!-- BEGIN INCLUDE ./FlowStepsLoadQemscan.md -->
-<h3 id="carregar-qemscan">Carregar QEMSCAN</h3>
-<p>Escolha o arquivo de imagem QEMSCAN a ser carregado.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/ThinSectionQemscanLoader.html">QEMSCAN Loader</a></em></p>
-<h4 id="elementos-da-interface_15">Elementos da Interface</h4>
-<p><img alt="Carregar QEMSCAN" src="../../assets/images/PNMFlowLoadQemscan.png" /></p>
+<h3 id="load-qemscan">Load QEMSCAN</h3>
+<p>Choose the QEMSCAN image file to be loaded.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Loader/QemscanLoader.html">QEMSCAN Loader</a></em></p>
+<h4 id="interface-elements_17">Interface Elements</h4>
+<p><img alt="Load QEMSCAN" src="../../assets/images/PNMFlowLoadQemscan.png" /></p>
 <ul>
 <li>QEMSCAN file
-Especifique o caminho para a imagem QEMSCAN.</li>
+Specify the path to the QEMSCAN image.</li>
 </ul>
-<p>Ao lado deste campo, há um botão <img alt="Procurar arquivo" src="../../assets/images/PNMFlowFindFile.png" /> que abre o explorador de arquivos do sistema, a fim de selecionar o arquivo.</p>
-<p>Se houver um único arquivo CSV na mesma pasta da imagem, este será usado para definir o nome e a cor de cada segmento da imagem. Se não houver, é usada uma tabela padrão QEMSCAN.</p>
+<p>Next to this field, there is a button <img alt="Browse file" src="../../assets/images/PNMFlowFindFile.png" /> that opens the system's file explorer, in order to select the file.</p>
+<p>If there is a single CSV file in the same folder as the image, this will be used to define the name and color of each image segment. If there isn't, a standard QEMSCAN table is used.</p>
 <ul>
 <li>Pixel size (mm)</li>
 </ul>
-<p>Especifique o tamanho de cada pixel da imagem em milímetros.</p>
-<h4 id="formatos-aceitos_2">Formatos aceitos</h4>
+<p>Specify the size of each image pixel in millimeters.</p>
+<h4 id="accepted-formats_2">Accepted Formats</h4>
 <ul>
-<li>TIFF (imagem)</li>
-<li>CSV (tabela de cores)</li>
+<li>TIFF (image)</li>
+<li>CSV (color table)</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsSoi.md -->
-<h3 id="definir-o-segmento-de-interesse_2">Definir o Segmento de Interesse</h3>
-<p>Selecione o segmento de interesse (SOI) para as imagens PP/PX.</p>
-<p>Algumas imagens podem incluir regiões que não fazem parte da rocha, em especial nas bordas. Esse passo permite definir a região relevante.</p>
-<p>Os passos posteriores <em>Smart-seg</em> e <em>Auto-label</em> serão executados apenas nesta região.</p>
-<p>Para definir o segmento, desenhe retângulos na imagem. Se preferir desenho livre, selecione a opção <em>Free-form</em>.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentEditor.html">Segment Editor</a></em></p>
-<h4 id="elementos-da-interface_16">Elementos da Interface</h4>
-<p><img alt="Definir o Segmento de Interesse" src="../../assets/images/PNMFlowSoi.png" /></p>
-<h5 id="ferramentas-de-segmentacao_2">Ferramentas de Segmentação</h5>
+<h3 id="define-the-segment-of-interest_2">Define the Segment of Interest</h3>
+<p>Select the segment of interest (SOI) for the PP/PX images.</p>
+<p>Some images may include regions that are not part of the rock, especially at the edges. This step allows you to define the relevant region.</p>
+<p>The subsequent <em>Smart-seg</em> and <em>Auto-label</em> steps will only be executed in this region.</p>
+<p>To define the segment, draw rectangles on the image. If you prefer freehand drawing, select the <em>Free-form</em> option.</p>
+<p><strong>Corresponding module</strong>: <em><a href="../Segmentation/Segmentation.html#manual-segmentation">Segment Editor</a></em></p>
+<h4 id="interface-elements_18">Interface Elements</h4>
+<p><img alt="Define the Segment of Interest" src="../../assets/images/PNMFlowSoi.png" /></p>
+<h5 id="segmentation-tools_2">Segmentation Tools</h5>
 <ul>
-<li><img alt="" src="../../assets/images/PNMFlowNoEditing.png" /> <strong>Sem edição</strong>: Use este ícone para interagir com a visualização (zoom, mover etc) em vez de desenhar o segmento.</li>
-<li><img alt="" src="../../assets/images/PNMFlowScissors.png" /> <strong>Tesoura</strong>: Use este ícone para ativar a ferramenta de tesoura, usada para editar o segmento de interesse.</li>
+<li><img alt="" src="../../assets/images/PNMFlowNoEditing.png" /> <strong>No editing</strong>: Use this icon to interact with the visualization (zoom, move, etc.) instead of drawing the segment.</li>
+<li><img alt="" src="../../assets/images/PNMFlowScissors.png" /> <strong>Scissors</strong>: Use this icon to activate the scissors tool, used to edit the segment of interest.</li>
 </ul>
-<h5 id="opcoes-da-tesoura_2">Opções da Tesoura</h5>
+<h5 id="scissors-options_2">Scissors Options</h5>
 <ul>
-<li><strong>Operações</strong>:<ul>
-<li><strong>Erase inside</strong>: Apagar parte do segmento que estiver dentro da região desenhada.</li>
-<li><strong>Erase outside</strong>: Apagar parte do segmento que estiver fora da região desenhada.</li>
-<li><strong>Fill inside</strong>: Preencher segmento dentro da região desenhada.</li>
-<li><strong>Fill outside</strong>: Preencher segmento fora da região desenhada.</li>
+<li><strong>Operations</strong>:<ul>
+<li><strong>Erase inside</strong>: Erase part of the segment that is inside the drawn region.</li>
+<li><strong>Erase outside</strong>: Erase part of the segment that is outside the drawn region.</li>
+<li><strong>Fill inside</strong>: Fill segment inside the drawn region.</li>
+<li><strong>Fill outside</strong>: Fill segment outside the drawn region.</li>
 </ul>
 </li>
-<li><strong>Formas</strong>:<ul>
-<li><strong>Free-form</strong>: Desenhar desenhos livres.</li>
-<li><strong>Circle</strong>: Desenhar círculos.</li>
-<li><strong>Rectangle</strong>: Desenhar retângulos.</li>
+<li><strong>Shapes</strong>:<ul>
+<li><strong>Free-form</strong>: Draw freehand shapes.</li>
+<li><strong>Circle</strong>: Draw circles.</li>
+<li><strong>Rectangle</strong>: Draw rectangles.</li>
 </ul>
 </li>
-<li><img alt="" src="../../assets/images/PNMFlowUndoRedo.png" /> <strong>Undo/Redo</strong>: Desfazer ou refazer a última alteração.</li>
+<li><img alt="" src="../../assets/images/PNMFlowUndoRedo.png" /> <strong>Undo/Redo</strong>: Undo or redo the last change.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsAutoLabel.md -->
-<h3 id="auto-fragmentar_2">Auto-fragmentar</h3>
-<p>Divida a segmentação atual em vários objetos usando o método escolhido.</p>
-<p>Escolha quais segmentos na segmentação atual dividir em objetos utilizando as caixas de seleção. Os segmentos selecionados serão considerados um só no algoritmo de fragmentação.</p>
-<p><strong>Módulo correspondente</strong>: <em><a href="../../Pages/SegmentInspector.html">Segment Inspector</a></em></p>
-<h4 id="elementos-da-interface_17">Elementos da Interface</h4>
-<p><img alt="Auto-fragmentar" src="../../assets/images/PNMFlowAutoLabel.png" /></p>
+<h3 id="auto-fragment_2">Auto-fragment</h3>
+<p>Divide the current segmentation into multiple objects using the chosen method.</p>
+<p>Choose which segments in the current segmentation to divide into objects using the checkboxes. The selected segments will be considered as one in the fragmentation algorithm.</p>
+<p><strong>Corresponding Module</strong>: <em><a href="../Segmentation/Segmentation.html#segment-inspector">Segment Inspector</a></em></p>
+<h4 id="interface-elements_19">Interface Elements</h4>
+<p><img alt="Auto-fragment" src="../../assets/images/PNMFlowAutoLabel.png" /></p>
 <ul>
 <li>
-<p><strong>Method:</strong> Selecione o método desejado para dividir os segmentos. As opções incluem:</p>
+<p><strong>Method:</strong> Select the desired method to divide the segments. Options include:</p>
 <ul>
-<li><strong>Watershed</strong>: Divide os segmentos encontrando bacias nos valores da imagem subjacente.</li>
-<li><strong>Separate objects</strong>: Divide segmentos em regiões contíguas. Os objetos não tocarão uns aos outros.</li>
+<li><strong>Watershed</strong>: Divides segments by finding basins in the underlying image values.</li>
+<li><strong>Separate objects</strong>: Divides segments into contiguous regions. Objects will not touch each other.</li>
 </ul>
 </li>
 <li>
 <p><strong>Segments:</strong></p>
 <ul>
-<li>Lista de segmentos atualmente na imagem com caixas de seleção para escolher quais devem ser divididos.</li>
-<li>Cada segmento é representado por sua cor e nome.</li>
+<li>List of segments currently in the image with checkboxes to choose which ones should be divided.</li>
+<li>Each segment is represented by its color and name.</li>
 </ul>
 </li>
 <li>
-<p><strong>Calculate proportions:</strong> Caixa de seleção para habilitar ou desabilitar o cálculo das proporções dos segmentos. Se habilitado, mostra a área de cada segmento em relação à região de interesse.</p>
+<p><strong>Calculate proportions:</strong> Checkbox to enable or disable the calculation of segment proportions. If enabled, shows the area of each segment relative to the region of interest.</p>
 </li>
 </ul>
-<!-- END INCLUDE -->
-
-<p>Observação: como este fluxo não carrega uma foto de lâmina de referência, o algoritmo <em>watershed</em> usa apenas o segmento especificado como entrada.</p>
-<!-- BEGIN INCLUDE ./FlowStepsLabelEditor.md -->
-<h3 id="editar-objetos_2">Editar Objetos</h3>
-<p>Separe ou una objetos detectados no passo anterior.</p>
-<p>Após a edição, pressione <code>Next</code> para recalcular as métricas de poro e gerar uma nova tabela de relatório. Pressione <code>Skip</code> para pular o cálculo, se não houver alterações.</p>
-<p><strong>Módulo correspondente</strong>: <em>Label Editor</em></p>
-<h4 id="elementos-da-interface_18">Elementos da Interface</h4>
-<p><img alt="Editar Objetos" src="../../assets/images/PNMFlowLabelEditor.png" /></p>
-<p>Este passo mostra o mapa de objetos gerado no passo anterior (<em>auto-label</em>). Clique em uma operação e, em seguida, clique em um objeto na imagem para executá-la.</p>
+<p>Note: as this flow does not load a reference thin section image, the <em>watershed</em> algorithm only uses the specified segment as input.</p>
+<h3 id="edit-objects_2">Edit Objects</h3>
+<p>Separate or merge objects detected in the previous step.</p>
+<p>After editing, press <code>Next</code> to recalculate pore metrics and generate a new report table. Press <code>Skip</code> to skip the calculation if there are no changes.</p>
+<p><strong>Corresponding module</strong>: <em>Label Editor</em></p>
+<h4 id="interface-elements_20">Interface Elements</h4>
+<p><img alt="Edit Objects" src="../../assets/images/PNMFlowLabelEditor.png" /></p>
+<p>This step shows the object map generated in the previous step (<em>auto-label</em>). Click an operation and then click an object in the image to execute it.</p>
 <ul>
-<li><strong>Hold operation for next edition</strong>: Selecione esta opção para realizar uma operação (ex.: <code>Merge</code>) várias vezes consecutivas sem precisar selecionar a operação novamente.</li>
-<li><strong>Merge</strong>: Clique em dois objetos para uni-los. Atalho: <code>m</code>.</li>
-<li><strong>Auto Split</strong>: Clique para dividir automaticamente um objeto usando a técnica de <em>watershed</em>. Atalho: <code>a</code>.</li>
-<li><strong>Slice</strong>: Clique para cortar o objeto com uma linha reta. Defina a linha com dois cliques na imagem. Atalho: <code>s</code>.</li>
-<li><strong>Point cut</strong>: Clique para cortar o objeto em um ponto específico. Atalho: <code>c</code>.</li>
-<li><strong>Cancel</strong>: Clique para cancelar a operação atual.</li>
-<li><strong>Undo</strong>: Clique para desfazer a última ação. Atalho: <code>z</code>.</li>
-<li><strong>Redo</strong>: Clique para refazer a última ação desfeita. Atalho: <code>x</code>.</li>
+<li><strong>Hold operation for next edition</strong>: Select this option to perform an operation (e.g., <code>Merge</code>) several times consecutively without needing to select the operation again.</li>
+<li><strong>Merge</strong>: Click two objects to unite them. Shortcut: <code>m</code>.</li>
+<li><strong>Auto Split</strong>: Click to automatically split an object using the <em>watershed</em> technique. Shortcut: <code>a</code>.</li>
+<li><strong>Slice</strong>: Click to cut the object with a straight line. Define the line with two clicks on the image. Shortcut: <code>s</code>.</li>
+<li><strong>Point cut</strong>: Click to cut the object at a specific point. Shortcut: <code>c</code>.</li>
+<li><strong>Cancel</strong>: Click to cancel the current operation.</li>
+<li><strong>Undo</strong>: Click to undo the last action. Shortcut: <code>z</code>.</li>
+<li><strong>Redo</strong>: Click to redo the last undone action. Shortcut: <code>x</code>.</li>
 </ul>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE ./FlowStepsFinish.md -->
-<h3 id="finalizar_2">Finalizar</h3>
-<p>Este passo apresenta os resultados do fluxo de trabalho. Todas imagens do projeto são listadas, incluindo entradas, saídas e imagens intermediárias.</p>
-<p>Ao finalizar o fluxo, você pode:</p>
+<h3 id="finish_2">Finish</h3>
+<p>This step presents the results of the workflow. All project images are listed, including inputs, outputs, and intermediate images.</p>
+<p>Upon completing the workflow, you can:</p>
 <ul>
-<li>Visualizar os resultados (Clique no ícone de olho na lista de resultados)</li>
-<li>Salvar o projeto (Ctrl+S)</li>
-<li>Exportar os resultados usando o módulo <em>Thin Section Export</em></li>
-<li>Clicar em <code>Next</code> para executar o fluxo com outra imagem.</li>
+<li>View the results (Click the eye icon in the results list)</li>
+<li>Save the project (Ctrl+S)</li>
+<li>Export the results using the <em>Thin Section Export</em> module</li>
+<li>Click <code>Next</code> to run the workflow with another image.</li>
 </ul>
-<p><strong>Módulo correspondente</strong>: <em>Explorer</em></p>
-<h4 id="elementos-da-interface_19">Elementos da Interface</h4>
-<p><img alt="Finalizar" src="../../assets/images/PNMFlowFinish.png" /></p>
-<p>Todos os dados do projeto atual são listados, isso inclui tanto dados gerados neste fluxo ou em outros processos.</p>
-<p>O relatório é gerado no passo <em>Auto-label</em> e é recalculado opcionalmente no passo <em>Edit labels</em>. Ambas tabelas são listadas. O mesmo vale para o mapa de objetos (<em>labelmap</em>).</p>
-<!-- END INCLUDE -->
-
-<!-- END INCLUDE -->
+<p><strong>Corresponding module</strong>: <em>Explorer</em></p>
+<h4 id="interface-elements_21">Interface Elements</h4>
+<p><img alt="Finish" src="../../assets/images/PNMFlowFinish.png" /></p>
+<p>All current project data is listed, this includes data generated in this workflow or in other processes.</p>
+<p>The report is generated in the <em>Auto-label</em> step and is optionally recalculated in the <em>Edit labels</em> step. Both tables are listed. The same applies to the object map (<em>labelmap</em>).</p>
 
 
 
@@ -2841,7 +2836,7 @@ Especifique o caminho para a imagem QEMSCAN.</li>
     
     
     
-<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
 
 

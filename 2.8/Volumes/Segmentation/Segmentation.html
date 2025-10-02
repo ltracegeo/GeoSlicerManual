@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="pt" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Segmentação - GeoSlicer Manual</title>
+        <title>Segmentation - GeoSlicer Manual</title>
       
     
     
@@ -75,7 +75,7 @@
       
         
         <a href="#manual-segmentation" class="md-skip">
-          Pular para conteúdo
+          Skip to content
         </a>
       
     </div>
@@ -93,7 +93,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
   <img src="../../assets/logo.png" alt="logo">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Segmentação
+              Segmentation
             
           </span>
         </div>
@@ -150,6 +150,32 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pt/Volumes/Segmentation/Segmentation.html" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="Segmentation.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         
@@ -159,16 +185,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -179,7 +205,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando busca
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -214,7 +240,7 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
@@ -237,7 +263,7 @@
         
   
   <span class="md-ellipsis">
-    Visão Geral
+    Overview
   </span>
   
 
@@ -267,7 +293,7 @@
             
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -277,7 +303,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Introdução
+            Introduction
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -294,7 +320,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog-icon lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>
   
   <span class="md-ellipsis">
-    Instalação
+    Installation
   </span>
   
 
@@ -317,7 +343,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints-icon lucide-footprints"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>
   
   <span class="md-ellipsis">
-    Primeiros Passos
+    First Steps
   </span>
   
 
@@ -340,7 +366,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-app-window-icon lucide-app-window"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
   
   <span class="md-ellipsis">
-    Aplicação
+    Application
   </span>
   
 
@@ -363,7 +389,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
   
   <span class="md-ellipsis">
-    Módulos
+    Modules
   </span>
   
 
@@ -386,7 +412,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up-icon lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Carregando dados
+    Loading Data
   </span>
   
 
@@ -476,7 +502,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -499,7 +525,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-down"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="M12 10v6"/><path d="m15 13-3 3-3-3"/></svg>
   
   <span class="md-ellipsis">
-    Carregamento
+    MicroCT Import
   </span>
   
 
@@ -522,7 +548,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Export
+    MicroCT Export
   </span>
   
 
@@ -568,7 +594,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg>
   
   <span class="md-ellipsis">
-    Filtros
+    Filter
   </span>
   
 
@@ -621,7 +647,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -634,7 +660,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -642,14 +668,14 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Índice
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -725,7 +751,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
   
   <span class="md-ellipsis">
-    Microporosidade
+    Microporosity
   </span>
   
 
@@ -771,7 +797,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
   
   <span class="md-ellipsis">
-    Registro
+    Register
   </span>
   
 
@@ -794,7 +820,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
   
   <span class="md-ellipsis">
-    Rede de Poros
+    Pore Network
   </span>
   
 
@@ -951,7 +977,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -997,7 +1023,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image-up"><path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21"/><path d="m14 19.5 3-3 3 3"/><path d="M17 22v-5.5"/><circle cx="9" cy="9" r="2"/></svg>
   
   <span class="md-ellipsis">
-    Qemscan Loader
+    QEMSCAN Loader
   </span>
   
 
@@ -1020,7 +1046,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crop"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
   
   <span class="md-ellipsis">
-    Cortes
+    Crop
   </span>
   
 
@@ -1043,7 +1069,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
   
   <span class="md-ellipsis">
-    Filtros
+    Filters
   </span>
   
 
@@ -1066,7 +1092,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg>
   
   <span class="md-ellipsis">
-    Registro
+    Register
   </span>
   
 
@@ -1089,7 +1115,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-3"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></svg>
   
   <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
   
 
@@ -1269,7 +1295,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -1656,7 +1682,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
   
   <span class="md-ellipsis">
-    Transforms
+    Multicore Transforms
   </span>
   
 
@@ -1703,6 +1729,29 @@
   
   <span class="md-ellipsis">
     Core Inpaint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core/MulticoreExport.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
+  
+  <span class="md-ellipsis">
+    Export
   </span>
   
 
@@ -1813,7 +1862,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -2162,7 +2211,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack-icon lucide-square-stack"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"/><rect width="8" height="8" x="14" y="14" rx="2"/></svg>
   
   <span class="md-ellipsis">
-    Fluxos
+    Flows
   </span>
   
 
@@ -2200,7 +2249,7 @@
             
   
   <span class="md-ellipsis">
-    Desenvolvimento
+    Development
   </span>
   
 
@@ -2210,7 +2259,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Desenvolvimento
+            Development
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2221,13 +2270,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Desenvolvimento/BuildingGeoSlicer.html" class="md-nav__link">
+      <a href="../../Development/BuildingGeoSlicer.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Compilando o GeoSlicer
+    Building GeoSlicer
   </span>
   
 
@@ -2244,13 +2293,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Desenvolvimento/HowToContribute.html" class="md-nav__link">
+      <a href="../../Development/HowToContribute.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Como Contribuir
+    How To Contribute
   </span>
   
 
@@ -2267,13 +2316,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Desenvolvimento/Documentation.html" class="md-nav__link">
+      <a href="../../Development/Documentation.html" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Documentação
+    Documentation
   </span>
   
 
@@ -2305,19 +2354,18 @@
                   
 
 
-  <h1>Segmentação</h1>
+  <h1>Segmentation</h1>
 
-<!-- BEGIN INCLUDE Pages/SegmentEditor.md -->
 <h2 id="manual-segmentation">Manual Segmentation</h2>
-<p>Este módulo é usado para especificar segmentos (estruturas de interesse) em imagens 2D/3D/4D. Algumas das ferramentas imitam uma interface de pintura, como o Photoshop ou o GIMP, mas operam em matrizes 3D de voxels em vez de pixels 2D. O módulo oferece edição de segmentos sobrepostos, exibição tanto em visualizações 2D quanto 3D, opções de visualização detalhadas, edição em visualizações 3D, criação de segmentações por interpolação ou extrapolação em algumas fatias, e edição em fatias em qualquer orientação.</p>
-<p>O Segment Editor não edita volumes de mapas de rótulos, mas as segmentações podem ser facilmente convertidas para/partir de volumes de mapas de rótulos usando a seção Explorer e utilizando o menu do botão secundário do mouse.</p>
-<h3 id="segmentacao-e-segmento">Segmentação e Segmento</h3>
-<p>O resultado de uma segmentação é armazenado no nó segmentation no GeoSlicer. Um nó de segmentação consiste em vários segmentos.</p>
-<p>Um segmento especifica a região para uma estrutura única. Cada segmento possui um número de propriedades, como nome, cor de exibição preferencial, descrição do conteúdo (capaz de armazenar entradas codificadas padrão DICOM) e propriedades personalizadas. Os segmentos podem se sobrepor no espaço.</p>
-<h3 id="representacao-de-rotulos-em-mapa-binario">Representação de rótulos em mapa binário</h3>
-<p>A representação em mapa binário de rótulos é provavelmente a representação mais comumente usada porque é a mais fácil de editar. A maioria dos softwares que utilizam essa representação armazena todos os segmentos em uma única matriz 3D, portanto, cada voxel pode pertencer a um único segmento: os segmentos não podem se sobrepor. No GeoSlicer, a sobreposição entre segmentos é permitida. Para armazenar segmentos sobrepostos em mapas binários, os segmentos são organizados em camadas. Cada camada é armazenada internamente como um volume 3D separado, e um volume pode ser compartilhado entre vários segmentos não sobrepostos para economizar memória.</p>
-<p>Em uma segmentação com a representação de origem definida como mapa binário, cada camada pode ter geometria diferente (origem, espaçamento, direções dos eixos, extensões) temporariamente - para permitir mover segmentos entre segmentações sem perda de qualidade desnecessária (cada reamostragem de um mapa binário pode levar a pequenas mudanças). Todas as camadas são forçadas a ter a mesma geometria durante certas operações de edição e quando a segmentação é salva em arquivo.</p>
-<h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
+<p>This module is used to specify segments (structures of interest) in 2D/3D/4D images. Some of the tools mimic a painting interface, such as Photoshop or GIMP, but operate on 3D arrays of voxels instead of 2D pixels. The module offers editing of overlapping segments, display in both 2D and 3D views, detailed visualization options, editing in 3D views, creation of segmentations by interpolation or extrapolation on some slices, and editing on slices in any orientation.</p>
+<p>The Segment Editor does not edit labelmap volumes, but segmentations can be easily converted to/from labelmap volumes using the Explorer section and utilizing the secondary mouse button menu.</p>
+<h3 id="segmentation-and-segment">Segmentation and Segment</h3>
+<p>The result of a segmentation is stored in the segmentation node in GeoSlicer. A segmentation node consists of several segments.</p>
+<p>A segment specifies the region for a single structure. Each segment has a number of properties, such as name, preferred display color, content description (capable of storing standard DICOM encoded entries), and custom properties. Segments can overlap in space.</p>
+<h3 id="binary-labelmap-representation">Binary Labelmap Representation</h3>
+<p>The binary labelmap representation is probably the most commonly used representation because it is the easiest to edit. Most software using this representation stores all segments in a single 3D array, so each voxel can belong to a single segment: segments cannot overlap. In GeoSlicer, overlap between segments is allowed. To store overlapping segments in binary maps, segments are organized into layers. Each layer is internally stored as a separate 3D volume, and a volume can be shared among multiple non-overlapping segments to save memory.</p>
+<p>In a segmentation with the source representation set to binary map, each layer can temporarily have different geometry (origin, spacing, axis directions, extents) - to allow moving segments between segmentations without unnecessary quality loss (each resampling of a binary map can lead to minor changes). All layers are forced to have the same geometry during certain editing operations and when the segmentation is saved to file.</p>
+<h3 id="panels-and-their-usage">Panels and their usage</h3>
 <table>
 <thead>
 <tr>
@@ -2326,47 +2374,47 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Apresentação do módulo segment editor.</td>
+<td align="center">Figure 1: Overview of the segment editor module.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="principais-opcoes">Principais opções</h4>
+<h4 id="main-options">Main options</h4>
 <ul>
 <li>
-<p>Segmentação: escolha a segmentação a ser editada.</p>
+<p>Segmentation: choose the segmentation to be edited.</p>
 </li>
 <li>
-<p>Volume de origem: escolha o volume a ser segmentado. O volume de origem selecionado na primeira vez após a segmentação ser criada é usado para determinar a geometria de representação do labelmap da segmentação (extensão, resolução, direções dos eixos, origem). O volume de origem é usado por todos os efeitos do editor que utilizam a intensidade do volume segmentado (por exemplo, limite, rastreamento de nível). O volume de origem pode ser alterado a qualquer momento durante o processo de segmentação.</p>
+<p>Source volume: choose the volume to be segmented. The source volume selected the first time after the segmentation is created is used to determine the labelmap representation geometry of the segmentation (extent, resolution, axis directions, origin). The source volume is used by all editor effects that use the intensity of the segmented volume (e.g., threshold, level tracing). The source volume can be changed at any time during the segmentation process.</p>
 </li>
 <li>
-<p>Adicionar: Adicione um novo segmento à segmentação e selecione-o.</p>
+<p>Add: Add a new segment to the segmentation and select it.</p>
 </li>
 <li>
-<p>Remover: selecione o segmento que deseja excluir e clique em Remover segmento para excluir da segmentação.</p>
+<p>Remove: select the segment you want to delete and click Remove segment to delete it from the segmentation.</p>
 </li>
 <li>
-<p>Mostrar 3D: exiba sua segmentação no visualizador 3D. Este é um botão de alternância. Quando ativado, a superfície é criada e atualizada automaticamente conforme o usuário segmenta. Quando desligado, a conversão não é contínua e o processo de segmentação é mais rápido. Para alterar os parâmetros de criação de superfície: clique na seta ao lado do botão siga para a opção "Smoothing factor" e na barra de valor para editar um valor de parâmetro de conversão. Definir o fator de suavização como 0 desativa a suavização, tornando as atualizações muito mais rápidas. Defina o fator de suavização como 0,1 para suavização fraca e 0,5 ou maior para suavização mais forte.</p>
+<p>Show 3D: display your segmentation in the 3D viewer. This is a toggle button. When enabled, the surface is automatically created and updated as the user segments. When disabled, the conversion is not continuous, and the segmentation process is faster. To change the surface creation parameters: click the arrow next to the button, go to the "Smoothing factor" option, and use the value bar to edit a conversion parameter value. Setting the smoothing factor to 0 disables smoothing, making updates much faster. Set the smoothing factor to 0.1 for weak smoothing and 0.5 or higher for stronger smoothing.</p>
 </li>
 </ul>
-<h3 id="tabela-de-segmentos">Tabela de segmentos</h3>
-<p>Esta tabela exibe a lista de todos os segmentos.</p>
-<h4 id="colunas-da-tabela">Colunas da tabela:</h4>
+<h3 id="segments-table">Segments Table</h3>
+<p>This table displays the list of all segments.</p>
+<h4 id="table-columns">Table columns:</h4>
 <ul>
 <li>
-<p>Visibilidade (ícone de olho): Alterna a visibilidade do segmento. Para personalizar a visualização: abra os controles de visualização de fatia (clique nos ícones de botão e seta dupla na parte superior de um visualizador de fatia) ou vá para o módulo Segmentações.</p>
+<p>Visibility (eye icon): Toggles segment visibility. To customize the display: open slice display controls (click the double-arrow button icons at the top of a slice viewer) or go to the Segmentations module.</p>
 </li>
 <li>
-<p>Amostra de cores: defina a cor e atribua o segmento à terminologia padronizada.</p>
+<p>Color swatch: set the color and assign the segment to standardized terminology.</p>
 </li>
 <li>
-<p>Estado (ícone de bandeira): Esta coluna pode ser usada para definir o status de edição de cada segmento que pode ser usado para filtrar a tabela ou marcar segmentos para processamento posterior. 
-Não iniciado: estado inicial padrão, indica que a edição ainda não ocorreu.
-Em andamento: quando um segmento “não iniciado” é editado, seu estado é automaticamente alterado para este
-Concluído: o usuário pode selecionar manualmente este estado para indicar que o segmentat está completo
-Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer finalidade personalizada, por exemplo, para chamar a atenção de um revisor especialista para o segmento</p>
+<p>Status (flag icon): This column can be used to set the editing status of each segment which can be used to filter the table or mark segments for further processing. 
+Not started: default initial state, indicates that editing has not yet occurred.
+In progress: when a “not started” segment is edited, its status is automatically changed to this.
+Completed: the user can manually select this state to indicate that the segment is complete.
+Flagged: the user can manually select this state for any custom purpose, e.g., to draw the attention of an expert reviewer to the segment.</p>
 </li>
 </ul>
-<h3 id="secao-de-efeitos">Seção de efeitos</h3>
+<h3 id="effects-section">Effects section</h3>
 <table>
 <thead>
 <tr>
@@ -2375,247 +2423,241 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 2: Seção de efeitos do segment editor.</td>
+<td align="center">Figure 2: Effects section of the segment editor.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>
-<p>Barra de ferramentas de efeitos: Selecione o efeito desejado aqui. Veja abaixo mais informações sobre cada efeito.</p>
+<p>Effects toolbar: Select the desired effect here. See below for more information on each effect.</p>
 </li>
 <li>
-<p>Opções: As opções para o efeito selecionado serão exibidas aqui.</p>
+<p>Options: The options for the selected effect will be displayed here.</p>
 </li>
 <li>
-<p>Desfazer/Refazer: O módulo salva o estado da segmentação antes de cada efeito ser aplicado. Isso é útil para experimentação e correção de erros. Por padrão, os últimos 10 estados são lembrados.</p>
+<p>Undo/Redo: The module saves the state of the segmentation before each effect is applied. This is useful for experimentation and error correction. By default, the last 10 states are remembered.</p>
 </li>
 </ul>
-<h4 id="efeitos">Efeitos</h4>
+<h4 id="effects">Effects</h4>
 <hr />
-<p>Os efeitos operam clicando no botão Aplicar na seção de opções do efeito ou clicando e/ou arrastando nas visualizações de fatias ou 3D.</p>
-<h4 id="pintura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id=#pintura>Pintura</a></h4>
+<p>Effects operate by clicking the Apply button in the effect's options section or by clicking and/or dragging in the slice or 3D views.</p>
+<h4 id="paint"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_paint.png" /> <a id="paint">Paint</a></h4>
 <ul>
 <li>
-<p>Escolha o raio (em milímetros) do pincel a ser aplicado.</p>
+<p>Choose the radius (in millimeters) of the brush to be applied.</p>
 </li>
 <li>
-<p>Clique com o botão esquerdo para aplicar um círculo único.</p>
+<p>Left-click to apply a single circle.</p>
 </li>
 <li>
-<p>Clique com o botão esquerdo e arraste para preencher uma região.</p>
+<p>Left-click and drag to fill a region.</p>
 </li>
 <li>
-<p>Uma trilha de círculos é deixada, que é aplicada quando o botão do mouse é liberado.</p>
+<p>A trail of circles is left, which is applied when the mouse button is released.</p>
 </li>
 <li>
-<p>O modo Esfera aplica o raio às fatias acima e abaixo da fatia atual.</p>
+<p>Sphere mode applies the radius to slices above and below the current slice.</p>
 </li>
 </ul>
-<h4 id="desenho"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id=#desenho>Desenho</a></h4>
+<h4 id="draw"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_draw.png" /> <a id="draw">Draw</a></h4>
 <ul>
 <li>
-<p>Clique com o botão esquerdo para criar pontos individuais de um contorno.</p>
+<p>Left-click to create individual points of an outline.</p>
 </li>
 <li>
-<p>Arraste com o botão esquerdo para criar uma linha contínua de pontos.</p>
+<p>Left-drag to create a continuous line of points.</p>
 </li>
 <li>
-<p>Clique duas vezes com o botão esquerdo para adicionar um ponto e preencher o contorno. Alternativamente, clique com o botão direito para preencher o contorno atual sem adicionar mais pontos.</p>
+<p>Double left-click to add a point and fill the outline. Alternatively, right-click to fill the current outline without adding more points.</p>
 </li>
 </ul>
-<p>Nota</p>
-<p>O efeito Tesoura também pode ser usado para desenhar. O efeito Tesoura funciona tanto em visualizações de fatias quanto em 3D, pode ser configurado para desenhar em mais de uma fatia por vez, pode apagar também, pode ser restrito a desenhar linhas horizontais/verticais (usando o modo retângulo), etc.</p>
-<h4 id="apagar"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_erase.png" /> Apagar</h4>
-<p>Semelhante ao efeito Pintura, mas as regiões destacadas são removidas do segmento selecionado em vez de adicionadas.</p>
-<p>Se a Máscara / Área Editável estiver definida para um segmento específico, a região destacada é removida do segmento selecionado e adicionada ao segmento de máscara. Isso é útil quando uma parte de um segmento precisa ser separada em outro segmento.</p>
-<h4 id="rastreamento-de-nivel"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_level_tracing.png" /> Rastreamento de Nível</h4>
+<p>Note</p>
+<p>The Scissors effect can also be used for drawing. The Scissors effect works in both slice and 3D views, can be configured to draw on more than one slice at a time, can also erase, can be restricted to drawing horizontal/vertical lines (using rectangle mode), etc.</p>
+<h4 id="erase"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_erase.png" /> Erase</h4>
+<p>Similar to the Paint effect, but the highlighted regions are removed from the selected segment instead of added.</p>
+<p>If the Mask / Editable Area is set to a specific segment, the highlighted region is removed from the selected segment and added to the mask segment. This is useful when a part of a segment needs to be separated into another segment.</p>
+<h4 id="level-tracing"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_level_tracing.png" /> Level Tracing</h4>
 <ul>
 <li>
-<p>Mover o mouse define um contorno onde os pixels têm o mesmo valor de fundo que o pixel de fundo atual.</p>
+<p>Moving the mouse defines an outline where pixels have the same background value as the current background pixel.</p>
 </li>
 <li>
-<p>Clicar com o botão esquerdo aplica esse contorno ao mapa de rótulos.</p>
+<p>Left-clicking applies this outline to the label map.</p>
 </li>
 </ul>
-<h4 id="crescer-a-partir-de-sementes"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_grow_from_seeds.png" /> Crescer a partir de sementes</h4>
-<p>Desenhe o segmento dentro de cada estrutura anatômica. Este método começará a partir dessas "sementes" e as expandirá para alcançar a segmentação completa.</p>
+<h4 id="grow-from-seeds"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_grow_from_seeds.png" /> Grow from Seeds</h4>
+<p>Draw the segment within each anatomical structure. This method will start from these "seeds" and expand them to achieve the complete segmentation.</p>
 <ul>
 <li>
-<p>Inicializar: Clique neste botão após a segmentação inicial ser concluída (usando outros efeitos de editor). O cálculo inicial pode levar mais tempo do que as atualizações subsequentes. O volume de origem e o método de preenchimento automático serão bloqueados após a inicialização, portanto, se algum desses precisar ser alterado, clique em Cancelar e inicialize novamente.</p>
+<p>Initialize: Click this button after the initial segmentation is completed (using other editor effects). The initial calculation may take longer than subsequent updates. The source volume and automatic fill method will be locked after initialization, so if any of these need to be changed, click Cancel and initialize again.</p>
 </li>
 <li>
-<p>Atualizar: Atualize a segmentação concluída com base nas entradas alteradas.</p>
+<p>Update: Update the completed segmentation based on altered inputs.</p>
 </li>
 <li>
-<p>Atualização automática: ative esta opção para atualizar automaticamente a visualização do resultado quando a segmentação for alterada.</p>
+<p>Auto-update: Enable this option to automatically refresh the result preview when the segmentation is changed.</p>
 </li>
 <li>
-<p>Cancelar: Remover visualização do resultado. As sementes são mantidas inalteradas, portanto, os parâmetros podem ser alterados e a segmentação pode ser     reiniciada clicando em Inicializar.</p>
+<p>Cancel: Remove result preview. Seeds are kept unchanged, so parameters can be changed, and segmentation can be restarted by clicking Initialize.</p>
 </li>
 <li>
-<p>Aplicar: Substitua os segmentos de sementes pelos resultados visualizados.</p>
+<p>Apply: Replace seed segments with visualized results.</p>
 </li>
 </ul>
-<p>Notas:</p>
+<p>Notes:</p>
 <ul>
 <li>
-<p>Apenas segmentos visíveis são usados por este efeito.</p>
+<p>Only visible segments are used by this effect.</p>
 </li>
 <li>
-<p>Pelo menos dois segmentos são necessários.</p>
+<p>At least two segments are required.</p>
 </li>
 <li>
-<p>Se uma parte de um segmento for apagada ou a pintura for removida usando Desfazer (e não for substituída por outro segmento), recomenda-se cancelar e inicializar novamente. A razão é que o efeito de adicionar mais informações (pintar mais sementes) pode ser propagado para toda a segmentação, mas remover informações (remover algumas regiões de sementes) não mudará a segmentação completa.</p>
+<p>If a part of a segment is erased or painting is removed using Undo (and not replaced by another segment), it is recommended to cancel and initialize again. The reason is that the effect of adding more information (painting more seeds) can propagate to the entire segmentation, but removing information (removing some seed regions) will not change the complete segmentation.</p>
 </li>
 <li>
-<p>O método usa uma versão aprimorada do algoritmo grow-cut descrito em <em>Liangjia Zhu, Ivan Kolesov, Yi Gao, Ron Kikinis, Allen Tannenbaum. An Effective Interactive Medical Image Segmentation Method Using Fast GrowCut, International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI), Interactive Medical Image Computing Workshop, 2014</em>.</p>
+<p>The method uses an improved version of the grow-cut algorithm described in <em>Liangjia Zhu, Ivan Kolesov, Yi Gao, Ron Kikinis, Allen Tannenbaum. An Effective Interactive Medical Image Segmentation Method Using Fast GrowCut, International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI), Interactive Medical Image Computing Workshop, 2014</em>.</p>
 </li>
 </ul>
-<h4 id="margem"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_margin.png" /> Margem</h4>
-<p>Aumenta ou diminui o segmento selecionado pela margem especificada.</p>
-<p>Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão processados (na ordem da lista de segmentos).</p>
-<h4 id="suavizacao"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_smoothing.png" /> Suavização</h4>
-<p>Suaviza segmentos preenchendo buracos e/ou removendo extrusões.</p>
-<p>Por padrão, o segmento atual será Suavizado. Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão suavizado (na ordem da lista de segmentos). Esta operação pode ser demorada para segmentações complexas. O método <code>Suavização conjunta</code> sempre suaviza todos os segmentos visíveis.</p>
-<p>Clicando no botão <code>Aplicar</code>, toda a segmentação é suavizada. Para suavizar uma região específica, clique e arraste com o botão esquerdo em qualquer visualização de fatia ou 3D. O mesmo método e força de suavização são usados tanto no modo de segmentação inteira quanto no modo de suavização por região (o tamanho do pincel não afeta a força da Suavização, apenas facilita a designação de uma região maior).</p>
-<p>Métodos disponíveis:</p>
+<h4 id="margin"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_margin.png" /> Margin</h4>
+<p>Increases or decreases the selected segment by the specified margin.</p>
+<p>By enabling <code>Apply to visible segments</code>, all visible segments of the segmentation will be processed (in the order of the segments list).</p>
+<h4 id="smoothing"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_smoothing.png" /> Smoothing</h4>
+<p>Smooths segments by filling holes and/or removing extrusions.</p>
+<p>By default, the current segment will be smoothed. By enabling <code>Apply to visible segments</code>, all visible segments of the segmentation will be smoothed (in the order of the segments list). This operation can be time-consuming for complex segmentations. The <code>Joint smoothing</code> method always smooths all visible segments.</p>
+<p>Clicking the <code>Apply</code> button, the entire segmentation is smoothed. To smooth a specific region, left-click and drag in any slice or 3D view. The same smoothing method and strength are used in both whole-segmentation mode and region-based smoothing mode (brush size does not affect Smoothing strength, it only facilitates designating a larger region).</p>
+<p>Available methods:</p>
 <ul>
 <li>
-<p>Mediana: remove pequenas extrusões e preenche pequenos espaços enquanto mantém os contornos suaves praticamente inalterados. Aplicado apenas ao segmento selecionado.</p>
+<p>Median: removes small extrusions and fills small gaps while keeping smooth contours virtually unchanged. Applied only to the selected segment.</p>
 </li>
 <li>
-<p>Abertura: remove extrusões menores do que o tamanho do kernel especificado. Não adiciona nada ao segmento. Aplicado apenas ao segmento selecionado.</p>
+<p>Opening: removes extrusions smaller than the specified kernel size. Adds nothing to the segment. Applied only to the selected segment.</p>
 </li>
 <li>
-<p>Fechamento: preenche cantos afiados e buracos menores do que o tamanho do kernel especificado. Não remove nada do segmento. Aplicado apenas ao segmento selecionado.</p>
+<p>Closing: fills sharp corners and holes smaller than the specified kernel size. Removes nothing from the segment. Applied only to the selected segment.</p>
 </li>
 <li>
-<p>Gaussiano: suaviza todos os detalhes. A suavização mais forte possível, mas tende a diminuir o segmento. Aplicado apenas ao segmento selecionado.</p>
+<p>Gaussian: smooths all details. The strongest possible smoothing, but tends to shrink the segment. Applied only to the selected segment.</p>
 </li>
 <li>
-<p>Suavização conjunto: suaviza múltiplos segmentos de uma vez, preservando a interface estanque entre eles. Se os segmentos se sobrepuserem, o segmento mais alto na tabela de segmentos terá prioridade. Aplicado a todos os segmentos visíveis.</p>
+<p>Joint smoothing: smooths multiple segments at once, preserving the watertight interface between them. If segments overlap, the segment higher in the segments table takes precedence. Applied to all visible segments.</p>
 </li>
 </ul>
-<h4 id="tesoura"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id=#tesoura>Tesoura</a></h4>
-<p>Recorta segmentos para a região especificada ou preenche regiões de um segmento (geralmente usado com mascaramento). As regiões podem ser desenhadas tanto na visualização de fatia quanto nas visualizações 3D.</p>
+<h4 id="scissors"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_scissors.png" /> <a id="scissors">Scissors</a></h4>
+<p>Cuts segments to the specified region or fills regions of a segment (often used with masking). Regions can be drawn in both slice view and 3D views.</p>
 <ul>
 <li>
-<p>Clique com o botão esquerdo para começar a desenhar (forma livre ou círculo/retângulo elástico)</p>
+<p>Left-click to start drawing (freeform or elastic circle/rectangle)</p>
 </li>
 <li>
-<p>Solte o botão para aplicar</p>
+<p>Release button to apply</p>
 </li>
 </ul>
-<p>Ao habilitar <code>Aplicar aos segmentos visíveis</code>, todos os segmentos visíveis da segmentação serão processados (na ordem da lista de segmentos).</p>
-<h4 id="ilhas"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_islands.png" /> Ilhas</h4>
-<p>Use esta ferramenta para processar “ilhas”, ou seja, regiões conectadas que são definidas como grupos de voxels não vazios que se tocam, mas são cercados por voxels vazios.</p>
+<p>By enabling <code>Apply to visible segments</code>, all visible segments of the segmentation will be processed (in the order of the segments list).</p>
+<h4 id="islands"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_islands.png" /> Islands</h4>
+<p>Use this tool to process "islands", i.e., connected regions that are defined as groups of non-empty voxels that touch each other but are surrounded by empty voxels.</p>
 <ul>
 <li>
-<p><code>Manter maior ilha</code>: mantém a maior região conectada.</p>
+<p><code>Keep largest island</code>: keeps the largest connected region.</p>
 </li>
 <li>
-<p><code>Remover pequenas ilhas</code>: mantém todas as regiões conectadas que são maiores que o <code>tamanho mínimo</code>.</p>
+<p><code>Remove small islands</code>: keeps all connected regions that are larger than the <code>minimum size</code>.</p>
 </li>
 <li>
-<p><code>Dividir ilhas em segmentos</code>: cria um segmento único para cada região conectada do segmento selecionado.</p>
+<p><code>Split islands into segments</code>: creates a single segment for each connected region of the selected segment.</p>
 </li>
 <li>
-<p><code>Manter ilha selecionada</code>: após selecionar este modo, clique em uma área não vazia na visualização de fatias para manter essa região e remover todas as outras regiões.</p>
+<p><code>Keep selected island</code>: after selecting this mode, click on a non-empty area in the slice view to keep that region and remove all other regions.</p>
 </li>
 <li>
-<p><code>Remover ilha selecionada</code>: após selecionar este modo, clique em uma área não vazia na visualização de fatias para remover essa região e preservar todas as outras regiões.</p>
+<p><code>Remove selected island</code>: after selecting this mode, click on a non-empty area in the slice view to remove that region and preserve all other regions.</p>
 </li>
 <li>
-<p><code>Adicionar ilha selecionada</code>: após selecionar este modo, clique em uma área vazia na visualização de fatias para adicionar essa região vazia ao segmento (preencher buraco).</p>
+<p><code>Add selected island</code>: after selecting this mode, click on an empty area in the slice view to add that empty region to the segment (fill hole).</p>
 </li>
 </ul>
-<h4 id="operadores-logicos"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_logical_operators.png" /> Operadores lógicos</h4>
-<p>Aplicar operações básicas de copiar, limpar, preencher e Booleanas ao(s) segmento(s) selecionado(s). Veja mais detalhes sobre os métodos clicando em “Mostrar detalhes” na descrição do efeito no Editor de Segmentos.</p>
-<h4 id="volume-de-mascara"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_mask_volume.png" /> Volume de máscara</h4>
-<p>Apague dentro/fora de um segmento em um volume ou crie uma máscara binária. O resultado pode ser salvo em um novo volume ou sobrescrever o volume de entrada. Isso é útil para remover detalhes irrelevantes de uma imagem ou criar máscaras para operações de processamento de imagem (como registro ou correção de intensidade).</p>
+<h4 id="logical-operators"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_logical_operators.png" /> Logical Operators</h4>
+<p>Apply basic copy, clear, fill, and Boolean operations to the selected segment(s). See more details on the methods by clicking “Show details” in the effect description in the Segment Editor.</p>
+<h4 id="mask-volume"><img alt="" src="https://github.com/Slicer/Slicer/releases/download/docs-resources/module_segmenteditor_mask_volume.png" /> Mask Volume</h4>
+<p>Erase inside/outside a segment in a volume or create a binary mask. The result can be saved to a new volume or overwrite the input volume. This is useful for removing irrelevant details from an image or creating masks for image processing operations (such as registration or intensity correction).</p>
 <ul>
 <li>
-<p><code>Operação</code>:</p>
+<p><code>Operation</code>:</p>
 <ul>
 <li>
-<p><code>Preencher dentro</code>: define todos os voxels do volume selecionado para o <code>Valor de preenchimento</code> especificado dentro do segmento selecionado.</p>
+<p><code>Fill inside</code>: sets all voxels of the selected volume to the specified <code>Fill value</code> inside the selected segment.</p>
 </li>
 <li>
-<p><code>Preencher fora</code>: define todos os voxels do volume selecionado para o <code>Valor de preenchimento</code> especificado fora do segmento selecionado.</p>
+<p><code>Fill outside</code>: sets all voxels of the selected volume to the specified <code>Fill value</code> outside the selected segment.</p>
 </li>
 <li>
-<p><code>Preencher dentro e fora</code>: cria um volume de mapa de etiquetas binário como saída, preenchido com o <code>Valor de preenchimento fora</code> e o <code>Valor de preenchimento dentro</code>. A maioria das operações de processamento de imagem exige que a região de fundo (fora, ignorada) seja preenchida com o valor 0.</p>
+<p><code>Fill inside and outside</code>: creates a binary labelmap volume as output, filled with the <code>Fill outside value</code> and <code>Fill inside value</code>. Most image processing operations require the background region (outside, ignored) to be filled with the value 0.</p>
 </li>
 </ul>
 </li>
 <li>
-<p><code>Borda suave</code>: se definido como &gt;0, a transição entre dentro/fora da máscara é gradual. O valor especifica o desvio padrão da função de desfoque gaussiano. Valores maiores resultam em uma transição mais suave.</p>
+<p><code>Smooth border</code>: if set to &gt;0, the transition between inside/outside the mask is gradual. The value specifies the standard deviation of the Gaussian blur function. Larger values result in a smoother transition.</p>
 </li>
 <li>
-<p><code>Volume de entrada</code>: voxels deste volume serão usados como entrada para a máscara. A geometria e o tipo de voxel do volume de saída serão os mesmos que os deste volume.</p>
+<p><code>Input volume</code>: voxels from this volume will be used as input for the mask. The geometry and voxel type of the output volume will be the same as this volume.</p>
 </li>
 <li>
-<p><code>Volume de saída</code>: este volume armazenará o resultado da máscara. Embora possa ser o mesmo que o volume de entrada, geralmente é melhor usar um volume de saída diferente, porque assim as opções podem ser ajustadas e a máscara pode ser recalculada várias vezes.</p>
+<p><code>Output volume</code>: this volume will store the mask result. While it can be the same as the input volume, it is often better to use a different output volume, because then options can be adjusted, and the mask can be recalculated multiple times.</p>
 </li>
 </ul>
-<h4 id="limiar-de-cores"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/color_threshold_effect.png" /> Limiar de cores</h4>
-<p>Esse efeito de edição de segmentação chamado "Color threshold", permite a segmentação de imagens com base em intervalos de cores definidos pelo usuário. O efeito pode operar em modos de cor HSV ou RGB, permitindo ajustes nos componentes de matiz, saturação e valor. Ainda possui ajuste nos níveis de vermelho, verde e azul. O efeito oferece uma visualização em tempo real da segmentação, utilizando um pulso de pré-visualização para ajudar o usuário a refinar os parâmetros antes de aplicar as alterações permanentemente. Além disso, o efeito inclui funcionalidades avançadas, como a conversão de espaços de cor e a manipulação de intervalos circulares, possibilitando uma segmentação precisa e customizada.</p>
-<h4 id="conectividade"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/conectivity_effect.png" /> Conectividade</h4>
-<p>Esse efeito de "Conectividade" permite a seleção de segmentos no Geoslicer, permitindo aos usuários calcular regiões conectadas dentro de um segmento em uma direção específica. O efeito inclui parâmetros configuráveis como saltos de conectividade, direção e nome de saída, tornando-o uma ferramenta versátil para tarefas detalhadas de segmentação. Ele lida de forma eficiente com a análise de componentes conectados e gera um novo segmento baseado nas configurações definidas pelo usuário.</p>
-<h4 id="remocao-de-borda"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> Remoção de Borda</h4>
-<p>Remove as bordas dos segmentos visíveis usando um filtro de detecção de bordas. Apenas os segmentos visíveis são modificados no processo.</p>
+<h4 id="color-threshold"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/color_threshold_effect.png" /> Color Threshold</h4>
+<p>This segmentation editing effect, called "Color threshold", allows the segmentation of images based on user-defined color ranges. The effect can operate in HSV or RGB color modes, allowing adjustments to hue, saturation, and value components. It also has adjustments for red, green, and blue levels. The effect offers a real-time visualization of the segmentation, using a preview pulse to help the user refine parameters before permanently applying changes. Additionally, the effect includes advanced functionalities, such as color space conversion and manipulation of circular ranges, enabling precise and customized segmentation.</p>
+<h4 id="connectivity"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/conectivity_effect.png" /> Connectivity</h4>
+<p>This "Connectivity" effect allows segment selection in Geoslicer, enabling users to calculate connected regions within a segment in a specific direction. The effect includes configurable parameters such as connectivity jumps, direction, and output name, making it a versatile tool for detailed segmentation tasks. It efficiently handles connected component analysis and generates a new segment based on user-defined settings.</p>
+<h4 id="boundary-removal"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/BoundaryRemovalEffect.png" /> <a id="boundary-removal">Boundary Removal</a></h4>
+<p>Removes the borders of visible segments using an edge detection filter. Only visible segments are modified in the process.</p>
 <ul>
-<li><strong>Filter</strong>: Apenas magnitude de gradiente até o momento.</li>
-<li><strong>Threshold adjustment</strong>: Ajusta o limiar para encontrar uma borda adequada.</li>
-<li><strong>Keep filter result</strong>: Marque esta opção para manter o resultado do filtro como um novo volume, para inspeção.</li>
+<li><strong>Filter</strong>: Only gradient magnitude so far.</li>
+<li><strong>Threshold adjustment</strong>: Adjusts the threshold to find a suitable border.</li>
+<li><strong>Keep filter result</strong>: Check this option to keep the filter result as a new volume, for inspection.</li>
 </ul>
-<h4 id="expandir-segmentos"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> Expandir Segmentos</h4>
-<p>Aplica o processo de watershed para expandir os segmentos visíveis, preenchendo os espaços vazios da segmentação. Os segmentos visíveis selecionados são usados como sementes, ou mínimos, a partir dos quais são expandidos.</p>
-<h4 id="primeiro-plano-inteligente"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/smart_foreground_effect.png" /> Primeiro plano inteligente</h4>
-<p>Segmenta automaticamente a área útil de uma imagem ou volume, isto é, a região que corresponde de fato à amostra, rejeitando as regiões de borda. Habilitando-se o recurso de fragmentação (atualmente disponível apenas para lâminas), eventuais fissuras entre fragmentos de rocha também deixam de ser consideradas área util. Este efeito é conveniente para fluxos de trabalho em que as áreas adjacentes à rocha possam influenciar negativamente, como, por exemplo, determinar a taxa de porosidade da amostra.</p>
-<h4 id="multiplos-limiares">Múltiplos limiares</h4>
-<p>O efeito de <em>multiple threshold</em>, apresentado nos ambientes Volumes, Image Log, Core e Multiscale, permite ao usuário segmentar um volume 3D a partir de múltiplos valores de limiares. Dependendo da quantidade de segmentos selecionados, um histograma com limiares aparece colorido na interface. Cada segmento será separado pelo limiar, começando o próximo segmento em um limiar levemente acima na escala de cinza. Dessa forma, pode-se segmentar facilmente a imagem a partir da escala de cinza.</p>
+<h4 id="expand-segments"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/ExpandSegmentsEffect.png" /> <a id="expand-segments">Expand Segments</a></h4>
+<p>Applies the watershed process to expand visible segments, filling the empty spaces of the segmentation. The selected visible segments are used as seeds, or minima, from which they are expanded.</p>
+<h4 id="smart-foreground"><img alt="" src="../../assets/images/thin_section/modulos/segment_editor/smart_foreground_effect.png" /> Smart Foreground</h4>
+<p>Automatically segments the useful area of an image or volume, i.e., the region that actually corresponds to the sample, rejecting border regions. By enabling the fragmentation feature (currently available only for thin sections), any fissures between rock fragments also cease to be considered useful area. This effect is convenient for workflows where areas adjacent to the rock might negatively influence results, such as determining the porosity rate of the sample.</p>
+<h4 id="multiple-thresholds"><a id="multiple-thresholds">Multiple Thresholds</a></h4>
+<p>The <em>multiple threshold</em> effect, available in the Volumes, Image Log, Core, and Multiscale environments, allows the user to segment a 3D volume based on multiple threshold values. Depending on the number of selected segments, a histogram with thresholds appears colored in the interface. Each segment will be separated by the threshold, with the next segment starting at a slightly higher threshold on the grayscale. This way, the image can be easily segmented based on its grayscale values.</p>
 <p><img alt="" src="../../assets/images/module_segmenteditor_multiple_threshold.png" /></p>
 <ul>
 <li>
-<p><code>Operação</code>:</p>
+<p><code>Operation</code>:</p>
 <ul>
 <li>
-<p><code>Preencher internamente</code>: segmenta toda a área útil da imagem/volume;</p>
+<p><code>Fill internally</code>: segments the entire useful area of the image/volume;</p>
 </li>
 <li>
-<p><code>Apagar externamente</code>: dado um segmento qualquer já preenchido, exclui toda sua região que resida fora da área útil.</p>
+<p><code>Erase externally</code>: given any already filled segment, it excludes all its region that resides outside the useful area.</p>
 </li>
 </ul>
 </li>
 <li>
-<p><code>Fragmentação</code>:</p>
+<p><code>Fragmentation</code>:</p>
 <ul>
 <li>
-<p><code>Dividir</code>: habilita/desabilita o recurso de fragmentação. Recomendado apenas para imagens de lâminas de luz polarizada (PP). Uma vez habilitado, permite escolher entre:</p>
+<p><code>Split</code>: enables/disables the fragmentation feature. Recommended only for polarized light thin section (PP) images. Once enabled, it allows choosing between:</p>
 <ul>
-<li>
-<p><code>Manter todos</code>: considera todos os fragmentos como área útil;</p>
-</li>
-<li>
-<p><code>Filtrar os N maiores</code>: apenas os <em>N</em> fragmentos de maior área serão preservados, sendo <em>N</em> o valor especificado pelo usuário.</p>
-</li>
+<li><code>Keep all</code>: considers all fragments as useful area;</li>
+<li><code>Filter the N largest</code>: only the <em>N</em> fragments with the largest area will be preserved, where <em>N</em> is the value specified by the user.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<!-- END INCLUDE -->
 <hr />
-<!-- BEGIN INCLUDE Pages/MicroCTSegmenter.md -->
 <h2 id="ai-segmenter">AI Segmenter</h2>
-<p>O módulo <strong>MicroCT Segmenter</strong> oferece a opção de <em>Model Training</em>, que realiza a segmentação de uma amostra inteira a partir de uma anotação inicial simples. Com base nessa anotação, diferentes métodos treinam um modelo e inferem o resultado em toda a imagem ou em uma região de interesse (SOI). O modelo treinado pode ser salvo e reutilizado em outras imagens.</p>
-<h3 id="metodo-random-forest">Método Random-Forest</h3>
-<p>O Random-Forest é um método que constrói múltiplas árvores de decisão durante o treinamento para criar um modelo robusto. A classificação final é determinada pela maioria dos votos das árvores. Para este método, é possível selecionar diferentes <em>features</em> (características) extraídas da imagem para o treinamento.</p>
-<h4 id="selecao-de-caracteristicas-features">Seleção de características (<em>features</em>)</h4>
+<p>The <strong>MicroCT Segmenter</strong> module offers the <em>Model Training</em> option, which performs the segmentation of an entire sample based on a simple initial annotation. Based on this annotation, different methods train a model and infer the result across the entire image or within a region of interest (SOI). The trained model can be saved and reused on other images.</p>
+<h3 id="random-forest-method">Random-Forest Method</h3>
+<p>Random-Forest is a method that constructs multiple decision trees during training to create a robust model. The final classification is determined by the majority vote of the trees. For this method, it is possible to select different <em>features</em> (characteristics) extracted from the image for training.</p>
+<h4 id="feature-selection-features">Feature selection (<em>features</em>)</h4>
 <ul>
-<li><strong>Raw input image</strong>: Adiciona a própria imagem como uma das entradas.</li>
-<li><strong>Gaussian filter</strong>: Aplica um kernel gaussiano de raio escolhido como um filtro na imagem.</li>
+<li><strong>Raw input image</strong>: Adds the image itself as one of the inputs.</li>
+<li><strong>Gaussian filter</strong>: Applies a Gaussian kernel of a chosen radius as a filter to the image.</li>
 </ul>
 <table>
 <thead>
@@ -2625,12 +2667,12 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Filtro gaussiano.</td>
+<td align="center">Figure 1: Gaussian filter.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>Winvar filter</strong>: Filtro baseado na variância, calcula <span class="arithmatex">\(\left\lt x^2\right\gt-\left\lt x\right\gt^2\)</span> dentro de um kernel de raio escolhido.</li>
+<li><strong>Winvar filter</strong>: Variance-based filter, calculates <span class="arithmatex">\(\left\lt x^2\right\gt-\left\lt x\right\gt^2\)</span> within a kernel of a chosen radius.</li>
 </ul>
 <table>
 <thead>
@@ -2640,12 +2682,12 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 2: Filtro winvar.</td>
+<td align="center">Figure 2: Winvar filter.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>Gabor filters</strong>: Calculados em direções <span class="arithmatex">\(\theta\)</span> igualmente espaçadas, esses filtros são compostos de uma parte gaussiana e uma parte senoidal. Em 2D, a fórmula é:</li>
+<li><strong>Gabor filters</strong>: Calculated in equally spaced <span class="arithmatex">\(\theta\)</span> directions, these filters are composed of a Gaussian part and a sinusoidal part. In 2D, the formula is:</li>
 </ul>
 <div class="arithmatex">\[ f(x,y,\omega,\theta,\sigma)=\frac{1}{2\pi\sigma^2}\exp\left[-\frac{1}{2}\frac{x^2+y^2}{\sigma^2}+I\omega(x\cos\theta+y\sin\theta)\right] \]</div>
 <table>
@@ -2656,12 +2698,12 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 3: Filtro Gabor em uma das direções <span class="arithmatex">\(\theta\)</span>.</td>
+<td align="center">Figure 3: Gabor filter in one of the <span class="arithmatex">\(\theta\)</span> directions.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>Minkowsky functionals</strong>: Parâmetros morfológicos que descrevem a geometria dos dados, associados a volume, superfície, curvatura média e característica de Euler.</li>
+<li><strong>Minkowsky functionals</strong>: Morphological parameters that describe the data geometry, associated with volume, surface, mean curvature, and Euler characteristic.</li>
 </ul>
 <table>
 <thead>
@@ -2671,12 +2713,12 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 4: Filtros Minkowsky.</td>
+<td align="center">Figure 4: Minkowsky filters.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>Variogram range</strong>: Mede a variação média dos valores em função da distância. O <em>range</em> é a distância onde a variação é máxima. É útil para diferenciar texturas e granulometrias.</li>
+<li><strong>Variogram range</strong>: Measures the average variation of values as a function of distance. The <em>range</em> is the distance where the variation is maximal. It is useful for differentiating textures and grain sizes.</li>
 </ul>
 <table>
 <thead>
@@ -2686,18 +2728,18 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 5: Variogram range.</td>
+<td align="center">Figure 5: Variogram range.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="metodo-inferencia-bayesiana">Método Inferência Bayesiana</h3>
-<p>Este método utiliza a <strong>regra de Bayes</strong> para classificar os pixels da imagem, atualizando as probabilidades de um pixel pertencer a uma classe com base nas anotações.</p>
-<p>A abordagem no GeoSlicer assume uma <strong>Distribuição Normal Multivariada</strong> para a função de verossimilhança, onde a média <span class="arithmatex">\(\mu_s\)</span> e a matriz de covariância <span class="arithmatex">\(\Sigma_s\)</span> de cada segmento são calculadas a partir das anotações:</p>
+<h3 id="bayesian-inference-method">Bayesian Inference Method</h3>
+<p>This method uses <strong>Bayes' rule</strong> to classify image pixels, updating the probabilities of a pixel belonging to a class based on annotations.</p>
+<p>The approach in GeoSlicer assumes a <strong>Multivariate Normal Distribution</strong> for the likelihood function, where the mean <span class="arithmatex">\(\mu_s\)</span> and covariance matrix <span class="arithmatex">\(\Sigma_s\)</span> of each segment are calculated from the annotations:</p>
 <div class="arithmatex">\[ f(x_p|s)=\frac{1}{\sqrt{(2\pi)^k \det \Sigma_s}}\exp\left(-\frac{1}{2}(x_p-\mu_s)^T \Sigma_s^{-1} (x_p-\mu_s)\right) \]</div>
-<p>Onde <span class="arithmatex">\(x_p\)</span> é o vetor de pixels em uma janela, e <span class="arithmatex">\(\mu_s\)</span> e <span class="arithmatex">\(\Sigma_s\)</span> são a média e a covariância do segmento <span class="arithmatex">\(s\)</span>.</p>
-<p>A inferência da probabilidade de cada segmento para um pixel é obtida pela regra de Bayes, e o segmento que maximiza essa probabilidade é escolhido.</p>
-<p>Para otimizar o desempenho, são aplicados alguns tratamentos, como a transformação de percentil em imagens de MicroCT e a conversão para o formato HSV em imagens de lâminas delgadas. Além disso, para acelerar o processo, é possível calcular a covariância de forma esparsa, utilizando apenas os eixos ou planos principais, o que é especialmente útil em 3D.</p>
-<p>Abaixo, alguns resultados da aplicação do método em imagens de tomografia e lâminas:</p>
+<p>Where <span class="arithmatex">\(x_p\)</span> is the pixel vector in a window, and <span class="arithmatex">\(\mu_s\)</span> and <span class="arithmatex">\(\Sigma_s\)</span> are the mean and covariance of segment <span class="arithmatex">\(s\)</span>.</p>
+<p>The inference of the probability of each segment for a pixel is obtained by Bayes' rule, and the segment that maximizes this probability is chosen.</p>
+<p>To optimize performance, some treatments are applied, such as percentile transformation in MicroCT images and conversion to HSV format in thin section images. Additionally, to speed up the process, it is possible to calculate covariance sparsely, using only the principal axes or planes, which is especially useful in 3D.</p>
+<p>Below are some results of the method's application to tomography and thin section images:</p>
 <table>
 <thead>
 <tr>
@@ -2706,7 +2748,7 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 6: Segmentação semi-automática usando inferência Bayesiana em dados de MicroCT.</td>
+<td align="center">Figure 6: Semi-automatic segmentation using Bayesian inference on MicroCT data.</td>
 </tr>
 </tbody>
 </table>
@@ -2718,17 +2760,17 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 7: Segmentação semi-automática usando inferência Bayesiana em dados de lâminas.</td>
+<td align="center">Figure 7: Semi-automatic segmentation using Bayesian inference on thin section data.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="modelos-pre-treinados">Modelos Pré-treinados</h3>
-<p>O GeoSlicer oferece modelos pré-treinados baseados na arquitetura <strong>U-Net</strong> para resolver dois problemas comuns na microtomografia de rochas: a segmentação binária (poro/não-poro) e a segmentação <em>basins</em> (múltiplos minerais).</p>
-<h4 id="treinamento">Treinamento</h4>
-<p>O treinamento dos modelos foi realizado com um vasto conjunto de dados (68 volumes para o modelo binário e 106 para o <em>basins</em>), aplicando uma transformação linear de histograma para facilitar a generalização. Os volumes foram recortados em subvolumes de 128³ voxels, e uma porção de 75% deles sofreu transformações aleatórias (aumento de dados) para melhorar a robustez do modelo. Para lidar com o desbalanceamento de classes (poros são menos comuns), foi utilizada a <strong>função de custo de Tversky</strong>, que ajusta a sensibilidade do modelo para classes minoritárias, melhorando a precisão na detecção de poros.</p>
-<h4 id="resultados">Resultados</h4>
-<p>Os modelos pré-treinados apresentam resultados de alta qualidade. O modelo de segmentação binária é especialmente preciso na identificação de poros, enquanto o modelo <em>basins</em> oferece uma segmentação completa dos diferentes minerais.</p>
-<h5 id="segmentacao-binaria">Segmentação Binária</h5>
+<h3 id="pre-trained-models">Pre-trained Models</h3>
+<p>GeoSlicer offers pre-trained models based on the <strong>U-Net</strong> architecture to solve two common problems in rock microtomography: binary segmentation (pore/non-pore) and <em>basins</em> segmentation (multiple minerals).</p>
+<h4 id="training">Training</h4>
+<p>Model training was performed with a vast dataset (68 volumes for the binary model and 106 for the <em>basins</em> model), applying a linear histogram transformation to facilitate generalization. Volumes were cropped into 128³ voxel subvolumes, and 75% of them underwent random transformations (data augmentation) to improve model robustness. To handle class imbalance (pores are less common), the <strong>Tversky loss function</strong> was used, which adjusts the model's sensitivity to minority classes, improving accuracy in pore detection.</p>
+<h4 id="results">Results</h4>
+<p>The pre-trained models show high-quality results. The binary segmentation model is particularly accurate in identifying pores, while the <em>basins</em> model offers complete segmentation of different minerals.</p>
+<h5 id="binary-segmentation">Binary Segmentation</h5>
 <table>
 <thead>
 <tr>
@@ -2737,11 +2779,11 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 8: Comparação entre a imagem original, a anotação e o resultado da segmentação binária.</td>
+<td align="center">Figure 8: Comparison between the original image, the annotation, and the binary segmentation result.</td>
 </tr>
 </tbody>
 </table>
-<h5 id="segmentacao-basins">Segmentação <em>Basins</em></h5>
+<h5 id="basins-segmentation"><em>Basins</em> Segmentation</h5>
 <table>
 <thead>
 <tr>
@@ -2750,38 +2792,24 @@ Sinalizado: o usuário pode selecionar manualmente esse estado para qualquer fin
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 9: Comparação entre a imagem original, a anotação e o resultado da segmentação basins.</td>
+<td align="center">Figure 9: Comparison between the original image, the annotation, and the basins segmentation result.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="referencias">Referências</h4>
+<h4 id="references">References</h4>
 <ul>
-<li>
-<p>SCHMIDT, U. et al. (2018). <em>Cell detection with star-convex polygons</em>. In: Medical Image Computing and Computer Assisted Intervention–MICCAI 2018. Springer.</p>
-</li>
-<li>
-<p>SALEHI, S. S. M. et al. (2017). <em>Tversky loss function for image segmentation using 3D fully convolutional deep networks</em>. In: Machine Learning in Medical Imaging. Springer.</p>
-</li>
-<li>
-<p>WEIGERT, M. et al. (2020). <em>Star-convex polyhedra for 3D object detection and segmentation in microscopy</em>. In: Proceedings of the IEEE/CVF winter conference on applications of computer vision.</p>
-</li>
-<li>
-<p>BAI, M. &amp; URTASUN, R. (2017). <em>Deep watershed transform for instance segmentation</em>. In: Proceedings of the IEEE conference on computer vision and pattern recognition.</p>
-</li>
-<li>
-<p>HE, K. et al. (2017). <em>Mask r-cnn</em>. In: Proceedings of the IEEE international conference on computer vision.</p>
-</li>
-<li>
-<p>RONNEBERGER, O. et al. (2015). <em>U-net: Convolutional networks for biomedical image segmentation</em>. In: Medical Image Computing and Computer-Assisted Intervention–MICCAI 2015. Springer.</p>
-</li>
+<li>SCHMIDT, U. et al. (2018). <em>Cell detection with star-convex polygons</em>. In: Medical Image Computing and Computer Assisted Intervention–MICCAI 2018. Springer.</li>
+<li>SALEHI, S. S. M. et al. (2017). <em>Tversky loss function for image segmentation using 3D fully convolutional deep networks</em>. In: Machine Learning in Medical Imaging. Springer.</li>
+<li>WEIGERT, M. et al. (2020). <em>Star-convex polyhedra for 3D object detection and segmentation in microscopy</em>. In: Proceedings of the IEEE/CVF winter conference on applications of computer vision.</li>
+<li>BAI, M. &amp; URTASUN, R. (2017). <em>Deep watershed transform for instance segmentation</em>. In: Proceedings of the IEEE conference on computer vision and pattern recognition.</li>
+<li>HE, K. et al. (2017). <em>Mask r-cnn</em>. In: Proceedings of the IEEE international conference on computer vision.</li>
+<li>RONNEBERGER, O. et al. (2015). <em>U-net: Convolutional networks for biomedical image segmentation</em>. In: Medical Image Computing and Computer-Assisted Intervention–MICCAI 2015. Springer.</li>
 </ul>
-<!-- END INCLUDE -->
 <hr />
-<!-- BEGIN INCLUDE Pages/SegmentInspector.md -->
 <h2 id="segment-inspector">Segment Inspector</h2>
-<p>Este módulo fornece vários métodos para analisar uma imagem segmentada. Particularmente, os algoritmos Watershed e Separate objects permitem fragmentar uma segmentação em várias partições, ou vários segmentos. Geralmente é aplicado à segmentação do espaço poroso para calcular as métricas de cada elemento poroso.
-A entrada é um nó de segmentação ou volume de labelmap, uma região de interesse (definida por um nó de segmentação) e a imagem/volume mestre. A saída é um labelmap onde cada partição (elemento poro) está em uma cor diferente, uma tabela com parâmetros globais e uma tabela com as diferentes métricas para cada partição.</p>
-<h3 id="paineis-e-sua-utilizacao_1">Painéis e sua utilização</h3>
+<p>This module provides several methods to analyze a segmented image. Particularly, the Watershed and Separate Objects algorithms allow a segmentation to be fragmented into multiple partitions, or multiple segments. It is generally applied to the segmentation of porous space to calculate the metrics of each porous element.
+The input is a segmentation node or labelmap volume, a region of interest (defined by a segmentation node), and the master image/volume. The output is a labelmap where each partition (pore element) is in a different color, a table with global parameters, and a table with the different metrics for each partition.</p>
+<h3 id="panels-and-their-use">Panels and their use</h3>
 <table>
 <thead>
 <tr>
@@ -2790,12 +2818,12 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Apresentação do módulo Segment Inspector.</td>
+<td align="center">Figure 1: Overview of the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="principais-opcoes_1">Principais opções</h4>
-<p>A interface do módulo Segment Inspector é composta por Inputs, Parameters e Output</p>
+<h4 id="main-options_1">Main options</h4>
+<p>The Segment Inspector module interface is composed of Inputs, Parameters, and Output.</p>
 <h5 id="single-input">Single input</h5>
 <table>
 <thead>
@@ -2805,19 +2833,19 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 2: Apresentação dos inputs no módulo Segment Inspector.</td>
+<td align="center">Figure 2: Overview of the inputs in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>
-<p><em>Segmentation</em>: Input para a segmentação utilizada na partição.</p>
+<p><em>Segmentation</em>: Input for the segmentation used in the partition.</p>
 </li>
 <li>
-<p><em>Region SOI</em>: Escolha Uma segmentação de interresse que contenha ao menos uma parte da segmentação utilizada em <em>Segmentation</em>.</p>
+<p><em>Region SOI</em>: Choose a segmentation of interest that contains at least part of the segmentation used in <em>Segmentation</em>.</p>
 </li>
 <li>
-<p><em>Image</em>: Campo preenchido automaticamente com o nodo de referência da segmentação utilizada em <em>Segmentation</em>.</p>
+<p><em>Image</em>: Field automatically filled with the reference node of the segmentation used in <em>Segmentation</em>.</p>
 </li>
 </ul>
 <h5 id="attributes">Attributes</h5>
@@ -2829,24 +2857,24 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 3: Atributos de segmentos no módulo Segment Inspector.</td>
+<td align="center">Figure 3: Segment attributes in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>
-<p><em>Segments</em>: Segmentos contidos na segmentação selecionada em <em>Segmentation</em>. A lista informa sobre a visualização do segmento pelo icone do olho. Para a inicialização do metodo de fragmentação um segmento deve ser selecionado.</p>
+<p><em>Segments</em>: Segments contained in the segmentation selected in <em>Segmentation</em>. The list shows the visualization of the segment via the eye icon. For the fragmentation method to be initialized, a segment must be selected.</p>
 </li>
 <li>
-<p><em>Calculate proportions</em>: Checkbox para apresentar as proporções de cada segmento na imagem.</p>
+<p><em>Calculate proportions</em>: Checkbox to display the proportions of each segment in the image.</p>
 </li>
 <li>
-<p><em>Dimension(px)</em>: Apresenta as dimensões da imagem selecionada.</p>
+<p><em>Dimension(px)</em>: Displays the dimensions of the selected image.</p>
 </li>
 </ul>
-<h4 id="parametros-e-metodos">Parâmetros e Métodos</h4>
+<h4 id="parameters-and-methods">Parameters and Methods</h4>
 <h5 id="watershed">Watershed</h5>
-<p>O algoritmo de Watershed funciona simulando a expansão de "bacias hidrográficas" a partir de pontos marcados como mínimos locais. À medida que a "água" preenche os vales, ela define as fronteiras entre diferentes regiões. Essa abordagem é amplamente utilizada em aplicações onde é necessário separar objetos ou poros em materiais, aproveitando os contrastes entre regiões.</p>
+<p>The Watershed algorithm works by simulating the expansion of "watersheds" from points marked as local minima. As "water" fills the valleys, it defines the boundaries between different regions. This approach is widely used in applications where it is necessary to separate objects or pores in materials, taking advantage of contrasts between regions.</p>
 <table>
 <thead>
 <tr>
@@ -2855,30 +2883,29 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 4: Watershed no módulo Segment Inspector.</td>
+<td align="center">Figure 4: Watershed in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>
-<p><em>Size Filter(mm)</em>: Controla o alcance máximo de segmentação, influenciando diretamente o tamanho e a conectividade das regiões segmentadas. Valores pequenos são Usados quando você deseja segmentar muitos detalhes finos em contrapartida Valores grandes são usados quando o foco é em grandes áreas ou objetos conectados.</p>
+<p><em>Size Filter(mm)</em>: Controls the maximum segmentation range, directly influencing the size and connectivity of the segmented regions. Small values are used when you want to segment many fine details, whereas large values are used when the focus is on large areas or connected objects.</p>
 </li>
 <li>
-<p><em>2D throat analysis(beta)</em>: Adiciona métricas de analise de gargantas 2d no report.</p>
+<p><em>2D throat analysis(beta)</em>: Adds 2D throat analysis metrics to the report.</p>
 </li>
 <li>
-<p><em>Smooth factor</em>: Parâmetro que ajusta o grau de suavidade nas bordas das regiões segmentadas, permitindo controle entre a preservação dos detalhes e a redução de ruído ou irregularidades. Com Fatores altos a segmentação será mais suave e simplificada, mas com perda de pequenos detalhes.</p>
+<p><em>Smooth factor</em>: Parameter that adjusts the degree of smoothness on the edges of segmented regions, allowing control between preserving details and reducing noise or irregularities. With high factors, the segmentation will be smoother and simplified, but with loss of small details.</p>
 </li>
 <li>
-<p><em>Minimun Distance</em>: parâmetro que determina a menor distância permitida entre dois máximos locais ou objetos segmentados. Um valor maior deste parâmetro fundirá objetos próximos, simplificando a segmentação, enquanto um valor menor permitirá a separação de objetos mais próximos, resultando em uma segmentação mais detalhada.</p>
+<p><em>Minimun Distance</em>: parameter that determines the smallest allowed distance between two local maxima or segmented objects. A larger value for this parameter will merge nearby objects, simplifying the segmentation, while a smaller value will allow the separation of closer objects, resulting in a more detailed segmentation.</p>
 </li>
 <li>
-<p><em>Orientation Line</em>: O parâmetro de orientação permite que o algoritmo alinhe-se adequadamente com as características da imagem, melhorando a precisão da segmentação</p>
+<p><em>Orientation Line</em>: The orientation parameter allows the algorithm to align itself properly with the image features, improving segmentation accuracy.</p>
 </li>
 </ul>
 <h5 id="separate-objects">Separate Objects</h5>
-<p>O método de segmentação por "Separate Objects
-" identifica regiões conectadas em uma matriz binária que representam objetos de informação. Este processo é especialmente útil em análise de porosidade, onde é importante distinguir diferentes regiões conectadas dentro de um volume.</p>
+<p>The "Separate Objects" segmentation method identifies connected regions in a binary matrix that represent information objects. This process is especially useful in porosity analysis, where it is important to distinguish different connected regions within a volume.</p>
 <table>
 <thead>
 <tr>
@@ -2887,20 +2914,20 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 5: Separate Objects no módulo Segment Inspector.</td>
+<td align="center">Figure 5: Separate Objects in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>
-<p><em>Size Filter(mm)</em>: Controla o alcance máximo de segmentação, influenciando diretamente o tamanho e a conectividade das regiões segmentadas. Valores pequenos são Usados quando você deseja segmentar muitos detalhes finos em contrapartida Valores grandes são usados quando o foco é em grandes áreas ou objetos conectados.</p>
+<p><em>Size Filter(mm)</em>: Controls the maximum segmentation range, directly influencing the size and connectivity of the segmented regions. Small values are used when you want to segment many fine details, whereas large values are used when the focus is on large areas or connected objects.</p>
 </li>
 <li>
-<p><em>Orientation Line</em>: O parâmetro de orientação permite que o algoritmo alinhe-se adequadamente com as características da imagem, melhorando a precisão da segmentação</p>
+<p><em>Orientation Line</em>: The orientation parameter allows the algorithm to align itself properly with the image features, improving segmentation accuracy.</p>
 </li>
 </ul>
 <h5 id="gpu-watershed">GPU Watershed</h5>
-<p>A técnica de Deep Watershed combina o conceito tradicional de Watershed com redes neurais profundas para obter uma segmentação mais precisa e robusta. Utilizando a força de aprendizado profundo, o método aprimora a detecção de limites e objetos em cenários complexos, como a análise de materiais porosos com múltiplos níveis de sobreposição. Essa abordagem é particularmente eficaz para lidar com volumes tridimensionais e para realizar segmentações precisas em imagens ruidosas.</p>
+<p>The Deep Watershed technique combines the traditional Watershed concept with deep neural networks to obtain more precise and robust segmentation. Using the power of deep learning, the method enhances the detection of boundaries and objects in complex scenarios, such as the analysis of porous materials with multiple levels of overlap. This approach is particularly effective for handling three-dimensional volumes and for performing precise segmentations in noisy images.</p>
 <table>
 <thead>
 <tr>
@@ -2909,32 +2936,32 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 6: GPU Watershed no módulo Segment Inspector.</td>
+<td align="center">Figure 6: GPU Watershed in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>
-<p><em>Split Threshold(0-1)</em>: Controla o alcance máximo de segmentação, influenciando diretamente o tamanho e a conectividade das regiões segmentadas. Valores pequenos são usados quando você deseja segmentar muitos detalhes finos em contrapartida valores grandes são usados quando o foco é em grandes áreas ou objetos conectados.</p>
+<p><em>Split Threshold(0-1)</em>: Controls the maximum segmentation range, directly influencing the size and connectivity of the segmented regions. Small values are used when you want to segment many fine details, whereas large values are used when the focus is on large areas or connected objects.</p>
 </li>
 <li>
-<p><em>2D throat analysis(beta)</em>: Adiciona métricas de analise de gargantas 2d no report.</p>
+<p><em>2D throat analysis(beta)</em>: Adds 2D throat analysis metrics to the report.</p>
 </li>
 <li>
-<p><em>Base volume (px)</em>: Esse parâmetro representa um valor base que pode ser relacionado ao tamanho ou à escala do volume que está sendo processado. Ele serve como uma referência para calcular a profundidade ou as camadas do volume que serão analisadas.</p>
+<p><em>Base volume (px)</em>: This parameter represents a base value that can be related to the size or scale of the volume being processed. It serves as a reference for calculating the depth or layers of the volume that will be analyzed.</p>
 </li>
 <li>
-<p><em>Intersection (px)</em>:Esse parâmetro é usado para ajustar o quanto as regiões dentro do volume podem se sobrepor umas às outras durante a segmentação. </p>
+<p><em>Intersection (px)</em>: This parameter is used to adjust how much regions within the volume can overlap during segmentation.</p>
 </li>
 <li>
-<p><em>Border (px)</em>: Esse parâmetro define o tamanho ou a espessura das bordas que serão consideradas ao calcular as camadas de profundidade no volume.</p>
+<p><em>Border (px)</em>: This parameter defines the size or thickness of the borders that will be considered when calculating the depth layers in the volume.</p>
 </li>
 <li>
-<p><em>Background Threshold(0-1)</em>:  Atua como um ponto de corte. Todos os valores abaixo desse limiar (threshold) são considerados como pertencentes ao fundo (ou background), enquanto valores acima do limiar são considerados como partes de objetos ou regiões significativas dentro da imagem ou volume.</p>
+<p><em>Background Threshold(0-1)</em>: Acts as a cutoff point. All values below this threshold are considered to belong to the background, while values above the threshold are considered to be parts of objects or significant regions within the image or volume.</p>
 </li>
 </ul>
 <h5 id="transitions-analysis">Transitions Analysis</h5>
-<p>A Análise de Transições se concentra em examinar as mudanças entre regiões ou segmentos de uma imagem. Este método é empregado principalmente para estudar a mineralogia de amostras.</p>
+<p>Transitions Analysis focuses on examining the changes between regions or segments of an image. This method is mainly employed to study the mineralogy of samples.</p>
 <table>
 <thead>
 <tr>
@@ -2943,12 +2970,12 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 7: Transitions Analysis no módulo Segment Inspector.</td>
+<td align="center">Figure 7: Transitions Analysis in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><em>Include Background</em>: Usa as dimensões totais da imagem de entrada para análise.</li>
+<li><em>Include Background</em>: Uses the total dimensions of the input image for analysis.</li>
 </ul>
 <h5 id="basic-petrophysics">Basic Petrophysics</h5>
 <table>
@@ -2959,51 +2986,50 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 8: Transitions Analysis no módulo Segment Inspector.</td>
+<td align="center">Figure 8: Transitions Analysis in the Segment Inspector module.</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><em>Include Background</em>: Usa as dimensões totais da imagem de entrada para análise.</li>
+<li><em>Include Background</em>: Uses the total dimensions of the input image for analysis.</li>
 </ul>
 <h4 id="output">Output</h4>
-<p>Digite um nome para ser usado como prefixo para o objeto de resultados (mapa de rótulos onde cada partição (elemento de poro) está em uma cor diferente, uma tabela com parâmetros globais e uma tabela com as diferentes métricas para cada partição).</p>
-<h4 id="propriedades-metricas">Propriedades / Métricas:</h4>
+<p>Enter a name to be used as a prefix for the results object (labelmap where each partition (pore element) is in a different color, a table with global parameters, and a table with the different metrics for each partition).</p>
+<h4 id="properties-metrics">Properties / Metrics:</h4>
 <ol>
-<li><strong>Label</strong>: identificação do rótulo da partição.</li>
-<li><strong>mean</strong>: valor médio da imagem/volume de entrada dentro da região da partição (poro/grão).</li>
-<li><strong>median</strong>: valor mediano da imagem/volume de entrada dentro da região da partição (poro/grão).</li>
-<li><strong>stddev</strong>:  Desvio padrão do valor da imagem/volume de entrada dentro da região da partição (poro/grão).</li>
-<li><strong>voxelCount</strong>: Número total de pixels/vóxels da região da partição (poro/grão).</li>
-<li><strong>area</strong>: Área total da partição (poro/grão). Unidade: mm².</li>
-<li><strong>angle</strong>: Ângulo em graus (entre 270 e 90) relacionado à linha de orientação (opcional, se nenhuma linha for selecionada, a orientação de referência é a horizontal superior).</li>
-<li><strong>max_feret</strong>: Maior eixo de Feret. Unidade: mm.</li>
-<li><strong>min_feret</strong>: Menor eixo de Feret. Unidade: mm.</li>
-<li><strong>mean_feret</strong>: Média dos eixos mínimo e máximo.</li>
-<li><strong>aspect_ratio</strong>:   min_feret / max_feret.</li>
+<li><strong>Label</strong>: partition label identification.</li>
+<li><strong>mean</strong>: mean value of the input image/volume within the partition region (pore/grain).</li>
+<li><strong>median</strong>: median value of the input image/volume within the partition region (pore/grain).</li>
+<li><strong>stddev</strong>: Standard deviation of the input image/volume value within the partition region (pore/grain).</li>
+<li><strong>voxelCount</strong>: Total number of pixels/voxels in the partition region (pore/grain).</li>
+<li><strong>area</strong>: Total area of the partition (pore/grain). Unit: mm².</li>
+<li><strong>angle</strong>: Angle in degrees (between 270 and 90) related to the orientation line (optional, if no line is selected, the reference orientation is the upper horizontal).</li>
+<li><strong>max_feret</strong>: Major Feret diameter. Unit: mm.</li>
+<li><strong>min_feret</strong>: Minor Feret diameter. Unit: mm.</li>
+<li><strong>mean_feret</strong>: Average of the minimum and maximum axes.</li>
+<li><strong>aspect_ratio</strong>: min_feret / max_feret.</li>
 <li><strong>elongation</strong>: max_feret / min_feret.</li>
-<li><strong>eccentricity</strong>:   quadrado(1 - min_feret / max_feret), relacionado à elipse equivalente (0 ≤ e &lt; 1), igual a 0 para círculos.</li>
-<li><strong>ellipse_perimeter</strong>: Perímetro da elipse equivalente (elipse equivalente com eixos dados pelos eixos mínimo e máximo de Feret). Unidade: mm.</li>
-<li><strong>ellipse_area</strong>: Área da elipse equivalente (elipse equivalente com eixos dados pelos eixos mínimo e máximo de Feret). Unidade: mm².</li>
-<li><strong>ellipse_perimeter_over_ellipse_area</strong>: Perímetro da elipse equivalente dividido por sua área.</li>
-<li><strong>perimeter</strong>: Perímetro real da partição (poro/grão). Unidade: mm.</li>
-<li><strong>perimeter_over_area</strong>: Perímetro real dividido pela área da partição (poro/grão).</li>
-<li><strong>gamma</strong>: Arredondamento de uma área calculado como 'gamma = perímetro / (2 * quadrado(PI * área))'.</li>
-<li><strong>pore_size_class</strong>:  Símbolo/código/id da classe do poro.</li>
-<li><strong>pore_size_class_label</strong>: Rótulo da classe do poro.</li>
+<li><strong>eccentricity</strong>: square(1 - min_feret / max_feret), related to the equivalent ellipse (0 ≤ e &lt; 1), equal to 0 for circles.</li>
+<li><strong>ellipse_perimeter</strong>: Perimeter of the equivalent ellipse (equivalent ellipse with axes given by the minimum and maximum Feret diameters). Unit: mm.</li>
+<li><strong>ellipse_area</strong>: Area of the equivalent ellipse (equivalent ellipse with axes given by the minimum and maximum Feret diameters). Unit: mm².</li>
+<li><strong>ellipse_perimeter_over_ellipse_area</strong>: Perimeter of the equivalent ellipse divided by its area.</li>
+<li><strong>perimeter</strong>: Actual perimeter of the partition (pore/grain). Unit: mm.</li>
+<li><strong>perimeter_over_area</strong>: Actual perimeter divided by the area of the partition (pore/grain).</li>
+<li><strong>gamma</strong>: Circularity of an area calculated as 'gamma = perimeter / (2 * square(PI * area))'.</li>
+<li><strong>pore_size_class</strong>: Pore class symbol/code/id.</li>
+<li><strong>pore_size_class_label</strong>: Pore class label.</li>
 </ol>
-<h5 id="definicao-das-classes-de-poros">Definição das classes de poros:</h5>
+<h5 id="definition-of-pore-classes">Definition of pore classes:</h5>
 <ul>
-<li><strong>Microporo</strong>:  classe = 0, max_feret menor que 0,062 mm.</li>
-<li><strong>Mesoporo muito pequeno</strong>: classe = 1, max_feret entre 0,062 e 0,125 mm.</li>
-<li><strong>Mesoporo pequeno</strong>: classe = 2, max_feret entre 0,125 e 0,25 mm.</li>
-<li><strong>Mesoporo médio</strong>: classe = 3, max_feret entre 0,25 e 0,5 mm.</li>
-<li><strong>Mesoporo grande</strong>: classe = 4, max_feret entre 0,5 e 1 mm.</li>
-<li><strong>Mesoporo muito grande</strong>: classe = 5, max_feret entre 1 e 4 mm.</li>
-<li><strong>Megaporo pequeno</strong>: classe = 6, max_feret entre 4 e 32 mm.</li>
-<li><strong>Megaporo grande</strong>: classe = 7, max_feret maior que 32 mm.</li>
+<li><strong>Micropore</strong>: class = 0, max_feret less than 0.062 mm.</li>
+<li><strong>Very small mesopore</strong>: class = 1, max_feret between 0.062 and 0.125 mm.</li>
+<li><strong>Small mesopore</strong>: class = 2, max_feret between 0.125 and 0.25 mm.</li>
+<li><strong>Medium mesopore</strong>: class = 3, max_feret between 0.25 and 0.5 mm.</li>
+<li><strong>Large mesopore</strong>: class = 4, max_feret between 0.5 and 1 mm.</li>
+<li><strong>Very large mesopore</strong>: class = 5, max_feret between 1 and 4 mm.</li>
+<li><strong>Small megapre</strong>: class = 6, max_feret between 4 and 32 mm.</li>
+<li><strong>Large megapre</strong>: class = 7, max_feret greater than 32 mm.</li>
 </ul>
-<!-- END INCLUDE -->
 
 
 
@@ -3054,7 +3080,7 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
     
     
     
-<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
 
 

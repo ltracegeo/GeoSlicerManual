@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../../assets/logo.ico" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.33" name="generator"/>
+<title>StreamlinedSegmentation - GeoSlicer Manual</title>
+<link href="../../../assets/stylesheets/main.3cba04c6.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#virtual-segmentation-flow">
+          Ir para o conteúdo
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Cabeçalho" class="md-header__inner md-grid">
+<a aria-label="GeoSlicer Manual" class="md-header__button md-logo" data-md-component="logo" href="../../../index.html" title="GeoSlicer Manual">
+<img alt="logo" src="../../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            GeoSlicer Manual
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              StreamlinedSegmentation
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Selecione o idioma" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="StreamlinedSegmentation.html" hreflang="pt">
+              Português
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="../../../Pages/en/StreamlinedSegmentation.html" hreflang="en">
+              English
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Buscar" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Buscar" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Pesquisar" class="md-search__options">
+<button aria-label="Limpar" class="md-search__icon md-icon" tabindex="-1" title="Limpar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegação" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="GeoSlicer Manual" class="md-nav__button md-logo" data-md-component="logo" href="../../../index.html" title="GeoSlicer Manual">
+<img alt="logo" src="../../../assets/logo.png"/>
+</a>
+    GeoSlicer Manual
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../index.html">
+<span class="md-ellipsis">
+    Visão Geral
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Introdução
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Introdução
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/InstallationGuide.html">
+<svg class="lucide lucide-monitor-cog-icon lucide-monitor-cog" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17v4"></path><path d="m14.305 7.53.923-.382"></path><path d="m15.228 4.852-.923-.383"></path><path d="m16.852 3.228-.383-.924"></path><path d="m16.852 8.772-.383.923"></path><path d="m19.148 3.228.383-.924"></path><path d="m19.53 9.696-.382-.924"></path><path d="m20.772 4.852.924-.383"></path><path d="m20.772 7.148.924.383"></path><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path><path d="M8 21h8"></path><circle cx="18" cy="6" r="3"></circle></svg>
+<span class="md-ellipsis">
+    Instalação
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/FirstSteps.html">
+<svg class="lucide lucide-footprints-icon lucide-footprints" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"></path><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"></path><path d="M16 17h4"></path><path d="M4 13h4"></path></svg>
+<span class="md-ellipsis">
+    Primeiros Passos
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/UserInterface/Application.html">
+<svg class="lucide lucide-app-window-icon lucide-app-window" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="M10 4v4"></path><path d="M2 8h20"></path><path d="M6 4v4"></path></svg>
+<span class="md-ellipsis">
+    Aplicação
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/UserInterface/Modules.html">
+<svg class="lucide lucide-package-icon lucide-package" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg>
+<span class="md-ellipsis">
+    Módulos
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/DataLoading.html">
+<svg class="lucide lucide-file-up-icon lucide-file-up" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
+<span class="md-ellipsis">
+    Carregando dados
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/RemoteComputing.html">
+<svg class="lucide lucide-cloud-cog-icon lucide-cloud-cog" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m10.852 19.772-.383.924"></path><path d="m13.148 14.228.383-.923"></path><path d="M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923"></path><path d="m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544"></path><path d="m14.772 15.852.923-.383"></path><path d="m14.772 18.148.923.383"></path><path d="M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"></path><path d="m9.228 15.852-.923-.383"></path><path d="m9.228 18.148-.923.383"></path></svg>
+<span class="md-ellipsis">
+    Computação Remota
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Volumes
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Volumes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Introduction.html">
+<svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
+<span class="md-ellipsis">
+    Introdução
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/MicroCTImport/Import.html">
+<svg class="lucide lucide-folder-down" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M12 10v6"></path><path d="m15 13-3 3-3-3"></path></svg>
+<span class="md-ellipsis">
+    MicroCT Import
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/MicroCTExport/Export.html">
+<svg class="lucide lucide-file-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
+<span class="md-ellipsis">
+    MicroCT Export
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Crop/Crop.html">
+<svg class="lucide lucide-crop" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M18 22V8a2 2 0 0 0-2-2H2"></path></svg>
+<span class="md-ellipsis">
+    Crop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Filter/Filter.html">
+<svg class="lucide lucide-blend" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7"></circle><circle cx="15" cy="15" r="7"></circle></svg>
+<span class="md-ellipsis">
+    Filter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Resample/Resample.html">
+<svg class="lucide lucide-minimize-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" x2="21" y1="10" y2="3"></line><line x1="3" x2="10" y1="21" y2="14"></line></svg>
+<span class="md-ellipsis">
+    Resample
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Segmentation/Segmentation.html">
+<svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
+<span class="md-ellipsis">
+    Segmentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Microtom/Microtom.html">
+<svg class="lucide lucide-cloud-cog" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="17" r="3"></circle><path d="M4.2 15.1A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"></path><path d="m15.7 18.4-.9-.3"></path><path d="m9.2 15.9-.9-.3"></path><path d="m10.6 20.7.3-.9"></path><path d="m13.1 14.2.3-.9"></path><path d="m13.6 20.7-.4-1"></path><path d="m10.8 14.3-.4-1"></path><path d="m8.3 18.6 1-.4"></path><path d="m14.7 15.8 1-.4"></path></svg>
+<span class="md-ellipsis">
+    Microtom
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Microporosity/Microporosity.html">
+<svg class="lucide lucide-microscope" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18h8"></path><path d="M3 22h18"></path><path d="M14 22a7 7 0 1 0 0-14h-1"></path><path d="M9 14h2"></path><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path></svg>
+<span class="md-ellipsis">
+    Microporosity
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/ModellingFlow/StreamlinedModelling.html">
+<svg class="lucide lucide-list-tree" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12h-8"></path><path d="M21 6H8"></path><path d="M21 18h-8"></path><path d="M3 6v4c0 1.1.9 2 2 2h3"></path><path d="M3 10v6c0 1.1.9 2 2 2h3"></path></svg>
+<span class="md-ellipsis">
+    Modelling Flow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Register/Register.html">
+<svg class="lucide lucide-rotate-3d" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"></path><path d="m15.194 13.707 3.814 1.86-1.86 3.814"></path><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"></path></svg>
+<span class="md-ellipsis">
+    Register
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/PNM/PNM.html">
+<svg class="lucide lucide-chart-network" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13.11 7.664 1.78 2.672"></path><path d="m14.162 12.788-3.324 1.424"></path><path d="m20 4-6.06 1.515"></path><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><circle cx="12" cy="6" r="2"></circle><circle cx="16" cy="12" r="2"></circle><circle cx="9" cy="15" r="2"></circle></svg>
+<span class="md-ellipsis">
+    Pore Network
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Multiscale/Multiscale.html">
+<svg class="lucide lucide-scaling" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M14 15H9v-5"></path><path d="M16 3h5v5"></path><path d="M21 3 9 15"></path></svg>
+<span class="md-ellipsis">
+    Multiscale
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/BigImage/BigImage.html">
+<svg class="lucide lucide-blocks" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="7" rx="1" width="7" x="14" y="3"></rect><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"></path></svg>
+<span class="md-ellipsis">
+    Big Image
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/MoreTools/MoreTools.html">
+<svg class="lucide lucide-table" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18"></path><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path></svg>
+<span class="md-ellipsis">
+    More Tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Volumes/Import/Import.html">
+<svg class="lucide lucide-database" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+<span class="md-ellipsis">
+    Import
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Thin Section
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Thin Section
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Introduction.html">
+<svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
+<span class="md-ellipsis">
+    Introdução
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Loader/ThinSectionLoader.html">
+<svg class="lucide lucide-folder-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M12 10v6"></path><path d="m9 13 3-3 3 3"></path></svg>
+<span class="md-ellipsis">
+    Thin Section Loader
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Loader/QemscanLoader.html">
+<svg class="lucide lucide-image-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21"></path><path d="m14 19.5 3-3 3 3"></path><path d="M17 22v-5.5"></path><circle cx="9" cy="9" r="2"></circle></svg>
+<span class="md-ellipsis">
+    QEMSCAN Loader
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Crop/Crop.html">
+<svg class="lucide lucide-crop" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M18 22V8a2 2 0 0 0-2-2H2"></path></svg>
+<span class="md-ellipsis">
+    Crop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Filters/ImageTools.html">
+<svg class="lucide lucide-sparkles" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+<span class="md-ellipsis">
+    Filters
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Register/Register.html">
+<svg class="lucide lucide-dices" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="12" rx="2" ry="2" width="12" x="2" y="10"></rect><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path><path d="M6 18h.01"></path><path d="M10 14h.01"></path><path d="M15 6h.01"></path><path d="M18 9h.01"></path></svg>
+<span class="md-ellipsis">
+    Register
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Segmentation/Segmentation.html">
+<svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
+<span class="md-ellipsis">
+    Segmentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Flows/Flows.html">
+<svg class="lucide lucide-list-tree" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12h-8"></path><path d="M21 6H8"></path><path d="M21 18h-8"></path><path d="M3 6v4c0 1.1.9 2 2 2h3"></path><path d="M3 10v6c0 1.1.9 2 2 2h3"></path></svg>
+<span class="md-ellipsis">
+    Thin Section Flows
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/MultipleImageAnalysis/MultipleImageAnalysis.html">
+<svg class="lucide lucide-images" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 22H4a2 2 0 0 1-2-2V6"></path><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"></path><circle cx="12" cy="8" r="2"></circle><rect height="16" rx="2" width="16" x="6" y="2"></rect></svg>
+<span class="md-ellipsis">
+    Multi-Image Analysis
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Export/Export.html">
+<svg class="lucide lucide-download" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+<span class="md-ellipsis">
+    Export
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/MoreTools/MoreTools.html">
+<svg class="lucide lucide-table" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18"></path><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path></svg>
+<span class="md-ellipsis">
+    More Tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThinSection/Import/Import.html">
+<svg class="lucide lucide-database" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+<span class="md-ellipsis">
+    Import
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Well Logs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Well Logs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Introduction.html">
+<svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
+<span class="md-ellipsis">
+    Introdução
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Import/Import.html">
+<svg class="lucide lucide-file-down" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg>
+<span class="md-ellipsis">
+    Import
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Unwrap/Unwrap.html">
+<svg class="lucide lucide-file-down" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg>
+<span class="md-ellipsis">
+    Unwrap
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Export/Export.html">
+<svg class="lucide lucide-file-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
+<span class="md-ellipsis">
+    Export
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Crop.html">
+<svg class="lucide lucide-crop" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M18 22V8a2 2 0 0 0-2-2H2"></path></svg>
+<span class="md-ellipsis">
+    Crop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Processing/Processing.html">
+<svg class="lucide lucide-audio-waveform" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2"></path></svg>
+<span class="md-ellipsis">
+    Processing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/UnwrapRegistration/UnwrapRegistration.html">
+<svg class="lucide lucide-circle-gauge" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.6 2.7a10 10 0 1 0 5.7 5.7"></path><circle cx="12" cy="12" r="2"></circle><path d="M13.4 10.6 19 5"></path></svg>
+<span class="md-ellipsis">
+    Unwrap Registration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/PermeabilityModeling/PermeabilityModeling.html">
+<svg class="lucide lucide-dam" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 11.31c1.17.56 1.54 1.69 3.5 1.69 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M11.75 18c.35.5 1.45 1 2.75 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><path d="M2 6h4"></path><path d="M7 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1L10 4a1 1 0 0 0-1-1z"></path></svg>
+<span class="md-ellipsis">
+    Permeability Modeling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Inpainting/Inpainting.html">
+<svg class="lucide lucide-brush" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg>
+<span class="md-ellipsis">
+    Inpainting
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/Segmentation/Segmentation.html">
+<svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
+<span class="md-ellipsis">
+    Segmentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ImageLog/MoreTools/MoreTools.html">
+<svg class="lucide lucide-table" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18"></path><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path></svg>
+<span class="md-ellipsis">
+    More Tools
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Core
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/Introduction.html">
+<svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
+<span class="md-ellipsis">
+    Introdução
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/Multicore.html">
+<svg class="lucide lucide-cylinder" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path></svg>
+<span class="md-ellipsis">
+    Multicore
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/CorePhotographLoader.html">
+<svg class="lucide lucide-file-down" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg>
+<span class="md-ellipsis">
+    Core Photograph Loader
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/Crop.html">
+<svg class="lucide lucide-crop" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M18 22V8a2 2 0 0 0-2-2H2"></path></svg>
+<span class="md-ellipsis">
+    Crop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/MulticoreTransforms.html">
+<svg class="lucide lucide-download" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"></path><path d="m15.194 13.707 3.814 1.86-1.86 3.814"></path><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"></path></svg>
+<span class="md-ellipsis">
+    Multicore Transforms
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/Segmentation/Segmentation.html">
+<svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
+<span class="md-ellipsis">
+    Segmentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/CoreInpaint.html">
+<svg class="lucide lucide-brush" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg>
+<span class="md-ellipsis">
+    Core Inpaint
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/MulticoreExport.html">
+<svg class="lucide lucide-file-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
+<span class="md-ellipsis">
+    Export
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/MulticoreExport.html">
+<svg class="lucide lucide-file-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
+<span class="md-ellipsis">
+    Export
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/Flows.html">
+<svg class="lucide lucide-square-stack-icon lucide-square-stack" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><rect height="8" rx="2" width="8" x="14" y="14"></rect></svg>
+<span class="md-ellipsis">
+    Fluxos
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Multiscale
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Multiscale
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/Introduction.html">
+<svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
+<span class="md-ellipsis">
+    Introdução
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/GeologIntegration/GeologEnv.html">
+<svg version="1.0" viewbox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon_geolog</title>
+<defs>
+<radialgradient cx="48.229" cy="51.9" gradienttransform="matrix(1.1635 -.96151 .89064 1.0777 -52.325 41.315)" gradientunits="userSpaceOnUse" id="f" r="47.77">
+<stop offset="0" stop-opacity="0"></stop>
+<stop offset=".466" stop-color="#fff" stop-opacity="0"></stop>
+<stop offset=".7709" stop-color="#fff" stop-opacity=".4314"></stop>
+<stop offset="1" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="40.373" cy="48.261" gradienttransform="matrix(.7906 1.0467 -1.0956 .82753 63.654 -40.608)" gradientunits="userSpaceOnUse" id="e" r="47.78">
+<stop offset="0" stop-opacity="0"></stop>
+<stop offset=".5909" stop-opacity="0"></stop>
+<stop offset=".8913" stop-opacity=".502"></stop>
+<stop offset="1" stop-color="#00a14b" stop-opacity="0"></stop>
+</radialgradient>
+<lineargradient gradienttransform="translate(3.9976 .9225)" gradientunits="userSpaceOnUse" id="d" x1="73.798" x2="3.6828" y1="88.996" y2="9.4646">
+<stop offset="0"></stop>
+<stop offset="1" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="m95.77 48.001c1.1762 30.978-32.668 55.877-61.887 45.636-29.922-8.0367-43.761-47.712-25.309-72.609 16.521-26.222 58.511-27.708 76.845-2.7213 6.668 8.3597 10.376 19.002 10.35 29.694z" fill="#004b8d"></path>
+<path d="M63.7122 61.988c-.5685.0801-1.1632-.8054-1.3284-1.9779-.1652-1.1724.1618-2.1877.7302-2.2679.5685-.08 1.1632.8055 1.3284 1.978.1651 1.1724-.1618 2.1877-.7302 2.2678zm-.9052-4.9723c-.734.0126-1.3502-1.207-1.3763-2.7242-.0261-1.5171.5478-2.7573 1.2818-2.77.734-.0125 1.3502 1.2071 1.3763 2.7242.0261 1.5172-.5478 2.7573-1.2818 2.77zm-.282-6.0183c-.931-.0996-1.5269-1.7472-1.3262-3.6814.2037-1.9312 1.1285-3.4233 2.0624-3.3237.937.098 1.5299 1.7471 1.3292 3.6798-.2067 1.9342-1.1255 3.4233-2.0654 3.3253zm.8995-7.9978c-1.1465-.2642-1.6334-2.399-1.0876-4.7685.5459-2.3694 1.9178-4.0761 3.0644-3.812 1.1465.2642 1.6335 2.3991 1.0876 4.7685-.5458 2.3695-1.9178 4.0762-3.0644 3.812zm2.2997-9.4635c-1.418-.516-1.7034-3.309-.6373-6.2383 1.0661-2.9292 3.0799-4.8855 4.4979-4.3694 1.418.516 1.7034 3.309.6373 6.2383-1.0661 2.9294-3.08 4.8857-4.498 4.3694zm4.1583-11.5933c-1.5175-.8764-1.2785-4.1308.5337-7.269 1.8122-3.138 4.5114-4.9717 6.029-4.0955 1.5176.8763 1.2787 4.1308-.5336 7.269-1.8123 3.1382-4.5116 4.9718-6.0291 4.0955zm-31.257 31.4206c.1528-.5525 1.202-.7445 2.3432-.4287s1.9424 1.0197 1.7895 1.5722c-.1528.5526-1.202.7445-2.3432.4287s-1.9423-1.0197-1.7894-1.5722zm4.612 1.5984c.3227-.6593 1.6892-.653 3.052.014 1.3629.667 2.2061 1.7421 1.8835 2.4015-.3227.6594-1.689.6532-3.052-.0138s-2.2062-1.7423-1.8835-2.4017zm5.5876 2.6434c.5532-.7609 2.2767-.4506 3.8497.693 1.5729 1.1434 2.3996 2.6872 1.8465 3.4481-.5532.7609-2.2767.4507-3.8497-.6929-1.5729-1.1435-2.3996-2.6873-1.8465-3.4482zm6.4803 4.7768c.8021-.8608 2.8943-.2146 4.673 1.4432 1.7786 1.6578 2.5701 3.6994 1.7679 4.56-.8022.8607-2.8943.2145-4.6729-1.4433-1.7786-1.6577-2.5702-3.6993-1.768-4.56zm7.0327 6.719c1.1561-.9697 3.7173.18 5.7207 2.568s2.6903 5.1101 1.5343 6.08c-1.1561.9698-3.7173-.18-5.7207-2.568s-2.6903-5.11-1.5343-6.08zm7.9668 9.4046c1.5184-.8762 4.2176.9578 6.0288 4.0964.5273.9138.9212 1.817 1.1772 2.689l-2.2916 1.6994-2.2702 1.5166c-.7539-.7154-1.4872-1.6455-2.1141-2.7319-1.8112-3.1386-2.0485-6.3932-.5301-7.2695zM58.649 35.7621c.353.4511-.1207 1.4077-1.0486 2.1364-.9309.7272-1.978.9535-2.331.5024-.347-.451.1207-1.4077 1.0546-2.1364.9324-.7287 1.972-.9535 2.325-.5024zm-3.859 3.2735c.378.6293-.3698 1.7729-1.6705 2.5543-1.3007.7815-2.6616.9048-3.0396.2755-.378-.6292.3698-1.7728 1.6705-2.5543 1.3007-.7814 2.6616-.9048 3.0396-.2755zm-5.0645 3.252c.3826.8595-.7476 2.1974-2.5244 2.9883-1.7768.791-3.5274.7355-3.91-.124-.3826-.8594.7476-2.1974 2.5245-2.9884 1.7768-.791 3.5273-.7354 3.9099.124zm-7.3842 3.2248c.3442 1.126-1.2618 2.615-3.587 3.3256-2.3252.7107-4.489.374-4.8332-.7519-.344-1.126 1.2619-2.6148 3.587-3.3255 2.3251-.7107 4.489-.374 4.8332.7518zm-9.3384 2.7327c.262 1.4861-2.0142 3.1295-5.084 3.6706-3.0698.5412-5.7707-.2249-6.0327-1.711-.262-1.486 2.0142-3.1294 5.084-3.6706 3.0698-.5411 5.7708.225 6.0327 1.711zm-12.1206 2.1954c0 1.7532-2.9384 3.1744-6.563 3.1744-3.6246 0-6.563-1.4212-6.563-3.1744 0-1.7531 2.9384-3.1744 6.563-3.1744 3.6246 0 6.563 1.4213 6.563 3.1744z" fill="url(#d)"></path>
+<g fill="#fff">
+<g transform="translate(-24.419 -24.42) scale(1.5087)">
+<ellipse cx="22.264" cy="47.958" rx="4.35" ry="2.104"></ellipse>
+<ellipse cx="30.964" cy="47.153" rx="3.741" ry="1.811" transform="rotate(-10.003 30.959 47.155)"></ellipse>
+<ellipse cx="38.049" cy="45.544" rx="2.918" ry="1.413" transform="rotate(-16.996 38.054 45.549)"></ellipse>
+<ellipse cx="43.597" cy="43.503" rx="2.334" ry="1.129" transform="rotate(-23.997 43.594 43.501)"></ellipse>
+<ellipse cx="47.527" cy="41.337" rx="1.821" ry=".881" transform="rotate(-30.996 47.526 41.336)"></ellipse>
+<path d="M51.646 38.229c.234.299-.08.933-.695 1.416-.617.482-1.311.632-1.545.333-.23-.299.08-.933.699-1.416.618-.483 1.307-.632 1.541-.333z"></path>
+</g>
+<g transform="translate(-24.419 -24.42) scale(1.5087)">
+<ellipse cx="61.547" cy="70.324" rx="4.349" ry="2.104" transform="rotate(240.01 61.548 70.326)"></ellipse>
+<ellipse cx="56.5" cy="63.191" rx="3.741" ry="1.811" transform="rotate(230.01 56.498 63.193)"></ellipse>
+<ellipse cx="51.564" cy="57.86" rx="2.918" ry="1.412" transform="rotate(222.99 51.566 57.862)"></ellipse>
+<ellipse cx="47.022" cy="54.076" rx="2.334" ry="1.129" transform="rotate(216.02 47.024 54.078)"></ellipse>
+<ellipse cx="43.065" cy="51.755" rx="1.821" ry=".881" transform="rotate(206.08 43.066 51.755)"></ellipse>
+<ellipse cx="39.747" cy="50.274" rx="1.421" ry=".688" transform="rotate(195.46 39.746 50.274)"></ellipse>
+</g>
+<g transform="translate(-24.419 -24.42) scale(1.5087)">
+<ellipse cx="61.269" cy="25.302" rx="4.349" ry="2.103" transform="rotate(120.01 61.266 25.301)"></ellipse>
+<ellipse cx="57.615" cy="33.239" rx="3.741" ry="1.811" transform="rotate(110 57.615 33.238)"></ellipse>
+<ellipse cx="55.466" cy="40.179" rx="2.918" ry="1.412" transform="rotate(102.97 55.465 40.18)"></ellipse>
+<path d="M54.215 48.327c-.617-.066-1.012-1.158-.879-2.44.135-1.28.748-2.269 1.367-2.203.621.065 1.014 1.158.881 2.439-.137 1.282-.746 2.269-1.369 2.204z"></path>
+<ellipse cx="54.371" cy="50.491" rx="1.821" ry=".881" transform="rotate(89.014 54.369 50.49)"></ellipse>
+<ellipse cx="54.806" cy="54.208" rx="1.421" ry=".689" transform="rotate(81.981 54.807 54.205)"></ellipse>
+</g>
+</g>
+<path d="m95.77 48.001c1.1762 30.978-32.668 55.877-61.887 45.636-29.922-8.0367-43.761-47.712-25.309-72.609 16.521-26.222 58.511-27.708 76.845-2.7213 6.668 8.3597 10.376 19.002 10.35 29.694z" fill="url(#e)"></path>
+<path d="m95.77 48.001c1.1762 30.978-32.668 55.877-61.887 45.636-29.922-8.0367-43.761-47.712-25.309-72.609 16.521-26.222 58.511-27.708 76.845-2.7213 6.668 8.3597 10.376 19.002 10.35 29.694z" fill="url(#f)"></path>
+</svg>
+<span class="md-ellipsis">
+    Geolog Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/ImportTools/ImportTools.html">
+<svg class="lucide lucide-download" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+<span class="md-ellipsis">
+    Import Tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/ExportTools/ExportTools.html">
+<svg class="lucide lucide-upload" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
+<span class="md-ellipsis">
+    Export Tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/ImageLogPreProcessing/ImageLogPreProcessing.html">
+<svg class="lucide lucide-columns-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>
+<span class="md-ellipsis">
+    Image Log Pre-processing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/VolumesPreProcessing/VolumesPreProcessing.html">
+<svg class="lucide lucide-box" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+<span class="md-ellipsis">
+    Volumes Pre-processing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/Microtom/Microtom.html">
+<svg class="lucide lucide-cloud-cog" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="17" r="3"></circle><path d="M4.2 15.1A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"></path><path d="m15.7 18.4-.9-.3"></path><path d="m9.2 15.9-.9-.3"></path><path d="m10.6 20.7.3-.9"></path><path d="m13.1 14.2.3-.9"></path><path d="m13.6 20.7-.4-1"></path><path d="m10.8 14.3-.4-1"></path><path d="m8.3 18.6 1-.4"></path><path d="m14.7 15.8 1-.4"></path></svg>
+<span class="md-ellipsis">
+    Microtom
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/MultiscaleImageGeneration/Multiscale.html">
+<svg class="lucide lucide-scaling" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M14 15H9v-5"></path><path d="M16 3h5v5"></path><path d="M21 3 9 15"></path></svg>
+<span class="md-ellipsis">
+    Multiscale Image Generation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/MultiscalePostProcessing/MultiscalePostProcessing.html">
+<svg class="lucide lucide-file-cog" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m3.2 12.9-.9-.4"></path><path d="m3.2 15.1-.9.4"></path><path d="M4.677 21.5a2 2 0 0 0 1.313.5H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2.5"></path><path d="m4.9 11.2-.4-.9"></path><path d="m4.9 16.8-.4.9"></path><path d="m7.5 10.3-.4.9"></path><path d="m7.5 17.7-.4-.9"></path><path d="m9.7 12.5-.9.4"></path><path d="m9.7 15.5-.9-.4"></path><circle cx="6" cy="14" r="3"></circle></svg>
+<span class="md-ellipsis">
+    Multiscale Post-Processing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/PNM/PNM.html">
+<svg class="lucide lucide-chart-network" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13.11 7.664 1.78 2.672"></path><path d="m14.162 12.788-3.324 1.424"></path><path d="m20 4-6.06 1.515"></path><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><circle cx="12" cy="6" r="2"></circle><circle cx="16" cy="12" r="2"></circle><circle cx="9" cy="15" r="2"></circle></svg>
+<span class="md-ellipsis">
+    Pore Network
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/Segmentation/VolumeSegmentation.html">
+<svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
+<span class="md-ellipsis">
+    Volume Segmentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/Segmentation/ImageLogSegmentation.html">
+<svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
+<span class="md-ellipsis">
+    Image Log Segmentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/MoreTools/MoreTools.html">
+<svg class="lucide lucide-table" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18"></path><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path></svg>
+<span class="md-ellipsis">
+    More Tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Multiscale/Flows/Flows.html">
+<svg class="lucide lucide-square-stack-icon lucide-square-stack" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><rect height="8" rx="2" width="8" x="14" y="14"></rect></svg>
+<span class="md-ellipsis">
+    Flows
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Desenvolvimento
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Desenvolvimento
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Development/BuildingGeoSlicer.html">
+<svg class="lucide lucide-hammer-icon lucide-hammer" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
+<span class="md-ellipsis">
+    Compilando o GeoSlicer
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Development/HowToContribute.html">
+<svg class="lucide lucide-hammer-icon lucide-hammer" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
+<span class="md-ellipsis">
+    Como Contribuir
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Development/Documentation.html">
+<svg class="lucide lucide-hammer-icon lucide-hammer" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
+<span class="md-ellipsis">
+    Documentação
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>StreamlinedSegmentation</h1>
+<h2 id="virtual-segmentation-flow">Virtual Segmentation Flow</h2>
+<p>Flow for obtaining a porosity map from a scalar volume.</p>
+<pre class="mermaid"><code>%%{
+  init: {
+    'themeVariables': {
+      'lineColor': '#c4c4c4'
+    }
+  }
+}%%
+flowchart LR
+    Iniciar --&gt; Importar
+    Importar --&gt; Segmentacao
+    Segmentacao --&gt; Modelagem
+    Modelagem --&gt; Resultados
+
+    click Segmentacao "../../Segmentation/segmentation.html" "teste de imagem"
+    style Iniciar fill:#808080,stroke:#333,stroke-width:1px,color:#fff;
+    style Importar fill:#6d8873,stroke:#333,stroke-width:1px,color:#fff;
+    style Segmentacao fill:#5a9b87,stroke:#333,stroke-width:1px,color:#fff;
+    style Modelagem fill:#45ae97,stroke:#333,stroke-width:1px,color:#fff;
+    style Resultados fill:#2ea67e,stroke:#333,stroke-width:1px,color:#fff;
+
+    Segmentacao["Segmentação"]
+</code></pre>
+<pre class="mermaid"><code>graph LR
+    hello --&gt; world
+    world --&gt; again
+    again --&gt; hello
+</code></pre>
+<ol>
+<li>
+<p>Start Geoslicer in the <strong>Volumes</strong> environment from the application interface.</p>
+</li>
+<li>
+<p>Select the input volume by clicking on "Escolher pasta" or "Escolher arquivo" and choose the desired import data from the available options. We suggest testing the default parameters first.</p>
+</li>
+<li>
+<p>Select the input volume by clicking on "Input:" Adjust the parameters for different segmentation effects, such as "Múltiplos Limiares," "Remoção de Fronteira," and "Expandir Segmentos." Adjust the settings to achieve the desired segmentation results, using interface feedback and visualization tools.</p>
+</li>
+<li>
+<p>Review and refine the segmented data. Adjust segmentation boundaries, merge or split segments, and apply other modifications to enhance the porosity model using the provided tools.</p>
+</li>
+<li>
+<p>Save the porosity map or export the volume with the parameter tables.</p>
+</li>
+</ol>
+<pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'default','themeVariables': {
+            'git0': '#808080',
+            'git1': '#6d8873',
+            'git2': '#5a9b87',
+            'git3': '#45ae97',
+            'git4': '#2ea67e',
+            'git5': '#ffff00',
+            'git6': '#ff00ff',
+            'git7': '#00ffff',
+            'gitBranchLabel0': '#ffffff',
+            'gitBranchLabel1': '#ffffff',
+            'gitBranchLabel2': '#ffffff',
+            'gitBranchLabel3': '#ffffff',
+            'gitBranchLabel4': '#ffffff',
+            'gitBranchLabel5': '#ffffff',
+            'gitBranchLabel6': '#ffffff',
+            'gitBranchLabel7': '#ffffff',
+            'gitBranchLabel8': '#ffffff',
+            'gitBranchLabel9': '#ffffff',
+            'commitLabelColor': '#afafaf',
+              'commitLabelBackground': '#0000',
+              'commitLabelFontSize': '13px'
+       }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Inicio'}} }%%
+      gitGraph LR:
+        commit id:"Inicio"
+        commit id:"Volumes  ."
+        branch "Importar"
+        commit id:"Aba de Dados"
+        commit id:"Aba de Importação"
+        commit id:"Selecionar Arquivo"
+        commit id:"Parâmetros"
+        commit id:"Carregar  ."
+        branch "Segmentação"
+        commit id:"Aba de Segmentação"
+        commit id:"Adicionar novo nó de segmentação"
+        commit id:"Criar pelo menos 4 segmentos"
+        commit id:"Adicionar ROI  ."
+        branch Modelagem
+        commit id:"Aba de Modelagem"
+        commit id:"Segmentação"
+        commit id:"Selecionar volume"
+        commit id:"Selecionar segmentação"
+        commit id:"Aplicar  ."
+        branch Resultados
+        commit id:"Gráficos"
+        commit id:"Imagens"
+        commit id:"Tabelas"
+        commit id:"Relatórios"
+</code></pre>
+<h4 id="start">Start</h4>
+<p>Start Geoslicer in the MicroCT environment from the application interface.</p>
+<h4 id="importtodo">Import(TODO)</h4>
+<p>Select the input volume by clicking on "Escolher pasta" or "Escolher arquivo" and choose the desired import data from the available options. We suggest testing the default parameters first.</p>
+<h4 id="segmentation">Segmentation</h4>
+<p>Select the input volume by clicking on "Input:" Adjust the parameters for different segmentation effects, such as:</p>
+<ol>
+<li>Multiple Thresholds(TODO)</li>
+<li>Boundary Removal(TODO)</li>
+<li>Expand Segments(TODO)</li>
+</ol>
+<p>Adjust the settings to obtain the desired segmentation results, using interface feedback and visualization tools.</p>
+<h4 id="modelingtodo">Modeling(TODO)</h4>
+<p>Review and refine the segmented data. Adjust segmentation boundaries, merge or split segments, and apply other modifications to enhance the segmentation model using the provided tools.(TODO)</p>
+<h4 id="resultstodo">Results(TODO)</h4>
+<p>Save the project or export the segmented volume. The results can be displayed as:</p>
+<ol>
+<li>Image(Screenshot)(TODO)</li>
+<li>Graphs(Charts)(TODO)</li>
+<li>Served via Reports (Streamlit)(TODO)</li>
+</ol>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+window.mermaidConfig = {default: {
+    startOnLoad: false
+}};</script></body>
+</html>

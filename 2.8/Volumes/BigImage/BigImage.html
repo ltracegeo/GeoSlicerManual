@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html class="no-js" lang="pt">
+<html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
@@ -23,8 +23,8 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#carregamento">
-          Pular para conteúdo
+<a class="md-skip" href="#loading">
+          Skip to content
         </a>
 </div>
 <div data-md-component="announce">
@@ -32,7 +32,7 @@
 <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
-<nav aria-label="Cabeçalho" class="md-header__inner md-grid">
+<nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="GeoSlicer Manual" class="md-header__button md-logo" data-md-component="logo" href="../../index.html" title="GeoSlicer Manual">
 <img alt="logo" src="../../assets/logo.png"/>
 </a>
@@ -66,6 +66,27 @@
 </label>
 </form>
 <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Select language" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="../../pt/Volumes/BigImage/BigImage.html" hreflang="pt">
+              Português
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="BigImage.html" hreflang="en">
+              English
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
@@ -73,13 +94,13 @@
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="Buscar" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Buscar" required="" spellcheck="false" type="text"/>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </label>
-<nav aria-label="Pesquisar" class="md-search__options">
-<button aria-label="Limpar" class="md-search__icon md-icon" tabindex="-1" title="Limpar" type="reset">
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
 </button>
 </nav>
@@ -88,7 +109,7 @@
 <div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
-            Inicializando busca
+            Initializing search
           </div>
 <ol class="md-search-result__list" role="presentation"></ol>
 </div>
@@ -104,7 +125,7 @@
 <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="Navegação" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="GeoSlicer Manual" class="md-nav__button md-logo" data-md-component="logo" href="../../index.html" title="GeoSlicer Manual">
 <img alt="logo" src="../../assets/logo.png"/>
@@ -115,7 +136,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../index.html">
 <span class="md-ellipsis">
-    Visão Geral
+    Overview
   </span>
 </a>
 </li>
@@ -123,21 +144,21 @@
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
-            Introdução
+            Introduction
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../GettingStarted/InstallationGuide.html">
 <svg class="lucide lucide-monitor-cog-icon lucide-monitor-cog" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17v4"></path><path d="m14.305 7.53.923-.382"></path><path d="m15.228 4.852-.923-.383"></path><path d="m16.852 3.228-.383-.924"></path><path d="m16.852 8.772-.383.923"></path><path d="m19.148 3.228.383-.924"></path><path d="m19.53 9.696-.382-.924"></path><path d="m20.772 4.852.924-.383"></path><path d="m20.772 7.148.924.383"></path><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path><path d="M8 21h8"></path><circle cx="18" cy="6" r="3"></circle></svg>
 <span class="md-ellipsis">
-    Instalação
+    Installation
   </span>
 </a>
 </li>
@@ -145,7 +166,7 @@
 <a class="md-nav__link" href="../../GettingStarted/FirstSteps.html">
 <svg class="lucide lucide-footprints-icon lucide-footprints" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"></path><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"></path><path d="M16 17h4"></path><path d="M4 13h4"></path></svg>
 <span class="md-ellipsis">
-    Primeiros Passos
+    First Steps
   </span>
 </a>
 </li>
@@ -153,7 +174,7 @@
 <a class="md-nav__link" href="../../GettingStarted/UserInterface/Application.html">
 <svg class="lucide lucide-app-window-icon lucide-app-window" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="M10 4v4"></path><path d="M2 8h20"></path><path d="M6 4v4"></path></svg>
 <span class="md-ellipsis">
-    Aplicação
+    Application
   </span>
 </a>
 </li>
@@ -161,7 +182,7 @@
 <a class="md-nav__link" href="../../GettingStarted/UserInterface/Modules.html">
 <svg class="lucide lucide-package-icon lucide-package" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg>
 <span class="md-ellipsis">
-    Módulos
+    Modules
   </span>
 </a>
 </li>
@@ -169,7 +190,7 @@
 <a class="md-nav__link" href="../../GettingStarted/DataLoading.html">
 <svg class="lucide lucide-file-up-icon lucide-file-up" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
 <span class="md-ellipsis">
-    Carregando dados
+    Loading Data
   </span>
 </a>
 </li>
@@ -202,7 +223,7 @@
 <a class="md-nav__link" href="../Introduction.html">
 <svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
 <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
 </a>
 </li>
@@ -210,7 +231,7 @@
 <a class="md-nav__link" href="../MicroCTImport/Import.html">
 <svg class="lucide lucide-folder-down" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M12 10v6"></path><path d="m15 13-3 3-3-3"></path></svg>
 <span class="md-ellipsis">
-    Carregamento
+    MicroCT Import
   </span>
 </a>
 </li>
@@ -218,7 +239,7 @@
 <a class="md-nav__link" href="../MicroCTExport/Export.html">
 <svg class="lucide lucide-file-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
 <span class="md-ellipsis">
-    Export
+    MicroCT Export
   </span>
 </a>
 </li>
@@ -234,7 +255,7 @@
 <a class="md-nav__link" href="../Filter/Filter.html">
 <svg class="lucide lucide-blend" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7"></circle><circle cx="15" cy="15" r="7"></circle></svg>
 <span class="md-ellipsis">
-    Filtros
+    Filter
   </span>
 </a>
 </li>
@@ -250,7 +271,7 @@
 <a class="md-nav__link" href="../Segmentation/Segmentation.html">
 <svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
 <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
 </a>
 </li>
@@ -266,7 +287,7 @@
 <a class="md-nav__link" href="../Microporosity/Microporosity.html">
 <svg class="lucide lucide-microscope" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18h8"></path><path d="M3 22h18"></path><path d="M14 22a7 7 0 1 0 0-14h-1"></path><path d="M9 14h2"></path><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path></svg>
 <span class="md-ellipsis">
-    Microporosidade
+    Microporosity
   </span>
 </a>
 </li>
@@ -282,7 +303,7 @@
 <a class="md-nav__link" href="../Register/Register.html">
 <svg class="lucide lucide-rotate-3d" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"></path><path d="m15.194 13.707 3.814 1.86-1.86 3.814"></path><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"></path></svg>
 <span class="md-ellipsis">
-    Registro
+    Register
   </span>
 </a>
 </li>
@@ -290,7 +311,7 @@
 <a class="md-nav__link" href="../PNM/PNM.html">
 <svg class="lucide lucide-chart-network" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13.11 7.664 1.78 2.672"></path><path d="m14.162 12.788-3.324 1.424"></path><path d="m20 4-6.06 1.515"></path><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><circle cx="12" cy="6" r="2"></circle><circle cx="16" cy="12" r="2"></circle><circle cx="9" cy="15" r="2"></circle></svg>
 <span class="md-ellipsis">
-    Rede de Poros
+    Pore Network
   </span>
 </a>
 </li>
@@ -317,16 +338,16 @@
     Big Image
   </span>
 </a>
-<nav aria-label="Índice" class="md-nav md-nav--secondary">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
-      Índice
+      Table of contents
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#carregamento">
+<a class="md-nav__link" href="#loading">
 <span class="md-ellipsis">
-      Carregamento
+      Loading
     </span>
 </a>
 </li>
@@ -405,7 +426,7 @@
 <a class="md-nav__link" href="../../ThinSection/Introduction.html">
 <svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
 <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
 </a>
 </li>
@@ -421,7 +442,7 @@
 <a class="md-nav__link" href="../../ThinSection/Loader/QemscanLoader.html">
 <svg class="lucide lucide-image-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21"></path><path d="m14 19.5 3-3 3 3"></path><path d="M17 22v-5.5"></path><circle cx="9" cy="9" r="2"></circle></svg>
 <span class="md-ellipsis">
-    Qemscan Loader
+    QEMSCAN Loader
   </span>
 </a>
 </li>
@@ -429,7 +450,7 @@
 <a class="md-nav__link" href="../../ThinSection/Crop/Crop.html">
 <svg class="lucide lucide-crop" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M18 22V8a2 2 0 0 0-2-2H2"></path></svg>
 <span class="md-ellipsis">
-    Cortes
+    Crop
   </span>
 </a>
 </li>
@@ -437,7 +458,7 @@
 <a class="md-nav__link" href="../../ThinSection/Filters/ImageTools.html">
 <svg class="lucide lucide-sparkles" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
 <span class="md-ellipsis">
-    Filtros
+    Filters
   </span>
 </a>
 </li>
@@ -445,7 +466,7 @@
 <a class="md-nav__link" href="../../ThinSection/Register/Register.html">
 <svg class="lucide lucide-dices" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="12" rx="2" ry="2" width="12" x="2" y="10"></rect><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path><path d="M6 18h.01"></path><path d="M10 14h.01"></path><path d="M15 6h.01"></path><path d="M18 9h.01"></path></svg>
 <span class="md-ellipsis">
-    Registro
+    Register
   </span>
 </a>
 </li>
@@ -453,7 +474,7 @@
 <a class="md-nav__link" href="../../ThinSection/Segmentation/Segmentation.html">
 <svg class="lucide lucide-layers-3" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"></path></svg>
 <span class="md-ellipsis">
-    Segmentação
+    Segmentation
   </span>
 </a>
 </li>
@@ -518,7 +539,7 @@
 <a class="md-nav__link" href="../../ImageLog/Introduction.html">
 <svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
 <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
 </a>
 </li>
@@ -655,7 +676,7 @@
 <a class="md-nav__link" href="../../Core/MulticoreTransforms.html">
 <svg class="lucide lucide-download" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"></path><path d="m15.194 13.707 3.814 1.86-1.86 3.814"></path><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"></path></svg>
 <span class="md-ellipsis">
-    Transforms
+    Multicore Transforms
   </span>
 </a>
 </li>
@@ -672,6 +693,14 @@
 <svg class="lucide lucide-brush" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg>
 <span class="md-ellipsis">
     Core Inpaint
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Core/MulticoreExport.html">
+<svg class="lucide lucide-file-up" fill="none" height="24" stroke="#e1e1e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 12v6"></path><path d="m15 15-3-3-3 3"></path></svg>
+<span class="md-ellipsis">
+    Export
   </span>
 </a>
 </li>
@@ -712,7 +741,7 @@
 <a class="md-nav__link" href="../../Multiscale/Introduction.html">
 <svg class="lucide lucide-notebook-text-icon lucide-notebook-text" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
 <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
 </a>
 </li>
@@ -866,7 +895,7 @@
 <a class="md-nav__link" href="../../Multiscale/Flows/Flows.html">
 <svg class="lucide lucide-square-stack-icon lucide-square-stack" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><rect height="8" rx="2" width="8" x="14" y="14"></rect></svg>
 <span class="md-ellipsis">
-    Fluxos
+    Flows
   </span>
 </a>
 </li>
@@ -877,37 +906,37 @@
 <input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-ellipsis">
-    Desenvolvimento
+    Development
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
-            Desenvolvimento
+            Development
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Desenvolvimento/BuildingGeoSlicer.html">
+<a class="md-nav__link" href="../../Development/BuildingGeoSlicer.html">
 <svg class="lucide lucide-hammer-icon lucide-hammer" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
 <span class="md-ellipsis">
-    Compilando o GeoSlicer
+    Building GeoSlicer
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Desenvolvimento/HowToContribute.html">
+<a class="md-nav__link" href="../../Development/HowToContribute.html">
 <svg class="lucide lucide-hammer-icon lucide-hammer" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
 <span class="md-ellipsis">
-    Como Contribuir
+    How To Contribute
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Desenvolvimento/Documentation.html">
+<a class="md-nav__link" href="../../Development/Documentation.html">
 <svg class="lucide lucide-hammer-icon lucide-hammer" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg>
 <span class="md-ellipsis">
-    Documentação
+    Documentation
   </span>
 </a>
 </li>
@@ -922,28 +951,22 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>Big Image</h1>
-<!-- BEGIN INCLUDE Pages/PrivateModuleNote.md -->
 <div class="admonition note">
-<p class="admonition-title">Observação</p>
-<p>Este módulo está disponível apenas na versão privada do GeoSlicer. Saiba mais clicando <a href="../../Pages/PrivateVersion.html">aqui</a>.</p>
+<p class="admonition-title">Note</p>
+<p>This module is available only in the private version of GeoSlicer. Learn more by clicking <a href="../../Pages/en/PrivateVersion.html">here</a>.</p>
 </div>
-<!-- END INCLUDE -->
-<!-- BEGIN INCLUDE Pages/LoadBigImage.md -->
-<p>O módulo <strong><em>Big Image</em></strong> é um kit de ferramentas para trabalhar com imagens grandes usando memória limitada. Visualize fatias, corte, reduza a
-resolução e converta o tipo sem carregar a imagem inteira na RAM. Atualmente, suporta o carregamento de imagens NetCDF
-de vários arquivos do sistema de arquivos local ou de imagens NetCDF MicroCT do módulo BIAEP Browser.</p>
-<h2 id="carregamento">Carregamento</h2>
-<p>Siga os passos abaixo para carregar, pré-visualizar e reduzir uma imagem de grande porte.</p>
-<h4 id="passo-1-carregar-o-conjunto-de-dados-netcdf">Passo 1: Carregar o Conjunto de Dados NetCDF</h4>
+<p>The <strong><em>Big Image</em></strong> module is a toolkit for working with large images using limited memory. Visualize slices, crop, downsample resolution, and convert type without loading the entire image into RAM. Currently, it supports loading NetCDF images from multiple local filesystem files or MicroCT NetCDF images from the BIAEP Browser module.</p>
+<h2 id="loading">Loading</h2>
+<p>Follow the steps below to load, preview, and reduce a large image.</p>
+<h4 id="step-1-load-the-netcdf-dataset">Step 1: Load the NetCDF Dataset</h4>
 <ol>
-<li>Na seção <strong>Load Multi-file NetCDF Image</strong>, clique no botão ao lado de <strong>Input directory</strong> para selecionar a pasta que contém o(s) arquivo(s) NetCDF (<code>.nc</code>).</li>
-<li>Uma vez que um diretório válido é selecionado, o botão <strong>Load dataset</strong> será habilitado.</li>
-<li>Clique em <strong>Load dataset</strong>. Isso irá analisar os metadados dos arquivos e criar imagens virtuais na hierarquia de dados do <em>GeoSlicer</em>. Esta operação é rápida e não consome muita memória, pois os dados da imagem ainda não são carregados.</li>
+<li>In the <strong>Load Multi-file NetCDF Image</strong> section, click the button next to <strong>Input directory</strong> to select the folder containing the NetCDF file(s) (<code>.nc</code>).</li>
+<li>Once a valid directory is selected, the <strong>Load dataset</strong> button will be enabled.</li>
+<li>Click <strong>Load dataset</strong>. This will parse the files' metadata and create virtual images in the <em>GeoSlicer</em> data hierarchy. This operation is fast and does not consume much memory, as the image data is not yet loaded.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Observação</p>
-<p>Uma <strong>imagem virtual</strong> é uma imagem no projeto <em>GeoSlicer</em> que aponta para o local onde uma imagem grande está armazenada.
-Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do projeto.</p>
+<p class="admonition-title">Note</p>
+<p>A <strong>virtual image</strong> is an image in the <em>GeoSlicer</em> project that points to the location where a large image is stored. When saving the project, only the image's address is stored in the project folder.</p>
 </div>
 <p><br/></p>
 <table>
@@ -954,14 +977,14 @@ Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do proj
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Seção "Load Multi-file NetCDF Image" com o diretório selecionado e o botão "Load dataset" habilitado.</td>
+<td align="center">Figure 1: "Load Multi-file NetCDF Image" section with the directory selected and the "Load dataset" button enabled.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="passo-2-selecionar-e-inspecionar-a-imagem">Passo 2: Selecionar e Inspecionar a Imagem</h4>
+<h4 id="step-2-select-and-inspect-the-image">Step 2: Select and Inspect the Image</h4>
 <ol>
-<li>Na seção <strong>Data</strong>, clique no seletor <strong>Image</strong> para ver a lista de imagens disponíveis no conjunto de dados carregado. Selecione a imagem que deseja inspecionar.</li>
-<li>Após a seleção, os campos <strong>Shape (XYZ)</strong> e <strong>Data type</strong> serão preenchidos com as informações da imagem selecionada.</li>
+<li>In the <strong>Data</strong> section, click the <strong>Image</strong> selector to view the list of available images in the loaded dataset. Select the image you want to inspect.</li>
+<li>After selection, the <strong>Shape (XYZ)</strong> and <strong>Data type</strong> fields will be populated with the information of the selected image.</li>
 </ol>
 <p><br/></p>
 <table>
@@ -972,15 +995,15 @@ Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do proj
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 2: Seção "Data" mostrando a seleção de uma imagem e os campos de informação preenchidos.</td>
+<td align="center">Figure 2: "Data" section showing image selection and populated information fields.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="passo-3-pre-visualizar-fatias-da-imagem">Passo 3: Pré-visualizar Fatias da Imagem</h4>
+<h4 id="step-3-preview-image-slices">Step 3: Preview Image Slices</h4>
 <ol>
-<li>Com uma imagem selecionada, clique no botão <strong>Preview image</strong> para entrar no modo de pré-visualização.</li>
-<li>A seção <strong>Slice Preview</strong> aparecerá. Use os sliders <strong>Z</strong>, <strong>Y</strong> e <strong>X</strong> para navegar pelas fatias da imagem nos visualizadores 2D. Apenas a fatia selecionada é carregada do disco, permitindo a exploração de imagens muito grandes.</li>
-<li>Para sair do modo de pré-visualização, clique em <strong>Stop preview</strong>.</li>
+<li>With an image selected, click the <strong>Preview image</strong> button to enter preview mode.</li>
+<li>The <strong>Slice Preview</strong> section will appear. Use the <strong>Z</strong>, <strong>Y</strong>, and <strong>X</strong> sliders to navigate through image slices in the 2D viewers. Only the selected slice is loaded from disk, allowing exploration of very large images.</li>
+<li>To exit preview mode, click <strong>Stop preview</strong>.</li>
 </ol>
 <p><br/></p>
 <table>
@@ -991,27 +1014,27 @@ Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do proj
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 3: Seção "Slice Preview" e os visualizadores 2D mostrando uma fatia da imagem de grande porte.</td>
+<td align="center">Figure 3: "Slice Preview" section and 2D viewers showing a slice of the large image.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Observação</p>
-<p>Para imagens NetCDF salvas sem <em>chunking</em>, a visualização pelo slider <strong>Z</strong> (plano YX) costuma ser a mais rápida, enquanto os outros eixos demoram mais. Para imagens salvas com <em>chunking</em>, é possível visualizar rapidamente por qualquer eixo.</p>
+<p class="admonition-title">Note</p>
+<p>For NetCDF images saved without <em>chunking</em>, viewing with the <strong>Z</strong> slider (YX plane) is usually the fastest, while other axes take longer. For images saved with <em>chunking</em>, it is possible to view quickly along any axis.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Dica</p>
-<p>No módulo <strong>Explorer</strong>, você pode iniciar a pré-visualização de uma imagem virtual já carregada ativando o ícone de olho dela.
-<img alt="Local do ícone de olho" src="../../assets/images/LoadBigImageEye.png"/></p>
+<p class="admonition-title">Tip</p>
+<p>In the <strong>Explorer</strong> module, you can start previewing an already loaded virtual image by activating its eye icon.
+<img alt="Location of the eye icon" src="../../assets/images/LoadBigImageEye.png"/></p>
 </div>
-<h4 id="passo-4-configurar-a-reducao-da-imagem">Passo 4: Configurar a Redução da Imagem</h4>
-<p>Para carregar uma versão menor da imagem na memória, configure as opções na seção <strong>Reduce Image</strong>.</p>
+<h4 id="step-4-configure-image-reduction">Step 4: Configure Image Reduction</h4>
+<p>To load a smaller version of the image into memory, configure the options in the <strong>Reduce Image</strong> section.</p>
 <ul>
-<li><strong>Crop</strong>: Defina uma região de interesse (ROI) para cortar a imagem. Especifique a coordenada inicial em <strong>Crop origin</strong> e o tamanho do corte em <strong>Crop size</strong> para cada eixo (X, Y, Z). Você pode definir o corte interagindo com o ROI no visualizador 3D, ou definindo os valores diretamente. Use o botão <strong>Reset crop region</strong> para redefinir a área para a imagem inteira.</li>
-<li><strong>Downsample</strong>: Reduza a resolução da imagem definindo um <strong>Downsample factor</strong>. Um fator de 2, por exemplo, reduzirá o tamanho da imagem em 8 vezes (2³).</li>
-<li><strong>Numeric type conversion</strong>: Converta o tipo numérico da imagem para um que consuma menos memória (por exemplo, <code>uint8</code>).<ul>
-<li>Se a caixa <strong>Map min and max values...</strong> estiver marcada, os valores da imagem serão remapeados para o novo intervalo de tipo, preservando a faixa dinâmica.</li>
-<li>Se desmarcada, os valores fora do novo intervalo serão limitados.</li>
+<li><strong>Crop</strong>: Define a region of interest (ROI) to crop the image. Specify the starting coordinate in <strong>Crop origin</strong> and the crop size in <strong>Crop size</strong> for each axis (X, Y, Z). You can define the crop by interacting with the ROI in the 3D viewer, or by defining the values directly. Use the <strong>Reset crop region</strong> button to reset the area to the entire image.</li>
+<li><strong>Downsample</strong>: Reduce the image resolution by defining a <strong>Downsample factor</strong>. A factor of 2, for example, will reduce the image size by 8 times (2³).</li>
+<li><strong>Numeric type conversion</strong>: Convert the image's numeric type to one that consumes less memory (for example, <code>uint8</code>).<ul>
+<li>If the <strong>Map min and max values...</strong> checkbox is marked, the image values will be remapped to the new type range, preserving the dynamic range.</li>
+<li>If unchecked, values outside the new range will be clamped.</li>
 </ul>
 </li>
 </ul>
@@ -1024,15 +1047,15 @@ Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do proj
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 4: Seção "Reduce Image" com as opções de Crop, Downsample e Type Conversion destacadas.</td>
+<td align="center">Figure 4: "Reduce Image" section with Crop, Downsample, and Type Conversion options highlighted.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="passo-5-carregar-a-imagem-reduzida">Passo 5: Carregar a Imagem Reduzida</h4>
+<h4 id="step-5-load-the-reduced-image">Step 5: Load the Reduced Image</h4>
 <ol>
-<li>Na seção <strong>Output</strong>, verifique o tamanho estimado da imagem final em <strong>Output size</strong>.</li>
-<li>Defina um nome para o novo volume em <strong>Output name</strong>.</li>
-<li>Clique em <strong>Load reduced image</strong>. As operações de redução (corte, reamostragem e conversão de tipo) serão executadas e o volume resultante será carregado no <em>GeoSlicer</em>.</li>
+<li>In the <strong>Output</strong> section, check the estimated final image size in <strong>Output size</strong>.</li>
+<li>Define a name for the new volume in <strong>Output name</strong>.</li>
+<li>Click <strong>Load reduced image</strong>. The reduction operations (cropping, resampling, and type conversion) will be executed, and the resulting volume will be loaded into <em>GeoSlicer</em>.</li>
 </ol>
 <p><br/></p>
 <table>
@@ -1043,11 +1066,11 @@ Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do proj
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 5: Seção "Output" com o nome de saída e o botão "Load reduced image" destacados.</td>
+<td align="center">Figure 5: "Output" section with the output name and "Load reduced image" button highlighted.</td>
 </tr>
 </tbody>
 </table>
-<p>Com a imagem reduzida gerada, você pode visualizá-la habilitando a visualização na aba <strong>Explorer</strong>.</p>
+<p>With the reduced image generated, you can visualize it by enabling its display in the <strong>Explorer</strong> tab.</p>
 <table>
 <thead>
 <tr>
@@ -1056,93 +1079,83 @@ Ao salvar o projeto, apenas o endereço da imagem é armazenado na pasta do proj
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 6: Visualização da imagem 3D da versão reduzida.</td>
+<td align="center">Figure 6: 3D visualization of the reduced version of the image.</td>
 </tr>
 </tbody>
 </table>
-<!-- END INCLUDE -->
 <hr/>
-<!-- BEGIN INCLUDE Pages/PolynomialShadingCorrectionBigImage.md -->
 <h2 id="polynomial-shading-correction">Polynomial Shading Correction</h2>
-<p>O módulo <strong>Polynomial Shading Correction (Big Image)</strong> é projetado para corrigir artefatos de sombreamento ou iluminação irregular em imagens de grande volume, que não podem ser carregadas inteiramente na memória. Ele funciona ajustando um polinômio ao fundo da imagem e normalizando a iluminação, de forma similar ao filtro <a href="../../Pages/PolynomialShadingCorrection.html">Polynomial Shading Correction</a>, mas com otimizações para processamento fora do núcleo (out-of-core).</p>
-<p>Este módulo opera sobre arquivos NetCDF (<code>.nc</code>) e salva o resultado em um novo arquivo, sendo ideal para pipelines de processamento de dados massivos.</p>
-<h3 id="principio-de-funcionamento">Princípio de Funcionamento</h3>
-<p>Este módulo adapta o algoritmo de correção de sombreamento polinomial para imagens que excedem a capacidade da memória RAM. As principais diferenças e otimizações são:</p>
+<p>The <strong>Polynomial Shading Correction (Big Image)</strong> module is designed to correct shading artifacts or irregular illumination in large-volume images that cannot be entirely loaded into memory. It works by fitting a polynomial to the image background and normalizing the illumination, similar to the <a href="../Filter/Filter.html#polynomial-shading-correction">Polynomial Shading Correction</a> filter, but with optimizations for out-of-core processing.</p>
+<p>This module operates on NetCDF (<code>.nc</code>) files and saves the result to a new file, making it ideal for massive data processing pipelines.</p>
+<h3 id="operating-principle">Operating Principle</h3>
+<p>This module adapts the polynomial shading correction algorithm for images that exceed RAM capacity. The main differences and optimizations are:</p>
 <ol>
-<li><strong>Processamento em Blocos (Out-of-Core):</strong> A imagem é dividida e processada em blocos (chunks), garantindo que apenas uma parte do volume seja carregada na memória a qualquer momento.</li>
-<li><strong>Amostragem de Pontos:</strong> Para ajustar o polinômio em cada fatia, em vez de usar todos os pixels da máscara de sombreamento, o módulo seleciona aleatoriamente um número definido de pontos (<code>Number of fitting points</code>). Isso acelera drasticamente o cálculo do ajuste sem comprometer significativamente a precisão da correção do sombreamento.</li>
-<li><strong>Agrupamento de Fatias (Slice Grouping):</strong> Para otimizar ainda mais o processo, o ajuste do polinômio é calculado na fatia central de um grupo de fatias (<code>Slice group size</code>). A função de correção resultante é então aplicada a todas as fatias dentro daquele grupo.</li>
+<li><strong>Block Processing (Out-of-Core):</strong> The image is divided and processed in blocks (chunks), ensuring that only a portion of the volume is loaded into memory at any given time.</li>
+<li><strong>Point Sampling:</strong> To fit the polynomial in each slice, instead of using all pixels from the shading mask, the module randomly selects a defined number of points (<code>Number of fitting points</code>). This drastically speeds up the fitting calculation without significantly compromising the accuracy of the shading correction.</li>
+<li><strong>Slice Grouping:</strong> To further optimize the process, the polynomial fit is calculated on the central slice of a group of slices (<code>Slice group size</code>). The resulting correction function is then applied to all slices within that group.</li>
 </ol>
-<p>Para uma descrição detalhada do algoritmo base de correção de sombreamento, consulte o manual do filtro <a href="../../Pages/PolynomialShadingCorrection.html">Polynomial Shading Correction</a>.</p>
-<h3 id="parametros">Parâmetros</h3>
+<p>For a detailed description of the base shading correction algorithm, please refer to the <a href="../Filter/Filter.html#polynomial-shading-correction">Polynomial Shading Correction</a> filter manual.</p>
+<h3 id="parameters">Parameters</h3>
 <ul>
-<li><strong>Input image:</strong> A imagem de grande volume (em formato NetCDF) a ser corrigida.</li>
-<li><strong>Input mask:</strong> Uma máscara que define a região de interesse. A área fora desta máscara será zerada na imagem de saída.</li>
-<li><strong>Input shading mask:</strong> A máscara que indica as áreas de fundo (ou com intensidade uniforme) a serem usadas para a amostragem de pontos e ajuste do polinômio.</li>
-<li><strong>Slice group size:</strong> Define o número de fatias em um grupo. A correção é calculada na fatia central e aplicada a todo o grupo. Um valor maior acelera o processo, mas pode não capturar variações rápidas de sombreamento ao longo do eixo das fatias.</li>
-<li><strong>Number of fitting points:</strong> O número de pontos a serem amostrados aleatoriamente da <code>Input shading mask</code> para realizar o ajuste do polinômio.</li>
-<li><strong>Output Path:</strong> O caminho do arquivo de saída no formato NetCDF (<code>.nc</code>) onde a imagem corrigida será salva.</li>
+<li><strong>Input image:</strong> The large-volume image (in NetCDF format) to be corrected.</li>
+<li><strong>Input mask:</strong> A mask that defines the region of interest. The area outside this mask will be zeroed in the output image.</li>
+<li><strong>Input shading mask:</strong> The mask indicating background areas (or areas with uniform intensity) to be used for point sampling and polynomial fitting.</li>
+<li><strong>Slice group size:</strong> Defines the number of slices in a group. The correction is calculated on the central slice and applied to the entire group. A larger value speeds up the process but may not capture rapid shading variations along the slice axis.</li>
+<li><strong>Number of fitting points:</strong> The number of points to be randomly sampled from the <code>Input shading mask</code> to perform the polynomial fitting.</li>
+<li><strong>Output Path:</strong> The path to the output file in NetCDF (<code>.nc</code>) format where the corrected image will be saved.</li>
 </ul>
-<h3 id="casos-de-uso">Casos de Uso</h3>
-<p>Este módulo é ideal para:</p>
+<h3 id="use-cases">Use Cases</h3>
+<p>This module is ideal for:</p>
 <ul>
-<li>Pré-processamento de micro-tomografias computadorizadas (µCT) de alta resolução e grande escala.</li>
-<li>Correção de iluminação em mosaicos de imagens ou qualquer imagem volumosa que não caiba na memória.</li>
-<li>Normalização de gradientes de iluminação em grandes datasets antes da segmentação ou análise quantitativa.</li>
+<li>Preprocessing high-resolution, large-scale micro-computed tomographies (µCT).</li>
+<li>Correcting illumination in image mosaics or any voluminous image that does not fit in memory.</li>
+<li>Normalizing illumination gradients in large datasets before segmentation or quantitative analysis.</li>
 </ul>
-<!-- END INCLUDE -->
 <hr/>
-<!-- BEGIN INCLUDE Pages/BoundaryRemovalBigImage.md -->
 <h2 id="boundary-removal">Boundary Removal</h2>
-<p>Este módulo remove as bordas de uma segmentação em uma imagem grande (formato NetCDF). Para mais informações sobre a versão interativa desta ferramenta, veja o efeito <a href="../../Pages/SegmentEditor.html#remocao-de-borda">Remoção de Borda</a> no Segment Editor.</p>
-<h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
-<h4 id="entrada">Entrada</h4>
+<p>This module removes the boundaries of a segmentation in a large image (NetCDF format). For more information about the interactive version of this tool, see the <a href="../Segmentation/Segmentation.html#boundary-removal">Boundary Removal</a> effect in the Segment Editor.</p>
+<h3 id="panels-and-their-use">Panels and their use</h3>
+<h4 id="input">Input</h4>
 <ul>
-<li><strong>Imagem de Entrada</strong>: Selecione a imagem de entrada no formato NetCDF.</li>
-<li><strong>Segmentação</strong>: Selecione o nó de segmentação relacionado ao conjunto de dados.</li>
+<li><strong>Input Image</strong>: Select the input image in NetCDF format.</li>
+<li><strong>Segmentation</strong>: Select the segmentation node related to the dataset.</li>
 </ul>
-<h4 id="parametros_1">Parâmetros</h4>
+<h4 id="parameters_1">Parameters</h4>
 <ul>
-<li><strong>Ajuste de limiar</strong>: Defina o intervalo de limiar para a detecção de bordas.</li>
+<li><strong>Threshold adjustment</strong>: Define the threshold range for boundary detection.</li>
 </ul>
-<h4 id="saida">Saída</h4>
+<h4 id="output">Output</h4>
 <ul>
-<li><strong>Caminho de Saída</strong>: Selecione o caminho de saída para a imagem resultante no formato .nc.</li>
+<li><strong>Output Path</strong>: Select the output path for the resulting image in .nc format.</li>
 </ul>
-<h4 id="botao-aplicar">Botão Aplicar</h4>
+<h4 id="apply-button">Apply Button</h4>
 <ul>
-<li><strong>Aplicar</strong>: Inicia o processo de remoção de bordas.</li>
+<li><strong>Apply</strong>: Initiates the boundary removal process.</li>
 </ul>
-<!-- END INCLUDE -->
 <hr/>
-<!-- BEGIN INCLUDE Pages/ExpandSegmentsBigImage.md -->
 <h2 id="expand-segments">Expand Segments</h2>
-<p>Este módulo expande os segmentos em uma segmentação para preencher todo o volume de uma imagem grande (formato NetCDF). Para mais informações sobre a versão interativa desta ferramenta, veja o efeito <a href="../../Pages/SegmentEditor.html#expandir-segmentos">Expandir Segmentos</a> no Segment Editor.</p>
-<h3 id="paineis-e-sua-utilizacao_1">Painéis e sua utilização</h3>
-<h4 id="entrada_1">Entrada</h4>
+<p>This module expands the segments in a segmentation to fill the entire volume of a large image (NetCDF format). For more information on the interactive version of this tool, see the <a href="../Segmentation/Segmentation.html#expand-segments">Expand Segments</a> effect in the Segment Editor.</p>
+<h3 id="panels-and-their-use_1">Panels and their use</h3>
+<h4 id="input_1">Input</h4>
 <ul>
-<li><strong>Segmentação</strong>: Selecione o nó de segmentação relacionado ao conjunto de dados.</li>
+<li><strong>Segmentation</strong>: Select the segmentation node related to the dataset.</li>
 </ul>
-<h4 id="saida_1">Saída</h4>
+<h4 id="output_1">Output</h4>
 <ul>
-<li><strong>Caminho de Saída</strong>: Selecione o caminho de saída para a imagem resultante no formato .nc.</li>
+<li><strong>Output Path</strong>: Select the output path for the resulting image in .nc format.</li>
 </ul>
-<h4 id="botao-aplicar_1">Botão Aplicar</h4>
+<h4 id="apply-button_1">Apply Button</h4>
 <ul>
-<li><strong>Aplicar</strong>: Inicia o processo de expansão dos segmentos.</li>
+<li><strong>Apply</strong>: Starts the segment expansion process.</li>
 </ul>
-<!-- END INCLUDE -->
 <hr/>
-<!-- BEGIN INCLUDE Pages/MultipleThresholdBigImage.md -->
 <h2 id="multiple-threshold">Multiple Threshold</h2>
-<p>Esse módulo é utilizado para segmentar uma amostra carregada através do modo Big Image a partir de uma segmentação manual por <a href="../../Pages/SegmentEditor.html#multiplos-limiares">Multiple Threshold</a>.</p>
-<p>Para utilizar esse recurso, primeiro carregue a imagem reduzida a partir do módulo <strong><a href="../../Pages/LoadBigImage.html">Large Image Loader</a></strong>. Depois de carregada, navegue até o módulo em <strong><a href="../../Pages/SegmentEditor.html">Manual Segmentation</a></strong> e clique no ícone <em>Multiple threshold</em>. Após selecionar os <em>thresholds</em> e realizar a segmentação na imagem reduzida, clique em <em>Apply to full volume</em>, isso deve redirecionar para a página do presente módulo, onde será escolhido o caminho de saída para salvar o resultado.</p>
+<p>This module is used to segment a sample loaded via Big Image mode from a manual segmentation by <a href="../Segmentation/Segmentation.html#multiple-thresholds">Multiple Threshold</a>.</p>
+<p>To use this feature, first load the reduced image from the <strong><a href="BigImage.html">Large Image Loader</a></strong> module. Once loaded, navigate to the module in <strong><a href="../Segmentation/Segmentation.html#manual-segmentation">Manual Segmentation</a></strong> and click the <em>Multiple threshold</em> icon. After selecting the <em>thresholds</em> and performing the segmentation on the reduced image, click <em>Apply to full volume</em>. This should redirect to the current module's page, where the output path to save the result will be chosen.</p>
 <p><img alt="Multiple Threshold Big Image" src="../../assets/images/multiple_threshold_bigimage.png"/></p>
-<!-- END INCLUDE -->
 <hr/>
-<!-- BEGIN INCLUDE Pages/StreamlinedSegmentation.md -->
 <h2 id="virtual-segmentation-flow">Virtual Segmentation Flow</h2>
-<p>Fluxo para o obtenção de um mapa de porosidade a partir de um volume escalar.</p>
+<p>Flow for obtaining a porosity map from a scalar volume.</p>
 <pre class="mermaid"><code>%%{
   init: {
     'themeVariables': {
@@ -1172,19 +1185,19 @@ flowchart LR
 </code></pre>
 <ol>
 <li>
-<p>Inicie o Geoslicer no ambiente <strong>Volumes</strong> a partir da interface do aplicativo.</p>
+<p>Start Geoslicer in the <strong>Volumes</strong> environment from the application interface.</p>
 </li>
 <li>
-<p>Selecione o volume de entrada clicando em "Escolher pasta" ou "Escolher arquivo" e escolha os dados de importação desejados entre as opções disponíveis. Sugerimos testar primeiro os parâmetros padrão.</p>
+<p>Select the input volume by clicking on "Escolher pasta" or "Escolher arquivo" and choose the desired import data from the available options. We suggest testing the default parameters first.</p>
 </li>
 <li>
-<p>Selecione o volume de entrada clicando em "Input:" Ajuste os parâmetros para diferentes efeitos de segmentação, como "Múltiplos Limiares," "Remoção de Fronteira," e "Expandir Segmentos." Ajuste as configurações para obter os resultados de segmentação desejados, usando o feedback da interface e as ferramentas de visualização.</p>
+<p>Select the input volume by clicking on "Input:" Adjust the parameters for different segmentation effects, such as "Múltiplos Limiares," "Remoção de Fronteira," and "Expandir Segmentos." Adjust the settings to achieve the desired segmentation results, using interface feedback and visualization tools.</p>
 </li>
 <li>
-<p>Revise e refine os dados segmentados. Ajuste os limites da segmentação, mescle ou divida segmentos, e aplique outras modificações para aprimorar o modelo de porosidade usando as ferramentas fornecidas.</p>
+<p>Review and refine the segmented data. Adjust segmentation boundaries, merge or split segments, and apply other modifications to enhance the porosity model using the provided tools.</p>
 </li>
 <li>
-<p>Salve o mapa de porosidade ou exporte o volume com as tabelas de parametros.</p>
+<p>Save the porosity map or export the volume with the parameter tables.</p>
 </li>
 </ol>
 <pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'default','themeVariables': {
@@ -1236,28 +1249,27 @@ flowchart LR
         commit id:"Tabelas"
         commit id:"Relatórios"
 </code></pre>
-<h4 id="inicio">Inicio</h4>
-<p>Inicie o Geoslicer no ambiente MicroCT a partir da interface do aplicativo.</p>
-<h4 id="importartodo">Importar(TODO)</h4>
-<p>Selecione o volume de entrada clicando em "Escolher pasta" ou "Escolher arquivo" e escolha os dados de importação desejados entre as opções disponíveis. Sugerimos testar primeiro os parâmetros padrão.</p>
-<h4 id="segmentacao">Segmentação</h4>
-<p>Selecione o volume de entrada clicando em "Entrada:" Ajuste os parâmetros para diferentes efeitos de segmentação, como:</p>
+<h4 id="start">Start</h4>
+<p>Start Geoslicer in the MicroCT environment from the application interface.</p>
+<h4 id="importtodo">Import(TODO)</h4>
+<p>Select the input volume by clicking on "Escolher pasta" or "Escolher arquivo" and choose the desired import data from the available options. We suggest testing the default parameters first.</p>
+<h4 id="segmentation">Segmentation</h4>
+<p>Select the input volume by clicking on "Input:" Adjust the parameters for different segmentation effects, such as:</p>
 <ol>
-<li>Múltiplos Limiares(TODO)</li>
-<li>Remoção de Fronteira(TODO)</li>
-<li>Expandir Segmentos(TODO)</li>
+<li>Multiple Thresholds(TODO)</li>
+<li>Boundary Removal(TODO)</li>
+<li>Expand Segments(TODO)</li>
 </ol>
-<p>Ajuste as configurações para obter os resultados de segmentação desejados, usando o feedback da interface e as ferramentas de visualização.</p>
-<h4 id="modelagemtodo">Modelagem(TODO)</h4>
-<p>Revise e refine os dados segmentados. Ajuste os limites da segmentação, mescle ou divida segmentos, e aplique outras modificações para aprimorar o modelo de segmentação usando as ferramentas fornecidas.(TODO)</p>
-<h4 id="resultadostodo">Resultados(TODO)</h4>
-<p>Salve o projeto ou exporte o volume segmentado. Os resultados podem ser exibidos como:</p>
+<p>Adjust the settings to obtain the desired segmentation results, using interface feedback and visualization tools.</p>
+<h4 id="modelingtodo">Modeling(TODO)</h4>
+<p>Review and refine the segmented data. Adjust segmentation boundaries, merge or split segments, and apply other modifications to enhance the segmentation model using the provided tools.(TODO)</p>
+<h4 id="resultstodo">Results(TODO)</h4>
+<p>Save the project or export the segmented volume. The results can be displayed as:</p>
 <ol>
-<li>Imagem(Screenshot)(TODO)</li>
-<li>Graficos(Charts)(TODO)</li>
-<li>Servidos atraves de Relatórios (Streamlit)(TODO)</li>
+<li>Image(Screenshot)(TODO)</li>
+<li>Graphs(Charts)(TODO)</li>
+<li>Served via Reports (Streamlit)(TODO)</li>
 </ol>
-<!-- END INCLUDE -->
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -1281,7 +1293,7 @@ flowchart LR
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
 <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
