@@ -901,19 +901,19 @@
   }
 }%%
 flowchart LR
-    Iniciar --&gt; Importar
-    Importar --&gt; Segmentacao
-    Segmentacao --&gt; Modelagem
-    Modelagem --&gt; Resultados
+    Start --&gt; Import
+    Import --&gt; Segmentation
+    Segmentation --&gt; Modelling
+    Modelling --&gt; Results
 
-    click Segmentacao "../../Segmentation/segmentation.html" "teste de imagem"
-    style Iniciar fill:#808080,stroke:#333,stroke-width:1px,color:#fff;
-    style Importar fill:#6d8873,stroke:#333,stroke-width:1px,color:#fff;
-    style Segmentacao fill:#5a9b87,stroke:#333,stroke-width:1px,color:#fff;
-    style Modelagem fill:#45ae97,stroke:#333,stroke-width:1px,color:#fff;
-    style Resultados fill:#2ea67e,stroke:#333,stroke-width:1px,color:#fff;
+    click Segmentation "../../Segmentation/segmentation.html" "teste de imagem"
+    style Start fill:#808080,stroke:#333,stroke-width:1px,color:#fff;
+    style Import fill:#6d8873,stroke:#333,stroke-width:1px,color:#fff;
+    style Segmentation fill:#5a9b87,stroke:#333,stroke-width:1px,color:#fff;
+    style Modelling fill:#45ae97,stroke:#333,stroke-width:1px,color:#fff;
+    style Results fill:#2ea67e,stroke:#333,stroke-width:1px,color:#fff;
 
-    Segmentacao["Segmentação"]
+    Segmentation["Segmentation"]
 </code></pre>
 <pre class="mermaid"><code>graph LR
     hello --&gt; world
@@ -959,32 +959,32 @@ flowchart LR
             'commitLabelColor': '#afafaf',
               'commitLabelBackground': '#0000',
               'commitLabelFontSize': '13px'
-       }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Inicio'}} }%%
+       }, 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'Start'}} }%%
       gitGraph LR:
-        commit id:"Inicio"
+        commit id:"Start"
         commit id:"Volumes  ."
-        branch "Importar"
-        commit id:"Aba de Dados"
-        commit id:"Aba de Importação"
-        commit id:"Selecionar Arquivo"
-        commit id:"Parâmetros"
-        commit id:"Carregar  ."
-        branch "Segmentação"
-        commit id:"Aba de Segmentação"
-        commit id:"Adicionar novo nó de segmentação"
-        commit id:"Criar pelo menos 4 segmentos"
-        commit id:"Adicionar ROI  ."
-        branch Modelagem
-        commit id:"Aba de Modelagem"
-        commit id:"Segmentação"
-        commit id:"Selecionar volume"
-        commit id:"Selecionar segmentação"
-        commit id:"Aplicar  ."
-        branch Resultados
-        commit id:"Gráficos"
-        commit id:"Imagens"
-        commit id:"Tabelas"
-        commit id:"Relatórios"
+        branch "Import"
+        commit id:"Data Tab"
+        commit id:"Import Tab"
+        commit id:"Select file"
+        commit id:"Parameters"
+        commit id:"Load  ."
+        branch "Segmentation"
+        commit id:"Segmentation Tab"
+        commit id:"Add new segmentation node"
+        commit id:"Create at least 4 segments"
+        commit id:"Add ROI  ."
+        branch Modelling
+        commit id:"Modelling Tab"
+        commit id:"Segmentation"
+        commit id:"Select Volume"
+        commit id:"Select Segmentation"
+        commit id:"Apply  ."
+        branch Results
+        commit id:"Charts"
+        commit id:"Images"
+        commit id:"Tables"
+        commit id:"Reportsd"
 </code></pre>
 <h4 id="start">Start</h4>
 <p>Start Geoslicer in the MicroCT environment from the application interface.</p>
