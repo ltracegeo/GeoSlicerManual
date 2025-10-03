@@ -2325,6 +2325,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#anchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anchor
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2359,14 +2368,14 @@
 <h1 id="linking">Linking</h1>
 <h2 id="page-links">Page links</h2>
 <p>If <strong>navigation is important</strong>, link to the full path:</p>
-<div class="highlight"><pre><span></span><code>[Saturation](/Volumes/Microporosity/PorosityFromSaturation.md)
+<div class="highlight"><pre><span></span><code>[Saturation](/Volumes/Microporosity/Microporosity.md)
 </code></pre></div>
 <p>The absolute path is converted to a relative path during build.</p>
-<p>After clicking, the following will be open in the navbar: <em>Volumes &gt; Microporosity &gt; Porosity From Saturation</em></p>
+<p>After clicking, the following will be open in the navbar: <em>Volumes &gt; Microporosity</em></p>
 <p>If <strong>navigation is not important</strong>, you can link directly:</p>
-<div class="highlight"><pre><span></span><code>[Saturation](../Pages/en/PorosityFromSaturation.md)
+<div class="highlight"><pre><span></span><code>[Saturation](../Pages/en/Microporosity.md)
 </code></pre></div>
-<p>This is equivalent to <code>./PorosityFromSaturation.md</code> and assumes all pages are in the same directory.</p>
+<p>This is equivalent to <code>./Microporosity.md</code> and assumes all pages are in the same directory.</p>
 <h2 id="images">Images</h2>
 <div class="highlight"><pre><span></span><code>![alt text](/assets/images/foo.png)
 </code></pre></div>
@@ -2375,6 +2384,15 @@
 <div class="highlight"><pre><span></span><code>&lt;figure class=&quot;video-container&quot;&gt;  &lt;video controls width=&quot;100%&quot;&gt;  &lt;source src=&quot;../../assets/videos/video_name.webm&quot; type=&quot;video/webm&quot; &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Optional caption&lt;/figcaption&gt;&lt;/figure&gt;
 </code></pre></div>
 <p>Videos are automatically sourced from <code>/assets/videos/</code>.</p>
+<h2 id="anchor">Anchor</h2>
+<p>For multiple languages compatibility, use the tag <code>&lt;a&gt;</code> in the desired header text, including the <code>id</code> definition in <em>english</em>.</p>
+<p>This approach ensures that a link like <code>[some text](../Pages/en/page.md#title-simulation)</code> will navigate to the correct section, regardless of whether the user is viewing the English or Portuguese page. It also prevents <code>mkdocs</code> from reporting broken links during the build process.</p>
+<div class="highlight"><pre><span></span><code>Header in Portuguese page:
+&lt;a id=&quot;title-simulation&quot;&gt;Simulação de Título&lt;/a&gt;
+
+Header in English page:
+&lt;a id=&quot;title-simulation&quot;&gt;Title Simulation&lt;/a&gt;
+</code></pre></div>
 
 
 

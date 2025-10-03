@@ -16,7 +16,7 @@
     
     
       
-        <title>Linking - GeoSlicer Manual</title>
+        <title>Links - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linking" class="md-skip">
+        <a href="#links" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linking
+              Links
             
           </span>
         </div>
@@ -2283,25 +2283,34 @@
                   
 
 
-<h1 id="linking">Linking</h1>
-<h2 id="page-links">Page links</h2>
-<p>If <strong>navigation is important</strong>, link to the full path:</p>
-<div class="highlight"><pre><span></span><code>[Saturation](/Volumes/Microporosity/PorosityFromSaturation.md)
+<h1 id="links">Links</h1>
+<h2 id="links-de-pagina">Links de página</h2>
+<p>Se a <strong>navegação for importante</strong>, crie um link para o caminho completo:</p>
+<div class="highlight"><pre><span></span><code>[Saturação](/Volumes/Microporosity/Microporosity.md)
 </code></pre></div>
-<p>The absolute path is converted to a relative path during build.</p>
-<p>After clicking, the following will be open in the navbar: <em>Volumes &gt; Microporosity &gt; Porosity From Saturation</em></p>
-<p>If <strong>navigation is not important</strong>, you can link directly:</p>
-<div class="highlight"><pre><span></span><code>[Saturation](PorosityFromSaturation.md)
+<p>O caminho absoluto é convertido em um caminho relativo durante a compilação.</p>
+<p>Após clicar, o seguinte caminho será aberto na barra de navegação: <em>Volumes &gt; Microporosity</em></p>
+<p>Se a <strong>navegação não for importante</strong>, você pode criar um link direto:</p>
+<div class="highlight"><pre><span></span><code>[Saturação](Microporosity.md)
 </code></pre></div>
-<p>This is equivalent to <code>./PorosityFromSaturation.md</code> and assumes all pages are in the same directory.</p>
-<h2 id="images">Images</h2>
+<p>Isso é equivalente a <code>./Microporosity.md</code> e pressupõe que todas as páginas estão no mesmo diretório.</p>
+<h2 id="imagens">Imagens</h2>
 <div class="highlight"><pre><span></span><code>![alt text](/assets/images/foo.png)
 </code></pre></div>
-<p>The absolute path is also converted to a relative path during build.</p>
-<h2 id="videos">Videos</h2>
-<div class="highlight"><pre><span></span><code>&lt;figure class=&quot;video-container&quot;&gt;  &lt;video controls width=&quot;100%&quot;&gt;  &lt;source src=&quot;../../../assets/videos/video_name.webm&quot; type=&quot;video/webm&quot; &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Optional caption&lt;/figcaption&gt;&lt;/figure&gt;
+<p>O caminho absoluto também é convertido em um caminho relativo durante a compilação.</p>
+<h2 id="videos">Vídeos</h2>
+<div class="highlight"><pre><span></span><code>&lt;figure class=&quot;video-container&quot;&gt;  &lt;video controls width=&quot;100%&quot;&gt;  &lt;source src=&quot;../../../assets/videos/video_name.webm&quot; type=&quot;video/webm&quot; &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Legenda opcional&lt;/figcaption&gt;&lt;/figure&gt;
 </code></pre></div>
-<p>Videos are automatically sourced from <code>/assets/videos/</code>.</p>
+<p>Os vídeos são automaticamente obtidos de <code>/assets/videos/</code>.</p>
+<h2 id="ancora">Âncora</h2>
+<p>Para compatibilidade com vários idiomas, use a tag <code>&lt;a&gt;</code> no texto do cabeçalho desejado, incluindo a definição <code>id</code> em <em>english</em>.</p>
+<p>Essa abordagem garante que um link como <code>[algum texto](page.md#title-simulation)</code> navegue para a seção correta, independentemente de o usuário estar visualizando a página em inglês ou português. Isso também evita que o <code>mkdocs</code> relate links quebrados durante o processo de compilação.</p>
+<div class="highlight"><pre><span></span><code>Cabeçalho na página em português:
+&lt;a id=&quot;title-simulation&quot;&gt;Simulação de Título&lt;/a&gt;
+
+Cabeçalho na página em inglês:
+&lt;a id=&quot;title-simulation&quot;&gt;Title Simulation&lt;/a&gt;
+</code></pre></div>
 
 
 
