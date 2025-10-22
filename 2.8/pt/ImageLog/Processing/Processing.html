@@ -1438,6 +1438,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kde-of-instance-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      KDE of instance measurements
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2615,6 +2624,37 @@
 <ol>
 <li><strong>Output prefix</strong>: Imagem processada, com tipo float64.</li>
 </ol>
+<hr />
+<h2 id="kde-of-instance-measurements">KDE of instance measurements</h2>
+<p>O módulo <em>KDE of instance measurements</em> permite calcular a estimativa de densidade de Kernel (KDE) de uma propriedade selecionada, utilizando a tabela de resultados gerada pelo <em>Imagelog Instance Segmenter</em>. O cálculo é ajustado de acordo com o intervalo de profundidade e o parâmetro de largura de banda do KDE.</p>
+<h3 id="paineis-e-sua-utilizacao_1">Painéis e sua utilização</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../../../assets/images/InstanceKDE.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 1: Apresentação do módulo KDE of instance measurements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="principais-opcoes">Principais opções</h3>
+<ul>
+<li>
+<p><em>Input</em>: Escolha a tabela de resultados da instância do Imagelog.</p>
+</li>
+<li>
+<p><em>Measurement</em>: Escolha a medição da instância do Imagelog para calcular o KDE.</p>
+</li>
+<li>
+<p><em>Depth interval (m)</em>: Escolha o intervalo de profundidade para agrupar os dados.</p>
+</li>
+<li>
+<p><em>KDE bandwith</em>: Largura de banda do KDE que controla a suavidade da curva de densidade estimada.</p>
+</li>
+</ul>
 
 
 

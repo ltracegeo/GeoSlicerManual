@@ -638,6 +638,13 @@
         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/en/InstallationGuide.html"/>
     </url>
     <url>
+        <loc>NonePages/en/InstanceKDE.html</loc>
+        <lastmod>2025-10-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NonePages/en/InstanceKDE.html"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/en/InstanceKDE.html"/>
+    </url>
+    <url>
         <loc>NonePages/en/InstanceSegmenterEditor.html</loc>
         <lastmod>2025-10-22</lastmod>
         <changefreq>daily</changefreq>
@@ -1497,6 +1504,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NonePages/pt/InstallationGuide.html"/>
         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/pt/InstallationGuide.html"/>
+    </url>
+    <url>
+        <loc>NonePages/pt/InstanceKDE.html</loc>
+        <lastmod>2025-10-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="NonePages/pt/InstanceKDE.html"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/pt/InstanceKDE.html"/>
     </url>
     <url>
         <loc>NonePages/pt/InstanceSegmenterEditor.html</loc>
@@ -2878,6 +2892,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="NonePages/en/InstallationGuide.html"/>
     </url>
     <url>
+        <loc>Nonept/Pages/en/InstanceKDE.html</loc>
+        <lastmod>2025-10-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/en/InstanceKDE.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NonePages/en/InstanceKDE.html"/>
+    </url>
+    <url>
         <loc>Nonept/Pages/en/InstanceSegmenterEditor.html</loc>
         <lastmod>2025-10-22</lastmod>
         <changefreq>daily</changefreq>
@@ -3737,6 +3758,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/pt/InstallationGuide.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="NonePages/pt/InstallationGuide.html"/>
+    </url>
+    <url>
+        <loc>Nonept/Pages/pt/InstanceKDE.html</loc>
+        <lastmod>2025-10-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="Nonept/Pages/pt/InstanceKDE.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="NonePages/pt/InstanceKDE.html"/>
     </url>
     <url>
         <loc>Nonept/Pages/pt/InstanceSegmenterEditor.html</loc>
