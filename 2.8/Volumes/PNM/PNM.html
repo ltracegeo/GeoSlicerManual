@@ -2667,17 +2667,55 @@
 <li><em>Correlation diameter</em>: If <em>Fraction correlation</em> is chosen as <em>Spatially correlated</em>, defines the most likely distance to find pores with the same contact angle distribution;</li>
 <li><em>Fraction correlation</em>: Defines how the fraction for the second distribution will be correlated, if spatially correlated, for larger pores, smaller pores, or random;</li>
 </ul>
+<h4 id="execution-mode">Execution Mode</h4>
+<p>The user can choose between two execution modes for running the <strong>two-phase simulation</strong>:</p>
+<ul>
+<li>
+<p><strong>Local:</strong> Runs the simulation directly on the user’s machine.<br />
+  In this mode, the user can define the <em>Max subprocesses</em> simulation option, which controls how many single-threaded subprocesses will run in parallel. The recommended value is about two-thirds of the total available CPU cores for optimal performance without overloading the system.</p>
+</li>
+<li>
+<p><strong>Remote:</strong> Sends the simulation to be executed on a configured computing cluster.<br />
+  In this mode, the user specifies the <em>Number of jobs</em> into which the simulation will be divided. Ideal for very large sensitivity tests.
+  The interface on the right will show the progress of the simulation, and the user can also <em>Open</em> the partial results for inspection before completion.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figure 12a" src="../../assets/images/PoreNetworkSimulationTwoPhaseExecutionMode.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figure 12a: Execution mode selection for the two-phase simulation.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figure 12b" src="../../assets/images/PoreNetworkSimulationTwoPhaseExecutionModeJob.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figure 12b: Job options.</td>
+</tr>
+</tbody>
+</table>
+<p>This flexibility allows the user to take advantage of local processing for smaller test runs or to leverage cluster computing resources for more complex or large-scale simulations.</p>
 <h4 id="simulation-options">Simulation options</h4>
 <p>This section of parameters is dedicated to controlling the parameters related to the simulation itself.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figure 12" src="../../assets/images/PoreNetworkSimulationTwoPhaseSimulationProperties.png" /></th>
+<th align="center"><img alt="Figure 13" src="../../assets/images/PoreNetworkSimulationTwoPhaseSimulationProperties.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 12: Simulation parameters.</td>
+<td align="center">Figure 13: Simulation parameters.</td>
 </tr>
 </tbody>
 </table>
@@ -2692,7 +2730,8 @@
 <li><em>Plot first injection cycle</em>: If selected, the first cycle, oil injection into a fully water-saturated medium, will be included in the output graph. The simulation will run regardless of whether the option is selected or not;</li>
 <li><em>Create animation node</em>: Creates an animation node that can be used in the “Cycles Visualization” tab;</li>
 <li><em>Keep temporary files</em>: Keeps the .vtu files in the GeoSlicer temporary files folder, one file for each stage of the simulation;</li>
-<li><em>Max subprocesses</em>: Maximum number of single-thread subprocesses to be executed; The recommended value for an idle machine is 2/3 of the total number of cores;</li>
+<li><em>Max subprocesses</em>: Maximum number of single-thread subprocesses to be executed; The recommended value for an idle machine is two-thirds of the total number of cores;</li>
+<li><em>Number of jobs</em>: number jobs of into which the simulation will be divided on the cluster;</li>
 </ul>
 <p>Since we have a vast number of parameters that can be modified to model the experiment from the simulation, it becomes useful to vary these parameters more systematically for an in-depth analysis of their influence on the results obtained. </p>
 <p>To do this, the user can select the “Multi” button available in most parameters. When clicking on Multi, three boxes appear with start, end, and step options, which can be used to run several simulations in a linearly distributed table of the values of these parameters. If more than one parameter is chosen with multiple values, simulations run with all possible parameter combinations, which can considerably increase the number of simulations and the time to execute them.</p>
@@ -2702,12 +2741,12 @@
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figure 13" src="../../assets/images/PoreNetworkSimulationMercury.png" /></th>
+<th align="center"><img alt="Figure 14" src="../../assets/images/PoreNetworkSimulationMercury.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 13: Mercury intrusion simulation.</td>
+<td align="center">Figure 14: Mercury intrusion simulation.</td>
 </tr>
 </tbody>
 </table>
@@ -2719,22 +2758,22 @@
 <ul>
 <li>
 <p>Fixed radius: All subresolution radii are the same size as chosen in the interface.
-<img alt="Figure 14" src="../../assets/images/PoreNetworkSimulationSubscaleFixed.png" /></p>
+<img alt="Figure 15" src="../../assets/images/PoreNetworkSimulationSubscaleFixed.png" /></p>
 </li>
 <li>
 <p><em>Leverett Function - Sample Permeability</em>: Assigns an inlet pressure based on the J Leverett curve based on the permeability of the sample;
-<img alt="Figure 15" src="../../assets/images/PoreNetworkSimulationSubscaleLeverett.png" /></p>
+<img alt="Figure 16" src="../../assets/images/PoreNetworkSimulationSubscaleLeverett.png" /></p>
 </li>
 <li>
 <p><em>Leverett Function - Permeability curve</em>: Also uses the J Leverett curve but with a curve defined for permeability instead of a value;
-<img alt="Figure 16" src="../../assets/images/PoreNetworkSimulationSubscaleLeverettCurve.png" /></p>
+<img alt="Figure 17" src="../../assets/images/PoreNetworkSimulationSubscaleLeverettCurve.png" /></p>
 </li>
 <li>
 <p><em>Pressure Curve</em> and <em>Throat Radius Curve</em>: Assigns subresolution radii based on the curve obtained from a mercury injection experiment. The inlet pressure data can be used by volume fraction, or the equivalent radius can be used as a function of volume fraction;
-<img alt="Figure 17a" src="../../assets/images/PoreNetworkSimulationSubscalePressure.png" /><img alt="Figure 17b" src="../../assets/images/PoreNetworkSimulationSubscaleRadius.png" /></p>
+<img alt="Figure 18a" src="../../assets/images/PoreNetworkSimulationSubscalePressure.png" /><img alt="Figure 18b" src="../../assets/images/PoreNetworkSimulationSubscaleRadius.png" /></p>
 </li>
 </ul>
-<p>The chosen subscale model has no impact on uniescalar network simulations, since all radii are already determined. </p>
+<p>The chosen subscale model has no impact on uniescalar network simulations, since all radii are already determined.  </p>
 <hr />
 <h2 id="kabs-rev">Kabs REV</h2>
 <p>The <strong>Pore Network Kabs REV</strong> module allows to perform single-phase (absolute permeability) simulations in multiple volume slices using the pore network.</p>

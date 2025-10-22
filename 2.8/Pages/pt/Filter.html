@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="pt" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -11,19 +11,19 @@
       
       
       
-      <link rel="icon" href="../../../assets/logo.ico">
+      <link rel="icon" href="../../assets/logo.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
-        <title>MicroCTFlowApplyFilters - GeoSlicer Manual</title>
+        <title>Filter - GeoSlicer Manual</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/extra.css">
+      <link rel="stylesheet" href="../../assets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,8 +70,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#filtering-tools" class="md-skip">
-          Ir para o conteúdo
+        <a href="#gradient-anisotropic-diffusion" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -89,10 +89,10 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MicroCTFlowApplyFilters
+              Filter
             
           </span>
         </div>
@@ -149,20 +149,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="MicroCTFlowApplyFilters.html" hreflang="pt" class="md-select__link">
+            <a href="../../pt/Pages/pt/Filter.html" hreflang="pt" class="md-select__link">
               Português
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../../Pages/pt/MicroCTFlowApplyFilters.html" hreflang="en" class="md-select__link">
+            <a href="Filter.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -181,16 +181,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -201,7 +201,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando a pesquisa
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -236,11 +236,11 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
+    <a href="../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     GeoSlicer Manual
@@ -259,7 +259,7 @@
         
   
   <span class="md-ellipsis">
-    Visão Geral
+    Overview
   </span>
   
 
@@ -289,7 +289,7 @@
             
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -299,7 +299,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Introdução
+            Introduction
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -316,7 +316,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog-icon lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>
   
   <span class="md-ellipsis">
-    Instalação
+    Installation
   </span>
   
 
@@ -339,7 +339,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints-icon lucide-footprints"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>
   
   <span class="md-ellipsis">
-    Primeiros Passos
+    First Steps
   </span>
   
 
@@ -362,7 +362,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-app-window-icon lucide-app-window"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
   
   <span class="md-ellipsis">
-    Aplicação
+    Application
   </span>
   
 
@@ -385,7 +385,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
   
   <span class="md-ellipsis">
-    Módulos
+    Modules
   </span>
   
 
@@ -408,7 +408,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up-icon lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg>
   
   <span class="md-ellipsis">
-    Carregando dados
+    Loading Data
   </span>
   
 
@@ -431,7 +431,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-cog-icon lucide-cloud-cog"><path d="m10.852 19.772-.383.924"/><path d="m13.148 14.228.383-.923"/><path d="M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923"/><path d="m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544"/><path d="m14.772 15.852.923-.383"/><path d="m14.772 18.148.923.383"/><path d="M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"/><path d="m9.228 15.852-.923-.383"/><path d="m9.228 18.148-.923.383"/></svg>
   
   <span class="md-ellipsis">
-    Computação Remota
+    Remote computing
   </span>
   
 
@@ -496,7 +496,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -906,7 +906,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -1224,7 +1224,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -1519,7 +1519,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -1791,7 +1791,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text-icon lucide-notebook-text"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5"/><path d="M9.5 12H16"/><path d="M9.5 16H14"/></svg>
   
   <span class="md-ellipsis">
-    Introdução
+    Introduction
   </span>
   
 
@@ -2178,7 +2178,7 @@
             
   
   <span class="md-ellipsis">
-    Desenvolvimento
+    Development
   </span>
   
 
@@ -2188,7 +2188,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Desenvolvimento
+            Development
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2205,7 +2205,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Compilando o GeoSlicer
+    Building GeoSlicer
   </span>
   
 
@@ -2228,7 +2228,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Como Contribuir
+    How To Contribute
   </span>
   
 
@@ -2251,7 +2251,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
   
   <span class="md-ellipsis">
-    Documentação
+    Documentation
   </span>
   
 
@@ -2283,112 +2283,102 @@
                   
 
 
-  <h1>MicroCTFlowApplyFilters</h1>
+  <h1>Filter</h1>
 
-<h2 id="filtering-tools">Filtering Tools</h2>
-<p>Módulo <em>GeoSlicer</em> que permite filtragem de imagens, conforme descrito abaixo:</p>
+<h2 id="gradient-anisotropic-diffusion">Gradient Anisotropic Diffusion</h2>
+<p>Em muitas aplicações, assume-se que transições de uma região clara para uma escura (caracterizadas por um alto gradiente) sejam de interesse. Enquanto outros filtros, como de mediana e gaussiana, frequentemente borram as fronteiras, deixando a delimitação dos poros mais confusa, os filtros de difusão anisotrópica tendem a evitar esse tipo de confusão. O termo de condutância é uma função da magnitude do gradiente da imagem em cada ponto, reduzindo a força da difusão nas bordas.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../../assets/images/GradientAnisotropicDiffusion2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Esquerda: Volume original, sem correção. Direita: Após correção feita com filtro de difusão de gradiente anisotrópico.</td>
+</tr>
+</tbody>
+</table>
+<p>A implementação numérica dessa equação disponível no <em>GeoSlicer</em> é similar à descrita no artigo de Perona-Malik, porém usa uma técnica mais robusta para estimativa da magnitude do gradiente e é generalizado para N-dimensões.</p>
+<p>Os parâmetros do módulo para o cálculo do gradiente de difusão anisotrópica são:</p>
+<ul>
+<li>
+<p><strong>Condutância</strong> (<em>Conductance</em>): Controla a sensibilidade do termo de condutância. Como regra geral, quanto menor o valor, mais fortemente o filtro preservará as bordas. Um alto valor causará difusão (suavização) das bordas. Note que o número de iterações controla o quanto haverá de suavização dentro de regiões delimitadas pelas bordas.</p>
+</li>
+<li>
+<p><strong>Iterações</strong> (<em>Iterations</em>): Quanto mais iterações, maior suavização. Cada iteração leva a mesma quantidade de tempo. Se uma iteração leva 10 segundos, 10 iterações levam 100 segundos.</p>
+</li>
+<li>
+<p><strong>Passo temporal</strong> (<em>Time step</em>): O passo temporal depende da dimensionalidade da imagem. Para imagens tridimensionais, o valor padrão de de 0.0625 fornece uma solução estável. Na prática, a alteração deste parâmetro causa poucas alterações na imagem.</p>
+</li>
+</ul>
+<hr />
+<h2 id="curvature-anisotropic-diffusion">Curvature Anisotropic Diffusion</h2>
+<p>Realiza difusão anisotrópica em uma imagem usando uma equação de difusão de curvatura modificada (<em>Modified Curvature Diffusion Equation</em>, MCDE).</p>
+<p>O MCDE não exibe as propriedades de realce de borda da difusão anisotrópica clássica, que sob certas condições pode sofrer uma difusão "negativa", que aumenta o contraste das bordas. A difusão anisotropica de curvatura sempre sofre difusão positiva, com o termo de condutância variando apenas a força dessa difusão.</p>
+<p>Qualitativamente, o MCDE se compara bem com outras técnicas de difusão não linear. É menos sensível ao contraste do que a difusão clássica do tipo Perona-Malik e preserva estruturas mais finas e detalhadas nas imagens. Existe uma potencial desvantagem de velocidade ao usar esta função em vez do <em>Gradient Anisotropic Diffusion</em>. Cada iteração da solução leva aproximadamente o dobro do tempo. Menos iterações, no entanto, podem ser necessárias para alcançar uma solução aceitável.</p>
+<p>Os parâmetros necessários para o cálculo do gradiente de difusão anisotrópica são os mesmos do método do gradiente anisotrópico.</p>
+<hr />
+<h2 id="gaussian-blur-image-filter">Gaussian Blur Image Filter</h2>
+<p>Aplica um filtro de desfoque gaussiano ao volume, o único parâmetro é <em>Sigma</em>, representando a largura da gaussiana em unidades de mm.</p>
+<hr />
+<h2 id="median-image-filter">Median Image Filter</h2>
+<p>Aplica um filtro de mediana ao volume, o parâmetro <em>Neighborhood size</em> define o tamanho da vizinhança em voxels em cada uma das direções.</p>
+<hr />
+<h2 id="simple-filters">Simple Filters</h2>
+<p>Esse módulo, carregado a partir do 3D Slicer original, apresenta um conjunto diverso de filtros para calcular a morfologia binária e em escala de cinza, remoção de ruído, limiar, manipulação de intensidade da imagem, crescimento de regiões, transformada de Fourier, etc. Para uma explicação mais detalhada de cada uma das opções disponíveis nesse módulo, consulte a documentação <a href="https://slicer.readthedocs.io/en/latest/user_guide/modules/simplefilters.html">específica</a>.</p>
+<hr />
+<h2 id="polynomial-shading-correction">Polynomial Shading Correction</h2>
+<p>Imagens de tomografia frequentemente apresentam variações nos valores de intensidade que não são características da amostra, mas sim do equipamento que as coletou. Essas variações são chamadas de artefatos, e existem diversos tipos deles. O módulo <em>Polynomial Shading Correction</em> corrige o artefato conhecido como <em>beam hardening</em>, entre outros. Também é conhecido como correção de <em>background</em>. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../../assets/images/PolynomialShadingCorrection1.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Esquerda: artefato de <em>beam hardening</em> presente. Direita: imagem corrigida após aplicação de <em>shading correction</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>Todo o procedimento descrito a seguir é feito fatia-a-fatia, no plano axial (eixo-z) da amostra.</p>
+<p>Para cada fatia, baseado no parâmetro "Number of fitting points", uma amostra aleatória é feita em valores de intensidade, em pontos pertencentes à máscara de sombreamento. Esses pontos são utilizados para o fit de uma função polinomial de segundo grau em duas variáveis, que define o background da imagem:</p>
+<div class="arithmatex">\[ f(x,y) = a (x-b)^2+c(y-d)^2+e(x-b)+f(y-d)+g(x-b)(y-d) + h \]</div>
+<p>A função ajustada é então utilizada para fazer a correção na fatia, seguindo a equação:</p>
+<p>$$ s'(x,y) = \frac{s(x,y)}{f(x,y)}M $$
+Onde, <span class="arithmatex">\(s'(x,y)\)</span> é a fatia corrigida, <span class="arithmatex">\(s(x,y)\)</span> é a original e <span class="arithmatex">\(M\)</span> é a média de todo o dado na máscara de sombreamento (valor constante).</p>
+<p>O fluxo de trabalho do módulo <em>Shading Correction</em> é dividido em três etapas: inicialização, definição da máscara de amostragem e processamento.</p>
+<h4 id="inicializacao">Inicialização</h4>
 <ol>
-<li>
-<p>Selecione uma ferramenta em <em>Filtering tool</em>.</p>
-</li>
-<li>
-<p>Preencha as entradas necessárias e aplique.</p>
-</li>
+<li><strong>Input image:</strong> Selecione a imagem de entrada que deseja corrigir.</li>
+<li><strong>Keep intermediate image:</strong> Marque esta opção se desejar manter a imagem pré-normalizada que é gerada durante a etapa de inicialização. Esta imagem intermediária facilita a etapa de limiarização (<em>threshold</em>).</li>
+<li>Clique no botão <strong>Initialize</strong>. Isso irá pré-normalizar a imagem de entrada e preparar o editor de segmentos para a criação da máscara de amostragem.</li>
 </ol>
-<h3 id="gradient-anisotropic-diffusion">Gradient Anisotropic Diffusion</h3>
-<p>Módulo <em>GeoSlicer</em> para aplicar filtro de difusão anisotrópica de gradiente a imagens, conforme descrito nos passos abaixo:</p>
+<h4 id="threshold">Threshold</h4>
 <ol>
-<li>
-<p>Selecione a imagem a ser filtrada em <em>Input image</em>.</p>
-</li>
-<li>
-<p>Defina o parâmetro de condutância em <em>Conductance</em>. A condutância controla a sensibilidade do termo de condutância. Como regra geral, quanto menor o valor, mais fortemente o filtro preservará as bordas. Um alto valor causará difusão (suavização) das bordas. Note que o número de iterações controla o quanto haverá de suavização dentro de regiões delimitadas pelas bordas.</p>
-</li>
-<li>
-<p>Defina o parâmetro de número de iterações em <em>Iterations</em>. Quanto mais iterações, maior suavização. Cada iteração leva a mesma quantidade de tempo. Se uma iteração leva 10 segundos, 10 iterações levam 100 segundos. Note que a condutância controla o quanto cada iteração suavizará as bordas.</p>
-</li>
-<li>
-<p>Defina o parâmetro de passo temporal em <em>Time step</em>. O passo temporal depende da dimensionalidade da imagem. Para imagens tridimensionais, o valor padrão de de 0.0625 fornece uma solução estável.</p>
-</li>
-<li>
-<p>Defina o nome de saída em <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Clique no botão <em>Apply</em> e aguarde a finalização. O volume de saída filtrado estará localizado no mesmo diretório que o volume de entrada.</p>
-</li>
+<li>Após a inicialização, uma interface do editor de segmentos com o efeito <strong>Threshold</strong> será exibida para criar uma máscara que cubra as áreas da imagem afetadas pelo sombreamento. Esta máscara será usada para amostrar os pontos para o ajuste do polinômio.</li>
+<li>Após ajustar o limiar, clique em <strong>Apply</strong> no painel do efeito Threshold.</li>
 </ol>
-<h3 id="curvature-anisotropic-diffusion">Curvature Anisotropic Diffusion</h3>
-<p>Módulo <em>GeoSlicer</em> para plicar filtro de difusão anisotrópica de curvatura em imagens, conforme descrito nos passos abaixo:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leve em consideração o mineral no qual o efeito de <em>beam hardening</em> estiver aparecendo mais claramente. Por exemplo: Se esse for o caso da calcita, basta clicar + arrastar com o mouse próximo de uma região com esse mineral, um circulo amarelo deve aparecer e você deve ver a segmentação colorindo próximo a região, a depender do raio desse círculo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Para um ajuste mais fino e sensível da segmentação, vá com o mouse para cima de uma das caixas de seleção com os valores máximo/mínimo e utilize a roleta do mouse para aumentar ou diminuir o limite superior/inferior.</p>
+<p><img alt="fine_tunning" src="../../assets/images/ShadingFineTunning.png" /></p>
+</div>
+<h4 id="selecao-de-parametros">Seleção de Parâmetros</h4>
 <ol>
-<li>
-<p>Selecione a imagem a ser filtrada em <em>Input image</em>.</p>
-</li>
-<li>
-<p>Defina o parâmetro de condutância em <em>Conductance</em>. A condutância controla a sensibilidade do termo de condutância. Como regra geral, quanto menor o valor, mais fortemente o filtro preservará as bordas. Um alto valor causará difusão (suavização) das bordas. Note que o número de iterações controla o quanto haverá de suavização dentro de regiões delimitadas pelas bordas.</p>
-</li>
-<li>
-<p>Defina o parâmetro de número de iterações em <em>Iterations</em>. Quanto mais iterações, maior suavização. Cada iteração leva a mesma quantidade de tempo. Se uma iteração leva 10 segundos, 10 iterações levam 100 segundos. Note que a condutância controla o quanto cada iteração suavizará as bordas.</p>
-</li>
-<li>
-<p>Defina o parâmetro de passo temporal em <em>Time step</em>. O passo temporal depende da dimensionalidade da imagem. Para imagens tridimensionais, o valor padrão de de 0.0625 fornece uma solução estável.</p>
-</li>
-<li>
-<p>Defina o nome de saída em <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Clique no botão <em>Apply</em> e aguarde a finalização. O volume de saída filtrado estará localizado no mesmo diretório que o volume de entrada.</p>
-</li>
+<li><strong>Slice group size:</strong> Defina o número de fatias que compartilharão a mesma função polinomial ajustada.</li>
+<li><strong>Number of fitting points:</strong> Defina o número de pontos a serem amostrados da máscara para o ajuste da função.</li>
+<li><strong>Output image name:</strong> Insira um nome para a imagem de saída corrigida.</li>
 </ol>
-<h3 id="gaussian-blur-image-filter">Gaussian Blur Image Filter</h3>
-<p>Módulo <em>GeoSlicer</em> para aplicar filtro de desfoque gaussiano a imagens, conforme descrito nos passos abaixo:</p>
+<h4 id="aplicar">Aplicar</h4>
 <ol>
-<li>
-<p>Selecione a imagem a ser filtrada em <em>Input image</em>.</p>
-</li>
-<li>
-<p>Defina o parâmetro <em>Sigma</em>, o valor em unidades físicas (e.g. mm) do kernel gaussiano.</p>
-</li>
-<li>
-<p>Defina o nome de saída em <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Clique no botão <em>Apply</em> e aguarde a finalização. O volume de saída filtrado estará localizado no mesmo diretório que o volume de entrada.</p>
-</li>
-</ol>
-<h3 id="median-image-filter">Median Image Filter</h3>
-<p>Módulo <em>GeoSlicer</em> para aplicar filtro mediano a imagens, conforme descrito nos passos abaixo:</p>
-<ol>
-<li>
-<p>Selecione a imagem a ser filtrada em <em>Input image</em>.</p>
-</li>
-<li>
-<p>Defina o parâmetro <em>Neighborhood size</em>, o tamanho da vizinhança em cada dimensão.</p>
-</li>
-<li>
-<p>Defina o nome de saída em <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Clique no botão <em>Apply</em> e aguarde a finalização. O volume de saída filtrado estará localizado no mesmo diretório que o volume de entrada.</p>
-</li>
-</ol>
-<h3 id="shading-correction">Shading Correction</h3>
-<p>Módulo <em>GeoSlicer</em> para aplicar correção de sombreamento a imagens, conforme descrito nos passos abaixo:</p>
-<ol>
-<li>
-<p>Selecione a imagem a ser corrigida em <em>Input image</em>.</p>
-</li>
-<li>
-<p>Selecione a máscara de entrada em <em>Input mask LabelMap</em> para ajustar as bordas do dado corrigido final.</p>
-</li>
-<li>
-<p>Selecione a máscara de sombreamento em <em>Input shading mask LabelMap</em>, que proverá o intervalo de intensidades usado no cálculo de fundo.</p>
-</li>
-<li>
-<p>Defina o o raio da bola do algoritmo rolling ball em <em>Ball Radius</em>.</p>
-</li>
-<li>
-<p>Clique no botão <em>Apply</em> e aguarde a finalização. O volume de saída filtrado estará localizado no mesmo diretório que o volume de entrada.</p>
-</li>
+<li><strong>Apply:</strong> Clique para iniciar o processo de correção na imagem de entrada.</li>
+<li><strong>Apply to full volume:</strong> Se a sua imagem de entrada for uma imagem virtual (<em>lazy node</em>), este botão estará visível. Clicar nele abrirá o módulo <strong>Polynomial Shading Correction Big Image</strong>, que é otimizado para processar imagens grandes. Os parâmetros definidos neste módulo serão automaticamente transferidos para o módulo de imagem grande.</li>
 </ol>
 
 
@@ -2437,12 +2427,12 @@
     
     
     
-<script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
 
 
     
-      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

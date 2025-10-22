@@ -16,7 +16,7 @@
     
     
       
-        <title>MicroCTFlowApplyFilters - GeoSlicer Manual</title>
+        <title>Filter - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#filtering-tools" class="md-skip">
+        <a href="#gradient-anisotropic-diffusion" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MicroCTFlowApplyFilters
+              Filter
             
           </span>
         </div>
@@ -156,13 +156,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="MicroCTFlowApplyFilters.html" hreflang="pt" class="md-select__link">
+            <a href="Filter.html" hreflang="pt" class="md-select__link">
               Português
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../../Pages/en/MicroCTFlowApplyFilters.html" hreflang="en" class="md-select__link">
+            <a href="../../../Pages/pt/Filter.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -2283,112 +2283,102 @@
                   
 
 
-  <h1>MicroCTFlowApplyFilters</h1>
+  <h1>Filter</h1>
 
-<h2 id="filtering-tools">Filtering Tools</h2>
-<p><em>GeoSlicer</em> module that allows image filtering, as described below:</p>
+<h2 id="gradient-anisotropic-diffusion">Gradient Anisotropic Diffusion</h2>
+<p>Em muitas aplicações, assume-se que transições de uma região clara para uma escura (caracterizadas por um alto gradiente) sejam de interesse. Enquanto outros filtros, como de mediana e gaussiana, frequentemente borram as fronteiras, deixando a delimitação dos poros mais confusa, os filtros de difusão anisotrópica tendem a evitar esse tipo de confusão. O termo de condutância é uma função da magnitude do gradiente da imagem em cada ponto, reduzindo a força da difusão nas bordas.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../../../assets/images/GradientAnisotropicDiffusion2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Esquerda: Volume original, sem correção. Direita: Após correção feita com filtro de difusão de gradiente anisotrópico.</td>
+</tr>
+</tbody>
+</table>
+<p>A implementação numérica dessa equação disponível no <em>GeoSlicer</em> é similar à descrita no artigo de Perona-Malik, porém usa uma técnica mais robusta para estimativa da magnitude do gradiente e é generalizado para N-dimensões.</p>
+<p>Os parâmetros do módulo para o cálculo do gradiente de difusão anisotrópica são:</p>
+<ul>
+<li>
+<p><strong>Condutância</strong> (<em>Conductance</em>): Controla a sensibilidade do termo de condutância. Como regra geral, quanto menor o valor, mais fortemente o filtro preservará as bordas. Um alto valor causará difusão (suavização) das bordas. Note que o número de iterações controla o quanto haverá de suavização dentro de regiões delimitadas pelas bordas.</p>
+</li>
+<li>
+<p><strong>Iterações</strong> (<em>Iterations</em>): Quanto mais iterações, maior suavização. Cada iteração leva a mesma quantidade de tempo. Se uma iteração leva 10 segundos, 10 iterações levam 100 segundos.</p>
+</li>
+<li>
+<p><strong>Passo temporal</strong> (<em>Time step</em>): O passo temporal depende da dimensionalidade da imagem. Para imagens tridimensionais, o valor padrão de de 0.0625 fornece uma solução estável. Na prática, a alteração deste parâmetro causa poucas alterações na imagem.</p>
+</li>
+</ul>
+<hr />
+<h2 id="curvature-anisotropic-diffusion">Curvature Anisotropic Diffusion</h2>
+<p>Realiza difusão anisotrópica em uma imagem usando uma equação de difusão de curvatura modificada (<em>Modified Curvature Diffusion Equation</em>, MCDE).</p>
+<p>O MCDE não exibe as propriedades de realce de borda da difusão anisotrópica clássica, que sob certas condições pode sofrer uma difusão "negativa", que aumenta o contraste das bordas. A difusão anisotropica de curvatura sempre sofre difusão positiva, com o termo de condutância variando apenas a força dessa difusão.</p>
+<p>Qualitativamente, o MCDE se compara bem com outras técnicas de difusão não linear. É menos sensível ao contraste do que a difusão clássica do tipo Perona-Malik e preserva estruturas mais finas e detalhadas nas imagens. Existe uma potencial desvantagem de velocidade ao usar esta função em vez do <em>Gradient Anisotropic Diffusion</em>. Cada iteração da solução leva aproximadamente o dobro do tempo. Menos iterações, no entanto, podem ser necessárias para alcançar uma solução aceitável.</p>
+<p>Os parâmetros necessários para o cálculo do gradiente de difusão anisotrópica são os mesmos do método do gradiente anisotrópico.</p>
+<hr />
+<h2 id="gaussian-blur-image-filter">Gaussian Blur Image Filter</h2>
+<p>Aplica um filtro de desfoque gaussiano ao volume, o único parâmetro é <em>Sigma</em>, representando a largura da gaussiana em unidades de mm.</p>
+<hr />
+<h2 id="median-image-filter">Median Image Filter</h2>
+<p>Aplica um filtro de mediana ao volume, o parâmetro <em>Neighborhood size</em> define o tamanho da vizinhança em voxels em cada uma das direções.</p>
+<hr />
+<h2 id="simple-filters">Simple Filters</h2>
+<p>Esse módulo, carregado a partir do 3D Slicer original, apresenta um conjunto diverso de filtros para calcular a morfologia binária e em escala de cinza, remoção de ruído, limiar, manipulação de intensidade da imagem, crescimento de regiões, transformada de Fourier, etc. Para uma explicação mais detalhada de cada uma das opções disponíveis nesse módulo, consulte a documentação <a href="https://slicer.readthedocs.io/en/latest/user_guide/modules/simplefilters.html">específica</a>.</p>
+<hr />
+<h2 id="polynomial-shading-correction">Polynomial Shading Correction</h2>
+<p>Imagens de tomografia frequentemente apresentam variações nos valores de intensidade que não são características da amostra, mas sim do equipamento que as coletou. Essas variações são chamadas de artefatos, e existem diversos tipos deles. O módulo <em>Polynomial Shading Correction</em> corrige o artefato conhecido como <em>beam hardening</em>, entre outros. Também é conhecido como correção de <em>background</em>. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figura 1" src="../../../assets/images/PolynomialShadingCorrection1.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Esquerda: artefato de <em>beam hardening</em> presente. Direita: imagem corrigida após aplicação de <em>shading correction</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>Todo o procedimento descrito a seguir é feito fatia-a-fatia, no plano axial (eixo-z) da amostra.</p>
+<p>Para cada fatia, baseado no parâmetro "Number of fitting points", uma amostra aleatória é feita em valores de intensidade, em pontos pertencentes à máscara de sombreamento. Esses pontos são utilizados para o fit de uma função polinomial de segundo grau em duas variáveis, que define o background da imagem:</p>
+<div class="arithmatex">\[ f(x,y) = a (x-b)^2+c(y-d)^2+e(x-b)+f(y-d)+g(x-b)(y-d) + h \]</div>
+<p>A função ajustada é então utilizada para fazer a correção na fatia, seguindo a equação:</p>
+<p>$$ s'(x,y) = \frac{s(x,y)}{f(x,y)}M $$
+Onde, <span class="arithmatex">\(s'(x,y)\)</span> é a fatia corrigida, <span class="arithmatex">\(s(x,y)\)</span> é a original e <span class="arithmatex">\(M\)</span> é a média de todo o dado na máscara de sombreamento (valor constante).</p>
+<p>O fluxo de trabalho do módulo <em>Shading Correction</em> é dividido em três etapas: inicialização, definição da máscara de amostragem e processamento.</p>
+<h4 id="inicializacao">Inicialização</h4>
 <ol>
-<li>
-<p>Select a tool in <em>Filtering tool</em>.</p>
-</li>
-<li>
-<p>Fill in the required inputs and apply.</p>
-</li>
+<li><strong>Input image:</strong> Selecione a imagem de entrada que deseja corrigir.</li>
+<li><strong>Keep intermediate image:</strong> Marque esta opção se desejar manter a imagem pré-normalizada que é gerada durante a etapa de inicialização. Esta imagem intermediária facilita a etapa de limiarização (<em>threshold</em>).</li>
+<li>Clique no botão <strong>Initialize</strong>. Isso irá pré-normalizar a imagem de entrada e preparar o editor de segmentos para a criação da máscara de amostragem.</li>
 </ol>
-<h3 id="gradient-anisotropic-diffusion">Gradient Anisotropic Diffusion</h3>
-<p><em>GeoSlicer</em> module to apply a gradient anisotropic diffusion filter to images, as described in the steps below:</p>
+<h4 id="threshold">Threshold</h4>
 <ol>
-<li>
-<p>Select the image to be filtered in <em>Input image</em>.</p>
-</li>
-<li>
-<p>Define the conductance parameter in <em>Conductance</em>. Conductance controls the sensitivity of the conductance term. As a general rule, the lower the value, the more strongly the filter will preserve edges. A high value will cause diffusion (smoothing) of the edges. Note that the number of iterations controls how much smoothing will occur within regions delimited by the edges.</p>
-</li>
-<li>
-<p>Define the number of iterations parameter in <em>Iterations</em>. The more iterations, the greater the smoothing. Each iteration takes the same amount of time. If one iteration takes 10 seconds, 10 iterations take 100 seconds. Note that conductance controls how much each iteration will smooth the edges.</p>
-</li>
-<li>
-<p>Define the time step parameter in <em>Time step</em>. The time step depends on the dimensionality of the image. For three-dimensional images, the default value of 0.0625 provides a stable solution.</p>
-</li>
-<li>
-<p>Define the output name in <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Click the <em>Apply</em> button and wait for completion. The filtered output volume will be located in the same directory as the input volume.</p>
-</li>
+<li>Após a inicialização, uma interface do editor de segmentos com o efeito <strong>Threshold</strong> será exibida para criar uma máscara que cubra as áreas da imagem afetadas pelo sombreamento. Esta máscara será usada para amostrar os pontos para o ajuste do polinômio.</li>
+<li>Após ajustar o limiar, clique em <strong>Apply</strong> no painel do efeito Threshold.</li>
 </ol>
-<h3 id="curvature-anisotropic-diffusion">Curvature Anisotropic Diffusion</h3>
-<p><em>GeoSlicer</em> module to apply a curvature anisotropic diffusion filter to images, as described in the steps below:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leve em consideração o mineral no qual o efeito de <em>beam hardening</em> estiver aparecendo mais claramente. Por exemplo: Se esse for o caso da calcita, basta clicar + arrastar com o mouse próximo de uma região com esse mineral, um circulo amarelo deve aparecer e você deve ver a segmentação colorindo próximo a região, a depender do raio desse círculo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Para um ajuste mais fino e sensível da segmentação, vá com o mouse para cima de uma das caixas de seleção com os valores máximo/mínimo e utilize a roleta do mouse para aumentar ou diminuir o limite superior/inferior.</p>
+<p><img alt="fine_tunning" src="../../../assets/images/ShadingFineTunning.png" /></p>
+</div>
+<h4 id="selecao-de-parametros">Seleção de Parâmetros</h4>
 <ol>
-<li>
-<p>Select the image to be filtered in <em>Input image</em>.</p>
-</li>
-<li>
-<p>Define the conductance parameter in <em>Conductance</em>. Conductance controls the sensitivity of the conductance term. As a general rule, the lower the value, the more strongly the filter will preserve edges. A high value will cause diffusion (smoothing) of the edges. Note that the number of iterations controls how much smoothing will occur within regions delimited by the edges.</p>
-</li>
-<li>
-<p>Define the number of iterations parameter in <em>Iterations</em>. The more iterations, the greater the smoothing. Each iteration takes the same amount of time. If one iteration takes 10 seconds, 10 iterations take 100 seconds. Note that conductance controls how much each iteration will smooth the edges.</p>
-</li>
-<li>
-<p>Define the time step parameter in <em>Time step</em>. The time step depends on the dimensionality of the image. For three-dimensional images, the default value of 0.0625 provides a stable solution.</p>
-</li>
-<li>
-<p>Define the output name in <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Click the <em>Apply</em> button and wait for completion. The filtered output volume will be located in the same directory as the input volume.</p>
-</li>
+<li><strong>Slice group size:</strong> Defina o número de fatias que compartilharão a mesma função polinomial ajustada.</li>
+<li><strong>Number of fitting points:</strong> Defina o número de pontos a serem amostrados da máscara para o ajuste da função.</li>
+<li><strong>Output image name:</strong> Insira um nome para a imagem de saída corrigida.</li>
 </ol>
-<h3 id="gaussian-blur-image-filter">Gaussian Blur Image Filter</h3>
-<p><em>GeoSlicer</em> module to apply a Gaussian blur filter to images, as described in the steps below:</p>
+<h4 id="aplicar">Aplicar</h4>
 <ol>
-<li>
-<p>Select the image to be filtered in <em>Input image</em>.</p>
-</li>
-<li>
-<p>Define the <em>Sigma</em> parameter, the value in physical units (e.g. mm) of the Gaussian kernel.</p>
-</li>
-<li>
-<p>Define the output name in <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Click the <em>Apply</em> button and wait for completion. The filtered output volume will be located in the same directory as the input volume.</p>
-</li>
-</ol>
-<h3 id="median-image-filter">Median Image Filter</h3>
-<p><em>GeoSlicer</em> module to apply a median filter to images, as described in the steps below:</p>
-<ol>
-<li>
-<p>Select the image to be filtered in <em>Input image</em>.</p>
-</li>
-<li>
-<p>Define the <em>Neighborhood size</em> parameter, the size of the neighborhood in each dimension.</p>
-</li>
-<li>
-<p>Define the output name in <em>Output image name</em>.</p>
-</li>
-<li>
-<p>Click the <em>Apply</em> button and wait for completion. The filtered output volume will be located in the same directory as the input volume.</p>
-</li>
-</ol>
-<h3 id="shading-correction">Shading Correction</h3>
-<p><em>GeoSlicer</em> module to apply shading correction to images, as described in the steps below:</p>
-<ol>
-<li>
-<p>Select the image to be corrected in <em>Input image</em>.</p>
-</li>
-<li>
-<p>Select the input mask in <em>Input mask LabelMap</em> to adjust the edges of the final corrected data.</p>
-</li>
-<li>
-<p>Select the shading mask in <em>Input shading mask LabelMap</em>, which will provide the intensity range used in the background calculation.</p>
-</li>
-<li>
-<p>Define the rolling ball algorithm's ball radius in <em>Ball Radius</em>.</p>
-</li>
-<li>
-<p>Click the <em>Apply</em> button and wait for completion. The filtered output volume will be located in the same directory as the input volume.</p>
-</li>
+<li><strong>Apply:</strong> Clique para iniciar o processo de correção na imagem de entrada.</li>
+<li><strong>Apply to full volume:</strong> Se a sua imagem de entrada for uma imagem virtual (<em>lazy node</em>), este botão estará visível. Clicar nele abrirá o módulo <strong>Polynomial Shading Correction Big Image</strong>, que é otimizado para processar imagens grandes. Os parâmetros definidos neste módulo serão automaticamente transferidos para o módulo de imagem grande.</li>
 </ol>
 
 

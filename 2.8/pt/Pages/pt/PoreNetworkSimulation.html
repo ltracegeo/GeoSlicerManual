@@ -2468,17 +2468,55 @@
 <li><em>Correlation diameter</em>: Se a <em>Fraction correlation</em> for escolhida como <em>Spatially correlated</em>, define a distância mais provável de encontrar poros com mesma distribuição de ângulo de contato;</li>
 <li><em>Fraction correlation</em>: Define como a fração para a segunda distribuição será correlacionada, se correlacionada espacialmente, para maiores poros, menores poros ou aleatória;</li>
 </ul>
+<h4 id="modo-de-execucao">Modo de Execução</h4>
+<p>O usuário pode escolher entre dois modos de execução para realizar a <strong>simulação bifásica</strong>:</p>
+<ul>
+<li>
+<p><strong>Local</strong>: Executa a simulação diretamente na máquina do usuário.
+  Nesse modo, o usuário pode definir a opção de simulação <em>Max subprocesses</em>, que controla quantos subprocessos de thread única serão executados em paralelo. O valor recomendado é cerca de dois terços do total de núcleos de CPU disponíveis para um desempenho otimizado sem sobrecarregar o sistema.</p>
+</li>
+<li>
+<p><strong>Remoto</strong>: Envia a simulação para ser executada em um cluster de computação configurado.
+  Nesse modo, o usuário especifica o opção <em>Number of jobs</em> em que a simulação será dividida. Ideal para testes de sensibilidade muito grandes.
+  A interface à direita mostrará o progresso da simulação, e o usuário também pode clicar em <em>Open</em>  para inspeção dos resultados parciais antes da conclusão.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figure 12a" src="../../../assets/images/PoreNetworkSimulationTwoPhaseExecutionMode.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 12a: Seleção do modo de execução para a simulação bifásica.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figure 12b" src="../../../assets/images/PoreNetworkSimulationTwoPhaseExecutionModeJob.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figure 12b: Opções do job enviado a cluster.</td>
+</tr>
+</tbody>
+</table>
+<p>Essa flexibilidade permite que o usuário aproveite o processamento local para execuções de testes menores ou utilize recursos de computação em cluster para simulações mais complexas ou de grande escala.</p>
 <h4 id="simulation-options"><em>Simulation options</em></h4>
 <p>Essa seção de parâmetros é dedicada a controlar os parâmetros relacionados a própria simulação.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 12" src="../../../assets/images/PoreNetworkSimulationTwoPhaseSimulationProperties.png" /></th>
+<th align="center"><img alt="Figura 13" src="../../../assets/images/PoreNetworkSimulationTwoPhaseSimulationProperties.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 12: Parâmetros da simulação.</td>
+<td align="center">Figura 13: Parâmetros da simulação.</td>
 </tr>
 </tbody>
 </table>
@@ -2494,6 +2532,7 @@
 <li><em>Create animation node</em>: Cria um nó de animação que pode ser usado na aba "Cycles Visualization";</li>
 <li><em>Keep temporary files</em>: Mantém os arquivos .vtu na pasta de arquivos temporários do GeoSlicer, um arquivo para cada etapa da simulação;</li>
 <li><em>Max subprocesses</em>: Quantidade máxima de subprocessos single-thread que devem ser executados; O valor recomendado para uma máquina ociosa é 2/3 do total de núcleos;</li>
+<li><em>Number of jobs</em>: número de jobs em que a simulação será dividida no cluster;</li>
 </ul>
 <p>Uma vez que temos uma vasta quantidade de parâmetros que podem ser modificados para modelar o experimento a partir da simulação, se torna útil variarmos tais parâmetros de forma mais sistemática para uma análise aprofundada da sua influência nos resultados obtidos. </p>
 <p>Para isso o usuário pode selecionar o botão "<em>Multi</em>" disponível em grande parte dos parâmetros, ao clicar em Multi, três caixas aparecem com opções de início, fim e passo, que podem ser usadas para rodar diversas simulações em uma tabela linearmente distribuída dos valores desses parâmetros. Se mais de um parâmetro é escolhido com múltiplos valores, simulações rodam com todas as combinações de parâmetros possíveis, isso pode aumentar consideravelmente a quantidade de simulações e o tempo para executar.</p>
@@ -2503,12 +2542,12 @@
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 13" src="../../../assets/images/PoreNetworkSimulationMercury.png" /></th>
+<th align="center"><img alt="Figura 14" src="../../../assets/images/PoreNetworkSimulationMercury.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 13: Simulação de intrusão de Mercúrio.</td>
+<td align="center">Figura 14: Simulação de intrusão de Mercúrio.</td>
 </tr>
 </tbody>
 </table>
@@ -2520,19 +2559,19 @@
 <ul>
 <li>
 <p><em>Fixed radius</em>: Todos os raios da subresolução tem o mesmo tamanho escolhido na interface;
-<img alt="Figura 14" src="../../../assets/images/PoreNetworkSimulationSubscaleFixed.png" /></p>
+<img alt="Figura 15" src="../../../assets/images/PoreNetworkSimulationSubscaleFixed.png" /></p>
 </li>
 <li>
 <p><em>Leverett Function - Sample Permeability</em>: Atribui uma pressão de entrada com base na curva de J Leverett com base na permeabilidade da amostra;
-<img alt="Figura 15" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverett.png" /></p>
+<img alt="Figura 16" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverett.png" /></p>
 </li>
 <li>
 <p><em>Leverett Function - Permeability curve</em>: Também utiliza a curva de J Leverett mas com uma curva definida para a permeabilidade ao invés de um valor;
-<img alt="Figura 16" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverettCurve.png" /></p>
+<img alt="Figura 17" src="../../../assets/images/PoreNetworkSimulationSubscaleLeverettCurve.png" /></p>
 </li>
 <li>
 <p><em>Pressure Curve</em> e <em>Throat Radius Curve</em>: Atribui os raios da subresolução com base na curva obtida por um experimento de injeção de mercúrio. Pode ser utilizado o dado da pressão de entrada pela fração do volume, ou então o raio equivalente em função da fração de volume;
-<img alt="Figura 17a" src="../../../assets/images/PoreNetworkSimulationSubscalePressure.png" /><img alt="Figura 17b" src="../../../assets/images/PoreNetworkSimulationSubscaleRadius.png" /></p>
+<img alt="Figura 18a" src="../../../assets/images/PoreNetworkSimulationSubscalePressure.png" /><img alt="Figura 18b" src="../../../assets/images/PoreNetworkSimulationSubscaleRadius.png" /></p>
 </li>
 </ul>
 <p>O modelo de subescala escolhido não tem impacto nas simulações de redes uniescalares, uma vez que todos os raios já estão determinados. </p>
