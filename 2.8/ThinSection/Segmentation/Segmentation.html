@@ -2955,6 +2955,9 @@ The input is a segmentation node or labelmap volume, a region of interest (defin
 <p><em>2D throat analysis(beta)</em>: Adds 2D throat analysis metrics to the report.</p>
 </li>
 <li>
+<p><em>Calculate Coordination Number</em>: Calculates the number of neighboring regions (that share a border) with each of the watershed labels. We consider as a "neighbor" any label that shares a face, edge or vertex of another nearby.</p>
+</li>
+<li>
 <p><em>Smooth factor</em>: Parameter that adjusts the degree of smoothness on the edges of segmented regions, allowing control between preserving details and reducing noise or irregularities. With high factors, the segmentation will be smoother and simplified, but with loss of small details.</p>
 </li>
 <li>

@@ -2325,6 +2325,16 @@
 <h2 id="median-image-filter">Median Image Filter</h2>
 <p>Applies a median filter to the volume; the <em>Neighborhood size</em> parameter defines the neighborhood size in voxels in each of the directions.</p>
 <hr />
+<h2 id="euclidean-distance-transform">Euclidean Distance Transform</h2>
+<p>Calculates the Euclidean distance transform of a binary image. The output image contains, for each voxel, the distance to the nearest non-zero voxel in the input image.</p>
+<h3 id="usage">Usage</h3>
+<ol>
+<li>Select the input binary image. Scalar images also work, but only non-zero voxels are considered as foreground.</li>
+<li>If the input has more than one label, select the desired label value to be considered as foreground. It is possible to select multiple segments.</li>
+<li>If the input is a scalar or just have one label, the selection of label value is hidden.</li>
+<li>Choose a prefix for the output image name.</li>
+</ol>
+<hr />
 <h2 id="simple-filters">Simple Filters</h2>
 <p>This module, loaded from the original 3D Slicer, presents a diverse set of filters for calculating binary and grayscale morphology, noise removal, thresholding, image intensity manipulation, region growing, Fourier transform, etc. For a more detailed explanation of each of the options available in this module, consult the <a href="https://slicer.readthedocs.io/en/latest/user_guide/modules/simplefilters.html">specific</a> documentation.</p>
 <hr />

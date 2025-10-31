@@ -706,6 +706,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#interactive-segmenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Segmenter
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2895,6 +2904,9 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 <p><em>2D throat analysis(beta)</em>: Adiciona métricas de analise de gargantas 2d no report.</p>
 </li>
 <li>
+<p><em>Calculate Coordination Number</em>: Calcula o número de regiões vizinhas (que dividem fronteira) com cada um dos rótulos (<em>labels</em>) do watershed. Consideramos como um "vizinho" todo rótulo que compartilhe uma face, aresta ou vértice de outro próximo.</p>
+</li>
+<li>
 <p><em>Smooth factor</em>: Parâmetro que ajusta o grau de suavidade nas bordas das regiões segmentadas, permitindo controle entre a preservação dos detalhes e a redução de ruído ou irregularidades. Com Fatores altos a segmentação será mais suave e simplificada, mas com perda de pequenos detalhes.</p>
 </li>
 <li>
@@ -3031,6 +3043,85 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 <li><strong>Megaporo pequeno</strong>: classe = 6, max_feret entre 4 e 32 mm.</li>
 <li><strong>Megaporo grande</strong>: classe = 7, max_feret maior que 32 mm.</li>
 </ul>
+<hr />
+<h2 id="interactive-segmenter">Interactive Segmenter</h2>
+<p>O módulo <strong>Interactive Segmenter</strong> fornece uma ferramenta de segmentação supervisionada para imagens 3D com uma pré-visualização em tempo real. Ele permite que os usuários anotem uma pequena porção de uma imagem e vejam o resultado da segmentação ser atualizado instantaneamente em uma visualização paralela, facilitando um treinamento de modelo rápido e intuitivo.</p>
+<h3 id="uso">Uso</h3>
+<p>O fluxo de trabalho foi projetado para ser interativo, fornecendo feedback imediato sobre as anotações do usuário.</p>
+<h4 id="passo-1-selecionar-imagem-de-entrada">Passo 1: Selecionar Imagem de Entrada</h4>
+<ol>
+<li>Na seção <strong>Input</strong>, selecione o volume que você deseja segmentar usando o seletor <strong>Input Image</strong>.</li>
+<li>Se a imagem for muito grande (por exemplo, maior que 700³ voxels), é recomendado recortar a imagem primeiro para obter um melhor desempenho. Você pode recortar a imagem usando o módulo Crop. A segmentação pode ser aplicada à imagem completa, sem recortes, posteriormente.</li>
+</ol>
+<h4 id="passo-2-iniciar-anotacao">Passo 2: Iniciar Anotação</h4>
+<ol>
+<li>Clique no botão <strong>Start Annotation</strong>.</li>
+<li>O layout da tela mudará para uma visualização lado a lado. A visualização da esquerda é para anotação, e a da direita exibirá a pré-visualização da segmentação em tempo real.</li>
+<li>O módulo começará a calcular um cache de características em segundo plano. Uma barra de progresso indicará o status. As ferramentas de anotação serão habilitadas assim que este processo for concluído.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Layout" src="../../../assets/images/InteractiveSegmenter.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figura 1: Layout lado a lado para anotação (esquerda) e pré-visualização (direita).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="passo-3-anotar-a-imagem">Passo 3: Anotar a Imagem</h4>
+<ol>
+<li>Use as ferramentas simplificadas do <strong>Segment Editor</strong> na seção <strong>Annotation</strong> para criar segmentos e desenhar anotações na imagem na <strong>visualização da esquerda</strong>. As principais ferramentas disponíveis são <code>Paint</code>, <code>Draw</code> e <code>Erase</code>.</li>
+<li>Conforme você anota, um modelo Random Forest é treinado em segundo plano. O resultado da segmentação será atualizado em tempo real na <strong>visualização da direita</strong>.</li>
+<li>Crie pelo menos dois segmentos e forneça exemplos para cada um para obter um resultado significativo.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Dica</p>
+<p>Anote várias características da imagem para um resultado melhor. Inclua as fronteiras entre os segmentos esperados e outras regiões potencialmente ambíguas. Itere corrigindo quaisquer regiões classificadas incorretamente que você veja na pré-visualização.</p>
+</div>
+<h4 id="passo-4-ajustar-o-conjunto-de-caracteristicas-opcional">Passo 4: Ajustar o Conjunto de Características (Opcional)</h4>
+<ol>
+<li>Na seção <strong>Annotation</strong>, você pode selecionar um <strong>Feature Set</strong> no menu suspenso. Esses pré-ajustes controlam o conjunto de características da imagem usadas para treinar o classificador, afetando a suavidade e o detalhe do resultado da segmentação.</li>
+<li>Os pré-ajustes disponíveis são:<ul>
+<li><strong>Sharp</strong>: Prioriza detalhes finos.</li>
+<li><strong>Balanced</strong>: Um bom ponto de partida para a maioria das imagens.</li>
+<li><strong>Smooth</strong>: Cria um resultado mais suave, ignorando pequenas variações.</li>
+<li><strong>Extra Smooth</strong>: Resultados ainda mais suaves.</li>
+<li><strong>Complete</strong>: Usa todas as características disponíveis.</li>
+</ul>
+</li>
+<li>Mudar o pré-ajuste irá acionar um novo treinamento do modelo, e a pré-visualização será atualizada de acordo.</li>
+</ol>
+<h4 id="passo-5-aplicar-a-imagem-completa">Passo 5: Aplicar à Imagem Completa</h4>
+<ol>
+<li>Quando estiver satisfeito com a pré-visualização, vá para a seção <strong>Output</strong>.</li>
+<li>(Opcional) Se você deseja aplicar a segmentação a uma imagem diferente (por exemplo, o volume original, sem recortes), selecione-a no seletor <strong>Inference Image</strong>. Se nenhuma imagem for selecionada, a imagem de entrada original será usada.</li>
+<li>Clique no botão <strong>Apply to Full Image</strong>. O modelo treinado será aplicado a todo o volume selecionado.</li>
+<li>Uma barra de progresso mostrará o status da segmentação completa. Quando concluído, o layout lado a lado será fechado e um novo nó de segmentação será adicionado à cena.</li>
+</ol>
+<p>Para interromper a sessão interativa a qualquer momento, clique no botão <strong>Cancel</strong>. Suas anotações serão salvas em um nó de segmentação, e você poderá retomar a sessão mais tarde, iniciando o módulo novamente com a mesma imagem de entrada.</p>
+<h3 id="metodo">Método</h3>
+<p>O Interactive Segmenter usa um classificador <strong>Random Forest</strong>, um algoritmo de aprendizado de máquina que constrói múltiplas árvores de decisão para fazer uma predição robusta para cada voxel. O classificador é treinado em um conjunto de características de imagem calculadas a partir do volume de entrada.</p>
+<h4 id="caracteristicas">Características</h4>
+<p>As seguintes características são calculadas a partir da imagem de entrada para treinar o modelo. O usuário pode escolher quais características usar através dos pré-ajustes do <strong>Feature Set</strong>.</p>
+<ul>
+<li><strong>Raw Image</strong>: A intensidade original do voxel.</li>
+<li><strong>Gaussian Filter</strong>: Uma versão suavizada da imagem. O módulo calcula isso com quatro valores de <code>sigma</code> diferentes (1, 2, 4 e 8), criando características que capturam informações em diferentes escalas.</li>
+<li><strong>Window Variance</strong>: A variância local das intensidades dos voxels dentro de uma janela 3D. Isso é útil para a discriminação de texturas. O módulo calcula isso com três tamanhos de janela diferentes (5x5x5, 9x9x9 e 13x13x13).</li>
+</ul>
+<h4 id="pre-ajustes-de-caracteristicas">Pré-ajustes de Características</h4>
+<p>Os pré-ajustes combinam essas características para alcançar resultados diferentes:</p>
+<ul>
+<li><strong>Sharp</strong>: Raw Image, Gaussian (sigma=1, 2), Window Variance (5x5x5).</li>
+<li><strong>Balanced</strong>: Raw Image, Gaussian (sigma=1, 2, 4), Window Variance (5x5x5, 9x9x9).</li>
+<li><strong>Smooth</strong>: Gaussian (sigma=1, 2, 4, 8), Window Variance (5x5x5, 9x9x9).</li>
+<li><strong>Extra Smooth</strong>: Gaussian (sigma=2, 4, 8), Window Variance (5x5x5, 9x9x9).</li>
+<li><strong>Complete</strong>: Todas as características calculadas.</li>
+</ul>
+<h3 id="modulos-relacionados">Módulos Relacionados</h3>
+<p>Para tarefas de segmentação mais avançadas, considere o módulo <a href="#ai-segmenter">AI Segmenter</a>. Ele também usa um classificador Random Forest, mas oferece mais opções de características e diferentes métodos de treinamento, embora não forneça uma pré-visualização em tempo real.</p>
 
 
 

@@ -706,6 +706,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#interactive-segmenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Segmenter
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2895,6 +2904,9 @@ The input is a segmentation node or labelmap volume, a region of interest (defin
 <p><em>2D throat analysis(beta)</em>: Adds 2D throat analysis metrics to the report.</p>
 </li>
 <li>
+<p><em>Calculate Coordination Number</em>: Calculates the number of neighboring regions (that share a border) with each of the watershed labels. We consider as a "neighbor" any label that shares a face, edge or vertex of another nearby.</p>
+</li>
+<li>
 <p><em>Smooth factor</em>: Parameter that adjusts the degree of smoothness on the edges of segmented regions, allowing control between preserving details and reducing noise or irregularities. With high factors, the segmentation will be smoother and simplified, but with loss of small details.</p>
 </li>
 <li>
@@ -3030,6 +3042,85 @@ The input is a segmentation node or labelmap volume, a region of interest (defin
 <li><strong>Small megapre</strong>: class = 6, max_feret between 4 and 32 mm.</li>
 <li><strong>Large megapre</strong>: class = 7, max_feret greater than 32 mm.</li>
 </ul>
+<hr />
+<h2 id="interactive-segmenter">Interactive Segmenter</h2>
+<p>The <strong>Interactive Segmenter</strong> module provides a supervised segmentation tool for 3D images with a real-time preview. It allows users to annotate a small portion of an image and see the segmentation result update instantly in a parallel view, facilitating rapid and intuitive model training.</p>
+<h3 id="usage">Usage</h3>
+<p>The workflow is designed to be interactive, providing immediate feedback on the user's annotations.</p>
+<h4 id="step-1-select-input-image">Step 1: Select Input Image</h4>
+<ol>
+<li>In the <strong>Input</strong> section, select the volume you want to segment using the <strong>Input Image</strong> selector.</li>
+<li>If the image is very large (e.g., larger than 700³ voxels), it is recommended to crop the image first for better performance. You can crop the image using the Crop module. The segmentation can be applied to the full, uncropped image later.</li>
+</ol>
+<h4 id="step-2-start-annotation">Step 2: Start Annotation</h4>
+<ol>
+<li>Click the <strong>Start Annotation</strong> button.</li>
+<li>The screen layout will change to a side-by-side view. The left view is for annotation, and the right view will display the real-time segmentation preview.</li>
+<li>The module will start calculating a feature cache in the background. A progress bar will indicate the status. The annotation tools will be enabled once this process is complete.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Layout" src="../../assets/images/InteractiveSegmenter.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figure 1: Side-by-side layout for annotation (left) and preview (right).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-3-annotate-the-image">Step 3: Annotate the Image</h4>
+<ol>
+<li>Use the simplified <strong>Segment Editor</strong> tools in the <strong>Annotation</strong> section to create segments and draw annotations on the image in the <strong>left view</strong>. The primary tools available are <code>Paint</code>, <code>Draw</code>, and <code>Erase</code>.</li>
+<li>As you annotate, a Random Forest model is trained in the background. The segmentation result will be updated in real-time in the <strong>right view</strong>.</li>
+<li>Create at least two segments and provide examples for each to get a meaningful result.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>Annotate various characteristics of the image for a better result. Include boundaries between the expected segments and other potentially ambiguous regions. Iterate by correcting any misclassified regions you see in the preview.</p>
+</div>
+<h4 id="step-4-adjust-feature-set-optional">Step 4: Adjust Feature Set (Optional)</h4>
+<ol>
+<li>In the <strong>Annotation</strong> section, you can select a <strong>Feature Set</strong> from the dropdown menu. These presets control the set of image features used for training the classifier, affecting the smoothness and detail of the segmentation result.</li>
+<li>The available presets are:<ul>
+<li><strong>Sharp</strong>: Prioritizes fine details.</li>
+<li><strong>Balanced</strong>: A good starting point for most images.</li>
+<li><strong>Smooth</strong>: Creates a smoother result, ignoring small variations.</li>
+<li><strong>Extra Smooth</strong>: Even smoother results.</li>
+<li><strong>Complete</strong>: Uses all available features.</li>
+</ul>
+</li>
+<li>Changing the preset will trigger a retraining of the model, and the preview will update accordingly.</li>
+</ol>
+<h4 id="step-5-apply-to-full-image">Step 5: Apply to Full Image</h4>
+<ol>
+<li>Once you are satisfied with the preview, go to the <strong>Output</strong> section.</li>
+<li>(Optional) If you want to apply the segmentation to a different image (e.g., the original, uncropped volume), select it in the <strong>Inference Image</strong> selector. If no image is selected, the original input image will be used.</li>
+<li>Click the <strong>Apply to Full Image</strong> button. The trained model will be applied to the entire selected volume.</li>
+<li>A progress bar will show the status of the full segmentation. When complete, the side-by-side layout will be closed, and a new segmentation node will be added to the scene.</li>
+</ol>
+<p>To stop the interactive session at any time, click the <strong>Cancel</strong> button. Your annotations will be saved in a segmentation node, and you can resume the session later by starting the module again with the same input image.</p>
+<h3 id="method">Method</h3>
+<p>The Interactive Segmenter uses a <strong>Random Forest</strong> classifier, a machine learning algorithm that builds multiple decision trees to make a robust prediction for each voxel. The classifier is trained on a set of image features calculated from the input volume.</p>
+<h4 id="features">Features</h4>
+<p>The following features are calculated from the input image to train the model. The user can choose which features to use through the <strong>Feature Set</strong> presets.</p>
+<ul>
+<li><strong>Raw Image</strong>: The original voxel intensity.</li>
+<li><strong>Gaussian Filter</strong>: A smoothed version of the image. The module calculates this with four different <code>sigma</code> values (1, 2, 4, and 8), creating features that capture information at different scales.</li>
+<li><strong>Window Variance</strong>: The local variance of voxel intensities within a 3D window. This is useful for texture discrimination. The module calculates this with three different window sizes (5x5x5, 9x9x9, and 13x13x13).</li>
+</ul>
+<h4 id="feature-presets">Feature Presets</h4>
+<p>The presets combine these features to achieve different results:</p>
+<ul>
+<li><strong>Sharp</strong>: Raw Image, Gaussian (sigma=1, 2), Window Variance (5x5x5).</li>
+<li><strong>Balanced</strong>: Raw Image, Gaussian (sigma=1, 2, 4), Window Variance (5x5x5, 9x9x9).</li>
+<li><strong>Smooth</strong>: Gaussian (sigma=1, 2, 4, 8), Window Variance (5x5x5, 9x9x9).</li>
+<li><strong>Extra Smooth</strong>: Gaussian (sigma=2, 4, 8), Window Variance (5x5x5, 9x9x9).</li>
+<li><strong>Complete</strong>: All calculated features.</li>
+</ul>
+<h3 id="related-modules">Related Modules</h3>
+<p>For more advanced segmentation tasks, consider the <a href="#ai-segmenter">AI Segmenter</a> module. It also uses a Random Forest classifier but offers more feature options and different training methods, though it does not provide a real-time preview.</p>
 
 
 
