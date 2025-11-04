@@ -2286,7 +2286,84 @@
   <h1>VariogramAnalysis</h1>
 
 <h2 id="variogram-analysis">Variogram Analysis</h2>
-<p><img alt="Under Construction" src="../../../assets/images/UnderConstruction.svg" /></p>
+<p>O módulo <strong>Variogram Analysis</strong> faz uma análise da correlação espacial e a representatividade estatística dos dados em um determinado volume.</p>
+<p>O variograma é uma função que mede a diferença quadrática média entre valores da imagem para uma dada distância entre eles. Funções que apresentam baixos valores para longas distâncias indicam um maior grau de continuidade da amostra. O módulo calcula esta função para as três direções da imagem (X, Y e Z) e ajusta um modelo para extrair parâmetros como <strong>Alcance (Range)</strong>, <strong>Patamar (Sill)</strong> e <strong>Efeito Pepita (Nugget)</strong>.</p>
+<p><img alt="Variograma" src="../../../assets/images/Schematic_variogram.png" width="40%" /></p>
+<p>A análise de subvolumes é um método de avaliação do <strong>Volume Elementar Representativo (REV)</strong>, que corresponde ao menor volume para o qual a média das propriedades de um material se torna constante e representativa do todo. O módulo determina o REV analisando a variação (na forma de desvio padrão) da média da propriedade dentro de subvolumes de tamanhos crescentes. O REV é tomado como a região de baixa inclinação na curva resultante.</p>
+<h3 id="entradas">Entradas</h3>
+<p>O módulo utiliza um painel de entrada unificado:</p>
+<ul>
+<li>
+<p><strong>Input node</strong>: O volume principal para análise. Pode ser:</p>
+<ul>
+<li><code>vtkMRMLScalarVolumeNode</code>: Uma imagem em escala de cinza (ex: imagem de micro-CT).</li>
+<li><code>vtkMRMLLabelMapVolumeNode</code>: Uma imagem segmentada (label map).</li>
+<li><code>vtkMRMLSegmentationNode</code>: Uma segmentação. Se esta opção for usada, o usuário deve selecionar quais segmentos da lista devem ser analisados. A análise será binária (1 para segmentos selecionados, 0 para o resto).</li>
+</ul>
+</li>
+<li>
+<p><strong>Reference</strong>: O volume usado para definir a geometria, espaçamento (tamanho do voxel) e orientação do espaço. Geralmente, é o mesmo que o nó de entrada.</p>
+</li>
+<li>
+<p><strong>Region (SOI)</strong>: Um nó opcional para definir uma máscara. Se um SOI for fornecido, toda a análise (Variograma e REV) será restrita apenas aos voxels dentro desta região.</p>
+</li>
+</ul>
+<h3 id="parametros">Parâmetros</h3>
+<p>Existem duas formas principais de usar o módulo:</p>
+<ul>
+<li>
+<p><strong>Sem SOI (Método FFT)</strong>: Se nenhuma "Região (SOI)" for fornecida, o módulo assume que o usuário deseja analisar o volume inteiro. Para acelerar o cálculo, ele utiliza um método baseado em Transformada Rápida de Fourier (FFT).</p>
+</li>
+<li>
+<p><strong>Com SOI (Método de Amostragem)</strong>: Se uma "Região (SOI)" for fornecida, o módulo usa um método de amostragem de pares de pontos dentro da máscara. Este método calcula variogramas direcionais (<strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>) e um variograma omnidirecional (<strong>r</strong>).</p>
+</li>
+</ul>
+<p>O módulo é dividido em duas seções de análise. <em>Variogram results</em> calcula o variograma para entender a variabilidade da propriedade no volume. Os parâmetros desse algoritmo são:</p>
+<ul>
+<li><code>Sampling rate</code>: Porcentagem de pontos que será subamostrada dentro do SOI para o cálculo. Visa melhorar o tempo de processamento, ao custo de uma potencial perda de acurácia.</li>
+<li><code>Maximum number of samples</code>: Número máximo de pontos da subamostragem que será utilizada, limitando a amostragem definida pelo <code>Sampling rate</code>. O objetivo é também melhorar o tempo de processamento, sacrificando acurácia.</li>
+<li><code>Number of lags</code>: Define o número de divisões no eixo de distância (eixo X do variograma), análogo ao número de <em>bins</em> em um histograma.</li>
+<li><code>Directional tolerance</code>: Tolerância angular (em graus) para o cálculo dos variogramas direcionais (X, Y, Z). Durante o cálculo em uma direção específica, o algoritmo considera não apenas os pontos perfeitamente alinhados, mas também aqueles que estão dentro dessa tolerância angular. O objetivo é aumentar a robustez estatística, especialmente em dados esparsos. Para dados de micro-CT, onde a densidade de pontos é alta, valores menores (ex: &lt; 60°) são geralmente suficientes.</li>
+<li><code>Maximum distance</code>: Permite definir manualmente a distância máxima (em mm) para o cálculo do variograma. Se desmarcado, usa uma distância padrão (baseada na média).</li>
+<li><code>Use nugget</code>: Se marcado, leva em conta o "Efeito Pepita" no ajuste do modelo de variograma.</li>
+</ul>
+<p>A seção <em>Representative volume analysis</em> calcula o desvio padrão da média conforme a distância. isso serve para determinar o tamanho de subvolume onde a propriedade de interesse se torna estatisticamente estável. Nesse algoritmo os parâmetros são:</p>
+<ul>
+<li><code>Number of volume sizes</code>: O número de tamanhos de aresta diferentes a serem testados (ex: 10 tamanhos entre o mínimo e o máximo).</li>
+<li><code>Maximum number of samples per volume</code>: O número de subvolumes aleatórios a serem amostrados para cada tamanho, garantindo robustez estatística.</li>
+</ul>
+<h3 id="resultados-e-saidas">Resultados e Saídas</h3>
+<ul>
+<li>
+<p><strong>Gráficos de Variograma</strong>:</p>
+<ul>
+<li>Um gráfico de barras superior mostra o número de pares de pontos (amostras) usados em cada "lag" (distância).</li>
+<li>O gráfico principal mostra os pontos do variograma experimental e a curva do modelo ajustado para cada direção (X, Y, Z, r).</li>
+</ul>
+</li>
+<li>
+<p><strong>Tabela de Parâmetros</strong>: Abaixo do gráfico, uma tabela exibe os valores ajustados de <strong>Range (Alcance)</strong>, <strong>Sill (Patamar)</strong> e <strong>Nugget (Efeito Pepita)</strong> para cada direção.</p>
+</li>
+<li>
+<p><strong>Gráfico de REV</strong>:</p>
+<ul>
+<li>Um gráfico de barras superior mostra o número de amostras (subvolumes) usadas para cada tamanho.</li>
+<li>O gráfico principal plota o <strong>Desvio Padrão da Média</strong> (eixo Y) contra o <strong>Tamanho da Aresta</strong> (eixo X, em mm).</li>
+</ul>
+</li>
+</ul>
+<h4 id="exportacao-de-relatorio-html">Exportação de Relatório (HTML)</h4>
+<p>O módulo pode gerar um relatório HTML unificado contendo os resultados de ambas as análises.</p>
+<ul>
+<li><strong>Export directory</strong>: O usuário especifica a pasta onde o relatório será salvo.</li>
+<li><strong>Export report</strong>: Ao clicar, o módulo:<ol>
+<li>Extrai metadados do nome do arquivo de referência (ex: Poço, Plugue, Condição, usando a convenção).</li>
+<li>Captura uma imagem da visualização 3D atual do Slicer.</li>
+<li>Captura imagens dos gráficos de Variograma e REV (se tiverem sido calculados).</li>
+<li>Insere todas essas informações (metadados, imagens, tabelas de resultados) em um modelo HTML (<code>variogram_report_template.html</code>) e o salva no diretório de exportação.</li>
+</ol>
+</li>
+</ul>
 
 
 
