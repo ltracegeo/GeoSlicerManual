@@ -3052,6 +3052,23 @@ A entrada é um nó de segmentação ou volume de labelmap, uma região de inter
 <li><strong>Megaporo pequeno</strong>: classe = 6, max_feret entre 4 e 32 mm.</li>
 <li><strong>Megaporo grande</strong>: classe = 7, max_feret maior que 32 mm.</li>
 </ul>
+<h5 id="definicao-das-classes-de-graos">Definição das classes de grãos:</h5>
+<ul>
+<li><strong>Argila</strong>: classe = 0, max_feret menor que 0,004mm.</li>
+<li><strong>Silte muito fino</strong>: classe = 1, max_feret entre 0,004 e 0,008 mm.</li>
+<li><strong>Silte fino</strong>: classe = 2, max_feret entre 0,008 e 0,016 mm.</li>
+<li><strong>Silte médio</strong>: classe = 3, max_feret entre 0,016 e 0,031 mm.</li>
+<li><strong>Silte grosso</strong>: classe = 4, max_feret entre 0,031 e 0,062 mm.</li>
+<li><strong>Areia muito fina</strong>: classe = 5, max_feret entre 0,062 e 0,125 mm.</li>
+<li><strong>Areia fina</strong>: classe = 6, max_feret entre 0,125 e 0,25 mm.</li>
+<li><strong>Areia média</strong>: classe = 7, max_feret entre 0,25 e 0,5 mm.</li>
+<li><strong>Areia grossa</strong>: classe = 8, max_feret entre 0,5 e 1 mm.</li>
+<li><strong>Areia muito grossa</strong>: classe = 9, max_feret entre 1 e 2 mm.</li>
+<li><strong>Grânulo</strong>: classe = 10, max_feret entre 2 e 4 mm.</li>
+<li><strong>Seixo</strong>: classe = 11, max_feret entre 4 e 64 mm.</li>
+<li><strong>Bloco ou Calhau</strong>: classe = 12, max_feret entre 64 e 256 mm.</li>
+<li><strong>Matacão</strong>: classe = 13, max_feret maior que 256 mm.</li>
+</ul>
 <hr />
 <h2 id="labelmap-editor">LabelMap Editor</h2>
 <p>Esse módulo permite a edição de labelmaps, tipicamente gerados pelo algoritmo de Watershed no módulo Segment Inspector.</p>
