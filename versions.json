@@ -3,12 +3,5 @@
     "version": "2.8",
     "title": "2.8",
     "aliases": []
-  },
-  {
-    "version": "v0.0.36",
-    "title": "v0.0.36",
-    "aliases": [
-      "latest"
-    ]
   }
 ]
