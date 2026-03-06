@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-generation" class="md-skip">
+        <a href="#multiscale" class="md-skip">
           Skip to content
         </a>
       
@@ -2002,7 +2002,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2285,7 +2285,7 @@
 
   <h1>Multiscale</h1>
 
-<h2 id="image-generation">Image Generation</h2>
+<h2 id="multiscale">Multiscale</h2>
 <p>O módulo Multiscale Image Generation oferece uma interface com diversos parâmetros para a manipulação e configuração da biblioteca <a href="https://mpslib.readthedocs.io/en/latest/">MPSlib</a>. O MPSlib possui um conjunto de algoritmos baseados em modelos estatísticos de múltiplos pontos (MPS - Multiple point statistics) inferidos a partir de uma imagem de treinamento. Atualmente, apenas o algoritmo Generalized ENESIM com modo de amostragem direta (DS - Direct Sampling) está disponível.</p>
 <h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
 <table>
@@ -2338,6 +2338,9 @@
 <li><em>Ratio</em>: Razão da nova resolução do voxel para a resolução inicial.</li>
 </ul>
 </li>
+<li>
+<p><em>Number of patches</em>: Quebra a imagem em múltiplas partes e as simula separadamente, aumentando performance e reduzindo tempo de simulação para imagens grandes. Disponível apenas para imagens 2D.</p>
+</li>
 </ul>
 <h4 id="parametros">Parâmetros</h4>
 <ul>
@@ -2348,10 +2351,10 @@
 <p><em>Number of realizations</em>: Número de simulações e imagens a serem geradas.</p>
 </li>
 <li>
-<p><em>Number of iterations</em>: Número máximo de iterações a serem realizadas na imagem de treinamento.</p>
+<p><em>Number of iterations</em>: Número máximo de iterações a serem realizadas na imagem de treinamento. Use valor -1 para varredura completa na imagem de treinamento.</p>
 </li>
 <li>
-<p><em>Random seed</em>: Valor usado para iniciar a simulação. Uma mesma seed com os mesmos parâmetros sempre geram o mesmo resultado.</p>
+<p><em>Random seed</em>: Valor usado para iniciar a simulação. Uma mesma <em>seed</em> com os mesmos parâmetros sempre geram o mesmo resultado. Use valor 0 para gerar uma <em>seed</em> aleatória.</p>
 </li>
 <li>
 <p><em>Colocate dimensions</em>: Para uma simulação 3D, garanta que a ordem nas últimas dimensões seja importante, permitindo uma co-simulação 2D com dados condicionais na terceira dimensão.</p>
@@ -2386,9 +2389,8 @@
 </ul>
 <h4 id="botoes">Botões</h4>
 <ul>
-<li><em>Run</em>: Executa o mps de forma sequencial. A interface do <em>Geoslicer</em> é travada durante a execução dessa opção.</li>
-<li><em>Run Parallel</em>: Executa o mps de forma paralela. Nessa opção a execução é executada em outra thread e a interface pode ser usada durante a execução.</li>
-<li><em>Cancel</em>: Interrompe a execução da simulação. Apenas quando executado de forma paralela.</li>
+<li><em>Run</em>: Executa o MPS. Se o <em>number of patches</em> é 1, o código paralelo do MPS será executado. Caso contrário, o código sequencial do MPS será executado para cada patch e cada realização."</li>
+<li><em>Cancel</em>: Interrompe a execução da simulação.</li>
 </ul>
 
 

@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-generation" class="md-skip">
+        <a href="#multiscale" class="md-skip">
           Skip to content
         </a>
       
@@ -818,9 +818,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#image-generation" class="md-nav__link">
+  <a href="#multiscale" class="md-nav__link">
     <span class="md-ellipsis">
-      Image Generation
+      Multiscale
     </span>
   </a>
   
@@ -2064,7 +2064,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2347,7 +2347,7 @@
 
   <h1>Multiscale</h1>
 
-<h2 id="image-generation">Image Generation</h2>
+<h2 id="multiscale">Multiscale</h2>
 <p>The Multiscale Image Generation module offers an interface with various parameters for manipulating and configuring the MPSlib library. MPSlib features a set of algorithms based on multiple point statistical (MPS) models inferred from a training image.
 Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode is available.</p>
 <h3 id="panels-and-their-use">Panels and their use</h3>
@@ -2401,6 +2401,9 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 <li><em>Ratio</em>: Ratio of the new voxel resolution to the initial resolution.</li>
 </ul>
 </li>
+<li>
+<p><em>Number of patches</em>: Breaks the simulation grid in several parts to simulate separetaly, improving performance and reducing overall simulation time for big images. Only available for 2D images.</p>
+</li>
 </ul>
 <h4 id="parameters">Parameters</h4>
 <ul>
@@ -2411,10 +2414,10 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 <p><em>Number of realizations</em>: Number of simulations and images to be generated.</p>
 </li>
 <li>
-<p><em>Number of iterations</em>: Maximum number of iterations when searching the training image.</p>
+<p><em>Number of iterations</em>: Maximum number of iterations when searching the training image. Use value -1 to run a full scan on the training image.</p>
 </li>
 <li>
-<p><em>Random seed</em>: Initial value used to start the simulation. The same seed with the same parameters always generates the same result.</p>
+<p><em>Random seed</em>: Initial value used to start the simulation. The same seed with the same parameters always generates the same result. Value 0 will generate a random seed for the simulation.</p>
 </li>
 <li>
 <p><em>Colocate dimensions</em>: For a 3D simulation, ensure that the order in the last dimensions is important, allowing a 2D co-simulation with conditional data in the third dimension.</p>
@@ -2449,9 +2452,8 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 </ul>
 <h4 id="buttons">Buttons</h4>
 <ul>
-<li><em>Run</em>: Executes the mps sequentially. The <em>Geoslicer</em> interface is locked during the execution of this option.</li>
-<li><em>Run Parallel</em>: Executes the mps in parallel. In this option, the execution runs in another thread, and the interface can be used during execution.</li>
-<li><em>Cancel</em>: Interrupts the simulation execution. Only when executed in parallel.</li>
+<li><em>Run</em>: Executes the MPS. If <em>number of patches</em> is 1, the parallel MPS code will be executed. Otherwise, the sequential MPS code will be executed for each patch and realization."</li>
+<li><em>Cancel</em>: Interrupts the simulation execution.</li>
 </ul>
 <hr />
 <h2 id="post-processing">Post Processing</h2>

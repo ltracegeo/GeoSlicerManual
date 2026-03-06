@@ -2008,7 +2008,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2528,7 +2528,7 @@
 <figure class="video-container">  <video controls width="100%">  <source src="../../../assets/videos/imagelog_inpaint.webm" type="video/webm" >  Your browser does not support the video tag.</video>  <figcaption>Video: Filling in the empty spaces of a well image</figcaption></figure>
 
 <hr />
-<div class="highlight"><pre><span></span><code>## Image Generation
+<div class="highlight"><pre><span></span><code>## Multiscale
 
 The Multiscale Image Generation module offers an interface with various parameters for manipulating and configuring the MPSlib library. MPSlib features a set of algorithms based on multiple point statistical (MPS) models inferred from a training image.
 Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode is available.
@@ -2564,15 +2564,17 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
     - _Size_: New axis dimension after resizing.
     - _Ratio_: Ratio of the new voxel resolution to the initial resolution.
 
+ - _Number of patches_: Breaks the simulation grid in several parts to simulate separetaly, improving performance and reducing overall simulation time for big images. Only available for 2D images.
+
 #### Parameters
 
  - _Number of Conditioning points_: Number of conditioning points to be used in each iteration.
 
  - _Number of realizations_: Number of simulations and images to be generated.
 
- - _Number of iterations_: Maximum number of iterations when searching the training image.
+ - _Number of iterations_: Maximum number of iterations when searching the training image. Use value -1 to run a full scan on the training image.
 
- - _Random seed_: Initial value used to start the simulation. The same seed with the same parameters always generates the same result.
+ - _Random seed_: Initial value used to start the simulation. The same seed with the same parameters always generates the same result. Value 0 will generate a random seed for the simulation.
 
  - _Colocate dimensions_: For a 3D simulation, ensure that the order in the last dimensions is important, allowing a 2D co-simulation with conditional data in the third dimension.
 
@@ -2596,9 +2598,8 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 
 #### Buttons
 
-- _Run_: Executes the mps sequentially. The _Geoslicer_ interface is locked during the execution of this option.
-- _Run Parallel_: Executes the mps in parallel. In this option, the execution runs in another thread, and the interface can be used during execution.
-- _Cancel_: Interrupts the simulation execution. Only when executed in parallel.
+- _Run_: Executes the MPS. If _number of patches_ is 1, the parallel MPS code will be executed. Otherwise, the sequential MPS code will be executed for each patch and realization.&quot;
+- _Cancel_: Interrupts the simulation execution.
 
 
 &lt;figure class=&quot;video-container&quot;&gt;  &lt;video controls width=&quot;100%&quot;&gt;  &lt;source src=&quot;../../../assets/videos/multiscale_multiscale.webm&quot; type=&quot;video/webm&quot; &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Video: Simulando um volume 3D a partir de uma imagem de poço&lt;/figcaption&gt;&lt;/figure&gt;

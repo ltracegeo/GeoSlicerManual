@@ -1600,6 +1600,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Problems
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2059,7 +2068,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2432,6 +2441,43 @@ A <a href="https://youtu.be/JBkeHx6obTY">demonstration video</a> of an earlier v
 </ul>
 <h3 id="apply-all">Apply all</h3>
 <p>Applies all processing, orientation, and unwrapping steps.</p>
+<h2 id="common-problems">Common Problems</h2>
+<h3 id="could-not-detect-core-geometry">"Could not detect core geometry"</h3>
+<p>The error "Could not detect core geometry" occurs in the <code>Multicore</code> module when the <code>CoreGeometryCLI</code> command-line interface fails to detect any valid core geometry in the provided volume. This happens because the CLI is unable to find circular features (representing the core) in the volume slices using image processing techniques.</p>
+<p>Primary reasons this error can occur:</p>
+<h3 id="1-no-detectable-core-circles-in-the-volume">1. <strong>No Detectable Core Circles in the Volume</strong></h3>
+<ul>
+<li>The volume image does not contain a clear, cylindrical core structure that can be identified via Hough circle detection.</li>
+<li>Possible causes:<ul>
+<li>The core is obscured, damaged, or has irregular geometry that doesn't form detectable circles in cross-sections.</li>
+<li>Low image quality, noise, or artifacts prevent edge detection from working properly.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-incorrect-core-radius-parameter">2. <strong>Incorrect Core Radius Parameter</strong></h3>
+<ul>
+<li>The <code>coreRadius</code> value passed to the CLI is inaccurate, causing the search radius range (min/max) to not match the actual core size in the image.</li>
+<li>The search radius is calculated as <code>[coreRadius - 3mm, coreRadius + 3mm]</code> in pixels. If the real core radius is outside this range, no circles will be detected.</li>
+<li>Users should verify the core radius matches the physical dimensions of the sample by loading the original volume and measuring the radius.</li>
+</ul>
+<h3 id="3-insufficient-valid-slices-for-analysis">3. <strong>Insufficient Valid Slices for Analysis</strong></h3>
+<ul>
+<li>The CLI discards 20 slices from each end of the volume to avoid "destroyed core ends," then samples every 5th slice.</li>
+<li>If the volume has very few slices (e.g., &lt;40 total), there may be no slices left to analyze after discarding ends.</li>
+<li>If all sampled slices fail the geometry detection (e.g., due to poor image quality in those slices), the result list remains empty.</li>
+</ul>
+<h3 id="4-circle-detection-filtering">4. <strong>Circle Detection Filtering</strong></h3>
+<ul>
+<li>Detected circles are filtered out if their center is too close to the image center (within 10% of the minimum image dimension from the center). This is to avoid false positives from central artifacts.</li>
+<li>If all detected circles are filtered out by this condition, no valid geometry is recorded.</li>
+</ul>
+<h3 id="troubleshooting-steps-for-users">Troubleshooting Steps for Users</h3>
+<ul>
+<li><strong>Verify Input Data</strong>: Ensure the volume is a valid core image with clear circular cross-sections. Check volume dimensions and spacing.</li>
+<li><strong>Adjust Core Radius</strong>: Provide an accurate core radius in meters. If unsure, try a range of values.</li>
+<li><strong>Check Volume Quality</strong>: Load only the original core image to confirm the core is visible and not obscured.</li>
+</ul>
+<p>If the error persists, the volume may not be suitable for automated core geometry detection, and manual intervention or alternative modules might be needed.</p>
 
 
 

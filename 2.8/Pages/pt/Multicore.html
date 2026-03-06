@@ -2002,7 +2002,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2374,6 +2374,43 @@
 </ul>
 <h3 id="apply-all">Apply all</h3>
 <p>Aplica todos os passos de processamento, orientação e desenrolamento.</p>
+<h2 id="problemas-comuns">Problemas Comuns</h2>
+<h3 id="could-not-detect-core-geometry">"Could not detect core geometry"</h3>
+<p>O erro "Could not detect core geometry" ocorre no módulo <code>Multicore</code> quando a interface de linha de comando <code>CoreGeometryCLI</code> falha ao detectar uma geometria de testemunho válida no volume fornecido. Isso acontece porque a CLI não consegue encontrar feições circulares (representando o testemunho) nas fatias do volume usando técnicas de processamento de imagem.</p>
+<p>Principais razões para este erro ocorrer:</p>
+<h3 id="1-nenhum-circulo-de-testemunho-detectavel-no-volume">1. <strong>Nenhum Círculo de Testemunho Detectável no Volume</strong></h3>
+<ul>
+<li>A imagem do volume não contém uma estrutura de testemunho cilíndrica clara que possa ser identificada via detecção de círculos de Hough.</li>
+<li>Causas possíveis:<ul>
+<li>O testemunho está obscurecido, danificado ou possui geometria irregular que não forma círculos detectáveis nas seções transversais.</li>
+<li>Baixa qualidade de imagem, ruído ou artefatos impedem que a detecção de bordas funcione corretamente.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-parametro-de-raio-do-testemunho-incorreto">2. <strong>Parâmetro de Raio do Testemunho Incorreto</strong></h3>
+<ul>
+<li>O valor de <code>coreRadius</code> passado para a CLI é impreciso, fazendo com que o intervalo do raio de busca (mín/máx) não corresponda ao tamanho real do testemunho na imagem.</li>
+<li>O raio de busca é calculado como <code>[coreRadius - 3mm, coreRadius + 3mm]</code> em pixels. Se o raio real do testemunho estiver fora desse intervalo, nenhum círculo será detectado.</li>
+<li>Os usuários devem verificar se o raio do testemunho corresponde às dimensões físicas da amostra carregando o volume original e medindo o raio.</li>
+</ul>
+<h3 id="3-fatias-validas-insuficientes-para-analise">3. <strong>Fatias Válidas Insuficientes para Análise</strong></h3>
+<ul>
+<li>A CLI descarta 20 fatias de cada extremidade do volume para evitar "pontas de testemunho destruídas", e então amostra a cada 5ª fatia.</li>
+<li>Se o volume tiver muito poucas fatias (ex: &lt;40 no total), pode não haver fatias restantes para analisar após descartar as extremidades.</li>
+<li>Se todas as fatias amostradas falharem na detecção de geometria (ex: devido à má qualidade de imagem nessas fatias), a lista de resultados permanece vazia.</li>
+</ul>
+<h3 id="4-filtragem-de-deteccao-de-circulos">4. <strong>Filtragem de Detecção de Círculos</strong></h3>
+<ul>
+<li>Círculos detectados são filtrados se o centro deles estiver muito próximo do centro da imagem (dentro de 10% da dimensão mínima da imagem a partir do centro). Isso serve para evitar falsos positivos de artefatos centrais.</li>
+<li>Se todos os círculos detectados forem filtrados por essa condição, nenhuma geometria válida será registrada.</li>
+</ul>
+<h3 id="passos-de-solucao-de-problemas-para-usuarios">Passos de Solução de Problemas para Usuários</h3>
+<ul>
+<li><strong>Verifique os Dados de Entrada</strong>: Garanta que o volume seja uma imagem de testemunho válida com seções transversais circulares claras. Verifique as dimensões e o espaçamento do volume.</li>
+<li><strong>Ajuste o Raio do Testemunho</strong>: Forneça um raio de testemunho preciso em metros. Se não tiver certeza, tente uma faixa de valores.</li>
+<li><strong>Verifique a Qualidade do Volume</strong>: Carregue apenas a imagem original do testemunho para confirmar se ele está visível e não obscurecido.</li>
+</ul>
+<p>Se o erro persistir, o volume pode não ser adequado para detecção automatizada da geometria do testemunho, e intervenção manual ou módulos alternativos podem ser necessários.</p>
 
 
 

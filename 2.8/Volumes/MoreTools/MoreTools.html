@@ -913,6 +913,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#attribute-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#workflows" class="md-nav__link">
     <span class="md-ellipsis">
       Workflows
@@ -2104,7 +2113,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2655,6 +2664,25 @@
 <li><strong>Save</strong> modifies an <strong>existing</strong> <code>.nc</code> file, preserving its structure and metadata.</li>
 <li><strong>Export</strong> always creates a <strong>new</strong> <code>.nc</code> file.</li>
 </ul>
+<hr />
+<h2 id="attribute-tools">Attribute Tools</h2>
+<p>The Attribute Tools module provides tools for editing image attributes. These attributes can be inspected in the "Attributes" tab in the Explorer module.</p>
+<h3 id="import-pcr-from-file">Import PCR from file</h3>
+<p>This tool allows the user to import a PCR file and associate it with a volume. The PCR file contains information which is particularly useful for certain analyses like porosity mapping from saturation.</p>
+<p>While PCR information is usually imported alongside the image data (for example, through <strong>MicroCT Import</strong> or <strong>NetCDF Loader</strong>), this tool is useful when the PCR data needs to be imported separately or updated.</p>
+<h4 id="how-to-use_3">How to use</h4>
+<ol>
+<li><strong>Select a tool</strong>: From the "Tool" dropdown menu, select "Import PCR from file".</li>
+<li><strong>Input Volume</strong>: Select the volume node that you want to associate the PCR data with.</li>
+<li><strong>PCR File</strong>: Click the file browser icon to select the <code>.pcr</code> file from your computer.</li>
+<li><strong>File Validation</strong>: After selecting a file, the module will validate it.<ul>
+<li>If the file is a valid PCR file, it will display the minimum and maximum values found in the file.</li>
+<li>If the file is not valid or does not exist, an error message will be displayed.</li>
+</ul>
+</li>
+<li><strong>Import</strong>: Once a valid volume and a valid PCR file are selected, the "Import PCR" button will be enabled. Click it to import the data.</li>
+<li>A success message will appear after the import is complete. The PCR information is now stored within the volume node's metadata. You can verify this by navigating to the Explorer module, selecting the volume, and inspecting the <code>Attributes</code> tab.</li>
+</ol>
 <hr />
 <h2 id="workflows">Workflows</h2>
 <h3 id="tables_1">Tables</h3>

@@ -20,7 +20,7 @@
     
     
       
-        <title>Multiscale Image Generation - GeoSlicer Manual</title>
+        <title>Image Generation - GeoSlicer Manual</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-generation" class="md-skip">
+        <a href="#multiscale" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multiscale Image Generation
+              Image Generation
             
           </span>
         </div>
@@ -2015,7 +2015,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2028,7 +2028,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scaling"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 15H9v-5"/><path d="M16 3h5v5"/><path d="M21 3 9 15"/></svg>
   
   <span class="md-ellipsis">
-    Multiscale Image Generation
+    Image Generation
   </span>
   
 
@@ -2048,9 +2048,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#image-generation" class="md-nav__link">
+  <a href="#multiscale" class="md-nav__link">
     <span class="md-ellipsis">
-      Image Generation
+      Multiscale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singan-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      SinGAN Module
     </span>
   </a>
   
@@ -2336,9 +2345,9 @@
                   
 
 
-  <h1>Multiscale Image Generation</h1>
+  <h1>Image Generation</h1>
 
-<h2 id="image-generation">Image Generation</h2>
+<h2 id="multiscale">Multiscale</h2>
 <p>The Multiscale Image Generation module offers an interface with various parameters for manipulating and configuring the MPSlib library. MPSlib features a set of algorithms based on multiple point statistical (MPS) models inferred from a training image.
 Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode is available.</p>
 <h3 id="panels-and-their-use">Panels and their use</h3>
@@ -2392,6 +2401,9 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 <li><em>Ratio</em>: Ratio of the new voxel resolution to the initial resolution.</li>
 </ul>
 </li>
+<li>
+<p><em>Number of patches</em>: Breaks the simulation grid in several parts to simulate separetaly, improving performance and reducing overall simulation time for big images. Only available for 2D images.</p>
+</li>
 </ul>
 <h4 id="parameters">Parameters</h4>
 <ul>
@@ -2402,10 +2414,10 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 <p><em>Number of realizations</em>: Number of simulations and images to be generated.</p>
 </li>
 <li>
-<p><em>Number of iterations</em>: Maximum number of iterations when searching the training image.</p>
+<p><em>Number of iterations</em>: Maximum number of iterations when searching the training image. Use value -1 to run a full scan on the training image.</p>
 </li>
 <li>
-<p><em>Random seed</em>: Initial value used to start the simulation. The same seed with the same parameters always generates the same result.</p>
+<p><em>Random seed</em>: Initial value used to start the simulation. The same seed with the same parameters always generates the same result. Value 0 will generate a random seed for the simulation.</p>
 </li>
 <li>
 <p><em>Colocate dimensions</em>: For a 3D simulation, ensure that the order in the last dimensions is important, allowing a 2D co-simulation with conditional data in the third dimension.</p>
@@ -2440,9 +2452,80 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 </ul>
 <h4 id="buttons">Buttons</h4>
 <ul>
-<li><em>Run</em>: Executes the mps sequentially. The <em>Geoslicer</em> interface is locked during the execution of this option.</li>
-<li><em>Run Parallel</em>: Executes the mps in parallel. In this option, the execution runs in another thread, and the interface can be used during execution.</li>
-<li><em>Cancel</em>: Interrupts the simulation execution. Only when executed in parallel.</li>
+<li><em>Run</em>: Executes the MPS. If <em>number of patches</em> is 1, the parallel MPS code will be executed. Otherwise, the sequential MPS code will be executed for each patch and realization."</li>
+<li><em>Cancel</em>: Interrupts the simulation execution.</li>
+</ul>
+<hr />
+<h2 id="singan-module">SinGAN Module</h2>
+<p>The <em>SinGAN</em> Module provides an interface for using SinGAN models within GeoSlicer...</p>
+<h3 id="panels-and-their-usage">Panels and their usage</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Figure 1" src="../../assets/images/SinGANModule.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Figure 1: SinGAN module presentation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_1">Parameters</h3>
+<h4 id="model-configuration">Model Configuration:</h4>
+<ul>
+<li>
+<p><em>Select Model</em>: Select the model to be used. Only valid models are listed, within the SinGAN model directory configured by the user.</p>
+</li>
+<li>
+<p><em>Create TI from model</em>: Reconstructs the training image as a volume within <em>GeoSlicer</em></p>
+</li>
+</ul>
+<h4 id="conditioning-image">Conditioning Image</h4>
+<ul>
+<li>
+<p><em>Hard Data Image</em>: Selects the conditioning image to be used during generation.</p>
+</li>
+<li>
+<p><em>Choose scale to use HD</em>: If selected, the conditioning image is injected only at the chosen scale. If disabled, the image is injected at the first available scale and then resized for subsequent scales.</p>
+</li>
+<li>
+<p><em>Create Hard Data preview</em>: Creates a preview of the hard data image at the injection scales.</p>
+</li>
+</ul>
+<h4 id="big-image">BIG IMAGE:</h4>
+<ul>
+<li>
+<p><em>Selected method</em>: Method used for generating large images.</p>
+<ol>
+<li><em>Generation patch on gpu</em>: All processing is performed entirely in RAM and on the GPU, without splitting into patches or writing anything to disk.</li>
+<li><em>Pacth Inference</em>: Generates the image by processing it in small pieces (patches), using the disk to store intermediate data. It is ideal for very large images that do not fit in RAM.</li>
+<li><em>Early crop</em>: Generates the image recursively, resizing the input image for each scale and extracting the corresponding <em>patch</em>.</li>
+<li><em>By chunks</em>: Divides the image into larger blocks (chunks) defined by the user, processing each one individually. It is an approach to handle large images, offering a balance between memory usage and processing time.</li>
+</ol>
+</li>
+<li>
+<p><em>Set number of chunk</em>: Defines the number of blocks in each dimension in the <em>By chunks</em> method.</p>
+</li>
+</ul>
+<h4 id="output">Output</h4>
+<ul>
+<li>
+<p><em>Number of realizations</em>: Number of images to be generated.</p>
+</li>
+<li>
+<p><em>Output Prefix</em>: Name of the generated volumes</p>
+</li>
+<li>
+<p><em>Save</em>: How the simulated image will be saved in GeoSlicer.</p>
+<ol>
+<li><em>As Large Image node</em>: An large image node will be added automaticaly to geoslicer. Refer to <a href="../../Volumes/BigImage/BigImage.html">Big Image</a> for more information about this node.</li>
+<li><em>As volume</em>: An individual volume is generated for each realization. Available when there is enough memory to load output image.</li>
+<li><em>As sequence</em>: A sequence of volumes containing all realizations is generated. This option is only available for more than one realization and when the option to save as volume is enabled.</li>
+<li><em>As NetCDF files</em>: The generated images are automatically saved as .nc files. Obligatory for big images.</li>
+</ol>
+</li>
+<li><em>Export directory</em>: Directory where the NetCDF images will be saved.</li>
 </ul>
 
 
