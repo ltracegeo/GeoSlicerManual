@@ -445,6 +445,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/Troubleshooting.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bug-icon lucide-bug"><path d="M12 20v-9"/><path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/><path d="M14.12 3.88 16 2"/><path d="M21 21a4 4 0 0 0-3.81-4"/><path d="M21 5a4 4 0 0 1-3.55 3.97"/><path d="M22 13h-4"/><path d="M3 21a4 4 0 0 1 3.81-4"/><path d="M3 5a4 4 0 0 0 3.55 3.97"/><path d="M6 13H2"/><path d="m8 2 1.88 1.88"/><path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></svg>
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2411,43 +2434,37 @@
   <h1>Volumes Pre-processing</h1>
 
 <h2 id="volumes-crop">Volumes Crop</h2>
-<p>The <em>Volumes Crop</em> module is a tool integrated into GeoSlicer, designed to allow customized cropping of image volumes in IJK coordinates, using a specific Region of Interest (ROI). The module is especially useful for focusing on specific areas of larger volumes, adjusting the cut dimension according to user needs.</p>
+<p>The <strong>Volumes Crop</strong> module allows for efficient cropping of one or multiple volumes simultaneously using a customizable Region of Interest (ROI). It supports Scalar, Vector, and LabelMap volumes, ensuring that all related data can be processed with a consistent spatial boundary.</p>
 <h3 id="panels-and-their-usage">Panels and their usage</h3>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../../assets/images/CustomizedCropVolumeInterface.png" /></th>
+<th style="text-align: center;"><img alt="Figure 1" src="../../assets/images/CropTool_UI.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figure 1: Presentation of the Crop module.</td>
+<td style="text-align: center;">Figure 1: Presentation of the Crop module.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="main-options">Main options</h3>
-<ul>
-<li>
-<p><em>Volume to be cropped</em>: Choose the Image to be Cropped.</p>
-</li>
-<li>
-<p><em>Crop Size</em>: Define the crop size in the three dimensions (X, Y, Z), interactively adjusting the ROI limits. In the case of 2D images, the Z value will always be 1.</p>
-</li>
-<li>
-<p><em>Crop/cancel</em>: Dedicated buttons to start the cropping process and cancel ongoing operations.</p>
-</li>
-</ul>
-<p><em>GeoSlicer</em> module to crop a volume, as described in the steps bellow:</p>
+<p><strong>Input</strong>
+ - <em>Image</em>: Select an image and click <strong>Add</strong>. You can add multiple images to the list; they will all be cropped using the same ROI configuration. Use the radio buttons in the <strong>Visible</strong> column to choose which volume to use as a reference in the slice views.</p>
+<p><strong>Parameters</strong>
+ - <em>Copy from</em>: (Optional) Select an existing ROI to define the crop region.
+ - <em>Center</em>: Set the precise center of the crop in IJK coordinates. Click the <strong>...</strong> button to select from the last 10 used configurations.
+ - <em>Dimensions</em>: Define the crop size in the three dimensions (X, Y, Z). Click the <strong>...</strong> button to select from the last 10 used configurations.
+ - <em>Copy attributes and references</em>: If checked, the cropped volumes will inherit metadata, attributes, and references from the original volumes.
+ - <em>Keep ROI after crop</em>: If checked, the temporary ROI will be kept as a permanent node in the scene after cropping.</p>
+<p><strong>Actions</strong>
+ - <em>Crop All/Cancel</em>: Buttons to start the batch cropping process or cancel and clear the list.</p>
+<h3 id="usage">Usage</h3>
 <ol>
-<li>
-<p>Select the <em>Volume to be cropped</em>.</p>
-</li>
-<li>
-<p>Adjust the ROI in the slice views to the desired location and size.</p>
-</li>
-<li>
-<p>Click <em>Crop</em> and wait for completion. The cropped volume will appear in the same directory as the original volume.</p>
-</li>
+<li>Select the images to be cropped and add them to the table.</li>
+<li>Adjust the ROI interactively in the slice views or manually via the Center and Dimensions fields.</li>
+<li>(Optional) Hold the <strong>Alt</strong> key while dragging ROI anchors in the slice views to resize symmetrically around the center.</li>
+<li>Click <strong>Crop All</strong> and wait for completion. The cropped volumes will appear in the same subject hierarchy folder as the original volumes.</li>
 </ol>
 <hr />
 <h2 id="resample">Resample</h2>
@@ -2475,12 +2492,12 @@
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../../assets/images/GradientAnisotropicDiffusion2.png" /></th>
+<th style="text-align: center;"><img alt="Figura 1" src="../../assets/images/GradientAnisotropicDiffusion2.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Left: Original volume, uncorrected. Right: After correction with anisotropic gradient diffusion filter.</td>
+<td style="text-align: center;">Left: Original volume, uncorrected. Right: After correction with anisotropic gradient diffusion filter.</td>
 </tr>
 </tbody>
 </table>
@@ -2512,7 +2529,7 @@
 <hr />
 <h2 id="euclidean-distance-transform">Euclidean Distance Transform</h2>
 <p>Calculates the Euclidean distance transform of a binary image. The output image contains, for each voxel, the distance to the nearest non-zero voxel in the input image.</p>
-<h3 id="usage">Usage</h3>
+<h3 id="usage_1">Usage</h3>
 <ol>
 <li>Select the input binary image. Scalar images also work, but only non-zero voxels are considered as foreground.</li>
 <li>If the input has more than one label, select the desired label value to be considered as foreground. It is possible to select multiple segments.</li>
@@ -2528,21 +2545,21 @@
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../../assets/images/PolynomialShadingCorrection1.png" /></th>
+<th style="text-align: center;"><img alt="Figura 1" src="../../assets/images/PolynomialShadingCorrection1.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Left: <em>Beam hardening</em> artifact present. Right: Corrected image after applying <em>shading correction</em>.</td>
+<td style="text-align: center;">Left: <em>Beam hardening</em> artifact present. Right: Corrected image after applying <em>shading correction</em>.</td>
 </tr>
 </tbody>
 </table>
 <p>The entire procedure described below is performed slice by slice, in the axial (z-axis) plane of the sample.</p>
-<p>For each slice, based on the "Number of fitting points" parameter, a random sample is taken from intensity values at points belonging to the shading mask. These points are used to fit a second-degree polynomial function in two variables, which defines the image background:</p>
-<div class="arithmatex">\[ f(x,y) = a (x-b)^2+c(y-d)^2+e(x-b)+f(y-d)+g(x-b)(y-d) + h \]</div>
+<p>For each slice, based on the "Number of fitting points" parameter, a random sample is taken from intensity values at points belonging to the shading mask. These points are used to fit a mathematical function that defines the image background. Depending on the chosen function, this could be a generic Cartesian polynomial, a strict radial polynomial, or a spline profile. For example, a basic second-degree Cartesian polynomial follows this equation:</p>
+<div class="arithmatex">\[f(x,y) = a (x-b)^2+c(y-d)^2+e(x-b)+f(y-d)+g(x-b)(y-d) + h\]</div>
 <p>The fitted function is then used to perform the correction on the slice, following the equation:</p>
-<p>$$ s'(x,y) = \frac{s(x,y)}{f(x,y)}M $$
-Where, <span class="arithmatex">\(s'(x,y)\)</span> is the corrected slice, <span class="arithmatex">\(s(x,y)\)</span> is the original, and <span class="arithmatex">\(M\)</span> is the average of all data in the shading mask (constant value).</p>
+<div class="arithmatex">\[s'(x,y) = \frac{s(x,y)}{f(x,y)}M\]</div>
+<p>Where, <span class="arithmatex">\(s'(x,y)\)</span> is the corrected slice, <span class="arithmatex">\(s(x,y)\)</span> is the original, and <span class="arithmatex">\(M\)</span> is the average of all data in the shading mask (constant value).</p>
 <p>The <em>Shading Correction</em> module workflow is divided into three steps: initialization, sampling mask definition, and processing.</p>
 <h4 id="initialization">Initialization</h4>
 <ol>
@@ -2552,7 +2569,7 @@ Where, <span class="arithmatex">\(s'(x,y)\)</span> is the corrected slice, <span
 </ol>
 <h4 id="threshold">Threshold</h4>
 <ol>
-<li>After initialization, a segment editor interface with the <strong>Threshold</strong> effect will be displayed to create a mask that covers the image areas affected by shading. This mask will be used to sample points for polynomial fitting.</li>
+<li>After initialization, a segment editor interface with the <strong>Threshold</strong> effect will be displayed to create a mask that covers the image areas affected by shading. This mask will be used to sample points for fitting.</li>
 <li>After adjusting the threshold, click <strong>Apply</strong> in the Threshold effect panel.</li>
 </ol>
 <div class="admonition tip">
@@ -2566,9 +2583,26 @@ Where, <span class="arithmatex">\(s'(x,y)\)</span> is the corrected slice, <span
 </div>
 <h4 id="parameter-selection">Parameter Selection</h4>
 <ol>
-<li><strong>Slice group size:</strong> Define the number of slices that will share the same fitted polynomial function.</li>
-<li><strong>Number of fitting points:</strong> Define the number of points to be sampled from the mask for function fitting.</li>
-<li><strong>Output image name:</strong> Enter a name for the corrected output image.</li>
+<li><strong>Function:</strong> Select the mathematical model used for the shading correction:<ul>
+<li><strong>Polynomial:</strong> Fits a 2D Cartesian surface. Best for general, non-symmetric shading gradients across the image.</li>
+<li><strong>Polynomial Radial:</strong> Fits a curve based strictly on the distance from the center. Best for broad, circular shading effects like standard beam hardening.</li>
+<li><strong>Spline Radial:</strong> Calculates a median radial profile and uses splines to handle fine, high-frequency ring artifacts.</li>
+</ul>
+</li>
+<li><strong>Center:</strong> Define the center point for the radial mathematical curve fitting:<ul>
+<li><strong>Default:</strong> Automatically uses the geometric center of the image (leave "Custom" unchecked).</li>
+<li><strong>Set:</strong> Check to manually input the X and Y center coordinates.</li>
+<li><strong>Pick Red View:</strong> Click to interactively select the center point directly on the Red slice view.</li>
+</ul>
+</li>
+<li><strong>Order:</strong> Select the complexity of the polynomial curve (2, 4, or 6). <em>Note: This parameter is ignored if 'Spline Radial' is selected.</em><ul>
+<li><strong>Lower orders (2):</strong> Capture broad, gentle shading gradients. Less prone to errors.</li>
+<li><strong>Higher orders (6):</strong> Allow for more complex, wavy curves but increase the risk of overfitting to local image features instead of the overall shading trend.</li>
+</ul>
+</li>
+<li><strong>Group size:</strong> Define the number of slices that will share the same fitted mathematical function. <strong>Smaller values yield better results, but processing is slower</strong> as more individual fits must be calculated.</li>
+<li><strong>Fitting points:</strong> Define the number of points to be randomly sampled from the mask for the function fitting process. <strong>Larger values yield better results, but processing is slower</strong> due to the increased computational load of the fitting algorithm.</li>
+<li><strong>Output image name:</strong> Enter the desired name for the corrected output image volume.</li>
 </ol>
 <h4 id="apply">Apply</h4>
 <ol>

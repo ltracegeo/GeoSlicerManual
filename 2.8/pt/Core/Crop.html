@@ -445,6 +445,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GettingStarted/Troubleshooting.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bug-icon lucide-bug"><path d="M12 20v-9"/><path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/><path d="M14.12 3.88 16 2"/><path d="M21 21a4 4 0 0 0-3.81-4"/><path d="M21 5a4 4 0 0 1-3.55 3.97"/><path d="M22 13h-4"/><path d="M3 21a4 4 0 0 1 3.81-4"/><path d="M3 5a4 4 0 0 0 3.55 3.97"/><path d="M6 13H2"/><path d="m8 2 1.88 1.88"/><path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></svg>
+  
+  <span class="md-ellipsis">
+    SoluÃ§Ã£o de Problemas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2339,43 +2362,37 @@
   <h1>Crop</h1>
 
 <h2 id="volumes-crop">Volumes Crop</h2>
-<p>O módulo <em>Crop</em> é uma ferramenta integrada ao GeoSlicer, projetada para permitir o recorte personalizado de volumes de imagem em coordenadas IJK, utilizando uma Região de Interesse (ROI) específica. O módulo é especialmente útil para focar em áreas específicas de volumes maiores, ajustando a dimensão do corte de acordo com as necessidades do usuário.</p>
+<p>O módulo <strong>Volumes Crop</strong> permite o recorte eficiente de um ou múltiplos volumes simultaneamente usando uma Região de Interesse (ROI) customizável. Ele suporta volumes do tipo Scalar, Vector e LabelMap, garantindo que todos os dados relacionados possam ser processados com um limite espacial consistente.</p>
 <h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../../assets/images/CustomizedCropVolumeInterface.png" /></th>
+<th style="text-align: center;"><img alt="Figura 1" src="../../assets/images/CropTool_UI.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Apresentação do módulo Crop.</td>
+<td style="text-align: center;">Figura 1: Apresentação do módulo Crop.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="principais-opcoes">Principais opções</h3>
-<ul>
-<li>
-<p><em>Volume to be cropped</em>: Escolha a Imagem a ser Recortada. </p>
-</li>
-<li>
-<p><em>Crop Size</em>: Definir o tamanho do recorte nas três dimensões (X, Y, Z), ajustando os limites da ROI de forma interativa. No caso de imagens 2D o valor Z sempre será 1.</p>
-</li>
-<li>
-<p><em>Crop/cancel</em>: Botões dedicados para iniciar o processo de recorte e cancelar as operações em andamento.</p>
-</li>
-</ul>
-<p><em>GeoSlicer</em> module to crop a volume, as described in the steps bellow:</p>
+<p><strong>Input (Entrada)</strong>
+ - <em>Image</em>: Selecione uma imagem e clique em <strong>Add</strong>. Você pode adicionar múltiplas imagens à lista; todas serão recortadas usando a mesma configuração de ROI. Use os botões de rádio na coluna <strong>Visible</strong> para escolher qual volume usar como referência nas visualizações de fatia.</p>
+<p><strong>Parameters (Parâmetros)</strong>
+ - <em>Copy from</em>: (Opcional) Selecione uma ROI existente para definir a região de recorte.
+ - <em>Center</em>: Define o centro preciso do recorte em coordenadas IJK. Clique no botão <strong>...</strong> para selecionar uma das últimas 10 configurações utilizadas.
+ - <em>Dimensions</em>: Define o tamanho do recorte nas três dimensões (X, Y, Z). Clique no botão <strong>...</strong> para selecionar uma das últimas 10 configurações utilizadas.
+ - <em>Copy attributes and references</em>: Se marcado, os volumes recortados herdarão metadados, atributos e referências dos volumes originais.
+ - <em>Keep ROI after crop</em>: Se marcado, a ROI temporária será mantida como um nó permanente na cena após o recorte.</p>
+<p><strong>Actions (Ações)</strong>
+ - <em>Crop All/Cancel</em>: Botões para iniciar o processo de recorte em lote ou cancelar e limpar a lista.</p>
+<h3 id="utilizacao">Utilização</h3>
 <ol>
-<li>
-<p>Select the <em>Volume to be cropped</em>.</p>
-</li>
-<li>
-<p>Adjust the ROI in the slice views to the desired location and size.</p>
-</li>
-<li>
-<p>Click <em>Crop</em> and wait for completion. The cropped volume will appear in the same directory as the original volume.</p>
-</li>
+<li>Selecione as imagens a serem recortadas e adicione-as à tabela.</li>
+<li>Ajuste a ROI interativamente nas visualizações de fatia ou manualmente através dos campos Center e Dimensions.</li>
+<li>(Opcional) Segure a tecla <strong>Alt</strong> enquanto arrasta as alças da ROI nas visualizações de fatia para redimensionar simetricamente em torno do centro.</li>
+<li>Clique em <strong>Crop All</strong> e aguarde a finalização. Os volumes recortados aparecerão na mesma pasta da hierarquia de assuntos que os volumes originais.</li>
 </ol>
 
 

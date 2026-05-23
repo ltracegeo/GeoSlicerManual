@@ -16,7 +16,7 @@
     
     
       
-        <title>SinGANModule - GeoSlicer Manual</title>
+        <title>CropTool - GeoSlicer Manual</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modulo-singan" class="md-skip">
+        <a href="#volumes-crop" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SinGANModule
+              CropTool
             
           </span>
         </div>
@@ -156,13 +156,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../pt/Pages/pt/SinGANModule.html" hreflang="pt" class="md-select__link">
+            <a href="../../pt/Pages/pt/CropTool.html" hreflang="pt" class="md-select__link">
               Português
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="SinGANModule.html" hreflang="en" class="md-select__link">
+            <a href="CropTool.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -432,6 +432,29 @@
   
   <span class="md-ellipsis">
     Remote computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/Troubleshooting.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e1e1e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bug-icon lucide-bug"><path d="M12 20v-9"/><path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/><path d="M14.12 3.88 16 2"/><path d="M21 21a4 4 0 0 0-3.81-4"/><path d="M21 5a4 4 0 0 1-3.55 3.97"/><path d="M22 13h-4"/><path d="M3 21a4 4 0 0 1 3.81-4"/><path d="M3 5a4 4 0 0 0 3.55 3.97"/><path d="M6 13H2"/><path d="m8 2 1.88 1.88"/><path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></svg>
+  
+  <span class="md-ellipsis">
+    Troubleshooting
   </span>
   
 
@@ -2283,80 +2306,41 @@
                   
 
 
-  <h1>SinGANModule</h1>
+  <h1>CropTool</h1>
 
-<h2 id="modulo-singan">Módulo SinGAN</h2>
-<p>O Módulo <em>SinGAN</em> oferece uma interface para a utilização dos modelos SinGAN dentro do GeoSlicer...</p>
+<h2 id="volumes-crop">Volumes Crop</h2>
+<p>O módulo <strong>Volumes Crop</strong> permite o recorte eficiente de um ou múltiplos volumes simultaneamente usando uma Região de Interesse (ROI) customizável. Ele suporta volumes do tipo Scalar, Vector e LabelMap, garantindo que todos os dados relacionados possam ser processados com um limite espacial consistente.</p>
 <h3 id="paineis-e-sua-utilizacao">Painéis e sua utilização</h3>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Figura 1" src="../../assets/images/SinGANModule.png" /></th>
+<th style="text-align: center;"><img alt="Figura 1" src="../../assets/images/CropTool_UI.png" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Figura 1: Apresentação do módulo SinGAN.</td>
+<td style="text-align: center;">Figura 1: Apresentação do módulo Crop.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros">Parâmetros</h3>
-<h4 id="configuracao-do-modelo">Configuração do modelo:</h4>
-<ul>
-<li>
-<p><em>Select Model</em>: Escolha do modelo a ser utilizado. Apenas modelos válidos são listados, dentro do diretório de modelos de SinGAN configurado pelo usuário.</p>
-</li>
-<li>
-<p><em>Create TI from model</em>: Reconstrói a imagem de treinamento como um volume dentro do <em>Geoslicer</em></p>
-</li>
-</ul>
-<h4 id="imagem-condicionante">Imagem condicionante</h4>
-<ul>
-<li>
-<p><em>Hard Data Image</em>: Seleciona a imagem condicionante a ser usada durante a geração.</p>
-</li>
-<li>
-<p><em>Choose scale to use HD</em>: Caso selecionado a imagem condicionante é injetada apenas na escala escolhida. Se desabilitado, a imagem é injetada na primeira escala disponível e depois redimensionada para as próximas escalas.</p>
-</li>
-<li>
-<p><em>Create Hard Data preview</em>: Cria uma prévia da imagem condicionante nas escalas de injeção.</p>
-</li>
-</ul>
-<h4 id="big-image">BIG IMAGE:</h4>
-<ul>
-<li>
-<p><em>Select a method</em>: Escolha o método de geração de grandes imagens.</p>
+<h3 id="principais-opcoes">Principais opções</h3>
+<p><strong>Input (Entrada)</strong>
+ - <em>Image</em>: Selecione uma imagem e clique em <strong>Add</strong>. Você pode adicionar múltiplas imagens à lista; todas serão recortadas usando a mesma configuração de ROI. Use os botões de rádio na coluna <strong>Visible</strong> para escolher qual volume usar como referência nas visualizações de fatia.</p>
+<p><strong>Parameters (Parâmetros)</strong>
+ - <em>Copy from</em>: (Opcional) Selecione uma ROI existente para definir a região de recorte.
+ - <em>Center</em>: Define o centro preciso do recorte em coordenadas IJK. Clique no botão <strong>...</strong> para selecionar uma das últimas 10 configurações utilizadas.
+ - <em>Dimensions</em>: Define o tamanho do recorte nas três dimensões (X, Y, Z). Clique no botão <strong>...</strong> para selecionar uma das últimas 10 configurações utilizadas.
+ - <em>Copy attributes and references</em>: Se marcado, os volumes recortados herdarão metadados, atributos e referências dos volumes originais.
+ - <em>Keep ROI after crop</em>: Se marcado, a ROI temporária será mantida como um nó permanente na cena após o recorte.</p>
+<p><strong>Actions (Ações)</strong>
+ - <em>Crop All/Cancel</em>: Botões para iniciar o processo de recorte em lote ou cancelar e limpar a lista.</p>
+<h3 id="utilizacao">Utilização</h3>
 <ol>
-<li><em>Generation patch on gpu</em>:Todo o processamento é realizado inteiramente na RAM e na GPU, sem divisão em patches nem gravação em disco.</li>
-<li><em>Patch Inference</em>: Gera a imagem processando-a em pequenos pedaços (patches), utilizando o disco para armazenar dados intermediários. É ideal para imagens muito grandes que não cabem na memória RAM.</li>
-<li><em>Early crop</em>: Gera a imagem recursivamente, redimensionando a imagem de entrada para cada escala e extraindo o <em>patch</em> correspondente.</li>
-<li><em>By chunks</em>: Divide a imagem em blocos (chunks) maiores definidos pelo usuário, processando cada um individualmente. É uma abordagem para lidar com imagens grandes, oferecendo um balanço entre o uso de memória e o tempo de processamento.</li>
+<li>Selecione as imagens a serem recortadas e adicione-as à tabela.</li>
+<li>Ajuste a ROI interativamente nas visualizações de fatia ou manualmente através dos campos Center e Dimensions.</li>
+<li>(Opcional) Segure a tecla <strong>Alt</strong> enquanto arrasta as alças da ROI nas visualizações de fatia para redimensionar simetricamente em torno do centro.</li>
+<li>Clique em <strong>Crop All</strong> e aguarde a finalização. Os volumes recortados aparecerão na mesma pasta da hierarquia de assuntos que os volumes originais.</li>
 </ol>
-</li>
-<li>
-<p><em>Set number of chunk</em>: Define o número de blocos em cada dimensão no método <em>By chunks</em> </p>
-</li>
-</ul>
-<h4 id="output">Output</h4>
-<ul>
-<li>
-<p><em>Number of realizations</em>: Números de imagens a serem geradas.</p>
-</li>
-<li>
-<p><em>Output Prefix</em>: Nome dos volumes gerados</p>
-</li>
-<li>
-<p><em>Save</em>: Forma que as imagens simuladas serão salvas no Geoslicer.</p>
-<ol>
-<li><em>As Large Image node</em>: Um <em>large image node</em> vai ser automaticamente adicionado. Acesse <a href="../../Volumes/BigImage/BigImage.html">Big Image</a> para mais informações sobre sse <em>node</em>.</li>
-<li><em>As volume</em>: É gerado um volume individual para cada realização. Apenas para o método <em>Generation patch on cpu</em>.
-An individual volume is generated for each realization. Available when there is enough memory to load output image.</li>
-<li><em>As sequence</em>: É gerado uma sequência de volumes que contém todas as realizações. Opção só é disponível para mais de uma realização e para o método <em>Generation patch on cpu</em>.</li>
-<li><em>As NetCDF files</em>: As imagens geradas são salvas como arquivos .nc. Obrigatório para grandes imagens.</li>
-</ol>
-</li>
-<li><em>Export directory</em>: Diretório que as imagens NetCDF serão salvas.</li>
-</ul>
 
 
 
