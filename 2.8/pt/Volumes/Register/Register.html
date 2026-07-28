@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ltracegeo.github.io/GeoSlicerManual/Volumes/Register/Register.html">
+      
       
         <link rel="prev" href="../ModellingFlow/StreamlinedModelling.html">
       
@@ -15,7 +17,7 @@
         <link rel="next" href="../PNM/PNM.html">
       
       
-      <link rel="icon" href="../../../assets/logo.ico">
+      <link rel="icon" href="../../assets/logo.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
@@ -24,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -35,20 +37,16 @@
     
     
       
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <script src="../../assets/javascripts/iframe-worker.js"></script>
       
     
     
-      <link rel="stylesheet" href="../../../assets/extra.css">
+      
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
+    <a href="../../index.html" title="GeoSlicer Manual" class="md-header__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -160,13 +158,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="Register.html" hreflang="pt" class="md-select__link">
+            <a href="../../../pt/" hreflang="pt" class="md-select__link">
               Português
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../../Volumes/Register/Register.html" hreflang="en" class="md-select__link">
+            <a href="../../../en/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -242,9 +240,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
+    <a href="../../index.html" title="GeoSlicer Manual" class="md-nav__button md-logo" aria-label="GeoSlicer Manual" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     GeoSlicer Manual
@@ -2376,7 +2374,7 @@
 <p>O Registro serve para alinhar duas imagens de uma mesma amostra, muito utilizado em caso de lâminas (porém com outra interface) para quando se existe PP/PX. Em Micro CT geralmente utilizamos quando temos imagens da mesma amostra seca e saturada, ou quando a amostra passa por processos de limpeza.</p>
 <p>O alinhamento pode ser feito manualmente ou a partir de um algoritmo automático. Em casos simples, o automático deve ser capaz de resolver, mas em outros casos é interessante ajustar manualmente primeiro, deixando as amostras ao menos próxima da de referência e depois rodar o processo automático para fazer o ajuste fino.</p>
 <h2 id="registro-manual">Registro Manual</h2>
-<p><img alt="Registro Manual" src="../../../assets/images/MicroCTRegistroManual.webp" /></p>
+<p><img alt="Registro Manual" src="../../assets/images/MicroCTRegistroManual.webp" /></p>
 <p>A interface do registro manual conta com uma matrix de transformação que permite uma transformação afim geral no volume dada pela mudança de coordenadas:</p>
 <div class="arithmatex">\[\mathbf{r'}=\mathbf{A}\cdot\mathbf{r}+\mathbf{B},\]</div>
 <p>onde <span class="arithmatex">\(\mathbf{r}\)</span> é um vetor com as coordenadas da imagem original e <span class="arithmatex">\(\mathbf{r'}\)</span> são as coordenadas da imagem transformada. Dessa forma, a matriz <span class="arithmatex">\(\mathbf{A}\)</span> será responsável por aplicar transformações de escala (elementos da diagonal principal), rotações, reflexões e cisalhamento, e o vetor <span class="arithmatex">\(\mathbf{B}\)</span> será responsável pelas translações. A matrix de transformação presente na interface do registro manual é geralmente chamada de matriz aumentada, permitindo que a transformação seja representada como uma única multiplicação de matriz:</p>
@@ -2409,10 +2407,10 @@ z\\
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Para comparar os volumes durante o registro, pode-se escolher um dos volumes como <em>foreground</em> e o outro como <em>background</em>, a partir da caixa de seleção no canto superior esquerdo de cada view. Ao selecionar esses dois volumes, a interface permite mudar a opacidade entre os dois pelo controle deslizante na esquerda da seleção, ou então segurando o botão Ctrl + clicando e arrastando o mouse de baixo para a cima dentro da janela de visualização. 
-<img alt="foreground" src="../../../assets/images/MicroCTForeground.png" /></p>
+<img alt="foreground" src="../../assets/images/MicroCTForeground.png" /></p>
 </div>
 <h2 id="registro-automatico">Registro Automático</h2>
-<p><img alt="Registro Automático" src="../../../assets/images/MicroCTRegistroAutomatico.webp" /></p>
+<p><img alt="Registro Automático" src="../../assets/images/MicroCTRegistroAutomatico.webp" /></p>
 <p>Na interface do Registro Automático, deve-se selecionar um volume de referência e um volume que irá se mover até encontrar automaticamente a transformação necessária. As transformações serão aplicadas ao "<em>Moving volume</em>" para coincidir com o "<em>Fixed volume</em>", e o resultado será salvo em um novo volume transformado, preservando os volumes original e de referência.</p>
 <p>Os parâmetros utilizados no registro automático são:</p>
 <ul>
@@ -2477,14 +2475,16 @@ z\\
     
     
     
-<script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
     
 
 
     
-      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../assets/vendor/mathjax/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/javascripts/language-switcher.js"></script>
       
     
   </body>
