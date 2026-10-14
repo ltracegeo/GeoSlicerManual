@@ -1471,6 +1471,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../ImageLog/PoreSizeDistribution/PoreSizeDistribution.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
+  
+  <span class="md-ellipsis">
+    Pore Size Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ImageLog/MoreTools/MoreTools.html" class="md-nav__link">
         
   
@@ -2402,17 +2425,17 @@
 </code></pre></div>
 <p>The absolute path is also converted to a relative path during build.</p>
 <h2 id="videos">Videos</h2>
-<div class="highlight"><pre><span></span><code>&lt;figure class="video-container"&gt;  &lt;video controls width="100%"&gt;  &lt;source src="../assets/videos/video_name.webm" type="video/webm" &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Optional caption&lt;/figcaption&gt;&lt;/figure&gt;
+<div class="highlight"><pre><span></span><code>&lt;figure class=&quot;video-container&quot;&gt;  &lt;video controls width=&quot;100%&quot;&gt;  &lt;source src=&quot;../assets/videos/video_name.webm&quot; type=&quot;video/webm&quot; &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Optional caption&lt;/figcaption&gt;&lt;/figure&gt;
 </code></pre></div>
 <p>Videos are automatically sourced from <code>/assets/videos/</code>.</p>
 <h2 id="anchor">Anchor</h2>
 <p>For multiple languages compatibility, use the tag <code>&lt;a&gt;</code> in the desired header text, including the <code>id</code> definition in <em>english</em>.</p>
 <p>This approach ensures that a link like <code>[some text](../Pages/en/page.md#title-simulation)</code> will navigate to the correct section, regardless of whether the user is viewing the English or Portuguese page. It also prevents <code>mkdocs</code> from reporting broken links during the build process.</p>
 <div class="highlight"><pre><span></span><code>Header in Portuguese page:
-&lt;a id="title-simulation"&gt;Simulação de Título&lt;/a&gt;
+&lt;a id=&quot;title-simulation&quot;&gt;Simulação de Título&lt;/a&gt;
 
 Header in English page:
-&lt;a id="title-simulation"&gt;Title Simulation&lt;/a&gt;
+&lt;a id=&quot;title-simulation&quot;&gt;Title Simulation&lt;/a&gt;
 </code></pre></div>
 
 

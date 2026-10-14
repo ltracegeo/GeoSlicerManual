@@ -1473,6 +1473,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ImageLog/PoreSizeDistribution/PoreSizeDistribution.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-network"><path d="m13.11 7.664 1.78 2.672"/><path d="m14.162 12.788-3.324 1.424"/><path d="m20 4-6.06 1.515"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><circle cx="12" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="15" r="2"/></svg>
+  
+  <span class="md-ellipsis">
+    Pore Size Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ImageLog/MoreTools/MoreTools.html" class="md-nav__link">
         
   
@@ -2564,13 +2587,13 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 
  - _Training Image_: Volume that acts as a training image.
 
- - _Hard Data Image_: Volume that acts as "Hard Data", where values and points are fixed during the simulation.
+ - _Hard Data Image_: Volume that acts as &quot;Hard Data&quot;, where values and points are fixed during the simulation.
 
  - _Mask Image_: Volume that acts as a mask for selecting the simulation area. Unselected segments will not be included in the simulation.
 
 #### Simulation Options
 
- - _Wrap HD into cylinder_: If the "Hard Data" is a well image (2D), this option causes the image to be considered a cylinder and performs simulations as 3D.
+ - _Wrap HD into cylinder_: If the &quot;Hard Data&quot; is a well image (2D), this option causes the image to be considered a cylinder and performs simulations as 3D.
 
  - _Data type_: Determines whether the data type is continuous or categorical. Segmentations and Labelmaps can be used for discrete and continuous simulations, but scalar volumes can only be used for continuous.
    - Categorical: Segmentations control regions and determine the class value of the Hard Data and Training Image volume. Unselected segments will be disregarded.
@@ -2580,7 +2603,7 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
 
  - _Grid Dimensions_: Dimensions of the resulting image.
 
- - _Automatic resampling_: Activates the automatic resizing functionality of the input data to the simulation grid's dimension and resolution. If the image is an imagelog, Y-axis resizing is disabled.
+ - _Automatic resampling_: Activates the automatic resizing functionality of the input data to the simulation grid&#39;s dimension and resolution. If the image is an imagelog, Y-axis resizing is disabled.
     - _Spacing_: New axis resolution after resizing.
     - _Size_: New axis dimension after resizing.
     - _Ratio_: Ratio of the new voxel resolution to the initial resolution.
@@ -2612,18 +2635,18 @@ Currently, only the Generalized ENESIM algorithm with direct sampling (DS) mode 
  - _Save_: Options for saving the results.
    - _First realization_: Saves only the first realization as an individual volume.
    - _All realizations_: Saves all realizations as individual volumes.
-   - _As sequence_: Saves the realizations in a sequence set. The "_proxy" output volume indicates it is a sequence and has the controllers for visualizing the realizations.
+   - _As sequence_: Saves the realizations in a sequence set. The &quot;_proxy&quot; output volume indicates it is a sequence and has the controllers for visualizing the realizations.
    - _TIF files_: Saves all realizations as tiff files.
 
- - _Export directory_: Directory where the tiff files will be saved. It is only enabled if the "TIF files" option is selected.
+ - _Export directory_: Directory where the tiff files will be saved. It is only enabled if the &quot;TIF files&quot; option is selected.
 
 #### Buttons
 
-- _Run_: Executes the MPS. If _number of patches_ is 1, the parallel MPS code will be executed. Otherwise, the sequential MPS code will be executed for each patch and realization."
+- _Run_: Executes the MPS. If _number of patches_ is 1, the parallel MPS code will be executed. Otherwise, the sequential MPS code will be executed for each patch and realization.&quot;
 - _Cancel_: Interrupts the simulation execution.
 
 
-&lt;figure class="video-container"&gt;  &lt;video controls width="100%"&gt;  &lt;source src="../../assets/videos/multiscale_multiscale.webm" type="video/webm" &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Video: Simulando um volume 3D a partir de uma imagem de poço&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;video-container&quot;&gt;  &lt;video controls width=&quot;100%&quot;&gt;  &lt;source src=&quot;../../assets/videos/multiscale_multiscale.webm&quot; type=&quot;video/webm&quot; &gt;  Your browser does not support the video tag.&lt;/video&gt;  &lt;figcaption&gt;Video: Simulando um volume 3D a partir de uma imagem de poço&lt;/figcaption&gt;&lt;/figure&gt;
 </code></pre></div>
 <hr />
 <h2 id="post-processing">Post Processing</h2>
